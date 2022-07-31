@@ -31,7 +31,7 @@
 
 		scroll(
 			animate(el_h2, {
-				opacity: [0, 1]
+				opacity: [0, 0, 1, 1]
 			}),
 			{
 				target: el_h1,
@@ -78,7 +78,6 @@
 
 	h1 {
 		width: 100%;
-		text-align: center;
 		padding-top: 17vh;
 		margin: 0;
 	}
