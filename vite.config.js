@@ -9,7 +9,8 @@ const config = {
 			components: path.resolve('./src/components'),
 			data: path.resolve('./src/data'),
 			routes: path.resolve('./src/routes'),
-			styles: path.resolve('./src/styles')
+			styles: path.resolve('./src/styles'),
+			utils: path.resolve('./src/utils')
 		}
 	}
 };

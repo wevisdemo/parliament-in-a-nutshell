@@ -1,13 +1,17 @@
+@import 'animate';
+@import 'helpers';
 @import 'reseter';
+
+html {
+	background: url(bg.jpg);
+	background-size: 100%;
+}
 
 body {
 	font-family: 'Bai Jamjuree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	letter-spacing: 1%;
+	letter-spacing: 0.01em; // 1/100 of an em
 	font-weight: 500;
-
-	background: url(bg.jpg);
-	background-size: cover;
 }
 
 div,
@@ -26,4 +30,30 @@ section {
 	line-height: 1;
 	font-weight: 600;
 	font-size: 2.5rem;
+	text-align: center;
+}
+
+.c {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin: 0;
+}
+
+.lock-body-scroll {
+	// scrollbar-gutter: stable;
+	position: fixed;
+	overflow-y: scroll;
+	width: 100%;
+
+	> body {
+		overflow-y: hidden;
+	}
 }
