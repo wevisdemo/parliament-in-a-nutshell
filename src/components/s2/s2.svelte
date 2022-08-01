@@ -42,7 +42,7 @@
 </script>
 
 <section>
-	<div class="stick" style="--h:120vh">
+	<div class="stick c" style="--h:120vh">
 		<ARC {show_current_data} />
 	</div>
 	<div class="floating">
@@ -55,19 +55,11 @@
 			<span class="bigger">มี ส.ส. ปฏิบัติหน้าที่อยู่ทั้งสิ้น ...</span>
 		</h1>
 	</div>
-	<div bind:this={el_part2_trigger} style="--h:40vh" />
+	<div bind:this={el_part2_trigger} style="--h:40vh;margin-bottom:-40vh;" />
 </section>
 
 <style lang="scss">
 	.stick {
-		position: sticky;
-		top: 0;
-
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-
 		z-index: 1;
 	}
 
