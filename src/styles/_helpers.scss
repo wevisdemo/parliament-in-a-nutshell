@@ -1,0 +1,23 @@
+.h100 {
+	height: 100vh;
+}
+
+.stick {
+	position: sticky;
+	top: 0;
+}
+
+.c {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.tc {
+	text-align: center;
+}
+
+.s {
+	height: var(--s, 25vh);
+}
