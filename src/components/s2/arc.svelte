@@ -91,6 +91,31 @@
 			.append('g')
 			.attr('transform', `translate(${width / 2}, ${height / 2 + radius / 2})`);
 
+		// #region [FLUID OPP TEXT]
+		const fluid_opp_text_group = svg.append('g').attr('class', 'fluid-opp-text num-text');
+
+		fluid_opp_text_group
+			.append('text')
+			.attr('x', 0)
+			.attr('y', -16)
+			.attr('text-anchor', 'middle')
+			.text('ฝ่ายอิสระ');
+
+		fluid_opp_text_group
+			.append('text')
+			.attr('class', 'num')
+			.attr('x', 0)
+			.attr('y', 0)
+			.attr('text-anchor', 'middle')
+			.text(`18 คน`);
+
+		fluid_opp_text_group
+			.append('path')
+			.attr('d', d3.symbol().type(d3.symbolTriangle).size(40))
+			.attr('fill', '#000')
+			.attr('transform', `translate(-33,-20) rotate(-90)`);
+		// #endregion
+
 		// #region [ARC]
 		svg
 			.append('g')
@@ -197,31 +222,6 @@
 			.attr('y', -radius / 2 + 18)
 			.attr('text-anchor', 'middle')
 			.text(`${DATA[0].numeric.opp} คน`);
-		// #endregion
-
-		// #region [FLUID OPP TEXT]
-		const fluid_opp_text_group = svg.append('g').attr('class', 'fluid-opp-text num-text');
-
-		fluid_opp_text_group
-			.append('text')
-			.attr('x', 0)
-			.attr('y', -16)
-			.attr('text-anchor', 'middle')
-			.text('ฝ่ายอิสระ');
-
-		fluid_opp_text_group
-			.append('text')
-			.attr('class', 'num')
-			.attr('x', 0)
-			.attr('y', 0)
-			.attr('text-anchor', 'middle')
-			.text(`18 คน`);
-
-		fluid_opp_text_group
-			.append('path')
-			.attr('d', d3.symbol().type(d3.symbolTriangle).size(40))
-			.attr('fill', '#000')
-			.attr('transform', `translate(-33,-20) rotate(-90)`);
 		// #endregion
 
 		// #region [UPDATE FUNCTION]
