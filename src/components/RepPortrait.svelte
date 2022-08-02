@@ -13,6 +13,7 @@
 <img
 	{src}
 	alt={name}
+	title={name}
 	class={`${side} ${clazz} portrait`}
 	style:--c={color}
 	style:--s={size}
