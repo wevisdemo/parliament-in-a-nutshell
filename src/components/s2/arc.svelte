@@ -161,7 +161,7 @@
 			.attr('y1', -radius + 5)
 			.attr('x2', 0)
 			.attr('y2', -75)
-			.attr('stroke', '#000')
+			.attr('stroke', '#F94141')
 			.attr('stroke-width', 1);
 
 		center_line_group
@@ -169,12 +169,12 @@
 			.attr('cx', 0)
 			.attr('cy', -radius + 5)
 			.attr('r', 3)
-			.attr('fill', '#000');
+			.attr('fill', '#F94141');
 
 		center_line_group
 			.append('path')
 			.attr('d', d3.symbol().type(d3.symbolTriangle).size(20))
-			.attr('fill', '#000')
+			.attr('fill', '#F94141')
 			.attr('transform', `translate(0,-76)`);
 
 		center_line_group
@@ -183,7 +183,8 @@
 			.attr('x', 0)
 			.attr('y', -radius - 4)
 			.attr('text-anchor', 'middle')
-			.text('กึ่งหนึ่งของสภา');
+			.text('กึ่งหนึ่งของสภา')
+			.attr('fill', '#F94141');
 		// #endregion
 
 		// #region [GOV TEXT]
