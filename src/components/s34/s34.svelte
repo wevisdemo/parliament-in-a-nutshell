@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { inView, scroll, animate, ScrollOffset, stagger } from 'motion';
+	import { inView, scroll, animate, ScrollOffset, stagger} from 'motion';
+	import { scaleLinear } from 'd3';
 
 	import RP from 'components/RepPortrait.svelte';
-	import { scaleLinear } from 'd3';
 
 	let el_bridge_text1: any;
 	let el_thanathorn: any;
@@ -214,7 +214,7 @@
 <section class="s4">
 	<div class="fade-bg" style="--h:300vh">
 		<div class="h100 stick c">
-			<div class="T1" style="height:unset;line-height:1.5">
+			<div class="T1 s4-title">
 				เพราะตัวเลขที่นั่งที่เปลี่ยนแปลงไป<br />
 				<strong>สะท้อนอะไรมากกว่า &ldquo;การโยกย้าย&rdquo;</strong>
 			</div>
@@ -386,5 +386,11 @@
 		> .circle2 {
 			top: 181px;
 		}
+	}
+
+	.s4-title {
+		font-size: 3.5rem;
+		line-height:1.5;
+		height:unset;
 	}
 </style>
