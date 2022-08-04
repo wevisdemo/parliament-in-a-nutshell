@@ -9,7 +9,7 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
-		prerender: { default: true },
+		prerender: { default: true, onError: 'continue' },
 		paths: {
 			base: process.env.NODE_ENV === 'development' ? '' : '/shaking-parliament'
 		}
