@@ -16,7 +16,7 @@
 
 	let isSubmitted = false;
 	$: isCorrect = choices.find((c) => c.value === selected_choice)?.isCorrect;
-	$: img_file = ['quiz-incorrect.png', 'quiz-correct.png'][+isCorrect!];
+	$: img_file = `quiz-${isCorrect ? '' : 'in'}correct.png`;
 
 	onMount(() => {
 		jsConfetti = new JSConfetti();
@@ -71,9 +71,6 @@
 			<img class="ans-img" class:correct={isCorrect} src={img_file} alt="" />
 		</div>
 	{/if}
-	<!-- <button on:click={() => window.scrollTo({ behavior: 'smooth', top: window.innerHeight })}
-		>Test</button
-	> -->
 </section>
 
 <style lang="scss">
