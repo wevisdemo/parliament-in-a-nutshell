@@ -1,6 +1,7 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { onMount } from 'svelte';
-	import { inView, scroll, animate, ScrollOffset, stagger} from 'motion';
+	import { inView, scroll, animate, ScrollOffset, stagger } from 'motion';
 	import { scaleLinear } from 'd3';
 
 	import RP from 'components/RepPortrait.svelte';
@@ -147,7 +148,7 @@
 			<RP color="#f0da8c" name="ธรรมนัส พรหมเผ่า" size="170px" side="free" src="rp/thammanas.png" />
 		</div>
 		<div bind:this={el_paiboon} class="paiboon-img-container">
-			<img class="back" src="star_01.svg" alt="" />
+			<img class="back" src="{base}/star_01.svg" alt="" />
 			<RP
 				class="paiboon-img"
 				color="#f3c628"
@@ -173,8 +174,8 @@
 				side="free"
 				src="rp/mongkonkit.png"
 			/>
-			<img class="circle1" src="circles_02.svg" alt="" />
-			<img class="circle2" src="circles_02.svg" alt="" />
+			<img class="circle1" src="{base}/circles_02.svg" alt="" />
+			<img class="circle2" src="{base}/circles_02.svg" alt="" />
 		</div>
 	</div>
 	<div class="c" bind:this={el_bridge_text1}>
@@ -390,7 +391,7 @@
 
 	.s4-title {
 		font-size: 3.5rem;
-		line-height:1.5;
-		height:unset;
+		line-height: 1.5;
+		height: unset;
 	}
 </style>

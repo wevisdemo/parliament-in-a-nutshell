@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+
 	export let data = { value: 0, isCorrect: false };
 	export let group: any;
 	export let submitted = false;
@@ -14,8 +16,8 @@
 	<input type="radio" bind:group name="quiz" value={data.value} disabled={submitted} />
 	<span class="text">{data.value} คน</span>
 	<div class="cross">
-		<img class="c1" src="mark-tlbr.png" alt="" />
-		<img class="c2" src="mark-bltr.png" alt="" />
+		<img class="c1" src="{base}/mark-tlbr.png" alt="" />
+		<img class="c2" src="{base}/mark-bltr.png" alt="" />
 	</div>
 </label>
 

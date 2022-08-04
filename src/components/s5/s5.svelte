@@ -1,9 +1,31 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+	import { inView } from 'motion';
+	import { onMount } from 'svelte';
+
 	import RP from 'components/RepPortrait.svelte';
+
+	let el_logo: any;
+	let is_logo_inview = false;
+	onMount(() => {
+		inView(
+			el_logo,
+			() => {
+				is_logo_inview = true;
+			},
+			{ amount: 0.5 }
+		);
+	});
 </script>
 
 <section class="h100 s5-container c">
-	<img src="title.png" alt="" />
+	<img
+		class="logo"
+		class:in-view={is_logo_inview}
+		bind:this={el_logo}
+		src="{base}/title.png"
+		alt=""
+	/>
 </section>
 <div style="--h:300vh">
 	<div class="stick part1-title" style="--h:200vh">
@@ -58,6 +80,37 @@
 </div>
 
 <style lang="scss">
+	@keyframes flickering {
+		70.1%,
+		100% {
+			opacity: 1;
+		}
+
+		50%,
+		60%,
+		20% {
+			opacity: 0.5;
+		}
+
+		0%,
+		19.9%,
+		20.1%,
+		49.9%,
+		50.1%,
+		69.9%,
+		99.9% {
+			opacity: 0;
+		}
+	}
+
+	.logo {
+		opacity: 0;
+
+		&.in-view {
+			opacity: 1;
+			animation: flickering 1s linear forwards;
+		}
+	}
 	.s5-container {
 		background: #000;
 
