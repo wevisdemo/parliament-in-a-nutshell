@@ -130,7 +130,7 @@
 	}
 
 	.choice.incorrect {
-		animation: shakeX 0.5s forwards;
+		animation: shakeX 0.5s;
 
 		> .text {
 			background: #dd5a5a;
