@@ -17,6 +17,8 @@
 	class={`${side} ${clazz} portrait`}
 	style:--c={color}
 	style:--s={size}
+	decoding="async"
+	loading="lazy"
 	{style}
 />
 
