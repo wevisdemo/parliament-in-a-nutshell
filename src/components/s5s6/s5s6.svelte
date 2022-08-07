@@ -21,12 +21,20 @@
 		inView(
 			el_circle_container,
 			() => {
-				console.log('intersect');
+				const [first, ...rest] = el_circle_container.children;
 				animate(
-					[...el_circle_container.children],
+					first,
 					{
 						opacity: 1,
-						transform: [`translateY(100px)`, `translateY(0px)`]
+						transform: [`translateY(0px)`]
+					},
+					{ duration: 1 }
+				);
+				animate(
+					rest,
+					{
+						opacity: 1,
+						transform: [`translateY(-100px)`, `translateY(0px)`]
 					},
 					{ duration: 1, delay: stagger(0.25) }
 				);
