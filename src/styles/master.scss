@@ -24,8 +24,9 @@ body {
 
 div,
 section {
+	--h: auto;
 	position: relative;
-	height: var(--h, unset);
+	height: var(--h);
 }
 
 h1,
