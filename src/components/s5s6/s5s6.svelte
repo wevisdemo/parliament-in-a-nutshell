@@ -168,7 +168,8 @@
 			}
 			> .logo-decor {
 				opacity: 1;
-				transition: opacity 1s;
+				transition: opacity 1s linear;
+				transition-delay: 0.5s;
 			}
 		}
 	}
