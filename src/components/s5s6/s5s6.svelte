@@ -1,39 +1,68 @@
 <script lang="ts">
-	import { inView } from 'motion';
+	import { animate, inView, stagger } from 'motion';
 	import { onMount } from 'svelte';
 
 	import RP from 'components/RepPortrait.svelte';
 
-	let el_logo: any;
+	let el_logo_container: any;
 	let is_logo_inview = false;
+
+	let el_circle_container: any;
+
 	onMount(() => {
 		inView(
-			el_logo,
+			el_logo_container,
 			() => {
 				is_logo_inview = true;
 			},
 			{ amount: 0.5 }
 		);
+
+		inView(
+			el_circle_container,
+			() => {
+				console.log('intersect');
+				animate(
+					[...el_circle_container.children],
+					{
+						opacity: 1,
+						transform: [`translateY(100px)`, `translateY(0px)`]
+					},
+					{ duration: 1, delay: stagger(0.25) }
+				);
+			},
+			{ amount: 0.2 }
+		);
 	});
 </script>
 
-<section class="h100 s5-container c">
-	<img
-		class="logo"
-		class:in-view={is_logo_inview}
-		bind:this={el_logo}
-		src="shaking-parliament/title.png"
-		alt=""
-	/>
+<section class="h100 s5-container c" class:in-view={is_logo_inview} bind:this={el_logo_container}>
+	<img class="logo-decor" src="shaking-parliament/title_decor.svg" alt="" />
+	<img class="logo" src="shaking-parliament/title.png" alt="" />
 </section>
-<div style="--h:300vh">
-	<div class="stick part1-title" style="--h:200vh">
+<!-- s6 -->
+<div style="--h:calc(210vh + 480px)">
+	<div class="stick part1-section" style="--h:calc(110vh + 480px)">
 		<div class="h100 c">
-			<h1 class="T1">เริ่มเกมเก้าอี้ดนตรี</h1>
-			<h2>
+			<h1 class="T1 part1-title">เริ่มเกมเก้าอี้ดนตรี</h1>
+			<h2 class="part1-text tc">
 				ตลอดระยะเวลา 3 ปี <br />
 				มีตำแหน่งใดที่ว่างลงบ้าง
 			</h2>
+		</div>
+		<div bind:this={el_circle_container}>
+			<p class="part1-circle c tc">
+				มาสำรวจสถิติ<br />
+				<strong>
+					การออกสภา<br />
+					และการแทนที่<br />
+				</strong>
+				ตลอดสมัยสภาผู้แทนราษฎร<br />
+				ชุดที่ 25 กันดีกว่า
+			</p>
+			<img class="part1-deco-circle c1" src="shaking-parliament/circle_03.svg" alt="" />
+			<img class="part1-deco-circle c2" src="shaking-parliament/circle_03.svg" alt="" />
+			<img class="part1-deco-circle c3" src="shaking-parliament/circle_03.svg" alt="" />
 		</div>
 	</div>
 	<div class="curtain h100 c">
@@ -102,21 +131,37 @@
 		}
 	}
 
-	.logo {
-		opacity: 0.1;
-
-		&.in-view {
-			opacity: 1;
-			animation: flickering 1s linear forwards;
-		}
-	}
 	.s5-container {
 		background: #000;
 
-		> img {
-			height: 60%;
-			width: 60%;
+		> .logo {
+			opacity: 0.1;
+
+			height: 60vh;
+			width: 60vw;
 			object-fit: contain;
+		}
+
+		> .logo-decor {
+			opacity: 0.3;
+
+			height: 70vh;
+			width: 70vw;
+			object-fit: contain;
+
+			position: absolute;
+			top: 15vh;
+		}
+
+		&.in-view {
+			> .logo {
+				opacity: 1;
+				animation: flickering 1s linear forwards;
+			}
+			> .logo-decor {
+				opacity: 1;
+				transition: opacity 1s;
+			}
 		}
 	}
 
@@ -133,12 +178,6 @@
 		color: white;
 
 		padding-bottom: 5%;
-	}
-
-	.part1-title {
-		background: url(shaking-parliament/part1_bg.png) no-repeat;
-		background-position: top;
-		background-size: 100%;
 	}
 
 	.row {
@@ -224,6 +263,65 @@
 			top: 50%;
 			left: -50%;
 			transform: translate(-50%, -50%);
+		}
+	}
+	.part1-section {
+		background: url(shaking-parliament/part1_bg.png) no-repeat;
+		background-position: bottom center;
+		background-size: contain;
+	}
+
+	.part1-title {
+		font-size: 5rem;
+	}
+
+	.part1-text {
+		font-size: 2rem;
+		line-height: 1.5;
+		margin-top: 0.5rem;
+	}
+
+	.part1-circle {
+		background: #000;
+		color: white;
+
+		width: 315px;
+		height: 315px;
+
+		border-radius: 50%;
+
+		margin: auto;
+
+		position: relative;
+		z-index: 1;
+
+		font-size: 1.2rem;
+		line-height: 1.5;
+
+		opacity: 0;
+
+		> strong {
+			font-size: 2rem;
+			line-height: 1.2;
+		}
+	}
+
+	.part1-deco-circle {
+		position: absolute;
+		top: 54px;
+		left: calc(50% - 315px / 2);
+
+		width: 315px;
+		height: 315px;
+
+		opacity: 0;
+
+		&.c2 {
+			top: 108px;
+		}
+
+		&.c3 {
+			top: 162px;
 		}
 	}
 </style>
