@@ -5,7 +5,13 @@
 		แต่ไม่เพียงเท่านั้น พวกเขายังได้เปรียบไปอีกขั้น<br />
 		ด้วยการได้ <strong>เก้าอี้เสริม</strong> มาอย่างน่าอัศจรรย์ใจ
 	</p>
-	<img class="caret" src="shaking-parliament/caret_down.svg" alt="" />
+	<img
+		class="caret"
+		src="shaking-parliament/caret_down.svg"
+		alt=""
+		decoding="async"
+		loading="lazy"
+	/>
 </div>
 
 <style lang="scss">

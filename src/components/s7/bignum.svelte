@@ -20,7 +20,7 @@
 
 <div class="bignum-container c">
 	<div class="title-container">
-		<img src="shaking-parliament/part1/{DATA[side].image}" alt="" />
+		<img src="shaking-parliament/part1/{DATA[side].image}" alt="" decoding="async" loading="lazy" />
 		<div class="bignum-text">
 			เป็น ส.ส.<br />
 			ฝ่าย<span style="color:{DATA[side].color}">{side}</span>

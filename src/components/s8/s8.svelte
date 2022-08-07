@@ -1,12 +1,18 @@
 <div class="h100 c tc part2-title">
-	<img src="shaking-parliament/part2_bg.png" alt="" class="bg" />
+	<img src="shaking-parliament/part2_bg.png" alt="" class="bg" decoding="async" loading="lazy" />
 	<header>
 		<span>นกหวีดดัง เกิดกติกาพิเศษ</span>
 		<h1 class="T1">&ldquo;ส.ส.ปัดเศษ&rdquo; เข้าสภา</h1>
 	</header>
 </div>
 <div style="--h:90vh">
-	<img src="shaking-parliament/part2_papers.png" alt="" class="newspaper" />
+	<img
+		src="shaking-parliament/part2_papers.png"
+		alt=""
+		class="newspaper"
+		decoding="async"
+		loading="lazy"
+	/>
 	<div class="news-text-container c">
 		<p class="news-text tc">
 			<span class="special-lh">&ldquo; ผ่านไป 45 วัน<br /></span>

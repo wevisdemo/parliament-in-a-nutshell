@@ -4,7 +4,10 @@
 	import { onMount } from 'svelte';
 	import { inView, scroll, animate, ScrollOffset } from 'motion';
 
-	import ARC from 'components/s2/arc.svelte';
+	let ARC: any;
+	import('components/s2/arc.svelte').then((c) => {
+		ARC = c.default;
+	});
 
 	let show_current_data = false;
 
@@ -43,7 +46,9 @@
 
 <section>
 	<div class="stick c" style="--h:120vh">
-		<ARC {show_current_data} />
+		{#if ARC}
+			<svelte:component this={ARC} {show_current_data} />
+		{/if}
 	</div>
 	<div class="floating">
 		<h1 bind:this={el_h1} class="T1">

@@ -1,7 +1,11 @@
 <script lang="ts">
 	import RP from 'components/RepPortrait.svelte';
 	import Bignum from './bignum.svelte';
-	import Bridge from './bridge.svelte';
+
+	let Bridge: any;
+	import('./bridge.svelte').then((c) => {
+		Bridge = c.default;
+	});
 </script>
 
 <div class="h100 c">
@@ -403,7 +407,9 @@
 		<Bignum side="ค้าน" num="20" />
 	</div>
 </div>
-<Bridge />
+{#if Bridge}
+	<svelte:component this={Bridge} />
+{/if}
 
 <style lang="scss">
 	.event-container {

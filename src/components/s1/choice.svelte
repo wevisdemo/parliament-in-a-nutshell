@@ -14,8 +14,8 @@
 	<input type="radio" bind:group name="quiz" value={data.value} disabled={submitted} />
 	<span class="text">{data.value} คน</span>
 	<div class="cross">
-		<img class="c1" src="shaking-parliament/mark-tlbr.png" alt="" />
-		<img class="c2" src="shaking-parliament/mark-bltr.png" alt="" />
+		<img class="c1" src="shaking-parliament/mark-tlbr.png" alt="" decoding="async" />
+		<img class="c2" src="shaking-parliament/mark-bltr.png" alt="" decoding="async" />
 	</div>
 </label>
 

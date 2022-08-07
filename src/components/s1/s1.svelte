@@ -16,7 +16,7 @@
 
 	let isSubmitted = false;
 	$: isCorrect = choices.find((c) => c.value === selected_choice)?.isCorrect;
-	$: img_file = `quiz-${isCorrect ? '' : 'in'}correct.png`;
+	$: img_file = `shaking-parliament/quiz-${isCorrect ? '' : 'in'}correct.png`;
 
 	onMount(() => {
 		jsConfetti = new JSConfetti();
@@ -57,9 +57,9 @@
 		ตรวจคำตอบ
 	</button>
 	<div class="continue" class:show={isSubmitted}>
-		<img src="shaking-parliament/thinking.png" alt="" />
+		<img src="shaking-parliament/thinking.png" alt="" decoding="async" loading="lazy" />
 		เกิดอะไรขึ้น? ไปดูกัน!
-		<img src="shaking-parliament/hand-down.png" alt="" />
+		<img src="shaking-parliament/hand-down.png" alt="" decoding="async" loading="lazy" />
 	</div>
 
 	{#if isSubmitted && !isCorrect}
@@ -68,7 +68,7 @@
 
 	{#if isSubmitted}
 		<div class="ans-img-container">
-			<img class="ans-img" class:correct={isCorrect} src={img_file} alt="" />
+			<img class="ans-img" class:correct={isCorrect} src={img_file} alt="" decoding="async" />
 		</div>
 	{/if}
 </section>
