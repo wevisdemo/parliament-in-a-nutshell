@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import { addHtmlClass, removeHtmlClass } from 'utils/html-style-director';
 	import { onMount } from 'svelte';
 
@@ -58,9 +57,9 @@
 		ตรวจคำตอบ
 	</button>
 	<div class="continue" class:show={isSubmitted}>
-		<img src="{base}/thinking.png" alt="" />
+		<img src="shaking-parliament/thinking.png" alt="" />
 		เกิดอะไรขึ้น? ไปดูกัน!
-		<img src="{base}/hand-down.png" alt="" />
+		<img src="shaking-parliament/hand-down.png" alt="" />
 	</div>
 
 	{#if isSubmitted && !isCorrect}

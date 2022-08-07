@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import { inView } from 'motion';
 	import { onMount } from 'svelte';
 
@@ -23,7 +22,7 @@
 		class="logo"
 		class:in-view={is_logo_inview}
 		bind:this={el_logo}
-		src="{base}/title.png"
+		src="shaking-parliament/title.png"
 		alt=""
 	/>
 </section>
@@ -99,12 +98,12 @@
 		50.1%,
 		69.9%,
 		99.9% {
-			opacity: 0;
+			opacity: 0.1;
 		}
 	}
 
 	.logo {
-		opacity: 0;
+		opacity: 0.1;
 
 		&.in-view {
 			opacity: 1;
@@ -124,7 +123,7 @@
 	.curtain {
 		width: 100%;
 		height: 100vh;
-		background: url('curtain.png') repeat-x;
+		background: url(shaking-parliament/curtain.png) repeat-x;
 		background-size: auto 100%;
 		background-position: center;
 
@@ -137,7 +136,7 @@
 	}
 
 	.part1-title {
-		background: url('part1_bg.png') no-repeat;
+		background: url(shaking-parliament/part1_bg.png) no-repeat;
 		background-position: top;
 		background-size: 100%;
 	}

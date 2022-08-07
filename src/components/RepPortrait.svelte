@@ -1,6 +1,5 @@
 <!-- Representative Portrait -->
 <script lang="ts">
-	import { base } from '$app/paths';
 	export let src: string;
 	export let side: 'gov' | 'opp' | 'free' = 'gov';
 	export let color: string;
@@ -12,7 +11,7 @@
 </script>
 
 <img
-	src={`${base}/${src}`}
+	src={`shaking-parliament/${src}`}
 	alt={name}
 	title={name}
 	class={`${side} ${clazz} portrait`}
