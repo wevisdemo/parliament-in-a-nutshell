@@ -47,12 +47,12 @@
 <section class="h100 s5-container c" class:in-view={is_logo_inview} bind:this={el_logo_container}>
 	<img
 		class="logo-decor"
-		src="shaking-parliament/title_decor.svg"
+		src="/shaking-parliament/title_decor.svg"
 		alt=""
 		decoding="async"
 		loading="lazy"
 	/>
-	<img class="logo" src="shaking-parliament/title.png" alt="" decoding="async" loading="lazy" />
+	<img class="logo" src="/shaking-parliament/title.png" alt="" decoding="async" loading="lazy" />
 </section>
 <!-- s6 -->
 <div style="--h:calc(210vh + 480px)">
@@ -76,21 +76,21 @@
 			</p>
 			<img
 				class="part1-deco-circle c1"
-				src="shaking-parliament/circle_03.svg"
+				src="/shaking-parliament/circle_03.svg"
 				alt=""
 				decoding="async"
 				loading="lazy"
 			/>
 			<img
 				class="part1-deco-circle c2"
-				src="shaking-parliament/circle_03.svg"
+				src="/shaking-parliament/circle_03.svg"
 				alt=""
 				decoding="async"
 				loading="lazy"
 			/>
 			<img
 				class="part1-deco-circle c3"
-				src="shaking-parliament/circle_03.svg"
+				src="/shaking-parliament/circle_03.svg"
 				alt=""
 				decoding="async"
 				loading="lazy"
@@ -201,7 +201,7 @@
 	.curtain {
 		width: 100%;
 		height: 100vh;
-		background: url(shaking-parliament/curtain.png) repeat-x;
+		background: url(/shaking-parliament/curtain.png) repeat-x;
 		background-size: auto 100%;
 		background-position: center;
 
@@ -287,7 +287,7 @@
 		}
 	}
 	.part1-section {
-		background: url(shaking-parliament/part1_bg.png) no-repeat;
+		background: url(/shaking-parliament/part1_bg.png) no-repeat;
 		background-position: bottom center;
 		background-size: contain;
 	}

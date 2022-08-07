@@ -7,7 +7,7 @@
 	</p>
 	<img
 		class="caret"
-		src="shaking-parliament/caret_down.svg"
+		src="/shaking-parliament/caret_down.svg"
 		alt=""
 		decoding="async"
 		loading="lazy"

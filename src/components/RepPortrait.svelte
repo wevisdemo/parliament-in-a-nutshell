@@ -11,7 +11,7 @@
 </script>
 
 <img
-	src={`shaking-parliament/${src}`}
+	src={`/shaking-parliament/${src}`}
 	alt={name}
 	title={name}
 	class={`${side} ${clazz} portrait`}

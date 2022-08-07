@@ -149,7 +149,7 @@
 		<div bind:this={el_paiboon} class="paiboon-img-container">
 			<img
 				class="back"
-				src="shaking-parliament/star_01.svg"
+				src="/shaking-parliament/star_01.svg"
 				alt=""
 				decoding="async"
 				loading="lazy"
@@ -181,14 +181,14 @@
 			/>
 			<img
 				class="circle1"
-				src="shaking-parliament/circles_02.svg"
+				src="/shaking-parliament/circles_02.svg"
 				alt=""
 				decoding="async"
 				loading="lazy"
 			/>
 			<img
 				class="circle2"
-				src="shaking-parliament/circles_02.svg"
+				src="/shaking-parliament/circles_02.svg"
 				alt=""
 				decoding="async"
 				loading="lazy"
