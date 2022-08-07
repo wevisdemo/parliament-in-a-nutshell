@@ -188,18 +188,6 @@
 		padding-bottom: 5%;
 	}
 
-	.row {
-		--h: auto;
-		--gap: 2rem;
-		display: flex;
-		margin: 0 calc(var(--gap) * -1);
-
-		> .col {
-			flex: 1 1 0;
-			margin: 0 calc(var(--gap) / 2);
-		}
-	}
-
 	.T1 {
 		font-size: 4rem;
 	}

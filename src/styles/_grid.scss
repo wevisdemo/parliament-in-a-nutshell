@@ -1,0 +1,14 @@
+.row {
+	--h: auto;
+	--gap: 2rem;
+	display: flex;
+	gap: var(--gap);
+
+	> .col {
+		flex: 1 1 0;
+	}
+
+	&.vert {
+		flex-direction: column;
+	}
+}
