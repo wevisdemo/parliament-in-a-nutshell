@@ -15,16 +15,16 @@
 </script>
 
 <div
-	class="rp-container"
+	class="rp-container {clazz}"
 	class:showTop
 	class:useExperimentTooltip={__useExperimentTooltip}
-	style="--s:{size}"
+	style:--s={size}
 >
 	<img
-		src={`/shaking-parliament/${src}`}
+		src="/shaking-parliament/{src}"
 		alt={name}
 		title={__useExperimentTooltip ? null : name}
-		class={`${side} ${clazz} portrait`}
+		class="portrait {side}"
 		style:--c={color}
 		style:--s={size}
 		decoding="async"
@@ -32,7 +32,7 @@
 		{style}
 	/>
 	<div class="tooltip">{name}</div>
-	<div class="top" style="--shift:{shift}"><slot /></div>
+	<div class="top" style:--shift={shift}><slot /></div>
 </div>
 
 <style lang="scss">
