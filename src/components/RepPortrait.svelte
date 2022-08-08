@@ -52,8 +52,9 @@
 		height: var(--s);
 
 		opacity: 1;
-		filter: saturate(1);
-		transition: opacity 0.3s, filter 0.3s;
+		// filter: saturate(1);
+		transition: opacity 0.3s /*, filter 0.3s*/;
+		will-change: opacity /*, filter*/;
 
 		position: relative;
 
@@ -79,12 +80,13 @@
 		pointer-events: none;
 		opacity: 0;
 		transition: opacity 0.3s;
+		will-change: opacity;
 	}
 
 	.rp-container.showTop {
 		> .portrait {
 			opacity: 0.4;
-			filter: saturate(0.5);
+			// filter: saturate(0.5);
 		}
 
 		> .top {

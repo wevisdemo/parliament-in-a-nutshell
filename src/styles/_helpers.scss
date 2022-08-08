@@ -18,6 +18,7 @@
 	text-align: center;
 }
 
-.s {
-	height: var(--s, 25vh);
+.pen {
+	pointer-events: none;
+	z-index: -1;
 }

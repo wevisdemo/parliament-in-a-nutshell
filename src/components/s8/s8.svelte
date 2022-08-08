@@ -26,7 +26,7 @@
 			<span class="special-lh" style="--lh:2.5">ที่พยายามคำนวณที่นั่ง ส.ส. ไว้ก่อนหน้า &rdquo;</span
 			>
 		</p>
-		<div class="s" style="--s:10vh" />
+		<div style="--h:10vh" />
 	</div>
 </div>
 

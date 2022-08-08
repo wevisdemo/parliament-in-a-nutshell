@@ -196,7 +196,7 @@
 		</div>
 	</div>
 	<div class="c" bind:this={el_bridge_text1}>
-		<div class="s" style="--s:1rem" />
+		<div style="--h:1rem" />
 		<h1 class="T1">
 			ตัวเลขที่ผันแปรเหล่านี้<br />
 			กำลังบอกอะไรเรา ?
@@ -212,9 +212,9 @@
 			<br />
 			และอีกมากมาย …<br />
 		</p>
-		<div class="s" style="--s:15vh" />
+		<div style="--h:15vh" />
 	</div>
-	<div class="s" style="--s:15vh" />
+	<div style="--h:15vh" />
 	<div class="c">
 		<p class="s3-2 tc">
 			<strong class="bigger">เมื่อประชาธิปไตยไม่ได้จบแค่การเลือกตั้ง</strong><br />
