@@ -61,7 +61,7 @@
 	</div>
 	<div class="new-num T1 tc">{~~$new_num_display}</div>
 	<div class="slash" />
-	<div class="base-num T1 tc" style="--sidecolor:{DATA[side].color}">{~~$old_num_display}</div>
+	<div class="base-num T1 tc" style:--sidecolor={DATA[side].color}>{~~$old_num_display}</div>
 	<div class="unit tc">คน</div>
 	<div class="unit-new tc">คน</div>
 </div>

@@ -60,7 +60,7 @@
 			<span class="bigger">มี ส.ส. ปฏิบัติหน้าที่อยู่ทั้งสิ้น ...</span>
 		</h1>
 	</div>
-	<div bind:this={el_part2_trigger} style="--h:40vh;margin-bottom:-40vh;" />
+	<div bind:this={el_part2_trigger} style="--h:40vh;margin-bottom:-40vh" />
 </section>
 
 <style lang="scss">
