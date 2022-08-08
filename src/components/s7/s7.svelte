@@ -1,6 +1,13 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
 	import RP from 'components/RepPortrait.svelte';
 	import Bignum from './bignum.svelte';
+
+	import { PART1_DATA } from 'data/part1';
+
+	let showReplaced = false;
+	let toggleReplace = () => (showReplaced = !showReplaced);
 
 	let Bridge: any;
 	import('./bridge.svelte').then((c) => {
@@ -11,393 +18,98 @@
 <div class="h100 c">
 	<div class="event-container" style="--gap:0">
 		<div class="event resign">
-			<h3 class="tc">ลาออก</h3>
+			<h3 class="tc" on:click={toggleReplace}>ลาออก</h3>
 			<div class="row rp-grid" style="--gap:1rem">
-				<div class="col">
-					<div class="row vert" style="--gap:1rem">
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
+				{#each PART1_DATA.resign as res_c}
+					<div class="col row vert" style="--gap:1rem">
+						{#each res_c as rep}
+							<RP
+								size="34px"
+								color={rep.color}
+								name={rep.name}
+								side={rep.side}
+								src={rep.src}
+								showTop={showReplaced}
+								__useExperimentTooltip={true}
+							>
+								{#if rep.replace_by}
+									<RP
+										size="34px"
+										color={rep.replace_by.color}
+										name={rep.replace_by.name}
+										side={rep.replace_by.side}
+										src={rep.replace_by.src}
+										__useExperimentTooltip={true}
+									/>
+								{/if}
+							</RP>
+						{/each}
 					</div>
-				</div>
-				<div class="col">
-					<div class="row vert" style="--gap:1rem">
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-					</div>
-				</div>
-				<div class="col">
-					<div class="row vert" style="--gap:1rem">
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-					</div>
-				</div>
-				<div class="col">
-					<div class="row vert" style="--gap:1rem">
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-					</div>
-				</div>
-				<div class="col">
-					<div class="row vert" style="--gap:1rem">
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="opp"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="opp"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="opp"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="opp"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="opp"
-							src="rp/thanathorn.png"
-						/>
-					</div>
-				</div>
+				{/each}
 			</div>
 		</div>
 		<div class="sep" />
 		<div class="event pass">
 			<h3 class="tc">เสียชีวิต</h3>
 			<div class="row rp-grid" style="--gap:1rem">
-				<div class="col">
-					<div class="row vert" style="--gap:1rem">
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="opp"
-							src="rp/thanathorn.png"
-						/>
+				{#each PART1_DATA.pass as res_c}
+					<div class="col row vert" style="--gap:1rem">
+						{#each res_c as rep}
+							<RP
+								size="34px"
+								color={rep.color}
+								name={rep.name}
+								side={rep.side}
+								src={rep.src}
+								showTop={showReplaced}
+								__useExperimentTooltip={true}
+							>
+								{#if rep.replace_by}
+									<RP
+										size="34px"
+										color={rep.replace_by.color}
+										name={rep.replace_by.name}
+										side={rep.replace_by.side}
+										src={rep.replace_by.src}
+										__useExperimentTooltip={true}
+									/>
+								{/if}
+							</RP>
+						{/each}
 					</div>
-				</div>
+				{/each}
 			</div>
 		</div>
 		<div class="sep" />
 		<div class="event fire">
 			<h3 class="tc">ศาลตัดสินให้พ้นสภาพ ส.ส.</h3>
 			<div class="row rp-grid" style="--gap:1rem">
-				<div class="col">
-					<div class="row vert" style="--gap:1rem">
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
+				{#each PART1_DATA.fire as res_c}
+					<div class="col row vert" style="--gap:1rem">
+						{#each res_c as rep}
+							<RP
+								size="34px"
+								color={rep.color}
+								name={rep.name}
+								side={rep.side}
+								src={rep.src}
+								showTop={showReplaced}
+								__useExperimentTooltip={true}
+							>
+								{#if rep.replace_by}
+									<RP
+										size="34px"
+										color={rep.replace_by.color}
+										name={rep.replace_by.name}
+										side={rep.replace_by.side}
+										src={rep.replace_by.src}
+										__useExperimentTooltip={true}
+									/>
+								{/if}
+							</RP>
+						{/each}
 					</div>
-				</div>
-				<div class="col">
-					<div class="row vert" style="--gap:1rem">
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="gov"
-							src="rp/thanathorn.png"
-						/>
-					</div>
-				</div>
-				<div class="col">
-					<div class="row vert" style="--gap:1rem">
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="opp"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="opp"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="opp"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="opp"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="opp"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="opp"
-							src="rp/thanathorn.png"
-						/>
-					</div>
-				</div>
-				<div class="col">
-					<div class="row vert" style="--gap:1rem">
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="opp"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="opp"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="opp"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="opp"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="opp"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="opp"
-							src="rp/thanathorn.png"
-						/>
-					</div>
-				</div>
-				<div class="col">
-					<div class="row vert" style="--gap:1rem">
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="opp"
-							src="rp/thanathorn.png"
-						/>
-						<RP
-							color="#ff6f21"
-							name="ธนาธร จึงรุ่งเรืองกิจ"
-							size="34px"
-							side="opp"
-							src="rp/thanathorn.png"
-						/>
-					</div>
-				</div>
+				{/each}
 			</div>
 		</div>
 	</div>
@@ -418,7 +130,7 @@
 	}
 
 	.event {
-		overflow: hidden;
+		// overflow: hidden;
 		border-radius: 12px;
 		padding: 2rem;
 	}
