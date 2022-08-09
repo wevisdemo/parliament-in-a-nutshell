@@ -182,7 +182,7 @@
 			<Bignum {showNewNum} oldNum={27} newNum={27} />
 			<div class="will-show" class:showNewNum>
 				<div class="bignum-container">
-					<Bignum {showNewNum} side="อิสระ" oldNum={0} newNum={1} />
+					<Bignum {showNewNum} side="อิสระ" oldNum={0} newNum={2} />
 				</div>
 			</div>
 			<Bignum {showNewNum} side="ค้าน" oldNum={20} newNum={4} />

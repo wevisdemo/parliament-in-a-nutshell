@@ -85,7 +85,7 @@
 
 	.rp-container.showTop {
 		> .portrait {
-			opacity: 0.4;
+			opacity: 0.3;
 			// filter: saturate(0.5);
 		}
 

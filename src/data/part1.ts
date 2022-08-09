@@ -16,263 +16,263 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 	resign: [
 		[
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'นฤมล ภิญโญสินวัฒน์',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ลาออก-นฤมล.png',
+				color: '#0B3757',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'พรชัย ตระกูลวรานนท์',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-พรชัย.png',
+					color: '#0B3757'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'สุพล ฟองงาม',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ลาออก-สุพล.png',
+				color: '#0B3757',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'ชวน ชูจันทร์',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-ชวน.png',
+					color: '#0B3757'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'วิเชียร ชวลิต',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ลาออก-วิเชียร.png',
+				color: '#0B3757',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'ภาคิน สมมิตรธนกุล',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-ภาคิน.png',
+					color: '#0B3757'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'หม่อมราชวงศ์จัตุมงคล โสณกุล',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ลาออก-จัตุมงคล.png',
+				color: '#18246D',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'จุฑาฑัตต เหล่าธรรมทัศน์',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-จุฑาฑัตต.png',
+					color: '#18246D'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'เพชรชมพู กิจบูรณะ',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ลาออก-เพชรชมพู.png',
+				color: '#18246D',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'สุเนตตา แซ่โก๊ะ',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-สุเนตตา.png',
+					color: '#18246D'
 				}
 			}
 		],
 		[
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'ทรงศักดิ์ ทองศรี',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ลาออก-ทรงศักดิ์.png',
+				color: '#065CAB',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'เศรษฐพงศ์ มะลิสุวรรณ',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-เศรษฐพงศ์.png',
+					color: '#065CAB'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'วีรศักดิ์ หวังศุภกิจโกศล',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ลาออก-วีรศักดิ์.png',
+				color: '#065CAB',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'มารุต มัสยวาณิช',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-มารุต.png',
+					color: '#065CAB'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'กนกวรรณ วิลาวัลย์',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ลาออก-กนกวรรณ.png',
+				color: '#065CAB',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'สุชาติ โชคชัยวัฒนากร',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-สุชาติ.png',
+					color: '#065CAB'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'พลตรีทรงกลด ทิพย์รัตน์',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ลาออก-ทรงกลด.png',
+				color: '#AAC826',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'บุญญาพร นาตะธนภัทร',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-บุญญาพร.png',
+					color: '#AAC826'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'สมเกียรติ ศรลัมพ์',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ลาออก-สมเกียรติ.png',
+				color: '#288707',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'นันทนา สงฆ์ประชา',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-นันทนา.png',
+					color: '#288707'
 				}
 			}
 		],
 		[
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'อภิสิทธิ์ เวชชาชีวะ',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ลาออก-อภิสิทธิ์.png',
+				color: '#349EE9',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'สุทัศน์ เงินหมื่น',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-สุทัศน์.png',
+					color: '#349EE9'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'กรณ์ จาติกวณิช',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ลาออก-กรณ์.png',
+				color: '#349EE9',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'พิสิฐ ลี้อาธรรม',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-พิสิฐ.png',
+					color: '#349EE9'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'จุติ ไกรฤกษ์',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ลาออก-จุติ.png',
+				color: '#349EE9',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'อิสระ เสรีวัฒนวุฒิ',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-อิสระ.png',
+					color: '#349EE9'
 				}
 			}
 		],
 		[
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'พีระพันธุ์ สาลีรัฐวิภาค',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ลาออก-พีระพันธุ์.png',
+				color: '#349EE9',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'พิมพ์รพี พันธุ์วิชาติกุล',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-พิมพ์รพี.png',
+					color: '#349EE9'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'อภิชัย เตชะอุบล',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ลาออก-อภิชัย.png',
+				color: '#349EE9',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'นราพัฒน์ แก้วทอง',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-นราพัฒน์.png',
+					color: '#349EE9'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'วีระชัย วีระเมธีกุล',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ลาออก-วีระชัย.png',
+				color: '#349EE9',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'ไชยยศ จิรเมธากร',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-ไชยยศ.png',
+					color: '#349EE9'
 				}
 			}
 		],
 		[
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'มิ่งขวัญ แสงสุวรรณ',
 				side: 'opp',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ลาออก-มิ่งขวัญ.png',
+				color: '#75328C',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'จิราพร นาคดิลก',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-จิราพร.png',
+					color: '#75328C'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'วันมูหะมัดนอร์ มะทา',
 				side: 'opp',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ลาออก-วันมูหะมัดนอร์.png',
+				color: '#D87A0E',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'พันตำรวจเอกทวี สอดส่อง',
 					side: 'opp',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-ทวี.png',
+					color: '#D87A0E'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'จุมพิตา จันทรขจร',
 				side: 'opp',
-				src: 'rp/thanathorn.png',
+				src: 'rp/ลาออก-จุมพิตา.png',
 				color: '#ff6f21',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'เผดิมชัย สะสมทรัพย์',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-เผดิมชัย.png',
+					color: '#CC8AE3'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'วิโรจน์ ลักขณาอดิศร',
 				side: 'opp',
-				src: 'rp/thanathorn.png',
+				src: 'rp/ลาออก-วิโรจน์.png',
 				color: '#ff6f21',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'ว่าง',
 					side: 'opp',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'white.jpg',
+					color: '#FFFFFF'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'วินท์ สุธีรชัย',
 				side: 'opp',
-				src: 'rp/thanathorn.png',
+				src: 'rp/ลาออก-วินท์.png',
 				color: '#ff6f21',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'ว่าง',
 					side: 'opp',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'white.jpg',
+					color: '#FFFFFF'
 				}
 			}
 		]
@@ -280,27 +280,27 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 	pass: [
 		[
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'ชัย ชิดชอบ',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/เสียชีวิต-ชัย.png',
+				color: '#065CAB',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'สวาป เผ่าประทาน',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-สวาป.png',
+					color: '#065CAB'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'อิทธิรัตน์ จันทรสุรินทร์',
 				side: 'opp',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/เสียชีวิต-อิทธิรัตน์.png',
+				color: '#E50000',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'เดชทวี ศรีวิชัย',
 					side: 'opp',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-เดชทวี.png',
+					color: '#D4B41E'
 				}
 			}
 		]
@@ -308,187 +308,125 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 	fire: [
 		[
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'ณัฏฐพล ทีปสุวรรณ',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ศาลตัด-ณัฏฐพล.png',
+				color: '#0B3757',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'ยุทธนา โพธสุธน',
 					side: 'free',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-ยุทธนา.png',
+					color: '#F0DA8C'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'พุทธิพงษ์ ปุณณกันต์',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ศาลตัด-พุทธิพงษ์.png',
+				color: '#0B3757',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'ต่อศักดิ์ อัศวเหม',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-ต่อศักดิ์.png',
+					color: '#0B3757'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'ปารีณา ไกรคุปต์',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ศาลตัด-ปารีณา.png',
+				color: '#0B3757',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'ชัยทิพย์ กมลพันธ์ทิพย์',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-ชัยทิพย์.png',
+					color: '#349EE9'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'สิระ เจนจาคะ',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ศาลตัด-สิระ.png',
+				color: '#0B3757',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'สุรชาติ เทียนทอง',
 					side: 'opp',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-สุรชาติ.png',
+					color: '#E50000'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'พันตำรวจโทไวพจน์ อาภรณ์รัตน์',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ศาลตัด-ไวพจน์.png',
+				color: '#0B3757',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'เพชรภูมิ อาภรณ์รัตน์',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-เพชรภูมิ.png',
+					color: '#0B3757'
 				}
 			}
 		],
 		[
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'ชุมพล จุลใส',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ศาลตัด-ชุมพล.png',
+				color: '#349EE9',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'อิสรพงษ์ มากอำไพ',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-อิสรพงษ์.png',
+					color: '#349EE9'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'ถาวร เสนเนียม',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ศาลตัด-ถาวร.png',
+				color: '#349EE9',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'สุภาพร กำเนิดผล',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-สุภาพร.png',
+					color: '#349EE9'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'อิสสระ สมชัย',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ศาลตัด-อิสสระ.png',
+				color: '#349EE9',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'จักพันธ์ ปิยพรไพบูลย์',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-จักพันธ์.png',
+					color: '#349EE9'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'เทพไท เสนพงศ์',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ศาลตัด-เทพไท.png',
+				color: '#349EE9',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'อาญาสิทธิ์ ศรีสุวรรณ',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'rp/แทน-อาญาสิทธิ์.png',
+					color: '#349EE9'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'สำลี รักสุทธิ',
 				side: 'gov',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
+				src: 'rp/ศาลตัด-สำลี.png',
+				color: '#065CAB',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'ว่าง',
 					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
-				}
-			}
-		],
-		[
-			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
-				side: 'opp',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
-				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
-					side: 'opp',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
-				}
-			},
-			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
-				side: 'opp',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
-				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
-					side: 'opp',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
-				}
-			},
-			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
-				side: 'opp',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
-				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
-					side: 'opp',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
-				}
-			},
-			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
-				side: 'opp',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
-				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
-					side: 'opp',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
-				}
-			},
-			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
-				side: 'opp',
-				src: 'rp/thanathorn.png',
-				color: '#ff6f21',
-				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
-					side: 'opp',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'white.jpg',
+					color: '#FFFFFF'
 				}
 			}
 		],
@@ -496,87 +434,173 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 			{
 				name: 'ธนาธร จึงรุ่งเรืองกิจ',
 				side: 'opp',
-				src: 'rp/thanathorn.png',
+				src: 'rp/ศาลตัด-ธนาธร.png',
 				color: '#ff6f21',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'มานพ คีรีภูวดล',
 					side: 'opp',
-					src: 'rp/thanathorn.png',
+					src: 'rp/แทน-มานพ.png',
 					color: '#ff6f21'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'กุลธิดา รุ่งเรืองเกียรติ',
 				side: 'opp',
-				src: 'rp/thanathorn.png',
+				src: 'rp/ศาลตัด-กุลธิดา.png',
 				color: '#ff6f21',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'ว่าง',
 					side: 'opp',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'white.jpg',
+					color: '#FFFFFF'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'ไกลก้อง ไวทยการ',
 				side: 'opp',
-				src: 'rp/thanathorn.png',
+				src: 'rp/ศาลตัด-ไกลก้อง.png',
 				color: '#ff6f21',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'ว่าง',
 					side: 'opp',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'white.jpg',
+					color: '#FFFFFF'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'จารุวรรณ ศรัณย์เกตุ',
 				side: 'opp',
-				src: 'rp/thanathorn.png',
+				src: 'rp/ศาลตัด-จารุวรรณ.png',
 				color: '#ff6f21',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'ว่าง',
 					side: 'opp',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'white.jpg',
+					color: '#FFFFFF'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'เจนวิทย์ ไกรสินธุ์',
 				side: 'opp',
-				src: 'rp/thanathorn.png',
+				src: 'rp/ศาลตัด-เจนวิทย์.png',
 				color: '#ff6f21',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'ว่าง',
 					side: 'opp',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'white.jpg',
+					color: '#FFFFFF'
 				}
 			}
 		],
 		[
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'ชำนาญ จันทร์เรือง',
 				side: 'opp',
-				src: 'rp/thanathorn.png',
+				src: 'rp/ศาลตัด-ชำนาญ.png',
 				color: '#ff6f21',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
+					name: 'ว่าง',
 					side: 'opp',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					src: 'white.jpg',
+					color: '#FFFFFF'
 				}
 			},
 			{
-				name: 'ธนาธร จึงรุ่งเรืองกิจ',
+				name: 'สุรชัย ศรีสารคาม',
 				side: 'opp',
-				src: 'rp/thanathorn.png',
+				src: 'rp/ศาลตัด-สุรชัย.png',
 				color: '#ff6f21',
 				replace_by: {
-					name: 'ธนาธร จึงรุ่งเรืองกิจ',
-					side: 'gov',
-					src: 'rp/thanathorn.png',
-					color: '#ff6f21'
+					name: 'ว่าง',
+					side: 'opp',
+					src: 'white.jpg',
+					color: '#FFFFFF'
+				}
+			},
+			{
+				name: 'นิรามาน สุไลมาน',
+				side: 'opp',
+				src: 'rp/ศาลตัด-นิรามาน.png',
+				color: '#ff6f21',
+				replace_by: {
+					name: 'ว่าง',
+					side: 'opp',
+					src: 'white.jpg',
+					color: '#FFFFFF'
+				}
+			},
+			{
+				name: 'ปิยบุตร แสงกนกกุล',
+				side: 'opp',
+				src: 'rp/ศาลตัด-ปิยบุตร.png',
+				color: '#ff6f21',
+				replace_by: {
+					name: 'ว่าง',
+					side: 'opp',
+					src: 'white.jpg',
+					color: '#FFFFFF'
+				}
+			},
+			{
+				name: 'พงศกร รอดชมภู',
+				side: 'opp',
+				src: 'rp/ศาลตัด-พงศกร.png',
+				color: '#ff6f21',
+				replace_by: {
+					name: 'ว่าง',
+					side: 'opp',
+					src: 'white.jpg',
+					color: '#FFFFFF'
+				}
+			}
+		],
+		[
+			{
+				name: 'พรรณิการ์ วานิช',
+				side: 'opp',
+				src: 'rp/ศาลตัด-พรรณิการ์.png',
+				color: '#ff6f21',
+				replace_by: {
+					name: 'ว่าง',
+					side: 'opp',
+					src: 'white.jpg',
+					color: '#FFFFFF'
+				}
+			},
+			{
+				name: 'เยาวลักษณ์ วงษ์ประภารัตน์',
+				side: 'opp',
+				src: 'rp/ศาลตัด-เยาวลักษณ์.png',
+				color: '#ff6f21',
+				replace_by: {
+					name: 'ว่าง',
+					side: 'opp',
+					src: 'white.jpg',
+					color: '#FFFFFF'
+				}
+			},
+			{
+				name: 'ธัญญ์วาริน สุขะพิสิษฐ์',
+				side: 'opp',
+				src: 'rp/ศาลตัด-ธัญญ์วาริน.png',
+				color: '#ff6f21',
+				replace_by: {
+					name: 'ว่าง',
+					side: 'opp',
+					src: 'white.jpg',
+					color: '#FFFFFF'
+				}
+			},
+			{
+				name: 'นวัธ เตาะเจริญสุข',
+				side: 'opp',
+				src: 'rp/ศาลตัด-นวัธ.png',
+				color: '#ff6f21',
+				replace_by: {
+					name: 'สมศักดิ์ คุณเงิน',
+					side: 'free',
+					src: 'rp/แทน-สมศักดิ์.png',
+					color: '#F0DA8C'
 				}
 			}
 		]
