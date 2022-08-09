@@ -75,12 +75,12 @@
 
 	.newspaper {
 		position: absolute;
-		right: 50%;
+		right: 40%;
 		height: 80vh;
-		width: 50vw;
+		width: 60vw;
 
 		object-fit: contain;
-		object-position: right center;
+		object-position: center;
 	}
 
 	.special-lh {
