@@ -54,7 +54,7 @@
 
 	@keyframes dashmove {
 		to {
-			stroke-dashoffset: 9;
+			stroke-dashoffset: -9;
 		}
 	}
 	.svg15 {
