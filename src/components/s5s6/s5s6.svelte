@@ -50,6 +50,12 @@
 <!-- s6 -->
 <div style="--h:calc(210vh + 480px)">
 	<div class="stick part1-section" style="--h:calc(110vh + 480px)">
+		<div class="part1-decor">
+			<img class="chair1" src="/shaking-parliament/part1_bg1.png" alt="" />
+			<img class="chair2" src="/shaking-parliament/part1_bg2.png" alt="" />
+			<img class="chair3" src="/shaking-parliament/part1_bg3.png" alt="" />
+			<img class="chair4" src="/shaking-parliament/part1_bg4.png" alt="" />
+		</div>
 		<div class="h100 c">
 			<h1 class="T1 part1-title">เริ่มเกมเก้าอี้ดนตรี</h1>
 			<h2 class="part1-text tc">
@@ -279,10 +285,39 @@
 			transform: translate(-50%, -50%);
 		}
 	}
-	.part1-section {
-		background: url(/shaking-parliament/part1_bg.png) no-repeat;
-		background-position: bottom center;
-		background-size: contain;
+
+	.part1-decor {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+
+		> img {
+			position: absolute;
+
+			&.chair1 {
+				top: -5%;
+				left: 3%;
+				max-width: 30vw;
+			}
+
+			&.chair2 {
+				top: -5%;
+				right: 0;
+				max-width: 30vw;
+			}
+
+			&.chair3 {
+				top: 25%;
+				left: 0;
+				max-width: 40vw;
+			}
+
+			&.chair4 {
+				top: 35%;
+				right: 0;
+				max-width: 40vw;
+			}
+		}
 	}
 
 	.part1-title {
