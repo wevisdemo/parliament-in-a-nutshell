@@ -319,13 +319,13 @@
 			position: absolute;
 
 			&.chair1 {
-				top: -5%;
+				top: 0;
 				left: 3%;
 				max-width: 30vw;
 			}
 
 			&.chair2 {
-				top: -5%;
+				top: 0;
 				right: 0;
 				max-width: 30vw;
 			}
