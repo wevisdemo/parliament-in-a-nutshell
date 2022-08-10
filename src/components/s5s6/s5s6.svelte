@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { animate, inView, stagger } from 'motion';
 	import { onMount } from 'svelte';
+	import { animate, inView, stagger } from 'motion';
 
 	import RP from 'components/RepPortrait.svelte';
 
@@ -22,14 +22,7 @@
 			el_circle_container,
 			() => {
 				const [first, ...rest] = el_circle_container.children;
-				animate(
-					first,
-					{
-						opacity: 1,
-						transform: [`translateY(0px)`]
-					},
-					{ duration: 1 }
-				);
+				animate(first, { opacity: 1 }, { duration: 1 });
 				animate(
 					rest,
 					{

@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import 'styles/master.scss';
 
-	let all_import = 7 + 1; /* onMount + pages */
+	let all_import = 8 + 1; /* onMount + pages */
 	let complete_import = 0;
 	let status: string[] = [];
 
@@ -18,6 +18,7 @@
 	let S7: any;
 	let S8: any;
 	let S9: any;
+	let S11: any;
 
 	onMount(() => {
 		finish_load('Svelte mounted');
@@ -58,6 +59,11 @@
 		finish_load('S9 loaded');
 	});
 
+	import('components/s11/s11.svelte').then((c) => {
+		S11 = c.default;
+		finish_load('S11 loaded');
+	});
+
 	$: load_percent = ((complete_import / all_import) * 100).toFixed(2);
 </script>
 
@@ -79,4 +85,5 @@
 	<svelte:component this={S7} />
 	<svelte:component this={S8} />
 	<svelte:component this={S9} />
+	<svelte:component this={S11} />
 {/if}
