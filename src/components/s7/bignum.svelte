@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { tweened } from 'svelte/motion';
-	import { inView } from 'motion';
 	import { sineOut } from 'svelte/easing';
+	import { inView } from 'motion';
 
 	const DATA = {
 		รัฐบาล: {
