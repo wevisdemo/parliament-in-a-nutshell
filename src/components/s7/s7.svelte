@@ -85,7 +85,7 @@
 									side={rep.side}
 									src={rep.src}
 									showTop={showReplaced}
-									__useExperimentTooltip={true}
+									tooltip="right"
 								>
 									{#if rep.replace_by}
 										<RP
@@ -95,7 +95,7 @@
 											side={rep.replace_by.side}
 											src={rep.replace_by.src}
 											dashedBorder={rep.replace_by.name === 'ว่าง'}
-											__useExperimentTooltip={true}
+											tooltip="right"
 										/>
 									{/if}
 								</RP>
@@ -118,7 +118,7 @@
 									side={rep.side}
 									src={rep.src}
 									showTop={showReplaced}
-									__useExperimentTooltip={true}
+									tooltip="right"
 								>
 									{#if rep.replace_by}
 										<RP
@@ -128,7 +128,7 @@
 											side={rep.replace_by.side}
 											src={rep.replace_by.src}
 											dashedBorder={rep.replace_by.name === 'ว่าง'}
-											__useExperimentTooltip={true}
+											tooltip="right"
 										/>
 									{/if}
 								</RP>
@@ -151,7 +151,7 @@
 									side={rep.side}
 									src={rep.src}
 									showTop={showReplaced}
-									__useExperimentTooltip={true}
+									tooltip="right"
 								>
 									{#if rep.replace_by}
 										<RP
@@ -161,7 +161,7 @@
 											side={rep.replace_by.side}
 											src={rep.replace_by.src}
 											dashedBorder={rep.replace_by.name === 'ว่าง'}
-											__useExperimentTooltip={true}
+											tooltip="right"
 										/>
 									{/if}
 								</RP>

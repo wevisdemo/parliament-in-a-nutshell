@@ -11,20 +11,15 @@
 
 	export let showTop: boolean = false;
 	export let shift: string = '6px';
-	export let __useExperimentTooltip: boolean = false;
+	export let tooltip: 'top' | 'right' | null = null;
 	export let dashedBorder = false;
 </script>
 
-<div
-	class="rp-container {clazz}"
-	class:showTop
-	class:useExperimentTooltip={__useExperimentTooltip}
-	style:--s={size}
->
+<div class="rp-container {clazz} tooltip-{tooltip}" class:showTop style:--s={size}>
 	<img
 		src="/shaking-parliament/{src}"
 		alt={name}
-		title={__useExperimentTooltip ? null : name}
+		title={tooltip ? null : name}
 		class="portrait {side}"
 		class:dashedBorder
 		style:--c={color}
@@ -56,7 +51,7 @@
 		opacity: 1;
 		// filter: saturate(1);
 		transition: opacity 0.3s /*, filter 0.3s*/;
-		will-change: opacity /*, filter*/;
+		// will-change: opacity /*, filter*/;
 
 		overflow: hidden;
 
@@ -106,22 +101,15 @@
 	.tooltip {
 		position: absolute;
 		top: -8px;
-		left: -8px;
 		z-index: 18;
 
-		width: auto;
-		height: calc(100% + 16px);
-
-		padding: 8px 12px 8px calc(100% + 16px);
-
+		background: #000d;
 		border-radius: 8px;
 
-		background: #000c;
-
 		display: flex;
-		align-items: center;
 
 		color: #fff;
+		line-height: 1;
 		white-space: nowrap;
 
 		user-select: none;
@@ -131,7 +119,21 @@
 		pointer-events: none;
 	}
 
-	.rp-container.useExperimentTooltip:not(.showTop) > .portrait:hover {
+	.tooltip-right .tooltip {
+		left: -8px;
+		padding: 8px 12px 8px calc(100% + 16px);
+		height: calc(100% + 16px);
+		align-items: center;
+	}
+
+	.tooltip-top .tooltip {
+		left: 50%;
+		padding: 12px;
+		transform: translate(-50%, -100%);
+		letter-spacing: 0.3px;
+	}
+
+	.rp-container:is(.tooltip-right, .tooltip-top):not(.showTop) > .portrait:hover {
 		z-index: 19;
 
 		+ .tooltip {

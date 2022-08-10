@@ -137,7 +137,14 @@
 		<h2 class="pill">ข้อมูล ส.ส. รายคน</h2>
 		<div class="row">
 			<div class="col tc">
-				<RP color="#0b3757" name="ปารีณา ไกรคุปต์" size="96px" side="gov" src="rp/parina.png" />
+				<RP
+					color="#0b3757"
+					name="ปารีณา ไกรคุปต์"
+					size="96px"
+					side="gov"
+					src="rp/parina.png"
+					tooltip="top"
+				/>
 				<div class="side-explain">ส.ส.<br />ฝ่ายรัฐบาล</div>
 				<div class="small-explain">(ไอคอนสี่เหลี่ยม)</div>
 			</div>
@@ -148,12 +155,20 @@
 					size="96px"
 					side="free"
 					src="rp/mongkonkit.png"
+					tooltip="top"
 				/>
 				<div class="side-explain">ส.ส.<br />ฝ่ายอิสระ</div>
 				<div class="small-explain">(ไอคอนหกเหลี่ยม)</div>
 			</div>
 			<div class="col tc">
-				<RP color="#ff6f21" name="วิโรจน์ ลักขณาอดิศร" size="96px" side="opp" src="rp/wiroj.png" />
+				<RP
+					color="#ff6f21"
+					name="วิโรจน์ ลักขณาอดิศร"
+					size="96px"
+					side="opp"
+					src="rp/wiroj.png"
+					tooltip="top"
+				/>
 				<div class="side-explain">ส.ส.<br />ฝ่ายค้าน</div>
 				<div class="small-explain">(ไอคอนวงกลม)</div>
 				<div class="explainer">พรรคที่สังกัด</div>
