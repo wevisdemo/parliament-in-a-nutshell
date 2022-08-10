@@ -67,7 +67,13 @@
 			<strong>246 คน</strong>
 		</div>
 		<div class="small-overlay" />
-		<img src="/shaking-parliament/middle_line.svg" alt="" class="middle-line" />
+		<img
+			src="/shaking-parliament/middle_line.svg"
+			alt=""
+			class="middle-line"
+			decoding="async"
+			loading="lazy"
+		/>
 	</div>
 	<svg width="0" height="0">
 		<defs>

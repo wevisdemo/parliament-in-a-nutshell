@@ -51,10 +51,34 @@
 <div style="--h:calc(210vh + 480px)">
 	<div class="stick part1-section" style="--h:calc(110vh + 480px)">
 		<div class="part1-decor">
-			<img class="chair1" src="/shaking-parliament/part1_bg1.png" alt="" />
-			<img class="chair2" src="/shaking-parliament/part1_bg2.png" alt="" />
-			<img class="chair3" src="/shaking-parliament/part1_bg3.png" alt="" />
-			<img class="chair4" src="/shaking-parliament/part1_bg4.png" alt="" />
+			<img
+				class="chair1"
+				src="/shaking-parliament/part1_bg1.png"
+				alt=""
+				decoding="async"
+				loading="lazy"
+			/>
+			<img
+				class="chair2"
+				src="/shaking-parliament/part1_bg2.png"
+				alt=""
+				decoding="async"
+				loading="lazy"
+			/>
+			<img
+				class="chair3"
+				src="/shaking-parliament/part1_bg3.png"
+				alt=""
+				decoding="async"
+				loading="lazy"
+			/>
+			<img
+				class="chair4"
+				src="/shaking-parliament/part1_bg4.png"
+				alt=""
+				decoding="async"
+				loading="lazy"
+			/>
 		</div>
 		<div class="h100 c">
 			<h1 class="T1 part1-title">เริ่มเกมเก้าอี้ดนตรี</h1>

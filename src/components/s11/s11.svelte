@@ -36,9 +36,27 @@
 <div class="s11-container tc c">
 	<div class="decor">
 		<div class="fade" />
-		<img class="hand1" src="/shaking-parliament/part3_bg1.png" alt="" />
-		<img class="hand2" src="/shaking-parliament/part3_bg2.png" alt="" />
-		<img class="hand3" src="/shaking-parliament/part3_bg3.png" alt="" />
+		<img
+			class="hand1"
+			src="/shaking-parliament/part3_bg1.png"
+			alt=""
+			decoding="async"
+			loading="lazy"
+		/>
+		<img
+			class="hand2"
+			src="/shaking-parliament/part3_bg2.png"
+			alt=""
+			decoding="async"
+			loading="lazy"
+		/>
+		<img
+			class="hand3"
+			src="/shaking-parliament/part3_bg3.png"
+			alt=""
+			decoding="async"
+			loading="lazy"
+		/>
 	</div>
 	<header>
 		<span>เพราะภายในมีจุดยืนต่าง</span>
