@@ -12,6 +12,7 @@
 	export let showTop: boolean = false;
 	export let shift: string = '6px';
 	export let __useExperimentTooltip: boolean = false;
+	export let dashedBorder = false;
 </script>
 
 <div
@@ -25,6 +26,7 @@
 		alt={name}
 		title={__useExperimentTooltip ? null : name}
 		class="portrait {side}"
+		class:dashedBorder
 		style:--c={color}
 		style:--s={size}
 		decoding="async"
@@ -56,7 +58,10 @@
 		transition: opacity 0.3s /*, filter 0.3s*/;
 		will-change: opacity /*, filter*/;
 
+		overflow: hidden;
+
 		position: relative;
+		z-index: 1;
 
 		&.gov {
 			border-radius: 25%;
@@ -70,6 +75,10 @@
 			// width: calc(var(--s) * 1.1);
 			// In the future use `aspect-ratio: 1.1/1` and with fixed `height`.
 		}
+
+		&.dashedBorder {
+			border: 1px dashed hsl(0, 0%, 32%);
+		}
 	}
 
 	.top {
@@ -80,7 +89,6 @@
 		pointer-events: none;
 		opacity: 0;
 		transition: opacity 0.3s;
-		will-change: opacity;
 	}
 
 	.rp-container.showTop {
@@ -99,7 +107,7 @@
 		position: absolute;
 		top: -8px;
 		left: -8px;
-		z-index: 1;
+		z-index: 18;
 
 		width: auto;
 		height: calc(100% + 16px);
@@ -124,7 +132,7 @@
 	}
 
 	.rp-container.useExperimentTooltip:not(.showTop) > .portrait:hover {
-		z-index: 2;
+		z-index: 19;
 
 		+ .tooltip {
 			opacity: 1;

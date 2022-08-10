@@ -94,6 +94,7 @@
 											name={rep.replace_by.name}
 											side={rep.replace_by.side}
 											src={rep.replace_by.src}
+											dashedBorder={rep.replace_by.name === 'ว่าง'}
 											__useExperimentTooltip={true}
 										/>
 									{/if}
@@ -126,6 +127,7 @@
 											name={rep.replace_by.name}
 											side={rep.replace_by.side}
 											src={rep.replace_by.src}
+											dashedBorder={rep.replace_by.name === 'ว่าง'}
 											__useExperimentTooltip={true}
 										/>
 									{/if}
@@ -158,6 +160,7 @@
 											name={rep.replace_by.name}
 											side={rep.replace_by.side}
 											src={rep.replace_by.src}
+											dashedBorder={rep.replace_by.name === 'ว่าง'}
 											__useExperimentTooltip={true}
 										/>
 									{/if}
@@ -189,7 +192,7 @@
 			<div class="bar" class:showNewNum />
 			<div class="will-show" class:showNewNum>
 				<div class="bignum-container total">
-					<Spareseat num={15} startIncrementWhen={showNewNum} />
+					<Spareseat />
 				</div>
 			</div>
 		</div>
