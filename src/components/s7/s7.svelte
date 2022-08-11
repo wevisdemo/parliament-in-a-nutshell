@@ -3,8 +3,9 @@
 	import { scroll, animate, ScrollOffset } from 'motion';
 
 	import RP from 'components/RepPortrait.svelte';
-	import Bignum from './bignum.svelte';
-	import Spareseat from './spareseat.svelte';
+	import Bignum from 'components/Bignum.svelte';
+	import BignumTitle from './BignumTitle.svelte';
+	import Spareseat from './_Spareseat.svelte';
 
 	import { PART1_DATA } from 'data/part1';
 
@@ -12,7 +13,7 @@
 	let showNewNum = false;
 
 	let Bridge: any;
-	import('./bridge.svelte').then((c) => {
+	import('./s8-bridge.svelte').then((c) => {
 		Bridge = c.default;
 	});
 
@@ -182,13 +183,19 @@
 		<div class="row">
 			<div class="shifter" class:showNewNum />
 			<div class="shifter" class:showNewNum />
-			<Bignum {showNewNum} oldNum={27} newNum={27} />
+			<Bignum {showNewNum} oldNum={27} newNum={27}>
+				<BignumTitle slot="header" />
+			</Bignum>
 			<div class="will-show" class:showNewNum>
 				<div class="bignum-container">
-					<Bignum {showNewNum} side="อิสระ" oldNum={0} newNum={2} />
+					<Bignum {showNewNum} side="อิสระ" oldNum={0} newNum={2}>
+						<BignumTitle side="อิสระ" slot="header" />
+					</Bignum>
 				</div>
 			</div>
-			<Bignum {showNewNum} side="ค้าน" oldNum={20} newNum={4} />
+			<Bignum {showNewNum} side="ค้าน" oldNum={20} newNum={4}>
+				<BignumTitle side="ค้าน" slot="header" />
+			</Bignum>
 			<div class="bar" class:showNewNum />
 			<div class="will-show" class:showNewNum>
 				<div class="bignum-container total">

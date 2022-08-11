@@ -4,19 +4,10 @@
 	import { sineOut } from 'svelte/easing';
 	import { inView } from 'motion';
 
-	const DATA = {
-		รัฐบาล: {
-			color: '#5b5b5b',
-			image: 'mini_rect.svg'
-		},
-		อิสระ: {
-			color: '#858585',
-			image: 'mini_hex.svg'
-		},
-		ค้าน: {
-			color: '#9f9e9e',
-			image: 'mini_circle.svg'
-		}
+	const SIDE_COLOR = {
+		รัฐบาล: '#5b5b5b',
+		อิสระ: '#858585',
+		ค้าน: '#9f9e9e'
 	};
 
 	export let side: 'รัฐบาล' | 'ค้าน' | 'อิสระ' = 'รัฐบาล';
@@ -47,21 +38,10 @@
 </script>
 
 <div class="bignum-container" class:showNewNum bind:this={el_bignum}>
-	<div class="title-container">
-		<img
-			src="/shaking-parliament/part1/{DATA[side].image}"
-			alt=""
-			decoding="async"
-			loading="lazy"
-		/>
-		<div class="bignum-text">
-			เป็น ส.ส.<br />
-			ฝ่าย<span style="color:{DATA[side].color}">{side}</span>
-		</div>
-	</div>
+	<slot name="header" />
 	<div class="new-num T1 tc">{~~$new_num_display}</div>
 	<div class="slash" />
-	<div class="base-num T1 tc" style:--sidecolor={DATA[side].color}>{~~$old_num_display}</div>
+	<div class="base-num T1 tc" style:--sidecolor={SIDE_COLOR[side]}>{~~$old_num_display}</div>
 	<div class="unit tc">คน</div>
 	<div class="unit-new tc">คน</div>
 </div>
@@ -69,17 +49,6 @@
 <style lang="scss">
 	.bignum-container {
 		height: 184px;
-	}
-
-	.bignum-text {
-		white-space: nowrap;
-	}
-
-	.title-container {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.5rem;
 	}
 
 	.slash {
@@ -131,7 +100,6 @@
 		font-variant-numeric: tabular-nums;
 	}
 
-	.title-container,
 	.unit,
 	.unit-new {
 		font-size: 1.5rem;
