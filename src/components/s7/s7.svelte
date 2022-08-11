@@ -5,7 +5,7 @@
 	import RP from 'components/RepPortrait.svelte';
 	import Bignum from 'components/Bignum.svelte';
 	import BignumTitle from './BignumTitle.svelte';
-	import Spareseat from './_Spareseat.svelte';
+	import Spareseat from './Spareseat.svelte';
 
 	import { PART1_DATA } from 'data/part1';
 
