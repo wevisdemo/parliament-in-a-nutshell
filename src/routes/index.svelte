@@ -4,7 +4,7 @@
 
 	import Loader from 'components/loader/loader.svelte';
 
-	let all_import = 8 + 1; /* onMount + pages */
+	let all_import = 9 + 1; /* onMount + pages */
 	let complete_import = 0;
 	let status: string[] = [];
 
@@ -22,6 +22,8 @@
 	let S8: any;
 	let S9: any;
 	let S11: any;
+
+	let S12: any;
 
 	onMount(() => {
 		finish_load('Svelte กำลังรัน');
@@ -67,6 +69,11 @@
 		finish_load('ส่วนที่ 11 สำเร็จ');
 	});
 
+	import('components/s12/s12.svelte').then((c) => {
+		S12 = c.default;
+		finish_load('ส่วนที่ 12 สำเร็จ');
+	});
+
 	$: load_percent = (complete_import / all_import) * 100;
 </script>
 
@@ -80,4 +87,5 @@
 	<svelte:component this={S8} />
 	<svelte:component this={S9} />
 	<svelte:component this={S11} />
+	<svelte:component this={S12} />
 {/if}

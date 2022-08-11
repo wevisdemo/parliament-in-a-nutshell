@@ -72,7 +72,7 @@
 	บนหน้าข่าวอยู่เรื่อยไป
 </p>
 <div style="--h:25vh" />
-<div bind:this={el_circle2}>
+<div bind:this={el_circle2} style="--h:480px">
 	<p class="circle-text c tc">
 		ซึ่งในหลาย ๆ ครั้ง<br />
 		การโหวตสวนมติพรรคก็ได้นำไปสู่<br />
