@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "_app/immutable/start-ad9fb66a.js",
+    "file": "_app/immutable/start-d3135dc2.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -33,7 +33,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "_app/immutable/pages/index.svelte-e1c1d72e.js",
+    "file": "_app/immutable/pages/index.svelte-9915014e.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -49,10 +49,11 @@
       "src/components/s7/s7.svelte",
       "src/components/s8/s8.svelte",
       "src/components/s9/s9-1.svelte",
-      "src/components/s11/s11.svelte"
+      "src/components/s11/s11.svelte",
+      "src/components/s12/s12.svelte"
     ],
     "css": [
-      "_app/immutable/assets/index-0acf51e1.css"
+      "_app/immutable/assets/index-4274309c.css"
     ]
   },
   "_index-8a378d88.js": {
@@ -79,15 +80,16 @@
     ]
   },
   "src/components/s2/s2.svelte": {
-    "file": "_app/immutable/chunks/s2-4bc21d53.js",
+    "file": "_app/immutable/chunks/s2-da315452.js",
     "src": "src/components/s2/s2.svelte",
     "isDynamicEntry": true,
     "imports": [
       "_preload-helper-e35b6cd0.js",
       "_index-8a378d88.js",
-      "_in-view.es-c8fab7cd.js",
-      "_index.es-23301361.js",
-      "_animate.es-864f6d0e.js"
+      "_in-view.es-4b07ee39.js",
+      "_index.es-8189098f.js",
+      "_animate.es-da432c65.js",
+      "_resolve-elements.es-2caf236e.js"
     ],
     "dynamicImports": [
       "src/components/s2/arc.svelte"
@@ -96,32 +98,40 @@
       "_app/immutable/assets/s2-1456e10c.css"
     ]
   },
-  "_in-view.es-c8fab7cd.js": {
-    "file": "_app/immutable/chunks/in-view.es-c8fab7cd.js",
+  "_in-view.es-4b07ee39.js": {
+    "file": "_app/immutable/chunks/in-view.es-4b07ee39.js",
     "imports": [
-      "_animate.es-864f6d0e.js"
+      "_resolve-elements.es-2caf236e.js"
     ]
   },
-  "_index.es-23301361.js": {
-    "file": "_app/immutable/chunks/index.es-23301361.js",
+  "_index.es-8189098f.js": {
+    "file": "_app/immutable/chunks/index.es-8189098f.js",
     "imports": [
-      "_animate.es-864f6d0e.js"
+      "_resolve-elements.es-2caf236e.js",
+      "_animate.es-da432c65.js"
     ]
   },
-  "_animate.es-864f6d0e.js": {
-    "file": "_app/immutable/chunks/animate.es-864f6d0e.js"
+  "_animate.es-da432c65.js": {
+    "file": "_app/immutable/chunks/animate.es-da432c65.js",
+    "imports": [
+      "_resolve-elements.es-2caf236e.js"
+    ]
+  },
+  "_resolve-elements.es-2caf236e.js": {
+    "file": "_app/immutable/chunks/resolve-elements.es-2caf236e.js"
   },
   "src/components/s3s4/s3s4.svelte": {
-    "file": "_app/immutable/chunks/s3s4-f9f13c93.js",
+    "file": "_app/immutable/chunks/s3s4-b57d094b.js",
     "src": "src/components/s3s4/s3s4.svelte",
     "isDynamicEntry": true,
     "imports": [
       "_index-8a378d88.js",
       "_transform-6b7f2bd3.js",
       "_RepPortrait-102d272f.js",
-      "_animate.es-864f6d0e.js",
-      "_index.es-23301361.js",
-      "_in-view.es-c8fab7cd.js"
+      "_animate.es-da432c65.js",
+      "_index.es-8189098f.js",
+      "_in-view.es-4b07ee39.js",
+      "_resolve-elements.es-2caf236e.js"
     ],
     "css": [
       "_app/immutable/assets/s3s4-b966b37c.css"
@@ -140,38 +150,52 @@
     ]
   },
   "src/components/s5s6/s5s6.svelte": {
-    "file": "_app/immutable/chunks/s5s6-9cafbd2f.js",
+    "file": "_app/immutable/chunks/s5s6-df3b8195.js",
     "src": "src/components/s5s6/s5s6.svelte",
     "isDynamicEntry": true,
     "imports": [
       "_index-8a378d88.js",
       "_RepPortrait-102d272f.js",
-      "_animate.es-864f6d0e.js",
-      "_in-view.es-c8fab7cd.js"
+      "_animate.es-da432c65.js",
+      "_in-view.es-4b07ee39.js",
+      "_resolve-elements.es-2caf236e.js"
     ],
     "css": [
       "_app/immutable/assets/s5s6-9760a42c.css"
     ]
   },
   "src/components/s7/s7.svelte": {
-    "file": "_app/immutable/chunks/s7-4a7afddd.js",
+    "file": "_app/immutable/chunks/s7-54c079f9.js",
     "src": "src/components/s7/s7.svelte",
     "isDynamicEntry": true,
     "imports": [
       "_preload-helper-e35b6cd0.js",
       "_index-8a378d88.js",
       "_RepPortrait-102d272f.js",
+      "_Bignum-0fbc2934.js",
+      "_animate.es-da432c65.js",
+      "_index.es-8189098f.js",
       "_index-5979f505.js",
-      "_in-view.es-c8fab7cd.js",
-      "_animate.es-864f6d0e.js",
-      "_index.es-23301361.js",
-      "_index-ba892166.js"
+      "_index-ba892166.js",
+      "_in-view.es-4b07ee39.js",
+      "_resolve-elements.es-2caf236e.js"
     ],
     "dynamicImports": [
-      "src/components/s7/bridge.svelte"
+      "src/components/s7/s8-bridge.svelte"
     ],
     "css": [
-      "_app/immutable/assets/s7-be352fca.css"
+      "_app/immutable/assets/s7-9832b372.css"
+    ]
+  },
+  "_Bignum-0fbc2934.js": {
+    "file": "_app/immutable/chunks/Bignum-0fbc2934.js",
+    "imports": [
+      "_index-8a378d88.js",
+      "_index-5979f505.js",
+      "_in-view.es-4b07ee39.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Bignum-d9a8a040.css"
     ]
   },
   "_index-5979f505.js": {
@@ -193,31 +217,49 @@
     ]
   },
   "src/components/s9/s9-1.svelte": {
-    "file": "_app/immutable/chunks/s9-1-c8c0b9ce.js",
+    "file": "_app/immutable/chunks/s9-1-3386979d.js",
     "src": "src/components/s9/s9-1.svelte",
     "isDynamicEntry": true,
     "imports": [
       "_index-8a378d88.js",
       "_index-5979f505.js",
-      "_animate.es-864f6d0e.js",
-      "_index.es-23301361.js",
-      "_index-ba892166.js"
+      "_animate.es-da432c65.js",
+      "_index.es-8189098f.js",
+      "_index-ba892166.js",
+      "_resolve-elements.es-2caf236e.js"
     ],
     "css": [
       "_app/immutable/assets/s9-1-62db4949.css"
     ]
   },
   "src/components/s11/s11.svelte": {
-    "file": "_app/immutable/chunks/s11-a473f44e.js",
+    "file": "_app/immutable/chunks/s11-9b143d6b.js",
     "src": "src/components/s11/s11.svelte",
     "isDynamicEntry": true,
     "imports": [
       "_index-8a378d88.js",
-      "_animate.es-864f6d0e.js",
-      "_in-view.es-c8fab7cd.js"
+      "_animate.es-da432c65.js",
+      "_in-view.es-4b07ee39.js",
+      "_resolve-elements.es-2caf236e.js"
     ],
     "css": [
       "_app/immutable/assets/s11-3b4238d5.css"
+    ]
+  },
+  "src/components/s12/s12.svelte": {
+    "file": "_app/immutable/chunks/s12-8ee1edaf.js",
+    "src": "src/components/s12/s12.svelte",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-8a378d88.js",
+      "_Bignum-0fbc2934.js",
+      "_index-5979f505.js",
+      "_index-ba892166.js",
+      "_in-view.es-4b07ee39.js",
+      "_resolve-elements.es-2caf236e.js"
+    ],
+    "css": [
+      "_app/immutable/assets/s12-70992f2e.css"
     ]
   },
   "src/components/s2/arc.svelte": {
@@ -232,63 +274,71 @@
       "_app/immutable/assets/arc-1a519c11.css"
     ]
   },
-  "src/components/s7/bridge.svelte": {
-    "file": "_app/immutable/chunks/bridge-6abfcf41.js",
-    "src": "src/components/s7/bridge.svelte",
+  "src/components/s7/s8-bridge.svelte": {
+    "file": "_app/immutable/chunks/s8-bridge-932c2acf.js",
+    "src": "src/components/s7/s8-bridge.svelte",
     "isDynamicEntry": true,
     "imports": [
       "_index-8a378d88.js"
     ],
     "css": [
-      "_app/immutable/assets/bridge-d77c16fd.css"
+      "_app/immutable/assets/s8-bridge-d77c16fd.css"
     ]
-  },
-  "src/components/s7/bridge.css": {
-    "file": "_app/immutable/assets/bridge-d77c16fd.css",
-    "src": "src/components/s7/bridge.css"
-  },
-  "src/components/s5s6/s5s6.css": {
-    "file": "_app/immutable/assets/s5s6-9760a42c.css",
-    "src": "src/components/s5s6/s5s6.css"
-  },
-  "src/components/s7/s7.css": {
-    "file": "_app/immutable/assets/s7-be352fca.css",
-    "src": "src/components/s7/s7.css"
-  },
-  "src/components/s8/s8.css": {
-    "file": "_app/immutable/assets/s8-e9e37357.css",
-    "src": "src/components/s8/s8.css"
-  },
-  "src/components/s9/s9-1.css": {
-    "file": "_app/immutable/assets/s9-1-62db4949.css",
-    "src": "src/components/s9/s9-1.css"
-  },
-  "src/components/s11/s11.css": {
-    "file": "_app/immutable/assets/s11-3b4238d5.css",
-    "src": "src/components/s11/s11.css"
-  },
-  "src/components/s2/arc.css": {
-    "file": "_app/immutable/assets/arc-1a519c11.css",
-    "src": "src/components/s2/arc.css"
-  },
-  "src/components/s1/s1.css": {
-    "file": "_app/immutable/assets/s1-d19fbb8f.css",
-    "src": "src/components/s1/s1.css"
   },
   "src/components/s3s4/s3s4.css": {
     "file": "_app/immutable/assets/s3s4-b966b37c.css",
     "src": "src/components/s3s4/s3s4.css"
   },
+  "src/routes/index.css": {
+    "file": "_app/immutable/assets/index-4274309c.css",
+    "src": "src/routes/index.css"
+  },
+  "src/components/s1/s1.css": {
+    "file": "_app/immutable/assets/s1-d19fbb8f.css",
+    "src": "src/components/s1/s1.css"
+  },
+  "src/components/s11/s11.css": {
+    "file": "_app/immutable/assets/s11-3b4238d5.css",
+    "src": "src/components/s11/s11.css"
+  },
+  "src/components/s12/s12.css": {
+    "file": "_app/immutable/assets/s12-70992f2e.css",
+    "src": "src/components/s12/s12.css"
+  },
+  "src/components/s2/arc.css": {
+    "file": "_app/immutable/assets/arc-1a519c11.css",
+    "src": "src/components/s2/arc.css"
+  },
+  "src/components/s7/s8-bridge.css": {
+    "file": "_app/immutable/assets/s8-bridge-d77c16fd.css",
+    "src": "src/components/s7/s8-bridge.css"
+  },
   "RepPortrait.css": {
     "file": "_app/immutable/assets/RepPortrait-6748c11b.css",
     "src": "RepPortrait.css"
   },
-  "src/routes/index.css": {
-    "file": "_app/immutable/assets/index-0acf51e1.css",
-    "src": "src/routes/index.css"
-  },
   "src/components/s2/s2.css": {
     "file": "_app/immutable/assets/s2-1456e10c.css",
     "src": "src/components/s2/s2.css"
+  },
+  "src/components/s8/s8.css": {
+    "file": "_app/immutable/assets/s8-e9e37357.css",
+    "src": "src/components/s8/s8.css"
+  },
+  "src/components/s7/s7.css": {
+    "file": "_app/immutable/assets/s7-9832b372.css",
+    "src": "src/components/s7/s7.css"
+  },
+  "Bignum.css": {
+    "file": "_app/immutable/assets/Bignum-d9a8a040.css",
+    "src": "Bignum.css"
+  },
+  "src/components/s9/s9-1.css": {
+    "file": "_app/immutable/assets/s9-1-62db4949.css",
+    "src": "src/components/s9/s9-1.css"
+  },
+  "src/components/s5s6/s5s6.css": {
+    "file": "_app/immutable/assets/s5s6-9760a42c.css",
+    "src": "src/components/s5s6/s5s6.css"
   }
 }
