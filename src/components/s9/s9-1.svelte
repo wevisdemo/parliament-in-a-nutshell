@@ -78,7 +78,7 @@
 	<svg width="0" height="0">
 		<defs>
 			<clipPath id="fadeCurve" clipPathUnits="objectBoundingBox">
-				<path d="M0.4872 0 0.5064 0C0.5064 0.8 1 0.2 1 1L0 1C0 0.2 0.4872 0.8 0.4872 0Z" />
+				<path d="M.5064 0C.5064.8 1 .2 1 1L0 1C0 .2.4872.8.4872 0Z" />
 			</clipPath>
 		</defs>
 	</svg>
