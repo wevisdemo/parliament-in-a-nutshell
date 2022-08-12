@@ -1,10 +1,14 @@
 <div class="h100 c tc part2-title">
 	<img src="/shaking-parliament/part2_bg.png" alt="" class="bg" decoding="async" loading="lazy" />
-	<header>
-		<span>นกหวีดดัง เกิดกติกาพิเศษ</span>
-		<h1 class="T1">&ldquo;ส.ส.ปัดเศษ&rdquo; เข้าสภา</h1>
-	</header>
+	<img
+		class="title-img"
+		src="/shaking-parliament/part2_title.png"
+		alt=""
+		decoding="async"
+		loading="lazy"
+	/>
 </div>
+<div style="--h:300px" />
 <div style="--h:90vh">
 	<img
 		src="/shaking-parliament/part2_papers.png"
@@ -33,22 +37,13 @@
 <style lang="scss">
 	.bg {
 		position: absolute;
-		width: 80%;
-		height: 80%;
+		top: 100px;
+		height: 1400px;
 		object-fit: contain;
 	}
 
-	header {
-		font-size: 2.5rem;
-		font-weight: 700;
-
-		line-height: 1.5;
-
-		margin-bottom: 15vh;
-
-		> h1 {
-			font-size: 4.5rem;
-		}
+	.title-img {
+		width: min(60vw, 60vh);
 	}
 
 	.news-text-container {

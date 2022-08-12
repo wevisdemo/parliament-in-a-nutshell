@@ -1,4 +1,4 @@
-<div class="h100 c tc">
+<div class="s8-bridge c tc">
 	<p>
 		เรียกได้ว่าฝ่ายรัฐบาลสามารถรักษาเก้าอี้ไว้ได้อย่างเหนียวแน่น<br />
 		<br />
@@ -15,6 +15,10 @@
 </div>
 
 <style lang="scss">
+	.s8-bridge {
+		padding: 100px 0 150px;
+	}
+
 	p {
 		line-height: 1.5;
 		font-size: 2rem;
@@ -25,10 +29,8 @@
 	}
 
 	.caret {
-		position: absolute;
-		top: calc(75% - 26.5px);
-		left: calc(50% - 14px);
-
+		display: inline-block;
+		margin-top: 100px;
 		animation: bounce 4s linear infinite;
 	}
 </style>

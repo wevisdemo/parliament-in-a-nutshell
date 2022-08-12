@@ -81,11 +81,13 @@
 			/>
 		</div>
 		<div class="h100 c">
-			<h1 class="T1 part1-title">เริ่มเกมเก้าอี้ดนตรี</h1>
-			<h2 class="part1-text tc">
-				ตลอดระยะเวลา 3 ปี <br />
-				มีตำแหน่งใดที่ว่างลงบ้าง
-			</h2>
+			<img
+				class="title-img"
+				src="/shaking-parliament/part1_title.png"
+				alt=""
+				decoding="async"
+				loading="lazy"
+			/>
 		</div>
 		<div bind:this={el_circle_container}>
 			<p class="part1-circle c tc">
@@ -359,14 +361,8 @@
 		}
 	}
 
-	.part1-title {
-		font-size: 5rem;
-	}
-
-	.part1-text {
-		font-size: 2rem;
-		line-height: 1.5;
-		margin-top: 0.5rem;
+	.title-img {
+		width: min(75vw, 75vh);
 	}
 
 	.part1-circle {

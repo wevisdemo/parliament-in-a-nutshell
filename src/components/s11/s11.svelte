@@ -33,9 +33,9 @@
 	});
 </script>
 
-<div class="s11-container tc c">
+<div class="fade" />
+<div class="s11-container h100 tc c">
 	<div class="decor">
-		<div class="fade" />
 		<img
 			class="hand1"
 			src="/shaking-parliament/part3_bg1.png"
@@ -58,10 +58,13 @@
 			loading="lazy"
 		/>
 	</div>
-	<header>
-		<span>เพราะภายในมีจุดยืนต่าง</span>
-		<h1 class="T1">ขั้วข้างจึงสั่นคลอน</h1>
-	</header>
+	<img
+		class="title-img"
+		src="/shaking-parliament/part3_title.png"
+		alt=""
+		decoding="async"
+		loading="lazy"
+	/>
 </div>
 <p bind:this={el_circle1} class="circle-text c tc">
 	แน่นอนว่ามันเป็นไปได้ยาก<br />
@@ -108,20 +111,8 @@
 </div>
 
 <style lang="scss">
-	header {
-		font-size: 2.5rem;
-		font-weight: 700;
-
-		line-height: 2;
-
-		margin: 50vh 0 30vh;
-
-		position: relative;
-		text-shadow: 0 0 32px #fff, 0 0 16px #fff, 0 0 8px #fff, 0 0 4px #fff, 0 0 2px #fff;
-
-		> h1 {
-			font-size: 4.5rem;
-		}
+	.title-img {
+		width: min(75vw, 75vh);
 	}
 
 	.decor {
@@ -132,7 +123,7 @@
 
 		> img {
 			position: absolute;
-			top: 10%;
+			top: 0;
 			left: 0;
 			z-index: 0;
 
@@ -143,17 +134,13 @@
 			}
 
 			&.hand3 {
-				top: 50%;
+				top: 60%;
 			}
 		}
 	}
 
 	.fade {
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 50%;
-		width: 100%;
+		height: 30vh;
 
 		background: linear-gradient(#000f, #0000);
 	}
