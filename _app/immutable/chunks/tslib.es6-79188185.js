@@ -1,0 +1,1 @@
+const f=r=>typeof r=="string";function l(r,n){var o={};for(var t in r)Object.prototype.hasOwnProperty.call(r,t)&&n.indexOf(t)<0&&(o[t]=r[t]);if(r!=null&&typeof Object.getOwnPropertySymbols=="function")for(var e=0,t=Object.getOwnPropertySymbols(r);e<t.length;e++)n.indexOf(t[e])<0&&Object.prototype.propertyIsEnumerable.call(r,t[e])&&(o[t[e]]=r[t[e]]);return o}export{l as _,f as i};
