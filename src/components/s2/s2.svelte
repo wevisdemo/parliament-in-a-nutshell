@@ -1,8 +1,7 @@
 <!-- SECTION 2 - OVERALL NUMBER -->
 <script lang="ts">
-	// @ts-nocheck
 	import { onMount } from 'svelte';
-	import { inView, scroll, animate, ScrollOffset } from 'motion';
+	import { inView, scroll, ScrollOffset, timeline } from 'motion';
 
 	let ARC: any;
 	import('components/s2/arc.svelte').then((c) => {
@@ -11,9 +10,9 @@
 
 	let show_current_data = false;
 
-	let el_part2_trigger;
-	let el_h1;
-	let el_h2;
+	let el_part2_trigger: any;
+	let el_h1: any;
+	let el_h2: any;
 
 	onMount(() => {
 		inView(el_part2_trigger, () => {
@@ -22,25 +21,15 @@
 			return () => (show_current_data = false);
 		});
 
-		scroll(
-			animate(el_h1, {
-				opacity: [1, 1, 0, 0]
-			}),
-			{
-				target: el_h1,
-				offset: ScrollOffset.Exit
-			}
-		);
+		const seq: TimelineDefinition = [
+			[el_h1, { opacity: [1, 1, 0, 0] }],
+			[el_h2, { opacity: [0, 0, 1, 1] }, { at: '<' }]
+		];
 
-		scroll(
-			animate(el_h2, {
-				opacity: [0, 0, 1, 1]
-			}),
-			{
-				target: el_h1,
-				offset: ScrollOffset.Exit
-			}
-		);
+		scroll(timeline(seq), {
+			target: el_h1,
+			offset: ScrollOffset.Exit
+		});
 	});
 </script>
 

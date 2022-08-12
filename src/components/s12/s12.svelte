@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { animate, inView, timeline } from 'motion';
+	import { inView, timeline } from 'motion';
 
 	import Bignum from 'components/Bignum.svelte';
 	import RP from 'components/RepPortrait.svelte';
 
 	const animate2ColSankey = (el: any) => {
 		const el_c = el.children;
-		const sequence = [
+		const sequence: TimelineDefinition = [
 			[el_c[0], { opacity: 1 }, { duration: 0.5 }],
 			[el_c[1], { opacity: 1 }, { duration: 0.5, at: '<' }],
 			[el_c[2], { opacity: 1 }, { duration: 0.5, at: '-0.25' }],
@@ -22,13 +22,12 @@
 			[el_c[5], { opacity: 1 }, { duration: 0.5, at: '-0.25' }],
 			[el_c[6], { opacity: 1 }, { duration: 0.5, at: '<' }]
 		];
-		// @ts-expect-error
 		timeline(sequence);
 	};
 
 	const animate1ColSankey = (el: any) => {
 		const el_c = el.children;
-		const sequence = [
+		const sequence: TimelineDefinition = [
 			[el_c[0], { opacity: 1 }, { duration: 0.5 }],
 			[el_c[1], { opacity: 1 }, { duration: 0.5, at: '-0.25' }],
 			[
@@ -41,7 +40,6 @@
 			[el_c[3], { opacity: 1 }, { duration: 0.5, at: '-0.1' }],
 			[el_c[4], { opacity: 1 }, { duration: 0.5, at: '-0.25' }]
 		];
-		// @ts-expect-error
 		timeline(sequence);
 	};
 
@@ -67,7 +65,7 @@
 			() => {
 				const x1_c = el_sankeyX1.children;
 				const x2_c = el_sankeyX2.children;
-				const sequence = [
+				const sequence: TimelineDefinition = [
 					[x2_c[0], { opacity: 1 }, { duration: 0.5 }],
 					[x2_c[1], { opacity: 1 }, { duration: 0.5, at: '-0.25' }],
 					[
@@ -80,7 +78,6 @@
 					[x1_c[1], { opacity: 1 }, { duration: 0.5, at: '-0.1' }],
 					[x1_c[2], { opacity: 1 }, { duration: 0.5, at: '-0.25' }]
 				];
-				// @ts-expect-error
 				timeline(sequence);
 			},
 			{ amount: 1 }
@@ -89,7 +86,7 @@
 			el_sankey6,
 			() => {
 				const el_c = el_sankey6.children;
-				const sequence = [
+				const sequence: TimelineDefinition = [
 					[el_c[0], { opacity: 1 }, { duration: 0.5 }],
 					[el_c[1], { opacity: 1 }, { duration: 0.5, at: '<' }],
 					[el_c[2], { opacity: 1 }, { duration: 0.5, at: '-0.25' }],
@@ -105,7 +102,6 @@
 					[el_c[7], { opacity: 1 }, { duration: 0.5, at: '-0.25' }],
 					[el_c[8], { opacity: 1 }, { duration: 0.5, at: '<' }]
 				];
-				// @ts-expect-error
 				timeline(sequence);
 			},
 			{ amount: 1 }

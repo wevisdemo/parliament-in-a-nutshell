@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { scroll, animate, ScrollOffset } from 'motion';
+	import { scroll, ScrollOffset, timeline } from 'motion';
 
 	import RP from 'components/RepPortrait.svelte';
 	import Bignum from 'components/Bignum.svelte';
@@ -23,31 +23,26 @@
 	let prev_scroll_progress: number;
 	let new_num_timeout: NodeJS.Timeout;
 	onMount(() => {
-		scroll(
-			animate(el_pill1, {
-				opacity: [1, 1, 0, 0],
-				transform: ['', '', 'translateY(-100px)']
-			}),
-			{
-				target: el_trigger,
-				offset: ScrollOffset.Enter
-			}
-		);
+		const seq: TimelineDefinition = [
+			[el_pill1, { opacity: [1, 1, 0, 0], transform: ['', '', 'translateY(-100px)'] }],
+			[
+				el_pill2,
+				{
+					opacity: [0, 0, 1, 1],
+					transform: [
+						'translateX(-50%) translateY(100px)',
+						'translateX(-50%) translateY(100px)',
+						'translateX(-50%)'
+					]
+				},
+				{ at: '<' }
+			]
+		];
 
-		scroll(
-			animate(el_pill2, {
-				opacity: [0, 0, 1, 1],
-				transform: [
-					'translateX(-50%) translateY(100px)',
-					'translateX(-50%) translateY(100px)',
-					'translateX(-50%)'
-				]
-			}),
-			{
-				target: el_trigger,
-				offset: ScrollOffset.Enter
-			}
-		);
+		scroll(timeline(seq), {
+			target: el_trigger,
+			offset: ScrollOffset.Enter
+		});
 
 		scroll(
 			({ y }) => {

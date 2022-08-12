@@ -1,3 +1,4 @@
+import type { ElementOrSelector, MotionKeyframesDefinition, AnimationListOptions } from 'motion';
 /// <reference types="@sveltejs/kit" />
 
 // See https://kit.svelte.dev/docs/types#app
@@ -8,4 +9,11 @@ declare namespace App {
 	// interface Platform {}
 	// interface Session {}
 	// interface Stuff {}
+}
+
+declare global {
+	type TimelineSegment =
+		| [ElementOrSelector, MotionKeyframesDefinition, AnimationListOptions]
+		| [ElementOrSelector, MotionKeyframesDefinition];
+	type TimelineDefinition = TimelineSegment[];
 }
