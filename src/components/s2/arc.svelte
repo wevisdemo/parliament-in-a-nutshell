@@ -1,7 +1,7 @@
 <script>
 	// @ts-nocheck
 	import { onMount } from 'svelte';
-	import * as d3 from 'd3';
+	import { arc as d3arc, interpolate, symbol, symbolTriangle, select } from 'd3';
 
 	let el_chart;
 	export let show_current_data = false;
@@ -69,13 +69,12 @@
 		radius = 200;
 
 	// #region [ARC INIT]
-	let arc = d3
-		.arc()
+	let arc = d3arc()
 		.innerRadius(radius - 125)
 		.outerRadius(radius - 20);
 
 	function arcTween(d) {
-		var i = d3.interpolate(this._current, d);
+		var i = interpolate(this._current, d);
 		this._current = i(0);
 
 		return function (t) {
@@ -85,8 +84,7 @@
 	// #endregion
 
 	onMount(() => {
-		svg = d3
-			.select(el_chart)
+		svg = select(el_chart)
 			.attr('viewBox', `0 0 ${width} ${height}`)
 			.append('g')
 			.attr('transform', `translate(${width / 2}, ${height / 2 + radius / 2})`);
@@ -111,7 +109,7 @@
 
 		fluid_opp_text_group
 			.append('path')
-			.attr('d', d3.symbol().type(d3.symbolTriangle).size(40))
+			.attr('d', symbol().type(symbolTriangle).size(40))
 			.attr('fill', '#000')
 			.attr('transform', `translate(-33,-20) rotate(-90)`);
 		// #endregion
@@ -173,7 +171,7 @@
 
 		center_line_group
 			.append('path')
-			.attr('d', d3.symbol().type(d3.symbolTriangle).size(20))
+			.attr('d', symbol().type(symbolTriangle).size(20))
 			.attr('fill', '#F94141')
 			.attr('transform', `translate(0,-76)`);
 
@@ -241,7 +239,7 @@
 				.transition()
 				.duration(1000)
 				.tween('total-text', function (d) {
-					const i = d3.interpolate(this.textContent, DATA[+show_current_data].total);
+					const i = interpolate(this.textContent, DATA[+show_current_data].total);
 					return function (t) {
 						this.textContent = Math.round(i(t));
 					};
@@ -252,7 +250,7 @@
 				.transition()
 				.duration(1000)
 				.tween('gov-text', function (d) {
-					const i = d3.interpolate(
+					const i = interpolate(
 						+this.textContent.split(' ')[0],
 						DATA[+show_current_data].numeric.gov
 					);
@@ -266,7 +264,7 @@
 				.transition()
 				.duration(1000)
 				.tween('gov-text', function (d) {
-					const i = d3.interpolate(
+					const i = interpolate(
 						+this.textContent.split(' ')[0],
 						DATA[+show_current_data].numeric.opp
 					);
