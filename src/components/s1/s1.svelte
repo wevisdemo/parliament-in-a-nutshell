@@ -30,7 +30,6 @@
 			isCorrect &&
 				jsConfetti?.addConfetti({
 					confettiColors: ['#ffbe0b', '#fb5607', '#ff006e', '#8338ec', '#3a86ff'],
-					// confettiColors: ['#aac826', '#288707', '#ff7e3f', '#f3c628', '#349ee9'],
 					confettiRadius: 8,
 					confettiNumber: 500
 				});
@@ -42,6 +41,7 @@
 	<h1 class="T1">
 		คุณรู้ไหม?<br />
 		ตอนนี้ในรัฐสภามี ส.ส. กี่คน
+		<small>(พ.ศ. 2565)</small>
 	</h1>
 
 	{#each choices as data}
@@ -78,6 +78,20 @@
 		font-size: 4rem;
 		line-height: 1.2;
 		margin-bottom: 2.5rem;
+
+		position: relative;
+
+		> small {
+			position: absolute;
+			bottom: -0.5rem;
+			left: 13%;
+			transform: translateX(-50%);
+
+			color: #7b7b7b;
+			font-weight: 600;
+			font-size: 1rem;
+			letter-spacing: 0.01em;
+		}
 	}
 
 	.submit-ans-btn {
