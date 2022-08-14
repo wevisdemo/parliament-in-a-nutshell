@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { animate, inView, stagger } from 'motion';
+	import { animate, inView, stagger, timeline, scroll, ScrollOffset } from 'motion';
 
 	let el_circle1: any;
 	let el_circle2: any;
-
+	let el_decor_container: any;
 	onMount(() => {
 		inView(
 			el_circle1,
@@ -30,12 +30,37 @@
 			},
 			{ amount: 0.2 }
 		);
+
+		const el_decorchild = el_decor_container.children;
+		const seq: TimelineDefinition = [
+			[
+				el_decorchild[0],
+				{ transform: ['translateY(-300px)', 'translateY(100px)'] },
+				{ easing: 'ease-out' }
+			],
+			[
+				el_decorchild[1],
+				{ transform: ['translateY(-200px)', 'translateY(200px)'] },
+				{ easing: 'linear', at: '<' }
+			],
+			[
+				el_decorchild[2],
+				{ transform: ['translateY(-300px)', 'translateY(200px)'] },
+				{ easing: 'ease-out', at: '<' }
+			]
+		];
+
+		scroll(timeline(seq), {
+			target: el_decor_container,
+			offset: ['start end', 'end start']
+			// offset: [...ScrollOffset.Enter, ...ScrollOffset.Exit]
+		});
 	});
 </script>
 
 <div class="fade" />
 <div class="s11-container h100 tc c">
-	<div class="decor">
+	<div bind:this={el_decor_container} class="decor">
 		<img
 			class="hand1"
 			src="/shaking-parliament/part3_bg1.png"

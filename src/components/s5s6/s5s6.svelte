@@ -1,14 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { animate, inView, stagger } from 'motion';
-
-	import RP from 'components/RepPortrait.svelte';
+	import { animate, inView, stagger, timeline, scroll, ScrollOffset } from 'motion';
+	import Curtain from './curtain.svelte';
 
 	let el_logo_container: any;
 	let is_logo_inview = false;
 
 	let el_circle_container: any;
-
+	let el_chair_container: any;
 	onMount(() => {
 		inView(
 			el_logo_container,
@@ -34,6 +33,35 @@
 			},
 			{ amount: 0.2 }
 		);
+
+		const el_chairchild = el_chair_container.children;
+		const seq: TimelineDefinition = [
+			[
+				el_chairchild[0],
+				{ transform: ['translateY(0px)', 'translateY(600px)'] },
+				{ easing: 'linear' }
+			],
+			[
+				el_chairchild[1],
+				{ transform: ['translateY(0px)', 'translateY(600px)'] },
+				{ easing: 'linear', at: '<' }
+			],
+			[
+				el_chairchild[2],
+				{ transform: ['translateY(0px)', 'translateY(400px)'] },
+				{ easing: 'linear', at: '<' }
+			],
+			[
+				el_chairchild[3],
+				{ transform: ['translateY(0px)', 'translateY(400px)'] },
+				{ easing: 'linear', at: '<' }
+			]
+		];
+
+		scroll(timeline(seq), {
+			target: el_chair_container,
+			offset: ScrollOffset.Exit
+		});
 	});
 </script>
 
@@ -50,7 +78,7 @@
 <!-- s6 -->
 <div style="--h:calc(210vh + 480px)">
 	<div class="stick part1-section" style="--h:calc(110vh + 480px)">
-		<div class="part1-decor">
+		<div bind:this={el_chair_container} class="part1-decor">
 			<img
 				class="chair1"
 				src="/shaking-parliament/part1_bg1.png"
@@ -122,61 +150,7 @@
 			/>
 		</div>
 	</div>
-	<div class="curtain h100 c">
-		<h1 class="T1" style="margin-bottom:1.5rem">วิธีอ่านข้อมูล</h1>
-		<h2 class="pill">ข้อมูลทั่วไป</h2>
-		<div class="row" style="margin-bottom:1.5rem">
-			<div class="col data-explain tc" style="--bgc:#5b5b5b;--txc:#fff">
-				<small>ข้อมูลเกี่ยวกับ</small><br />ฝ่ายรัฐบาล
-			</div>
-			<div class="col data-explain tc" style="--bgc:#a0a0a0">
-				<small>ข้อมูลเกี่ยวกับ</small><br />ฝ่ายอิสระ
-			</div>
-			<div class="col data-explain tc">
-				<small>ข้อมูลเกี่ยวกับ</small><br />ฝ่ายค้าน
-			</div>
-		</div>
-		<h2 class="pill">ข้อมูล ส.ส. รายคน</h2>
-		<div class="row">
-			<div class="col tc">
-				<RP
-					color="#0b3757"
-					name="ปารีณา ไกรคุปต์"
-					size="96px"
-					side="gov"
-					src="rp/parina.png"
-					tooltip="top"
-				/>
-				<div class="side-explain">ส.ส.<br />ฝ่ายรัฐบาล</div>
-				<div class="small-explain">(ไอคอนสี่เหลี่ยม)</div>
-			</div>
-			<div class="col tc">
-				<RP
-					color="#85e8fe"
-					name="มงคลกิตติ์ สุขสินธารานนท์"
-					size="96px"
-					side="free"
-					src="rp/mongkonkit.png"
-					tooltip="top"
-				/>
-				<div class="side-explain">ส.ส.<br />ฝ่ายอิสระ</div>
-				<div class="small-explain">(ไอคอนหกเหลี่ยม)</div>
-			</div>
-			<div class="col tc">
-				<RP
-					color="#ff6f21"
-					name="วิโรจน์ ลักขณาอดิศร"
-					size="96px"
-					side="opp"
-					src="rp/wiroj.png"
-					tooltip="top"
-				/>
-				<div class="side-explain">ส.ส.<br />ฝ่ายค้าน</div>
-				<div class="small-explain">(ไอคอนวงกลม)</div>
-				<div class="explainer">พรรคที่สังกัด</div>
-			</div>
-		</div>
-	</div>
+	<Curtain />
 </div>
 
 <style lang="scss">
@@ -235,95 +209,6 @@
 				transition: opacity 1s linear;
 				transition-delay: 0.5s;
 			}
-		}
-	}
-
-	.curtain {
-		width: 100%;
-		height: 100vh;
-		background: url(/shaking-parliament/curtain.png) repeat-x;
-		background-size: auto 100%;
-		background-position: center;
-
-		position: absolute;
-		top: 0;
-
-		color: white;
-
-		padding-bottom: 5%;
-	}
-
-	.T1 {
-		font-size: 4rem;
-	}
-
-	.pill {
-		border-radius: 999px;
-		border: 2px white solid;
-		line-height: 3rem;
-		padding: 0 1.5rem;
-
-		font-size: 1.5rem;
-		margin: 2rem 0;
-	}
-
-	.side-explain {
-		margin: 1rem 0 0.5rem;
-	}
-
-	.small-explain {
-		font-style: italic;
-		font-weight: 500;
-		font-size: 0.8rem;
-		line-height: 189%;
-
-		color: #ececec;
-
-		white-space: nowrap;
-	}
-
-	.data-explain {
-		background: var(--bgc, #dadada);
-		color: var(--txc, #000);
-
-		font-weight: 700;
-		padding: 0.5rem 3rem;
-		line-height: 1.2rem;
-	}
-
-	.explainer {
-		position: absolute;
-		top: 48px;
-		left: 150%;
-		transform: translateY(-50%);
-
-		border: 1px dashed #ffffff;
-		padding: 0.75rem;
-		white-space: nowrap;
-
-		&::before {
-			content: '';
-			position: absolute;
-			width: 50%;
-			height: 1px;
-			background: #fff;
-
-			top: 50%;
-			left: -50%;
-			transform: translateY(-50%);
-		}
-
-		&::after {
-			content: '';
-			position: absolute;
-			width: 4px;
-			height: 4px;
-			background: #fff;
-			border-radius: 50%;
-
-			top: 50%;
-			left: -50%;
-			transform: translate(-50%, -50%);
 		}
 	}
 

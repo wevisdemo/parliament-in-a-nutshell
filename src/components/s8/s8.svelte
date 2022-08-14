@@ -1,11 +1,42 @@
-<div class="h100 c tc part2-title">
-	<img src="/shaking-parliament/part2_bg.png" alt="" class="bg" decoding="async" loading="lazy" />
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import { animate, scroll } from 'motion';
+
+	let el_title_section: any;
+	let el_bg: any;
+	onMount(() => {
+		scroll(
+			animate(
+				el_bg,
+				{
+					transform: ['translateY(-400px)', 'translateY(50px)']
+				},
+				{ easing: 'linear' }
+			),
+			{
+				target: el_title_section,
+				offset: ['start end', 'end start']
+			}
+		);
+	});
+</script>
+
+<div bind:this={el_title_section} class="h100 c tc part2-title">
+	<img
+		bind:this={el_bg}
+		src="/shaking-parliament/part2_bg.png"
+		alt=""
+		class="bg"
+		decoding="async"
+		loading="lazy"
+	/>
 	<img
 		class="title-img"
 		src="/shaking-parliament/part2_title.png"
 		alt=""
 		decoding="async"
 		loading="lazy"
+		style="position:relative"
 	/>
 </div>
 <div style="--h:300px" />
