@@ -456,6 +456,7 @@
 			color="#75328C"
 			name="มนูญ สิวาภิรมย์รัตน์"
 			size="48px"
+			side="opp"
 			tooltip="top"
 		/>
 		<RP
@@ -463,6 +464,7 @@
 			color="#75328C"
 			name="มารศรี ขจรเรืองโรจน์"
 			size="48px"
+			side="opp"
 			tooltip="top"
 		/>
 	</div>
@@ -472,6 +474,7 @@
 			color="#75328C"
 			name="สุภดิช อากาศฤกษ์"
 			size="48px"
+			side="opp"
 			tooltip="top"
 		/>
 		<RP
@@ -479,6 +482,7 @@
 			color="#75328C"
 			name="นิยม วิวรรธนดิฐกุล"
 			size="48px"
+			side="opp"
 			tooltip="top"
 		/>
 		<RP
@@ -486,6 +490,7 @@
 			color="#75328C"
 			name="ภาสกร เงินเจริญกุล"
 			size="48px"
+			side="opp"
 			tooltip="top"
 		/>
 	</div>
