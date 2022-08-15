@@ -4,7 +4,7 @@
 
 	import Loader from 'components/loader/loader.svelte';
 
-	let all_import = 10 + 1; /* onMount + pages */
+	let all_import = 12 + 1; /* onMount + pages */
 	let complete_import = 0;
 	let status: string[] = [];
 
@@ -15,15 +15,18 @@
 
 	let S1: any;
 	let S2: any;
-	let S3S4: any;
-	let S5S6: any;
+	let S3: any;
+	let S4: any;
 
+	let S5: any;
+	let S6: any;
 	let S7: any;
 	let S8: any;
+
 	let S9: any;
 	let S11: any;
-
 	let S12: any;
+
 	let S18: any;
 
 	onMount(() => {
@@ -40,14 +43,24 @@
 		finish_load('ส่วนที่ 2 สำเร็จ');
 	});
 
-	import('components/s3s4/s3s4.svelte').then((c) => {
-		S3S4 = c.default;
-		finish_load('ส่วนที่ 3 และ 4 สำเร็จ');
+	import('components/s3/s3.svelte').then((c) => {
+		S3 = c.default;
+		finish_load('ส่วนที่ 3 สำเร็จ');
 	});
 
-	import('components/s5s6/s5s6.svelte').then((c) => {
-		S5S6 = c.default;
-		finish_load('ส่วนที่ 5 และ 6 สำเร็จ');
+	import('components/s4/s4.svelte').then((c) => {
+		S4 = c.default;
+		finish_load('ส่วนที่ 4 สำเร็จ');
+	});
+
+	import('components/s5/s5.svelte').then((c) => {
+		S5 = c.default;
+		finish_load('ส่วนที่ 5 สำเร็จ');
+	});
+
+	import('components/s6/s6.svelte').then((c) => {
+		S6 = c.default;
+		finish_load('ส่วนที่ 6 สำเร็จ');
 	});
 
 	import('components/s7/s7.svelte').then((c) => {
@@ -87,8 +100,10 @@
 {#if load_percent === 100}
 	<svelte:component this={S1} />
 	<svelte:component this={S2} />
-	<svelte:component this={S3S4} />
-	<svelte:component this={S5S6} />
+	<svelte:component this={S3} />
+	<svelte:component this={S4} />
+	<svelte:component this={S5} />
+	<svelte:component this={S6} />
 	<svelte:component this={S7} />
 	<svelte:component this={S8} />
 	<svelte:component this={S9} />

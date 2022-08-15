@@ -225,16 +225,8 @@
 			<br />
 			ผ่านการสำรวจ<br />
 			<strong class="bigger">การเปลี่ยนแปลงที่นั่งของสภาผู้แทนราษฎรไทย</strong><br />
-			นับตั้งแต่เปิดสภา พฤษภาคม 62
+			นับตั้งแต่เปิดสภา พฤษภาคม 2562
 		</p>
-	</div>
-</section>
-<section class="s4">
-	<div class="fade-bg" style="--h:300vh">
-		<div class="h100 stick c T1 s4-title">
-			เพราะตัวเลขที่นั่งที่เปลี่ยนแปลงไป<br />
-			<strong>สะท้อนอะไรมากกว่า &ldquo;การโยกย้าย&rdquo;</strong>
-		</div>
 	</div>
 </section>
 
@@ -271,17 +263,6 @@
 		height: 131px;
 		margin: 32px 0 64px;
 		border-right: 2px black solid;
-	}
-
-	.fade-bg {
-		background: linear-gradient(#fff0, #fff0 25%, #000f 90%);
-
-		> .T1 {
-			font-size: 3.5rem;
-			line-height: 1.5;
-			mix-blend-mode: difference;
-			color: white;
-		}
 	}
 
 	p {

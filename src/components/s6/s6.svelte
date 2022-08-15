@@ -3,20 +3,9 @@
 	import { animate, inView, stagger, timeline, scroll, ScrollOffset } from 'motion';
 	import Curtain from './curtain.svelte';
 
-	let el_logo_container: any;
-	let is_logo_inview = false;
-
 	let el_circle_container: any;
 	let el_chair_container: any;
 	onMount(() => {
-		inView(
-			el_logo_container,
-			() => {
-				is_logo_inview = true;
-			},
-			{ amount: 0.5 }
-		);
-
 		inView(
 			el_circle_container,
 			() => {
@@ -36,26 +25,10 @@
 
 		const el_chairchild = el_chair_container.children;
 		const seq: TimelineDefinition = [
-			[
-				el_chairchild[0],
-				{ transform: ['translateY(0px)', 'translateY(600px)'] },
-				{ easing: 'linear' }
-			],
-			[
-				el_chairchild[1],
-				{ transform: ['translateY(0px)', 'translateY(600px)'] },
-				{ easing: 'linear', at: '<' }
-			],
-			[
-				el_chairchild[2],
-				{ transform: ['translateY(0px)', 'translateY(400px)'] },
-				{ easing: 'linear', at: '<' }
-			],
-			[
-				el_chairchild[3],
-				{ transform: ['translateY(0px)', 'translateY(400px)'] },
-				{ easing: 'linear', at: '<' }
-			]
+			[el_chairchild[0], { transform: ['', 'translateY(600px)'] }, { easing: 'linear' }],
+			[el_chairchild[1], { transform: ['', 'translateY(600px)'] }, { easing: 'linear', at: '<' }],
+			[el_chairchild[2], { transform: ['', 'translateY(400px)'] }, { easing: 'linear', at: '<' }],
+			[el_chairchild[3], { transform: ['', 'translateY(400px)'] }, { easing: 'linear', at: '<' }]
 		];
 
 		scroll(timeline(seq), {
@@ -65,17 +38,6 @@
 	});
 </script>
 
-<section class="h100 s5-container c" class:in-view={is_logo_inview} bind:this={el_logo_container}>
-	<img
-		class="logo-decor"
-		src="/shaking-parliament/title_decor.svg"
-		alt=""
-		decoding="async"
-		loading="lazy"
-	/>
-	<img class="logo" src="/shaking-parliament/title.png" alt="" decoding="async" loading="lazy" />
-</section>
-<!-- s6 -->
 <div style="--h:calc(210vh + 480px)">
 	<div class="stick part1-section" style="--h:calc(110vh + 480px)">
 		<div bind:this={el_chair_container} class="part1-decor">
@@ -154,64 +116,6 @@
 </div>
 
 <style lang="scss">
-	@keyframes flickering {
-		70.1%,
-		100% {
-			opacity: 1;
-		}
-
-		50%,
-		60%,
-		20% {
-			opacity: 0.5;
-		}
-
-		0%,
-		19.9%,
-		20.1%,
-		49.9%,
-		50.1%,
-		69.9%,
-		99.9% {
-			opacity: 0.1;
-		}
-	}
-
-	.s5-container {
-		background: #000;
-
-		> .logo {
-			opacity: 0.1;
-
-			height: 60vh;
-			width: 60vw;
-			object-fit: contain;
-		}
-
-		> .logo-decor {
-			opacity: 0.3;
-
-			height: 70vh;
-			width: 70vw;
-			object-fit: contain;
-
-			position: absolute;
-			top: 15vh;
-		}
-
-		&.in-view {
-			> .logo {
-				opacity: 1;
-				animation: flickering 1s linear forwards;
-			}
-			> .logo-decor {
-				opacity: 1;
-				transition: opacity 1s linear;
-				transition-delay: 0.5s;
-			}
-		}
-	}
-
 	.part1-decor {
 		position: absolute;
 		inset: 0;
