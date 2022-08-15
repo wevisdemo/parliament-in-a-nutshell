@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { animate, inView, stagger, timeline, scroll, ScrollOffset } from 'motion';
+	import { animate, inView, stagger, timeline, scroll } from 'motion';
 
 	let el_circle1: any;
 	let el_circle2: any;
@@ -33,27 +33,14 @@
 
 		const el_decorchild = el_decor_container.children;
 		const seq: TimelineDefinition = [
-			[
-				el_decorchild[0],
-				{ transform: ['translateY(-300px)', 'translateY(100px)'] },
-				{ easing: 'ease-out' }
-			],
-			[
-				el_decorchild[1],
-				{ transform: ['translateY(-200px)', 'translateY(200px)'] },
-				{ easing: 'linear', at: '<' }
-			],
-			[
-				el_decorchild[2],
-				{ transform: ['translateY(-300px)', 'translateY(200px)'] },
-				{ easing: 'ease-out', at: '<' }
-			]
+			[el_decorchild[0], { transform: 'translateY(100px)' }, { easing: 'ease-out' }],
+			[el_decorchild[1], { transform: 'translateY(200px)' }, { easing: 'linear', at: '<' }],
+			[el_decorchild[2], { transform: 'translateY(200px)' }, { easing: 'ease-out', at: '<' }]
 		];
 
 		scroll(timeline(seq), {
 			target: el_decor_container,
 			offset: ['start end', 'end start']
-			// offset: [...ScrollOffset.Enter, ...ScrollOffset.Exit]
 		});
 	});
 </script>

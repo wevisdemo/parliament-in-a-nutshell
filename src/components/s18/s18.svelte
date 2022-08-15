@@ -1,7 +1,6 @@
 <script lang="ts">
 </script>
 
-<!-- <div class="semi-circ" style="--h:30vh" /> -->
 <div class="black c tc ref-container">
 	<h1 class="T1">แหล่งที่มาของข้อมูล</h1>
 	<div class="pill">แหล่งที่มาชุดข้อมูลการลงมติ</div>
@@ -52,13 +51,7 @@
 </div>
 
 <style lang="scss">
-	// .semi-circ {
-	// 	background: black;
-	// 	border-radius: 50% 50% 0% 0% / 100% 100% 0% 0%;
-	// }
-
 	.ref-container {
-		// margin-top: -10vh;
 		padding: 20vh 0;
 		z-index: 3;
 		box-shadow: 0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%),

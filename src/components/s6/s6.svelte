@@ -25,10 +25,10 @@
 
 		const el_chairchild = el_chair_container.children;
 		const seq: TimelineDefinition = [
-			[el_chairchild[0], { transform: ['', 'translateY(600px)'] }, { easing: 'linear' }],
-			[el_chairchild[1], { transform: ['', 'translateY(600px)'] }, { easing: 'linear', at: '<' }],
-			[el_chairchild[2], { transform: ['', 'translateY(400px)'] }, { easing: 'linear', at: '<' }],
-			[el_chairchild[3], { transform: ['', 'translateY(400px)'] }, { easing: 'linear', at: '<' }]
+			[el_chairchild[0], { transform: 'translateY(600px)' }, { easing: 'linear' }],
+			[el_chairchild[1], { transform: 'translateY(600px)' }, { easing: 'linear', at: '<' }],
+			[el_chairchild[2], { transform: 'translateY(400px)' }, { easing: 'linear', at: '<' }],
+			[el_chairchild[3], { transform: 'translateY(400px)' }, { easing: 'linear', at: '<' }]
 		];
 
 		scroll(timeline(seq), {
