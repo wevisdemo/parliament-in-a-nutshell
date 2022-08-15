@@ -27,7 +27,7 @@
 			[el_decochild[0], { transform: 'translateY(30%)' }, { easing: 'linear' }],
 			[
 				el_decochild[1],
-				{ transform: 'translateY(30%) translateX(-20%)' },
+				{ transform: ['translateY(-40%) translateX(-20%)', 'translateY(30%) translateX(-20%)'] },
 				{ easing: 'linear', at: '<' }
 			]
 		];
