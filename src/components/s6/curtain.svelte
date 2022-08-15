@@ -140,6 +140,7 @@
 		top: 48px;
 		left: 150%;
 		transform: translateY(-50%);
+		z-index: 19;
 
 		border: 1px dashed #ffffff;
 		padding: 0.75rem;
