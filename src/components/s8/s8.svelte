@@ -71,6 +71,7 @@
 		top: 100px;
 		height: 1400px;
 		object-fit: contain;
+		transform: translateY(-400px);
 	}
 
 	.title-img {

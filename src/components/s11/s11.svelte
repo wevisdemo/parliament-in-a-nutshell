@@ -151,11 +151,13 @@
 			top: 0;
 			left: 0;
 			z-index: 0;
+			transform: translateY(-300px);
 
 			&.hand2 {
 				left: unset;
 				top: 25%;
 				right: 0;
+				transform: translateY(-200px);
 			}
 
 			&.hand3 {
