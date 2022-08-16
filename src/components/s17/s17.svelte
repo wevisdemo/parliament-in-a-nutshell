@@ -19,7 +19,12 @@
 	<div class="social-container">
 		<div class="row">
 			<div class="col">
-				<a class="social-share" href="https://www.facebook.com/sharer/sharer.php?u={SITE_LINK}">
+				<a
+					class="social-share"
+					href="https://www.facebook.com/sharer/sharer.php?u={SITE_LINK}"
+					target="_blank"
+					rel="nofollow noopener noreferrer"
+				>
 					<svg
 						role="img"
 						viewBox="0 0 24 24"
@@ -34,7 +39,12 @@
 				</a>
 			</div>
 			<div class="col">
-				<a class="social-share" href="https://twitter.com/intent/tweet?url={SITE_LINK}&text=">
+				<a
+					class="social-share"
+					href="https://twitter.com/intent/tweet?url={SITE_LINK}&text="
+					target="_blank"
+					rel="nofollow noopener noreferrer"
+				>
 					<svg
 						role="img"
 						viewBox="0 0 24 24"
@@ -67,7 +77,12 @@
 				</button>
 			</div>
 		</div>
-		<a class="home-btn" href="https://wevis.info/">กลับสู่หน้าหลัก</a>
+		<a
+			class="home-btn"
+			href="https://wevis.info/"
+			target="_blank"
+			rel="nofollow noopener noreferrer">กลับสู่หน้าหลัก</a
+		>
 	</div>
 </div>
 <div class="they-work-container c tc">
@@ -89,7 +104,12 @@
 		/>
 	</div>
 	<div class="header">ติดตามการลงมติในสภาเพิ่มเติมได้ที่</div>
-	<a class="card" href="https://theyworkforus.wevis.info/">
+	<a
+		class="card"
+		href="https://theyworkforus.wevis.info/"
+		target="_blank"
+		rel="nofollow noopener noreferrer"
+	>
 		<img src="/shaking-parliament/theywork.png" alt="" />
 		<div class="card-body">
 			<div class="card-header">They Work For Us รู้จักและติดตาม 'ผู้แทน' ในสภาของเรา</div>
