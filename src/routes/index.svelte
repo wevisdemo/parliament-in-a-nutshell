@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import 'styles/master.scss';
+	import '@wevisdemo/ui/styles/typography.css';
+	import '@wevisdemo/ui/styles/components.css';
 
 	import Loader from 'components/loader/loader.svelte';
 
@@ -114,6 +116,15 @@
 	$: load_percent = (complete_import / all_import) * 100;
 </script>
 
+<a href="/" style="position:fixed;top:.75rem;left:1rem;z-index:99;mix-blend-mode:difference">
+	<img
+		src="/shaking-parliament/wevis-logo.svg"
+		alt=""
+		decoding="async"
+		loading="eager"
+		style="height:1.75rem"
+	/>
+</a>
 <Loader {load_percent} {status} />
 {#if load_percent === 100}
 	<svelte:component this={S1} />

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import WvFooter from '@wevisdemo/ui/components/footer.svelte';
 </script>
 
 <div class="black c tc ref-container">
@@ -64,13 +65,12 @@
 			<div class="intern-role">Intern Web Developer</div>
 		</div>
 	</div>
-	<div style="--h:15vh" />
-	<img src="/shaking-parliament/wevis-logo.svg" alt="" />
 </div>
+<WvFooter dark />
 
 <style lang="scss">
 	.ref-container {
-		padding: 20vh 0;
+		padding: 20vh 0 15vh;
 		z-index: 3;
 		box-shadow: 0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%),
 			0 11px 15px -7px rgb(0 0 0 / 20%);
