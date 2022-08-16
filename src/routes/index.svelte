@@ -116,7 +116,11 @@
 	$: load_percent = (complete_import / all_import) * 100;
 </script>
 
-<a href="/" style="position:fixed;top:.75rem;left:1rem;z-index:99;mix-blend-mode:difference">
+<a
+	href="https://theyworkforus.wevis.info/"
+	rel="nofollow noopener noreferrer"
+	style="position:fixed;top:.75rem;left:1rem;z-index:99;mix-blend-mode:difference"
+>
 	<img
 		src="/shaking-parliament/wevis-logo.svg"
 		alt=""

@@ -104,12 +104,7 @@
 		/>
 	</div>
 	<div class="header">ติดตามการลงมติในสภาเพิ่มเติมได้ที่</div>
-	<a
-		class="card"
-		href="https://theyworkforus.wevis.info/"
-		target="_blank"
-		rel="nofollow noopener noreferrer"
-	>
+	<a class="card" href="https://theyworkforus.wevis.info/" rel="nofollow noopener noreferrer">
 		<img src="/shaking-parliament/theywork.png" alt="" />
 		<div class="card-body">
 			<div class="card-header">They Work For Us รู้จักและติดตาม 'ผู้แทน' ในสภาของเรา</div>
