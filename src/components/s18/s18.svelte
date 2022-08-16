@@ -16,7 +16,13 @@
 	<h1 class="T1">WeVis Interns</h1>
 	<div class="row" style="--gap:5rem">
 		<div class="col c tc intern">
-			<img class="intern-portrait" src="/shaking-parliament/p1.png" alt="" />
+			<img
+				class="intern-portrait"
+				src="/shaking-parliament/p1.png"
+				alt=""
+				decoding="async"
+				loading="lazy"
+			/>
 			<div class="intern-name T1">ทินกร หวานแท้</div>
 			<div class="intern-sep" />
 			<div class="intern-education">
@@ -26,7 +32,13 @@
 			<div class="intern-role">Intern Project Coordinator</div>
 		</div>
 		<div class="col c tc intern">
-			<img class="intern-portrait" src="/shaking-parliament/p2.png" alt="" />
+			<img
+				class="intern-portrait"
+				src="/shaking-parliament/p2.png"
+				alt=""
+				decoding="async"
+				loading="lazy"
+			/>
 			<div class="intern-name T1">ณภัทร แต้เถา</div>
 			<div class="intern-sep" />
 			<div class="intern-education">
@@ -36,7 +48,13 @@
 			<div class="intern-role">Intern Digital Designer</div>
 		</div>
 		<div class="col c tc intern">
-			<img class="intern-portrait" src="/shaking-parliament/p3.png" alt="" />
+			<img
+				class="intern-portrait"
+				src="/shaking-parliament/p3.png"
+				alt=""
+				decoding="async"
+				loading="lazy"
+			/>
 			<div class="intern-name T1">สุเทพ จันทร์ชูผล</div>
 			<div class="intern-sep" />
 			<div class="intern-education">

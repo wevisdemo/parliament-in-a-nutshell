@@ -441,7 +441,13 @@
 		tooltip="top"
 	/>
 	<div class="sankey-block start" />
-	<img class="sankey-connector" src="/shaking-parliament/sankey-connector.svg" alt="" />
+	<img
+		class="sankey-connector"
+		src="/shaking-parliament/sankey-connector.svg"
+		alt=""
+		decoding="async"
+		loading="lazy"
+	/>
 	<div class="sankey-gap" />
 </div>
 <!-- SANKEY 6 -->
@@ -497,7 +503,13 @@
 	<div class="sankey-block start" />
 	<div class="sankey-fade-newecon" />
 	<div class="sankey-gap-newecon" />
-	<img class="sankey-img-newecon" src="/shaking-parliament/part12.png" alt="" />
+	<img
+		class="sankey-img-newecon"
+		src="/shaking-parliament/part12.png"
+		alt=""
+		decoding="async"
+		loading="lazy"
+	/>
 	<div class="row vert sankey-people" style="--gap:16px">
 		<RP
 			src="rp/pt12-สุภดิช.png"
