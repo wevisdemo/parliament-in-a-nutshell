@@ -41,7 +41,7 @@
 			<div class="col">
 				<a
 					class="social-share"
-					href="https://twitter.com/intent/tweet?url={SITE_LINK}&text="
+					href="https://twitter.com/intent/tweet?url={SITE_LINK}"
 					target="_blank"
 					rel="nofollow noopener noreferrer"
 				>
@@ -77,11 +77,8 @@
 				</button>
 			</div>
 		</div>
-		<a
-			class="home-btn"
-			href="https://wevis.info/"
-			target="_blank"
-			rel="nofollow noopener noreferrer">กลับสู่หน้าหลัก</a
+		<a class="home-btn" href="https://wevis.info/" rel="nofollow noopener noreferrer"
+			>กลับสู่หน้าหลัก</a
 		>
 	</div>
 </div>
@@ -104,7 +101,12 @@
 		/>
 	</div>
 	<div class="header">ติดตามการลงมติในสภาเพิ่มเติมได้ที่</div>
-	<a class="card" href="https://theyworkforus.wevis.info/" rel="nofollow noopener noreferrer">
+	<a
+		class="card"
+		href="https://theyworkforus.wevis.info/"
+		target="_blank"
+		rel="nofollow noopener noreferrer"
+	>
 		<img src="/shaking-parliament/theywork.png" alt="" />
 		<div class="card-body">
 			<div class="card-header">They Work For Us รู้จักและติดตาม 'ผู้แทน' ในสภาของเรา</div>

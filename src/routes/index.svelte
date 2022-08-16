@@ -117,7 +117,7 @@
 </script>
 
 <a
-	href="https://theyworkforus.wevis.info/"
+	href="https://wevis.info/"
 	rel="nofollow noopener noreferrer"
 	style="position:fixed;top:.75rem;left:1rem;z-index:99;mix-blend-mode:difference"
 >
