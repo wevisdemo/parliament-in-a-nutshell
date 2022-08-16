@@ -18,7 +18,7 @@
 		<div class="col c tc intern">
 			<img
 				class="intern-portrait"
-				src="/shaking-parliament/p1.png"
+				src="/shaking-parliament/i1.jpg"
 				alt=""
 				decoding="async"
 				loading="lazy"
@@ -34,7 +34,7 @@
 		<div class="col c tc intern">
 			<img
 				class="intern-portrait"
-				src="/shaking-parliament/p2.png"
+				src="/shaking-parliament/i2.jpg"
 				alt=""
 				decoding="async"
 				loading="lazy"
@@ -50,7 +50,7 @@
 		<div class="col c tc intern">
 			<img
 				class="intern-portrait"
-				src="/shaking-parliament/p3.png"
+				src="/shaking-parliament/i3.jpg"
 				alt=""
 				decoding="async"
 				loading="lazy"
