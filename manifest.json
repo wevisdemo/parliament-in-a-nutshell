@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "_app/immutable/start-234851b7.js",
+    "file": "_app/immutable/start-000bfee1.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -456,17 +456,13 @@
       "_app/immutable/assets/s8-bridge-bc9a1789.css"
     ]
   },
-  "src/components/s9/s9.css": {
-    "file": "_app/immutable/assets/s9-c02e4237.css",
-    "src": "src/components/s9/s9.css"
-  },
-  "src/components/s7/s8-bridge.css": {
-    "file": "_app/immutable/assets/s8-bridge-bc9a1789.css",
-    "src": "src/components/s7/s8-bridge.css"
-  },
   "src/routes/index.css": {
     "file": "_app/immutable/assets/index-aa61b3b5.css",
     "src": "src/routes/index.css"
+  },
+  "src/components/s10/s10.css": {
+    "file": "_app/immutable/assets/s10-a6b44cb4.css",
+    "src": "src/components/s10/s10.css"
   },
   "src/components/s1/s1.css": {
     "file": "_app/immutable/assets/s1-84a0dcbb.css",
@@ -496,60 +492,64 @@
     "file": "_app/immutable/assets/s6-a592550e.css",
     "src": "src/components/s6/s6.css"
   },
-  "src/components/s12/s12.css": {
-    "file": "_app/immutable/assets/s12-9dbd9080.css",
-    "src": "src/components/s12/s12.css"
-  },
-  "src/components/s13/s13.css": {
-    "file": "_app/immutable/assets/s13-485fc4b8.css",
-    "src": "src/components/s13/s13.css"
+  "src/components/s7/s7.css": {
+    "file": "_app/immutable/assets/s7-9832b372.css",
+    "src": "src/components/s7/s7.css"
   },
   "VoteIcon.css": {
     "file": "_app/immutable/assets/VoteIcon-67b8fa54.css",
     "src": "VoteIcon.css"
   },
-  "src/components/s7/s7.css": {
-    "file": "_app/immutable/assets/s7-9832b372.css",
-    "src": "src/components/s7/s7.css"
-  },
-  "src/components/s10/s10.css": {
-    "file": "_app/immutable/assets/s10-a6b44cb4.css",
-    "src": "src/components/s10/s10.css"
-  },
   "src/components/s8/s8.css": {
     "file": "_app/immutable/assets/s8-58264eb0.css",
     "src": "src/components/s8/s8.css"
-  },
-  "src/components/s14/s14.css": {
-    "file": "_app/immutable/assets/s14-f7286af4.css",
-    "src": "src/components/s14/s14.css"
-  },
-  "src/components/s17/s17.css": {
-    "file": "_app/immutable/assets/s17-a588b36d.css",
-    "src": "src/components/s17/s17.css"
-  },
-  "Bignum.css": {
-    "file": "_app/immutable/assets/Bignum-d9a8a040.css",
-    "src": "Bignum.css"
-  },
-  "src/components/s15/s15.css": {
-    "file": "_app/immutable/assets/s15-485fc4b8.css",
-    "src": "src/components/s15/s15.css"
-  },
-  "src/components/s16/s16.css": {
-    "file": "_app/immutable/assets/s16-eccd3a4b.css",
-    "src": "src/components/s16/s16.css"
-  },
-  "src/components/s11/s11.css": {
-    "file": "_app/immutable/assets/s11-7e2603e5.css",
-    "src": "src/components/s11/s11.css"
   },
   "Caret.css": {
     "file": "_app/immutable/assets/Caret-81d29a11.css",
     "src": "Caret.css"
   },
+  "src/components/s9/s9.css": {
+    "file": "_app/immutable/assets/s9-c02e4237.css",
+    "src": "src/components/s9/s9.css"
+  },
+  "Bignum.css": {
+    "file": "_app/immutable/assets/Bignum-d9a8a040.css",
+    "src": "Bignum.css"
+  },
+  "src/components/s13/s13.css": {
+    "file": "_app/immutable/assets/s13-485fc4b8.css",
+    "src": "src/components/s13/s13.css"
+  },
+  "src/components/s14/s14.css": {
+    "file": "_app/immutable/assets/s14-f7286af4.css",
+    "src": "src/components/s14/s14.css"
+  },
+  "src/components/s11/s11.css": {
+    "file": "_app/immutable/assets/s11-7e2603e5.css",
+    "src": "src/components/s11/s11.css"
+  },
+  "src/components/s12/s12.css": {
+    "file": "_app/immutable/assets/s12-9dbd9080.css",
+    "src": "src/components/s12/s12.css"
+  },
+  "src/components/s15/s15.css": {
+    "file": "_app/immutable/assets/s15-485fc4b8.css",
+    "src": "src/components/s15/s15.css"
+  },
+  "src/components/s7/s8-bridge.css": {
+    "file": "_app/immutable/assets/s8-bridge-bc9a1789.css",
+    "src": "src/components/s7/s8-bridge.css"
+  },
   "src/components/s18/s18.css": {
     "file": "_app/immutable/assets/s18-b14f3c04.css",
     "src": "src/components/s18/s18.css"
+  },
+  "src/components/s17/s17.css": {
+    "file": "_app/immutable/assets/s17-a588b36d.css",
+    "src": "src/components/s17/s17.css"
+  },
+  "src/components/s16/s16.css": {
+    "file": "_app/immutable/assets/s16-eccd3a4b.css",
+    "src": "src/components/s16/s16.css"
   }
 }
