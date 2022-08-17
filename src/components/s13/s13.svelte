@@ -1,0 +1,469 @@
+<script lang="ts">
+	import { VOTE_METADATA } from 'data/vote_metadata';
+	import { PART3_DATA, PART3_TRIGGER } from 'data/part3';
+
+	import Votelog from 'components/votelog/Votelog.svelte';
+	import RP from 'components/RepPortrait.svelte';
+	import Cell from 'components/votelog/VoteCell.svelte';
+	import Icon from 'components/votelog/VoteIcon.svelte';
+
+	let srinuanMoved = false;
+	let neweconMoved = false;
+	let anakinMoved = false;
+	let pornpimolMoved = false;
+
+	const setSrinuanMoved = (val: boolean) => () => {
+		if (val === srinuanMoved) return;
+		srinuanMoved = val;
+	};
+	const setNeweconMoved = (val: boolean) => () => {
+		if (val === neweconMoved) return;
+		neweconMoved = val;
+	};
+	const setAnakinMoved = (val: boolean) => () => {
+		if (val === anakinMoved) return;
+		anakinMoved = val;
+	};
+	const setPornpimolMoved = (val: boolean) => () => {
+		if (val === pornpimolMoved) return;
+		pornpimolMoved = val;
+	};
+</script>
+
+<div class="s9-2-container black tc c">
+	<Votelog>
+		<svelte:fragment slot="header">
+			<RP
+				src="rp/pt12-กวินนาถ.png"
+				color="#ff6f21"
+				name="กวินนาถ ตาคีย์"
+				side="opp"
+				size="56px"
+				shift="0"
+				tooltip="top"
+				showTop={srinuanMoved}
+			>
+				<RP
+					src="rp/pt12-กวินนาถ.png"
+					color="#70d267"
+					name="กวินนาถ ตาคีย์"
+					size="56px"
+					tooltip="top"
+				/>
+			</RP>
+			<RP
+				src="rp/pt12-จารึก.png"
+				color="#ff6f21"
+				name="จารึก ศรีอ่อน"
+				side="opp"
+				size="56px"
+				shift="0"
+				tooltip="top"
+				showTop={srinuanMoved}
+			>
+				<RP
+					src="rp/pt12-จารึก.png"
+					color="#70d267"
+					name="จารึก ศรีอ่อน"
+					size="56px"
+					tooltip="top"
+				/>
+			</RP>
+			<RP
+				src="rp/pt12-ฐนภัทร.png"
+				color="#ff6f21"
+				name="ฐนภัทร กิตติวงศา"
+				side="opp"
+				size="56px"
+				shift="0"
+				tooltip="top"
+				showTop={srinuanMoved}
+			>
+				<RP
+					src="rp/pt12-ฐนภัทร.png"
+					color="#065cab"
+					name="ฐนภัทร กิตติวงศา"
+					size="56px"
+					tooltip="top"
+				/></RP
+			>
+			<RP
+				src="rp/pt12-ศรีนวล.png"
+				color="#ff6f21"
+				name="ศรีนวล บุญลือ"
+				side="opp"
+				size="56px"
+				shift="0"
+				tooltip="top"
+				showTop={srinuanMoved}
+			>
+				<RP
+					src="rp/pt12-ศรีนวล.png"
+					color="#065cab"
+					name="ศรีนวล บุญลือ"
+					size="56px"
+					tooltip="top"
+				/></RP
+			>
+			<RP
+				src="rp/pt12-กิตติชัย.png"
+				color="#ff6f21"
+				name="กิตติชัย เรืองสวัสดิ์"
+				side="opp"
+				size="56px"
+				shift="0"
+				tooltip="top"
+				showTop={anakinMoved}
+			>
+				<RP
+					src="rp/pt12-กิตติชัย.png"
+					color="#065cab"
+					name="กิตติชัย เรืองสวัสดิ์"
+					size="56px"
+					tooltip="top"
+				/></RP
+			>
+			<RP
+				src="rp/pt12-กฤติเดช.png"
+				color="#ff6f21"
+				name="กฤติเดช สันติวชิระกุล"
+				side="opp"
+				size="56px"
+				shift="0"
+				tooltip="top"
+				showTop={anakinMoved}
+			>
+				<RP
+					src="rp/pt12-กฤติเดช.png"
+					color="#065cab"
+					name="กฤติเดช สันติวชิระกุล"
+					size="56px"
+					tooltip="top"
+				/></RP
+			>
+			<RP
+				src="rp/pt12-โชติพิพัฒน์.png"
+				color="#ff6f21"
+				name="โชติพิพัฒน์ เตชะโสภณมณี"
+				side="opp"
+				size="56px"
+				shift="0"
+				tooltip="top"
+				showTop={anakinMoved}
+			>
+				<RP
+					src="rp/pt12-โชติพิพัฒน์.png"
+					color="#065cab"
+					name="โชติพิพัฒน์ เตชะโสภณมณี"
+					size="56px"
+					tooltip="top"
+				/></RP
+			>
+			<RP
+				src="rp/pt12-ฐิตินันท์.png"
+				color="#ff6f21"
+				name="ฐิตินันท์ แสงนาค"
+				side="opp"
+				size="56px"
+				shift="0"
+				tooltip="top"
+				showTop={anakinMoved}
+			>
+				<RP
+					src="rp/pt12-ฐิตินันท์.png"
+					color="#065cab"
+					name="ฐิตินันท์ แสงนาค"
+					size="56px"
+					tooltip="top"
+				/></RP
+			>
+			<RP
+				src="rp/pt12-มณฑล.png"
+				color="#ff6f21"
+				name="มณฑล โพธิ์คาย"
+				side="opp"
+				size="56px"
+				shift="0"
+				tooltip="top"
+				showTop={anakinMoved}
+			>
+				<RP
+					src="rp/pt12-มณฑล.png"
+					color="#065cab"
+					name="มณฑล โพธิ์คาย"
+					size="56px"
+					tooltip="top"
+				/></RP
+			>
+			<RP
+				src="rp/pt12-วิรัช.png"
+				color="#ff6f21"
+				name="วิรัช พันธุมะผล"
+				side="opp"
+				size="56px"
+				shift="0"
+				tooltip="top"
+				showTop={anakinMoved}
+			>
+				<RP
+					src="rp/pt12-วิรัช.png"
+					color="#065cab"
+					name="วิรัช พันธุมะผล"
+					size="56px"
+					tooltip="top"
+				/></RP
+			>
+			<RP
+				src="rp/pt12-สำลี.png"
+				color="#ff6f21"
+				name="สำลี รักสุทธี"
+				side="opp"
+				size="56px"
+				shift="0"
+				tooltip="top"
+				showTop={anakinMoved}
+			>
+				<RP
+					src="rp/pt12-สำลี.png"
+					color="#065cab"
+					name="สำลี รักสุทธี"
+					size="56px"
+					tooltip="top"
+				/></RP
+			>
+			<RP
+				src="rp/pt12-อนาวิล.png"
+				color="#ff6f21"
+				name="อนาวิล รัตนสถาพร"
+				side="opp"
+				size="56px"
+				shift="0"
+				tooltip="top"
+				showTop={anakinMoved}
+			>
+				<RP
+					src="rp/pt12-อนาวิล.png"
+					color="#065cab"
+					name="อนาวิล รัตนสถาพร"
+					size="56px"
+					tooltip="top"
+				/></RP
+			>
+			<RP
+				src="rp/pt12-เอกการ.png"
+				color="#ff6f21"
+				name="เอกการ ซื่อทรงธรรม"
+				side="opp"
+				size="56px"
+				shift="0"
+				tooltip="top"
+				showTop={anakinMoved}
+			>
+				<RP
+					src="rp/pt12-เอกการ.png"
+					color="#065cab"
+					name="เอกการ ซื่อทรงธรรม"
+					size="56px"
+					tooltip="top"
+				/></RP
+			>
+			<RP
+				src="rp/pt12-จุลพันธ์.png"
+				color="#ff6f21"
+				name="จุลพันธ์ โนนศรีชัย"
+				side="opp"
+				size="56px"
+				shift="0"
+				tooltip="top"
+				showTop={anakinMoved}
+			>
+				<RP
+					src="rp/pt12-จุลพันธ์.png"
+					color="#cc8ae3"
+					name="จุลพันธ์ โนนศรีชัย"
+					size="56px"
+					tooltip="top"
+				/></RP
+			>
+			<RP
+				src="rp/pt12-สมัคร.png"
+				color="#ff6f21"
+				name="สมัคร ป้องวงษ์"
+				side="opp"
+				size="56px"
+				shift="0"
+				tooltip="top"
+				showTop={anakinMoved}
+			>
+				<RP
+					src="rp/pt12-สมัคร.png"
+					color="#fd980d"
+					name="สมัคร ป้องวงษ์"
+					size="56px"
+					tooltip="top"
+				/></RP
+			>
+			<RP
+				src="rp/pt12-พรพิมล.png"
+				color="#E50000"
+				name="พรพิมล ธรรมสาร"
+				side="opp"
+				size="56px"
+				shift="0"
+				tooltip="top"
+				showTop={pornpimolMoved}
+			>
+				<RP
+					src="rp/pt12-พรพิมล.png"
+					color="#065cab"
+					name="พรพิมล ธรรมสาร"
+					size="56px"
+					tooltip="top"
+				/></RP
+			>
+			<RP
+				src="rp/pt12-สุภดิช.png"
+				color="#75328C"
+				name="สุภดิช อากาศฤกษ์"
+				size="56px"
+				shift="0"
+				side="opp"
+				tooltip="top"
+				showTop={neweconMoved}
+			>
+				<RP
+					src="rp/pt12-สุภดิช.png"
+					color="#75328C"
+					name="สุภดิช อากาศฤกษ์"
+					size="56px"
+					tooltip="top"
+				/></RP
+			>
+			<RP
+				src="rp/pt12-นิยม.png"
+				color="#75328C"
+				name="นิยม วิวรรธนดิฐกุล"
+				size="56px"
+				shift="0"
+				side="opp"
+				tooltip="top"
+				showTop={neweconMoved}
+			>
+				<RP
+					src="rp/pt12-นิยม.png"
+					color="#75328C"
+					name="นิยม วิวรรธนดิฐกุล"
+					size="56px"
+					tooltip="top"
+				/></RP
+			>
+			<RP
+				src="rp/pt12-ภาสกร.png"
+				color="#75328C"
+				name="ภาสกร เงินเจริญกุล"
+				size="56px"
+				shift="0"
+				side="opp"
+				tooltip="top"
+				showTop={neweconMoved}
+			>
+				<RP
+					src="rp/pt12-ภาสกร.png"
+					color="#75328C"
+					name="ภาสกร เงินเจริญกุล"
+					size="56px"
+					tooltip="top"
+				/></RP
+			>
+			<RP
+				src="rp/pt12-มนูญ.png"
+				color="#75328C"
+				name="มนูญ สิวาภิรมย์รัตน์"
+				size="56px"
+				shift="0"
+				side="opp"
+				tooltip="top"
+				showTop={neweconMoved}
+			>
+				<RP
+					src="rp/pt12-มนูญ.png"
+					color="#75328C"
+					name="มนูญ สิวาภิรมย์รัตน์"
+					size="56px"
+					tooltip="top"
+				/></RP
+			>
+			<RP
+				src="rp/pt12-มารศรี.png"
+				color="#75328C"
+				name="มารศรี ขจรเรืองโรจน์"
+				size="56px"
+				shift="0"
+				side="opp"
+				tooltip="top"
+				showTop={neweconMoved}
+			>
+				<RP
+					src="rp/pt12-มารศรี.png"
+					color="#75328C"
+					name="มารศรี ขจรเรืองโรจน์"
+					size="56px"
+					tooltip="top"
+				/></RP
+			>
+		</svelte:fragment>
+		<div class="votelog-body">
+			{#each VOTE_METADATA as mati, i}
+				<div class="votelog-row">
+					<div class="votelog-icon">
+						<Icon type={mati.icon} />
+					</div>
+					<div class="votelog-value" class:first-row={i === 0}>
+						<div class="votelog-subject">{@html mati.html_name}</div>
+						{#each PART3_DATA[i] as vote, j}
+							{#if vote === 1}
+								<Cell trigger={PART3_TRIGGER(i)(j)} />
+							{:else if j === 0}
+								<Cell
+									trigger={PART3_TRIGGER(i)(j)}
+									on:inside={setSrinuanMoved(false)}
+									on:outside={setSrinuanMoved(true)}
+									side="opp"
+								/>
+							{:else if j === 4}
+								<Cell
+									trigger={PART3_TRIGGER(i)(j)}
+									on:inside={setAnakinMoved(false)}
+									on:outside={setAnakinMoved(true)}
+									side="opp"
+								/>
+							{:else if j === 15}
+								<Cell
+									trigger={PART3_TRIGGER(i)(j)}
+									on:inside={setPornpimolMoved(false)}
+									on:outside={setPornpimolMoved(true)}
+									side="opp"
+								/>
+							{:else if j === 18}
+								<Cell
+									trigger={PART3_TRIGGER(i)(j)}
+									on:inside={setNeweconMoved(false)}
+									on:outside={setNeweconMoved(true)}
+									side="opp"
+								/>
+							{:else}
+								<Cell trigger={PART3_TRIGGER(i)(j)} side="opp" />
+							{/if}
+						{/each}
+					</div>
+				</div>
+			{/each}
+		</div>
+	</Votelog>
+</div>
+
+<style lang="scss">
+	.s9-2-container {
+		padding: 20vh 0;
+	}
+</style>

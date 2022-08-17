@@ -8,7 +8,7 @@
 	import Icon from 'components/votelog/VoteIcon.svelte';
 
 	let showTop = false;
-	const setShowTop = (val: boolean) => {
+	const setShowTop = (val: boolean) => () => {
 		if (val === showTop) return;
 		showTop = val;
 	};
@@ -354,15 +354,15 @@
 							{#if j === 0}
 								{#if vote === 1}
 									<Cell
-										trigger={PART4_TRIGGER(i)(j)}
-										on:inside={() => setShowTop(false)}
-										on:outside={() => setShowTop(true)}
+										trigger={PART4_TRIGGER(i)}
+										on:inside={setShowTop(false)}
+										on:outside={setShowTop(true)}
 									/>
 								{:else}
 									<Cell side="opp" />
 								{/if}
 							{:else if vote === 1}
-								<Cell trigger={PART4_TRIGGER(i)(j)} />
+								<Cell trigger={PART4_TRIGGER(i)} />
 							{:else}
 								<Cell side="opp" />
 							{/if}

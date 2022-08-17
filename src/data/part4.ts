@@ -47,9 +47,7 @@ export const PART4_DATA = [
 	/* votelog.__96 */ [0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1]
 ];
 
-export const PART4_TRIGGER =
-	(mati_index: number) =>
-	(_: number): string => {
-		if (mati_index === 31) return '#f0da8c';
-		return '';
-	};
+export const PART4_TRIGGER = (mati_index: number) => {
+	if (mati_index === 31) return '#f0da8c';
+	return '';
+};
