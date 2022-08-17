@@ -404,7 +404,7 @@
 		class="sankey-people"
 		src="rp/pt12-สมัคร.png"
 		color="#ff6f21"
-		name="สมัคร ป้องวงศ์"
+		name="สมัคร ป้องวงษ์"
 		side="opp"
 		size="48px"
 		tooltip="top"
@@ -416,7 +416,7 @@
 		class="sankey-people"
 		src="rp/pt12-สมัคร.png"
 		color="#FD980D"
-		name="สมัคร ป้องวงศ์"
+		name="สมัคร ป้องวงษ์"
 		size="48px"
 		tooltip="top"
 	/>
