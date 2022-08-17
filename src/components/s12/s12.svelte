@@ -284,11 +284,7 @@
 	</div>
 </div>
 <!-- SANKEY X1 -->
-<div
-	bind:this={el_sankeyX1}
-	class="row sankey sankey-notop"
-	style="--gap:16px;--to-c:#065CAB;--to-p:'พรรคภูมิใจไทย'"
->
+<div bind:this={el_sankeyX1} class="row sankey sankey-notop" style="--gap:16px;--to-c:#065CAB">
 	<div class="sankey-gap" />
 	<div class="sankey-block end" />
 	<RP

@@ -4,6 +4,16 @@
 @import 'typography';
 @import 'reseter';
 
+*,
+*::before,
+*::after {
+	--mt: 0;
+	--mb: 0;
+
+	margin-top: var(--mt);
+	margin-bottom: var(--mb);
+}
+
 html {
 	background: url(/shaking-parliament/bg.jpg), #eee;
 	background-size: 100%;
@@ -33,7 +43,8 @@ h1,
 h2,
 h3,
 p {
-	margin: 0;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .lock-body-scroll {
@@ -48,4 +59,8 @@ p {
 
 p {
 	font-size: 1.5rem;
+}
+
+img {
+	position: relative;
 }
