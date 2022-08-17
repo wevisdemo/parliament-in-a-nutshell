@@ -595,7 +595,7 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				name: 'นวัธ เตาะเจริญสุข',
 				side: 'opp',
 				src: 'rp/ศาลตัด-นวัธ.png',
-				color: '#ff6f21',
+				color: '#e50000',
 				replace_by: {
 					name: 'สมศักดิ์ คุณเงิน',
 					side: 'free',
