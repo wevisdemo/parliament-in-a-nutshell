@@ -13,9 +13,10 @@
 	export let shift: string = '6px';
 	export let tooltip: 'top' | 'right' | null = null;
 	export let dashedBorder = false;
+	export let op: string = shift === '0' ? '0' : '0.3';
 </script>
 
-<div class="rp-container {clazz} tooltip-{tooltip}" class:showTop style:--s={size}>
+<div class="rp-container {clazz} tooltip-{tooltip}" class:showTop style:--s={size} style:--op={op}>
 	<img
 		src="/shaking-parliament/{src}"
 		alt={name}
@@ -88,7 +89,7 @@
 
 	.rp-container.showTop {
 		> .portrait {
-			opacity: 0.3;
+			opacity: var(--op, 0.3);
 			// filter: saturate(0.5);
 		}
 

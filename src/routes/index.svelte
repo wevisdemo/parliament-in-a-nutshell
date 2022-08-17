@@ -7,7 +7,7 @@
 
 	import Loader from 'components/loader/loader.svelte';
 
-	let all_import = 16 + 1; /* onMount + pages */
+	let all_import = 17 + 1; /* onMount + pages */
 	let complete_import = 0;
 	let status: string[] = [];
 
@@ -32,6 +32,7 @@
 	let S12: any;
 
 	let S14: any;
+	let S15: any;
 
 	let S16: any;
 	let S17: any;
@@ -82,7 +83,7 @@
 		finish_load('ส่วนที่ 8 สำเร็จ');
 	});
 
-	import('components/s9/s9-1.svelte').then((c) => {
+	import('components/s9/s9.svelte').then((c) => {
 		S9 = c.default;
 		finish_load('ส่วนที่ 9 สำเร็จ');
 	});
@@ -105,6 +106,11 @@
 	import('components/s14/s14.svelte').then((c) => {
 		S14 = c.default;
 		finish_load('ส่วนที่ 14 สำเร็จ');
+	});
+
+	import('components/s15/s15.svelte').then((c) => {
+		S15 = c.default;
+		finish_load('ส่วนที่ 15 สำเร็จ');
 	});
 
 	import('components/s16/s16.svelte').then((c) => {
@@ -153,6 +159,7 @@
 	<svelte:component this={S11} />
 	<svelte:component this={S12} />
 	<svelte:component this={S14} />
+	<svelte:component this={S15} />
 	<svelte:component this={S16} />
 	<svelte:component this={S17} />
 	<svelte:component this={S18} />
