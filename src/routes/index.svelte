@@ -3,6 +3,7 @@
 	import 'styles/master.scss';
 	import '@wevisdemo/ui/styles/typography.css';
 	import '@wevisdemo/ui/styles/components.css';
+	import { weAreAlwaysHiring } from 'utils/we-are-hiring';
 
 	import Loader from 'components/loader/loader.svelte';
 
@@ -37,6 +38,7 @@
 	let S18: any;
 
 	onMount(() => {
+		weAreAlwaysHiring();
 		finish_load('Svelte กำลังรัน');
 	});
 
