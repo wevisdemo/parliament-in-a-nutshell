@@ -414,7 +414,7 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 					name: 'อาญาสิทธิ์ ศรีสุวรรณ',
 					side: 'gov',
 					src: 'rp/แทน-อาญาสิทธิ์.png',
-					color: '#349EE9'
+					color: '#0B3757'
 				}
 			},
 			{
