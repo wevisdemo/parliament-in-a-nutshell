@@ -300,7 +300,7 @@
 <div
 	bind:this={el_sankey2}
 	class="row sankey"
-	style="--gap:16px;--to-c:#70D267;--to-p:'พรรคพลังท้องถิ่นไทย'"
+	style="--gap:16px;--to-c:#70D267;--to-p:'พรรคพลังท้องถิ่นไท'"
 >
 	<RP
 		class="sankey-people"
