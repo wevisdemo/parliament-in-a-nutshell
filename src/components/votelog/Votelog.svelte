@@ -21,6 +21,7 @@
 	:global(.votelog-row),
 	:global(.votelog-value) {
 		display: flex;
+		justify-content: center;
 	}
 
 	.votelog-head {
