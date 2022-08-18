@@ -12,8 +12,8 @@
 		background: linear-gradient(#fff0, #fff0 25%, #000f 90%);
 
 		> .T1 {
-			font-size: 3.5rem;
-			line-height: 1.5;
+			font-size: 3rem;
+			line-height: 1.3;
 			mix-blend-mode: difference;
 			color: white;
 		}
