@@ -25,16 +25,16 @@
 
 <div bind:this={el} class="cell {side}" class:trigger style="--trigger:{trigger}" {...$$restProps}>
 	{#if side === 'gov'}
-		<svg width="9" height="9" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M1 1L6 6M6 1L1 6" stroke="currentColor" stroke-width="1.5" />
-		</svg>
-	{:else if side === 'opp'}
 		<svg width="9" height="9" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path
 				d="M1.02415 2.64688L2.96757 4.97479L6.99949 0.92213"
 				stroke="currentColor"
 				stroke-width="1.5"
 			/>
+		</svg>
+	{:else if side === 'opp'}
+		<svg width="9" height="9" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M1 1L6 6M6 1L1 6" stroke="currentColor" stroke-width="1.5" />
 		</svg>
 	{/if}
 </div>
