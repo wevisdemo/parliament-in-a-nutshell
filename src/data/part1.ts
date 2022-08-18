@@ -327,7 +327,7 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				replace_by: {
 					name: 'ยุทธนา โพธสุธน',
 					side: 'free',
-					src: 'rp/แทน-ยุทธนา.png',
+					src: 'rp/pt14-ยุทธนา.png',
 					color: '#F0DA8C'
 				}
 			},
@@ -432,7 +432,7 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 			{
 				name: 'สำลี รักสุทธิ',
 				side: 'gov',
-				src: 'rp/ศาลตัด-สำลี.png',
+				src: 'rp/pt12-สำลี.png',
 				color: '#065CAB',
 				replace_by: {
 					name: 'ว่าง',
@@ -611,7 +611,7 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				replace_by: {
 					name: 'สมศักดิ์ คุณเงิน',
 					side: 'free',
-					src: 'rp/แทน-สมศักดิ์.png',
+					src: 'rp/pt14-สมศักดิ์.png',
 					color: '#F0DA8C'
 				}
 			}
