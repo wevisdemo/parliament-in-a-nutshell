@@ -1,124 +1,11 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { inView, timeline } from 'motion';
-
 	import Bignum from 'components/Bignum.svelte';
-	import RP from 'components/RepPortrait.svelte';
-
-	const animate2ColSankey = (el: any) => {
-		const el_c = el.children;
-		const sequence: TimelineDefinition = [
-			[el_c[0], { opacity: 1 }, { duration: 0.5 }],
-			[el_c[1], { opacity: 1 }, { duration: 0.5, at: '<' }],
-			[el_c[2], { opacity: 1 }, { duration: 0.5, at: '-0.25' }],
-			[
-				el_c[3],
-				{
-					clipPath: 'polygon(0 0, 101% 0, 101% 100%, 0% 100%)'
-				},
-				{ duration: 1, at: '-0.25' }
-			],
-			[el_c[4], { opacity: 1 }, { duration: 0.5, at: '-0.1' }],
-			[el_c[5], { opacity: 1 }, { duration: 0.5, at: '-0.25' }],
-			[el_c[6], { opacity: 1 }, { duration: 0.5, at: '<' }]
-		];
-		timeline(sequence);
-	};
-
-	const animate1ColSankey = (el: any) => {
-		const el_c = el.children;
-		const sequence: TimelineDefinition = [
-			[el_c[0], { opacity: 1 }, { duration: 0.5 }],
-			[el_c[1], { opacity: 1 }, { duration: 0.5, at: '-0.25' }],
-			[
-				el_c[2],
-				{
-					clipPath: 'polygon(0 0, 101% 0, 101% 100%, 0% 100%)'
-				},
-				{ duration: 1, at: '-0.25' }
-			],
-			[el_c[3], { opacity: 1 }, { duration: 0.5, at: '-0.1' }],
-			[el_c[4], { opacity: 1 }, { duration: 0.5, at: '-0.25' }]
-		];
-		timeline(sequence);
-	};
-
-	let el_sankey1: any;
-	let el_sankey2: any;
-	let el_sankey3: any;
-	let el_sankey4: any;
-	let el_sankey5: any;
-
-	let el_sankeyX1: any;
-	let el_sankeyX2: any;
-
-	let el_sankey6: any;
-
-	onMount(() => {
-		inView(el_sankey1, () => animate2ColSankey(el_sankey1), { amount: 1 });
-		inView(el_sankey2, () => animate2ColSankey(el_sankey2), { amount: 1 });
-		inView(el_sankey3, () => animate1ColSankey(el_sankey3), { amount: 1 });
-		inView(el_sankey4, () => animate1ColSankey(el_sankey4), { amount: 1 });
-		inView(el_sankey5, () => animate1ColSankey(el_sankey5), { amount: 1 });
-		inView(
-			el_sankeyX2,
-			() => {
-				const x1_c = el_sankeyX1.children;
-				const x2_c = el_sankeyX2.children;
-				const sequence: TimelineDefinition = [
-					[x2_c[0], { opacity: 1 }, { duration: 0.5 }],
-					[x2_c[1], { opacity: 1 }, { duration: 0.5, at: '-0.25' }],
-					[
-						x2_c[2],
-						{
-							clipPath: 'polygon(0 0, 101% 0, 101% 100%, 0% 100%)'
-						},
-						{ duration: 1, at: '-0.25' }
-					],
-					[x1_c[1], { opacity: 1 }, { duration: 0.5, at: '-0.1' }],
-					[x1_c[2], { opacity: 1 }, { duration: 0.5, at: '-0.25' }]
-				];
-				timeline(sequence);
-			},
-			{ amount: 1 }
-		);
-		inView(
-			el_sankey6,
-			() => {
-				const el_c = el_sankey6.children;
-				const sequence: TimelineDefinition = [
-					[el_c[0], { opacity: 1 }, { duration: 0.5 }],
-					[el_c[1], { opacity: 1 }, { duration: 0.5, at: '<' }],
-					[el_c[2], { opacity: 1 }, { duration: 0.5, at: '-0.25' }],
-					[
-						el_c[3],
-						{
-							clipPath: 'polygon(0 0, 101% 0, 101% 100%, 0% 100%)'
-						},
-						{ duration: 1, at: '-0.25' }
-					],
-					[
-						el_c[5],
-						{
-							opacity: 1,
-							transform: ['translateX(-50%) scale(0)', 'translateX(-50%) scale(1)']
-						},
-						{ duration: 0.5, at: '<' }
-					],
-					[el_c[6], { opacity: 1 }, { duration: 0.5, at: '-0.1' }],
-					[el_c[7], { opacity: 1 }, { duration: 0.5, at: '-0.25' }],
-					[el_c[8], { opacity: 1 }, { duration: 0.5, at: '<' }]
-				];
-				timeline(sequence);
-			},
-			{ amount: 1 }
-		);
-	});
+	import Sankey from './sankey.svelte';
 </script>
 
 <div style="--h:10vh" />
-<div class="row">
-	<div>
+<div class="compare">
+	<div class="compare-opp">
 		<div class="black-lbl tc">
 			พรรคฝ่ายค้าน<br />
 			ที่มีคน<strong>ย้ายออก</strong>มากที่สุด
@@ -131,7 +18,7 @@
 		</Bignum>
 	</div>
 	<div class="sep" />
-	<div>
+	<div class="compare-gov">
 		<div class="black-lbl tc">
 			พรรคฝ่ายรัฐบาล<br />
 			ที่ฝ่ายค้าน<strong>ย้ายเข้า</strong>มากที่สุด
@@ -145,417 +32,30 @@
 	</div>
 </div>
 <div style="--h:10vh" />
-<!-- SANKEY 1 -->
-<div
-	bind:this={el_sankey1}
-	class="row sankey"
-	style="--gap:16px;--from-p:'พรรคอนาคตใหม่';--to-c:#065CAB;--to-p:'พรรคภูมิใจไทย'"
->
-	<div class="row vert sankey-people" style="--gap:16px">
-		<RP
-			src="rp/pt12-ศรีนวล.png"
-			color="#ff6f21"
-			name="ศรีนวล บุญลือ"
-			side="opp"
-			size="48px"
-			tooltip="top"
-		/>
-		<RP
-			src="rp/pt12-กิตติชัย.png"
-			color="#ff6f21"
-			name="กิตติชัย เรืองสวัสดิ์"
-			side="opp"
-			size="48px"
-			tooltip="top"
-		/>
-		<RP
-			src="rp/pt12-กฤติเดช.png"
-			color="#ff6f21"
-			name="กฤติเดช สันติวชิระกุล"
-			side="opp"
-			size="48px"
-			tooltip="top"
-		/>
-		<RP
-			src="rp/pt12-โชติพิพัฒน์.png"
-			color="#ff6f21"
-			name="โชติพิพัฒน์ เตชะโสภณมณี"
-			side="opp"
-			size="48px"
-			tooltip="top"
-		/>
-		<RP
-			src="rp/pt12-ฐิตินันท์.png"
-			color="#ff6f21"
-			name="ฐิตินันท์ แสงนาค"
-			side="opp"
-			size="48px"
-			tooltip="top"
-		/>
-	</div>
-	<div class="row vert sankey-people" style="--gap:16px">
-		<RP
-			src="rp/pt12-มณฑล.png"
-			color="#ff6f21"
-			name="มณฑล โพธิ์คาย"
-			side="opp"
-			size="48px"
-			tooltip="top"
-		/>
-		<RP
-			src="rp/pt12-วิรัช.png"
-			color="#ff6f21"
-			name="วิรัช พันธุมะผล"
-			side="opp"
-			size="48px"
-			tooltip="top"
-		/>
-		<RP
-			src="rp/pt12-สำลี.png"
-			color="#ff6f21"
-			name="สำลี รักสุทธี"
-			side="opp"
-			size="48px"
-			tooltip="top"
-		/>
-		<RP
-			src="rp/pt12-อนาวิล.png"
-			color="#ff6f21"
-			name="อนาวิล รัตนสถาพร"
-			side="opp"
-			size="48px"
-			tooltip="top"
-		/>
-		<RP
-			src="rp/pt12-เอกการ.png"
-			color="#ff6f21"
-			name="เอกการ ซื่อทรงธรรม"
-			side="opp"
-			size="48px"
-			tooltip="top"
-		/>
-	</div>
-	<div class="sankey-block start" />
-	<div class="sankey-fade" />
-	<div class="sankey-block end" />
-	<div class="row vert sankey-people" style="--gap:16px">
-		<RP src="rp/pt12-ศรีนวล.png" color="#065cab" name="ศรีนวล บุญลือ" size="48px" tooltip="top" />
-		<RP
-			src="rp/pt12-กิตติชัย.png"
-			color="#065cab"
-			name="กิตติชัย เรืองสวัสดิ์"
-			size="48px"
-			tooltip="top"
-		/>
-		<RP
-			src="rp/pt12-กฤติเดช.png"
-			color="#065cab"
-			name="กฤติเดช สันติวชิระกุล"
-			size="48px"
-			tooltip="top"
-		/>
-		<RP
-			src="rp/pt12-โชติพิพัฒน์.png"
-			color="#065cab"
-			name="โชติพิพัฒน์ เตชะโสภณมณี"
-			size="48px"
-			tooltip="top"
-		/>
-		<RP
-			src="rp/pt12-ฐิตินันท์.png"
-			color="#065cab"
-			name="ฐิตินันท์ แสงนาค"
-			size="48px"
-			tooltip="top"
-		/>
-		<!-- <div /> -->
-	</div>
-	<div class="row vert sankey-people" style="--gap:16px">
-		<RP src="rp/pt12-มณฑล.png" color="#065cab" name="มณฑล โพธิ์คาย" size="48px" tooltip="top" />
-		<RP src="rp/pt12-วิรัช.png" color="#065cab" name="วิรัช พันธุมะผล" size="48px" tooltip="top" />
-		<RP src="rp/pt12-สำลี.png" color="#065cab" name="สำลี รักสุทธี" size="48px" tooltip="top" />
-		<RP
-			src="rp/pt12-อนาวิล.png"
-			color="#065cab"
-			name="อนาวิล รัตนสถาพร"
-			size="48px"
-			tooltip="top"
-		/>
-		<RP
-			src="rp/pt12-เอกการ.png"
-			color="#065cab"
-			name="เอกการ ซื่อทรงธรรม"
-			size="48px"
-			tooltip="top"
-		/>
+<Sankey />
+<div style="--h:32px" />
+<div class="bridge-13 tc c">
+	<div class="T1">
+		ถึงอย่างนั้น จำนวนเก้าอี้ฝ่ายรัฐบาลที่เพิ่มขึ้น<br />
+		<span class="bigger">เกื้อหนุน</span> การลงมติของ &ldquo;ขั้วรัฐบาล&rdquo; มากน้อยแค่ไหน ?
 	</div>
 </div>
-<!-- SANKEY X1 -->
-<div bind:this={el_sankeyX1} class="row sankey sankey-notop" style="--gap:16px;--to-c:#065CAB">
-	<div class="sankey-gap" />
-	<div class="sankey-block end" />
-	<RP
-		class="sankey-people"
-		src="rp/pt12-พรพิมล.png"
-		color="#065CAB"
-		name="พรพิมล ธรรมสาร"
-		size="48px"
-		tooltip="top"
-	/>
-</div>
-<!-- SANKEY 2 -->
-<div
-	bind:this={el_sankey2}
-	class="row sankey"
-	style="--gap:16px;--to-c:#70D267;--to-p:'พรรคพลังท้องถิ่นไท'"
->
-	<RP
-		class="sankey-people"
-		src="rp/pt12-กวินนาถ.png"
-		color="#ff6f21"
-		name="กวินนาถ ตาคีย์"
-		side="opp"
-		size="48px"
-		tooltip="top"
-	/>
-	<RP
-		class="sankey-people"
-		src="rp/pt12-จารึก.png"
-		color="#ff6f21"
-		name="จารึก ศรีอ่อน"
-		side="opp"
-		size="48px"
-		tooltip="top"
-	/>
-	<div class="sankey-block start" />
-	<div class="sankey-fade" />
-	<div class="sankey-block end" />
-	<RP
-		class="sankey-people"
-		src="rp/pt12-กวินนาถ.png"
-		color="#70D267"
-		name="กวินนาถ ตาคีย์"
-		size="48px"
-		tooltip="top"
-	/>
-	<RP
-		class="sankey-people"
-		src="rp/pt12-จารึก.png"
-		color="#70D267"
-		name="จารึก ศรีอ่อน"
-		size="48px"
-		tooltip="top"
-	/>
-</div>
-<!-- SANKEY 3 -->
-<div
-	bind:this={el_sankey3}
-	class="row sankey"
-	style="--gap:16px;--to-c:#0B3757;--to-p:'พรรคพลังประชารัฐ'"
->
-	<RP
-		class="sankey-people"
-		src="rp/pt12-ฐนภัทร.png"
-		color="#ff6f21"
-		name="ฐนภัทร กิตติวงศา"
-		side="opp"
-		size="48px"
-		tooltip="top"
-	/>
-	<div class="sankey-block start" />
-	<div class="sankey-fade" />
-	<div class="sankey-block end" />
-	<RP
-		class="sankey-people"
-		src="rp/pt12-ฐนภัทร.png"
-		color="#0B3757"
-		name="ฐนภัทร กิตติวงศา"
-		size="48px"
-		tooltip="top"
-	/>
-</div>
-<!-- SANKEY 4 -->
-<div
-	bind:this={el_sankey4}
-	class="row sankey"
-	style="--gap:16px;--to-c:#CC8AE3;--to-p:'พรรคชาติไทยพัฒนา'"
->
-	<RP
-		class="sankey-people"
-		src="rp/pt12-จุลพันธ์.png"
-		color="#ff6f21"
-		name="จุลพันธ์ โนนศรีชัย"
-		side="opp"
-		size="48px"
-		tooltip="top"
-	/>
-	<div class="sankey-block start" />
-	<div class="sankey-fade" />
-	<div class="sankey-block end" />
-	<RP
-		class="sankey-people"
-		src="rp/pt12-จุลพันธ์.png"
-		color="#CC8AE3"
-		name="จุลพันธ์ โนนศรีชัย"
-		size="48px"
-		tooltip="top"
-	/>
-</div>
-<!-- SANKEY 5 -->
-<div
-	bind:this={el_sankey5}
-	class="row sankey"
-	style="--gap:16px;--to-c:#FD980D;--to-p:'พรรคชาติพัฒนา'"
->
-	<RP
-		class="sankey-people"
-		src="rp/pt12-สมัคร.png"
-		color="#ff6f21"
-		name="สมัคร ป้องวงษ์"
-		side="opp"
-		size="48px"
-		tooltip="top"
-	/>
-	<div class="sankey-block start" />
-	<div class="sankey-fade" />
-	<div class="sankey-block end" />
-	<RP
-		class="sankey-people"
-		src="rp/pt12-สมัคร.png"
-		color="#FD980D"
-		name="สมัคร ป้องวงษ์"
-		size="48px"
-		tooltip="top"
-	/>
-</div>
-<!-- SANKEY X2 -->
-<div
-	bind:this={el_sankeyX2}
-	class="row sankey"
-	style="--gap:16px;--from-c:#E50000;--from-p:'พรรคเพื่อไทย'"
->
-	<RP
-		class="sankey-people"
-		src="rp/pt12-พรพิมล.png"
-		color="#E50000"
-		name="พรพิมล ธรรมสาร"
-		side="opp"
-		size="48px"
-		tooltip="top"
-	/>
-	<div class="sankey-block start" />
-	<img
-		class="sankey-connector"
-		src="/shaking-parliament/sankey-connector.svg"
-		alt=""
-		decoding="async"
-		loading="lazy"
-	/>
-	<div class="sankey-gap" />
-</div>
-<!-- SANKEY 6 -->
-<div
-	bind:this={el_sankey6}
-	class="row sankey"
-	style="--gap:16px;--from-c:#75328C;--from-p:'พรรคเศรษฐกิจใหม่'"
->
-	<div class="row vert sankey-people" style="--gap:16px">
-		<RP
-			src="rp/pt12-มนูญ.png"
-			color="#75328C"
-			name="มนูญ สิวาภิรมย์รัตน์"
-			size="48px"
-			side="opp"
-			tooltip="top"
-		/>
-		<RP
-			src="rp/pt12-มารศรี.png"
-			color="#75328C"
-			name="มารศรี ขจรเรืองโรจน์"
-			size="48px"
-			side="opp"
-			tooltip="top"
-		/>
-	</div>
-	<div class="row vert sankey-people" style="--gap:16px">
-		<RP
-			src="rp/pt12-สุภดิช.png"
-			color="#75328C"
-			name="สุภดิช อากาศฤกษ์"
-			size="48px"
-			side="opp"
-			tooltip="top"
-		/>
-		<RP
-			src="rp/pt12-นิยม.png"
-			color="#75328C"
-			name="นิยม วิวรรธนดิฐกุล"
-			size="48px"
-			side="opp"
-			tooltip="top"
-		/>
-		<RP
-			src="rp/pt12-ภาสกร.png"
-			color="#75328C"
-			name="ภาสกร เงินเจริญกุล"
-			size="48px"
-			side="opp"
-			tooltip="top"
-		/>
-	</div>
-	<div class="sankey-block start" />
-	<div class="sankey-fade-newecon" />
-	<div class="sankey-gap-newecon" />
-	<img
-		class="sankey-img-newecon"
-		src="/shaking-parliament/part12.png"
-		alt=""
-		decoding="async"
-		loading="lazy"
-	/>
-	<div class="row vert sankey-people" style="--gap:16px">
-		<RP
-			src="rp/pt12-สุภดิช.png"
-			color="#75328C"
-			name="สุภดิช อากาศฤกษ์"
-			size="48px"
-			tooltip="top"
-		/>
-		<RP
-			src="rp/pt12-นิยม.png"
-			color="#75328C"
-			name="นิยม วิวรรธนดิฐกุล"
-			size="48px"
-			tooltip="top"
-		/>
-		<RP
-			src="rp/pt12-ภาสกร.png"
-			color="#75328C"
-			name="ภาสกร เงินเจริญกุล"
-			size="48px"
-			tooltip="top"
-		/>
-	</div>
-	<div class="row vert sankey-people" style="--gap:16px">
-		<RP
-			src="rp/pt12-มนูญ.png"
-			color="#75328C"
-			name="มนูญ สิวาภิรมย์รัตน์"
-			size="48px"
-			tooltip="top"
-		/>
-		<RP
-			src="rp/pt12-มารศรี.png"
-			color="#75328C"
-			name="มารศรี ขจรเรืองโรจน์"
-			size="48px"
-			tooltip="top"
-		/>
-	</div>
-</div>
-<div style="--h:10vh" />
 
 <style lang="scss">
+	.compare {
+		display: grid;
+		grid-template-columns: 1fr auto 1fr;
+		gap: 2rem;
+
+		> .compare-opp {
+			justify-self: flex-end;
+		}
+
+		> .compare-gov {
+			justify-self: flex-start;
+		}
+	}
+
 	.sep {
 		border-right: 2px dashed #000;
 	}
@@ -593,94 +93,25 @@
 		color: #065cab;
 	}
 
-	.sankey {
-		margin-top: 40px;
-	}
+	.bridge-13 {
+		background: linear-gradient(#0000, #000f);
+		height: 50vh;
+		justify-content: flex-end;
 
-	.sankey-block {
-		color: var(--from-c, #ff6f21);
-		background: var(--from-c, #ff6f21);
-		width: 96px;
+		.T1 {
+			font-size: 2.5rem;
+			color: white;
+			line-height: 1.2;
+			letter-spacing: 1px;
 
-		&::after {
-			content: var(--from-p, '');
+			position: sticky;
+			bottom: 40vh;
 
-			position: absolute;
-			left: 50%;
-			top: -4px;
-			transform: translate(-50%, -100%);
+			padding: 64px 0;
 
-			font-style: italic;
-			font-weight: 600;
-			font-size: 0.7rem;
-			line-height: 1;
-			white-space: nowrap;
-		}
-
-		&.end {
-			color: var(--to-c, #ff6f21);
-			background: var(--to-c, #ff6f21);
-
-			&::after {
-				content: var(--to-p, '');
+			.bigger {
+				font-size: 1.2em;
 			}
 		}
-	}
-
-	.sankey-fade {
-		background: linear-gradient(90deg, var(--from-c, #ff6f21), var(--to-c, #ff6f21));
-		width: 288px;
-		opacity: 0.6;
-		margin: 0 -16px;
-		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-	}
-
-	.sankey-gap {
-		width: 432px;
-	}
-
-	.sankey-notop {
-		margin-top: 0;
-	}
-
-	.sankey-connector {
-		position: absolute;
-		bottom: 0;
-		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-	}
-
-	.sankey-people,
-	:global(.sankey-people) {
-		margin: 8px 0;
-		opacity: 0;
-	}
-
-	.sankey-block {
-		opacity: 0;
-	}
-
-	.sankey-fade-newecon {
-		background: linear-gradient(90deg, #75328c, #75328c00);
-		opacity: 0.6;
-
-		position: absolute;
-		width: 400px;
-		height: 100%;
-		transform: translateX(56px);
-
-		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-	}
-
-	.sankey-gap-newecon {
-		width: 368px;
-	}
-
-	.sankey-img-newecon {
-		position: absolute;
-		bottom: 0;
-		height: 100%;
-		opacity: 0;
-		left: calc(48px + 50%);
-		transform: translateX(-50%) scale(0);
 	}
 </style>
