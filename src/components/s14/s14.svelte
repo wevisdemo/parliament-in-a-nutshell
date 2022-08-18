@@ -86,7 +86,7 @@
 	<strong>อย่างยิ่ง</strong>
 </p>
 <div class="bridge-15 tc c">
-	<div>
+	<div class="bridge-text">
 		ลองมาสำรวจสถิติการลงมติของ <strong>18 สมาชิก</strong>พรรคเศรษฐกิจไทย<br />
 		ว่าพวกเขา <strong>&ldquo;เข้าข้าง&rdquo; หรือ &ldquo;ตรงข้าม&rdquo; กับฝ่ายรัฐบาล</strong> มากน้อยเพียงใด
 	</div>
@@ -195,11 +195,19 @@
 
 	.bridge-15 {
 		background: linear-gradient(#0000, #000f);
-		font-size: 2.5rem;
-		color: white;
 		height: 50vh;
-		line-height: 1.3;
 		justify-content: flex-end;
-		padding-bottom: 10vh;
+
+		.bridge-text {
+			font-size: 2.5rem;
+			color: white;
+			line-height: 1.2;
+			letter-spacing: 1px;
+
+			position: sticky;
+			bottom: 40vh;
+
+			padding: 64px 0;
+		}
 	}
 </style>
