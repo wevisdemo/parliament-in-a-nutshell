@@ -40,14 +40,14 @@
 		{
 			total: 485,
 			numeric: {
-				gov: 257,
-				opp: 210,
+				gov: 258,
+				opp: 209,
 				fluid_opp: 18,
 				empty: 15
 			},
 			sections: [
-				{ name: 'gov', startAngle: getAngle(0), endAngle: getAngle(257), fill: '#5b5b5b' },
-				{ name: 'opp', startAngle: getAngle(257), endAngle: getAngle(467), fill: '#d9d9d9' },
+				{ name: 'gov', startAngle: getAngle(0), endAngle: getAngle(258), fill: '#5b5b5b' },
+				{ name: 'opp', startAngle: getAngle(258), endAngle: getAngle(467), fill: '#d9d9d9' },
 				{ name: 'fluid_opp', startAngle: getAngle(467), endAngle: getAngle(485), fill: '#a0a0a0' },
 				{
 					name: 'empty',
