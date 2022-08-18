@@ -52,27 +52,27 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				}
 			},
 			{
-				name: 'หม่อมราชวงศ์จัตุมงคล โสณกุล',
+				name: 'วทันยา บุนนาค',
 				side: 'gov',
-				src: 'rp/ลาออก-จัตุมงคล.png',
-				color: '#18246D',
+				src: 'rp/ลาออก-วทันยา.png',
+				color: '#0B3757',
 				replace_by: {
-					name: 'จุฑาฑัตต เหล่าธรรมทัศน์',
+					name: 'ธนกร วังบุญคงชนะ',
 					side: 'gov',
-					src: 'rp/แทน-จุฑาฑัตต.png',
-					color: '#18246D'
+					src: 'rp/แทน-ธนกร.png',
+					color: '#0B3757'
 				}
 			},
 			{
-				name: 'เพชรชมพู กิจบูรณะ',
+				name: 'พลตรีทรงกลด ทิพย์รัตน์',
 				side: 'gov',
-				src: 'rp/ลาออก-เพชรชมพู.png',
-				color: '#18246D',
+				src: 'rp/ลาออก-ทรงกลด.png',
+				color: '#AAC826',
 				replace_by: {
-					name: 'สุเนตตา แซ่โก๊ะ',
+					name: 'บุญญาพร นาตะธนภัทร',
 					side: 'gov',
-					src: 'rp/แทน-สุเนตตา.png',
-					color: '#18246D'
+					src: 'rp/แทน-บุญญาพร.png',
+					color: '#AAC826'
 				}
 			}
 		],
@@ -114,15 +114,15 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				}
 			},
 			{
-				name: 'พลตรีทรงกลด ทิพย์รัตน์',
+				name: 'หม่อมราชวงศ์จัตุมงคล โสณกุล',
 				side: 'gov',
-				src: 'rp/ลาออก-ทรงกลด.png',
-				color: '#AAC826',
+				src: 'rp/ลาออก-จัตุมงคล.png',
+				color: '#18246D',
 				replace_by: {
-					name: 'บุญญาพร นาตะธนภัทร',
+					name: 'จุฑาฑัตต เหล่าธรรมทัศน์',
 					side: 'gov',
-					src: 'rp/แทน-บุญญาพร.png',
-					color: '#AAC826'
+					src: 'rp/แทน-จุฑาฑัตต.png',
+					color: '#18246D'
 				}
 			},
 			{
@@ -174,6 +174,18 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 					src: 'rp/แทน-อิสระ.png',
 					color: '#349EE9'
 				}
+			},
+			{
+				name: 'เพชรชมพู กิจบูรณะ',
+				side: 'gov',
+				src: 'rp/ลาออก-เพชรชมพู.png',
+				color: '#18246D',
+				replace_by: {
+					name: 'สุเนตตา แซ่โก๊ะ',
+					side: 'gov',
+					src: 'rp/แทน-สุเนตตา.png',
+					color: '#18246D'
+				}
 			}
 		],
 		[
@@ -212,9 +224,7 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 					src: 'rp/แทน-ไชยยศ.png',
 					color: '#349EE9'
 				}
-			}
-		],
-		[
+			},
 			{
 				name: 'มิ่งขวัญ แสงสุวรรณ',
 				side: 'opp',
@@ -226,19 +236,9 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 					src: 'rp/แทน-จิราพร.png',
 					color: '#75328C'
 				}
-			},
-			{
-				name: 'วันมูหะมัดนอร์ มะทา',
-				side: 'opp',
-				src: 'rp/ลาออก-วันมูหะมัดนอร์.png',
-				color: '#D87A0E',
-				replace_by: {
-					name: 'พันตำรวจเอกทวี สอดส่อง',
-					side: 'opp',
-					src: 'rp/แทน-ทวี.png',
-					color: '#D87A0E'
-				}
-			},
+			}
+		],
+		[
 			{
 				name: 'จุมพิตา จันทรขจร',
 				side: 'opp',
@@ -273,6 +273,18 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 					side: 'opp',
 					src: 'white.jpg',
 					color: '#FFFFFF'
+				}
+			},
+			{
+				name: 'วันมูหะมัดนอร์ มะทา',
+				side: 'opp',
+				src: 'rp/ลาออก-วันมูหะมัดนอร์.png',
+				color: '#D87A0E',
+				replace_by: {
+					name: 'พันตำรวจเอกทวี สอดส่อง',
+					side: 'opp',
+					src: 'rp/แทน-ทวี.png',
+					color: '#D87A0E'
 				}
 			}
 		]
