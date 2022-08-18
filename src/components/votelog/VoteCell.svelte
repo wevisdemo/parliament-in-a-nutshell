@@ -4,7 +4,7 @@
 
 	const dispatch = createEventDispatcher();
 
-	export let side: 'gov' | 'opp' | 'pracharat' = 'gov';
+	export let side: 'gov' | 'opp' | 'pracharat' | 'black' = 'gov';
 	export let trigger: string = '';
 	export let margin: string = '-216px 0px 1500px 0px';
 
@@ -67,6 +67,11 @@
 
 		&.pracharat {
 			--bg: #0b3757;
+			border-bottom: none;
+		}
+
+		&.black {
+			--bg: #000;
 			border-bottom: none;
 		}
 

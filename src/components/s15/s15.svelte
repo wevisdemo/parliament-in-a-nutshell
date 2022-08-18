@@ -363,6 +363,8 @@
 								{/if}
 							{:else if vote === 1}
 								<Cell trigger={PART4_TRIGGER(i)} />
+							{:else if vote === 2}
+								<Cell side="black" />
 							{:else}
 								<Cell side="opp" />
 							{/if}
