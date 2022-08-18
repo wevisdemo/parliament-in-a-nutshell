@@ -24,7 +24,7 @@
 				name="ปารีณา ไกรคุปต์"
 				size="96px"
 				side="gov"
-				src="rp/parina.png"
+				src="rp/ศาลตัด-ปารีณา.png"
 				tooltip="top"
 			/>
 			<div class="side-explain">ส.ส.<br />ฝ่ายรัฐบาล</div>
@@ -48,7 +48,7 @@
 				name="วิโรจน์ ลักขณาอดิศร"
 				size="96px"
 				side="opp"
-				src="rp/wiroj.png"
+				src="rp/ลาออก-วิโรจน์.png"
 				tooltip="top"
 			/>
 			<div class="side-explain">ส.ส.<br />ฝ่ายค้าน</div>
