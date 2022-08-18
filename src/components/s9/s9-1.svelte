@@ -78,7 +78,7 @@
 	<svg width="0" height="0">
 		<defs>
 			<clipPath id="fadeCurve" clipPathUnits="objectBoundingBox">
-				<path d="M.5064 0C.5064.8 1 .2 1 1L0 1C0 .2.4872.8.4872 0Z" />
+				<path d="M.5056 0C.5056.8 1 .2 1 1L0 1C0 .2.4888.8.4888 0Z" />
 			</clipPath>
 		</defs>
 	</svg>
@@ -118,7 +118,7 @@
 	}
 
 	.par-size {
-		width: 80%;
+		width: 70%;
 
 		> .col {
 			padding: 1rem;
