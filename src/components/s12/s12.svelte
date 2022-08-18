@@ -97,7 +97,14 @@
 						},
 						{ duration: 1, at: '-0.25' }
 					],
-					[el_c[5], { opacity: 1 }, { duration: 0.5, at: '<' }],
+					[
+						el_c[5],
+						{
+							opacity: 1,
+							transform: ['translateX(-50%) scale(0)', 'translateX(-50%) scale(1)']
+						},
+						{ duration: 0.5, at: '<' }
+					],
 					[el_c[6], { opacity: 1 }, { duration: 0.5, at: '-0.1' }],
 					[el_c[7], { opacity: 1 }, { duration: 0.5, at: '-0.25' }],
 					[el_c[8], { opacity: 1 }, { duration: 0.5, at: '<' }]
@@ -674,6 +681,6 @@
 		height: 100%;
 		opacity: 0;
 		left: calc(48px + 50%);
-		transform: translateX(-50%);
+		transform: translateX(-50%) scale(0);
 	}
 </style>
