@@ -1,7 +1,7 @@
 <script lang="ts">
 	import VoteLegend from './VoteLegend.svelte';
 
-	export let hideHint: boolean;
+	export let hideHint = true;
 </script>
 
 <div class="votelog-container">
