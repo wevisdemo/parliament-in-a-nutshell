@@ -451,6 +451,8 @@
 									on:outside={setNeweconMoved(true)}
 									side="opp"
 								/>
+							{:else if vote === 2}
+								<Cell side="black" />
 							{:else}
 								<Cell trigger={PART3_TRIGGER(i)(j)} side="opp" />
 							{/if}
