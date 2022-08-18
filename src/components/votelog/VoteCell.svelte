@@ -24,7 +24,19 @@
 </script>
 
 <div bind:this={el} class="cell {side}" class:trigger style="--trigger:{trigger}" {...$$restProps}>
-	<div class="particle" />
+	{#if side === 'gov'}
+		<svg width="9" height="9" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M1 1L6 6M6 1L1 6" stroke="currentColor" stroke-width="1.5" />
+		</svg>
+	{:else if side === 'opp'}
+		<svg width="9" height="9" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path
+				d="M1.02415 2.64688L2.96757 4.97479L6.99949 0.92213"
+				stroke="currentColor"
+				stroke-width="1.5"
+			/>
+		</svg>
+	{/if}
 </div>
 
 <style lang="scss">
@@ -38,6 +50,8 @@
 		border-bottom: 1px solid #a0a0a0;
 		border-left: 1px solid #a0a0a0;
 
+		color: var(--c);
+
 		&:last-of-type {
 			border-right: 1px solid #a0a0a0;
 		}
@@ -46,28 +60,14 @@
 		align-items: center;
 		justify-content: center;
 
-		> .particle {
-			width: 0.5rem;
-			height: 0.5rem;
-			background: var(--c);
-		}
-
 		&.opp {
 			--bg: #d9d9d9;
 			--c: #5b5b5b;
-
-			> .particle {
-				border-radius: 50%;
-			}
 		}
 
 		&.pracharat {
 			--bg: #0b3757;
 			border-bottom: none;
-
-			> .particle {
-				display: none;
-			}
 		}
 
 		&.trigger::after {
