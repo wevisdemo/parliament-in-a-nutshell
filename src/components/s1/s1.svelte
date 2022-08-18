@@ -126,13 +126,14 @@
 
 	.ans-img-container {
 		position: absolute;
-		top: calc(50% + 64px);
-		left: calc(50% + 336px);
+		top: calc(50% + 48px);
+		left: calc(50% + 304px);
 		transform: translate(-50%, -50%);
 
 		> .ans-img {
 			backface-visibility: visible !important;
 			animation: flipInY 1s;
+			width: 256px;
 		}
 
 		> .ans-img.correct {

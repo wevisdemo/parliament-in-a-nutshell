@@ -5,7 +5,7 @@
 	let el_title_section: any;
 	let el_bg: any;
 	onMount(() => {
-		scroll(animate(el_bg, { transform: 'translateY(50px)' }, { easing: 'linear' }), {
+		scroll(animate(el_bg, { transform: 'translateY(150px)' }, { easing: 'linear' }), {
 			target: el_title_section,
 			offset: ['start end', 'end start']
 		});
@@ -59,10 +59,10 @@
 <style lang="scss">
 	.bg {
 		position: absolute;
-		top: 100px;
-		height: 1400px;
+		top: 50%;
+		width: 80vw;
 		object-fit: contain;
-		transform: translateY(-400px);
+		transform: translateY(-150px);
 	}
 
 	.title-img {

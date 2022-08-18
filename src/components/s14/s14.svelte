@@ -54,7 +54,7 @@
 	/>
 </div>
 <div class="tc c" style="--mt:-30vh">
-	<img src="/shaking-parliament/pt4_newspaper.png" alt="" />
+	<img class="news-img" src="/shaking-parliament/pt4_newspaper.png" alt="" />
 </div>
 <p class="news-text tc" style="--mb:15vh">
 	&ldquo; มกราคม 2565 พล.อ.ประวิตร วงษ์สุวรรณ<br />
@@ -123,6 +123,12 @@
 				transform: translateY(-300px);
 			}
 		}
+	}
+
+	.news-img {
+		width: 80%;
+		max-width: 800px;
+		margin-bottom: 10vh;
 	}
 
 	.news-text {
