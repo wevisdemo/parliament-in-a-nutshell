@@ -4,8 +4,9 @@
 
 	const dispatch = createEventDispatcher();
 
-	export let side: 'gov' | 'opp' | 'skip' = 'gov';
+	export let side: 'gov' | 'opp' | 'pracharat' = 'gov';
 	export let trigger: string = '';
+	export let margin: string = '-216px 0px 1500px 0px';
 
 	let el: any;
 	onMount(() => {
@@ -17,9 +18,7 @@
 
 				return () => dispatch('outside');
 			},
-			{
-				margin: '-216px 0px 1500px 0px'
-			}
+			{ margin }
 		);
 	});
 </script>
@@ -51,7 +50,6 @@
 			width: 0.5rem;
 			height: 0.5rem;
 			background: var(--c);
-			border-radius: 25%;
 		}
 
 		&.opp {
@@ -63,9 +61,8 @@
 			}
 		}
 
-		&.skip {
+		&.pracharat {
 			--bg: #0b3757;
-			// --bg: #000;
 			border-bottom: none;
 
 			> .particle {

@@ -6,6 +6,12 @@
 	import RP from 'components/RepPortrait.svelte';
 	import Cell from 'components/votelog/VoteCell.svelte';
 	import Icon from 'components/votelog/VoteIcon.svelte';
+
+	let taeMoved = false;
+	const setTaeMoved = (val: boolean) => () => {
+		if (val === taeMoved) return;
+		taeMoved = val;
+	};
 </script>
 
 <div class="s9-2-container black tc c">
@@ -27,8 +33,17 @@
 				name="ไทยศรีวิไลย์"
 				tooltip="top"
 				color="#85e8fe"
-				side="free"
-			/>
+				showTop={taeMoved}
+				shift="0"
+			>
+				<RP
+					src="party/ไทยศรีวิไลย์.jpg"
+					name="ไทยศรีวิไลย์"
+					tooltip="top"
+					color="#85e8fe"
+					side="free"
+				/>
+			</RP>
 		</svelte:fragment>
 		<div class="votelog-body">
 			{#each VOTE_METADATA as mati, i}
@@ -40,7 +55,18 @@
 						<div class="votelog-subject">{@html mati.html_name}</div>
 						{#each PART2_DATA[i] as vote, j}
 							{#if vote === 1}
-								<Cell trigger={PART2_TRIGGER(i)(j)} />
+								{#if j === 11}
+									<Cell
+										trigger={PART2_TRIGGER(i)(j)}
+										on:inside={setTaeMoved(false)}
+										on:outside={setTaeMoved(true)}
+										margin="-168px 0px 1500px 0px"
+									/>
+								{:else}
+									<Cell trigger={PART2_TRIGGER(i)(j)} />
+								{/if}
+							{:else if vote === 2}
+								<Cell side="pracharat" />
 							{:else}
 								<Cell side="opp" />
 							{/if}
