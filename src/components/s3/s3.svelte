@@ -140,11 +140,17 @@
 				name="ธนาธร จึงรุ่งเรืองกิจ"
 				size="170px"
 				side="opp"
-				src="rp/thanathorn.png"
+				src="rp/ศาลตัด-ธนาธร.png"
 			/>
 		</div>
 		<div bind:this={el_thammanas} class="thammanas-img">
-			<RP color="#f0da8c" name="ธรรมนัส พรหมเผ่า" size="170px" side="free" src="rp/thammanas.png" />
+			<RP
+				color="#f0da8c"
+				name="ธรรมนัส พรหมเผ่า"
+				size="170px"
+				side="free"
+				src="rp/pt14-ธรรมนัส.png"
+			/>
 		</div>
 		<div bind:this={el_paiboon} class="paiboon-img-container">
 			<img
@@ -164,11 +170,17 @@
 			/>
 		</div>
 		<div bind:this={el_parina} class="parina-img">
-			<RP color="#0b3757" name="ปารีณา ไกรคุปต์" size="170px" side="gov" src="rp/parina.png" />
+			<RP
+				color="#0b3757"
+				name="ปารีณา ไกรคุปต์"
+				size="170px"
+				side="gov"
+				src="rp/ศาลตัด-ปารีณา.png"
+			/>
 		</div>
 		<div bind:this={el_pornpimol} class="pornpimol-img-container">
 			<div class="back" />
-			<RP color="#e50000" name="พรพิมล ธรรมสาร" size="170px" side="opp" src="rp/pornpimol.png" />
+			<RP color="#e50000" name="พรพิมล ธรรมสาร" size="170px" side="opp" src="rp/pt12-พรพิมล.png" />
 		</div>
 		<div bind:this={el_mongkonkit} class="mongkonkit-img-container">
 			<RP
