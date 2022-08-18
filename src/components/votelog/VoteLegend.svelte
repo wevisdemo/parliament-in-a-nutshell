@@ -3,6 +3,7 @@
 	import VoteIcon from './VoteIcon.svelte';
 
 	export let hideHint = true;
+	export let hintPracharat = false;
 </script>
 
 <div class:hideHint class="votelegend-container">
@@ -16,8 +17,21 @@
 			<div class="type">
 				<VoteCell side="opp" style="display:inline-block;border: 1px solid #a0a0a0" />
 				<span>=</span>
-				<span>เห็นด้วยกับฝ่ายรัฐบาล</span>
+				<span>ไม่เห็นด้วยกับฝ่ายรัฐบาล</span>
 			</div>
+			{#if hintPracharat}
+				<div class="type">
+					<VoteCell side="pracharat" style="display:inline-block;border: 1px solid #a0a0a0" />
+					<span>=</span>
+					<span>ยุบพรรคไปเข้าร่วมพรรคพลังประชารัฐ</span>
+				</div>
+			{:else}
+				<div class="type">
+					<VoteCell side="black" style="display:inline-block;border: 1px solid #a0a0a0" />
+					<span>=</span>
+					<span>ไม่อยู่ใน/ถูกระงับ/ลาออกจากการปฏิบัติหน้าที่</span>
+				</div>
+			{/if}
 		</div>
 	</div>
 	<div>
@@ -62,7 +76,7 @@
 		gap: 2rem;
 		border-radius: 999px;
 		margin-bottom: 1rem;
-		--distance: 52.5%;
+		--distance: 12%;
 
 		&::before {
 			content: 'แนวโน้มการลงมติ';

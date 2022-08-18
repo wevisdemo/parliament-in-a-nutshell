@@ -30,7 +30,7 @@
 	};
 </script>
 
-<div class="s9-2-container black tc c">
+<div class="s13-container black tc c">
 	<Votelog>
 		<svelte:fragment slot="header">
 			<RP
@@ -418,7 +418,7 @@
 					<div class="votelog-icon">
 						<Icon type={mati.icon} />
 					</div>
-					<div class="votelog-value" class:first-row={i === 0}>
+					<div class="votelog-value">
 						<div class="votelog-subject">{@html mati.html_name}</div>
 						{#each PART3_DATA[i] as vote, j}
 							{#if vote === 1}
@@ -465,7 +465,7 @@
 </div>
 
 <style lang="scss">
-	.s9-2-container {
-		padding: 20vh 0;
+	.s13-container {
+		padding: 0 0 10vh;
 	}
 </style>

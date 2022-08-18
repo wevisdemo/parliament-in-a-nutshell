@@ -44,11 +44,12 @@
 		--bg: #5b5b5b;
 		--c: #d9d9d9;
 
-		width: 72px;
-		height: 1.5rem;
 		background: var(--bg);
-		border-bottom: 1px solid #a0a0a0;
-		border-left: 1px solid #a0a0a0;
+		width: calc(72px - 1px);
+		height: calc(1.5rem - 1px);
+		margin-left: 1px;
+		margin-top: 1px;
+		box-shadow: 0 0 0 1px #a0a0a0;
 
 		color: var(--c);
 
@@ -66,13 +67,13 @@
 		}
 
 		&.pracharat {
-			--bg: #0b3757;
-			border-bottom: none;
+			--bg: hsl(205, 78%, 15%);
+			box-shadow: 0 1px 0 0 var(--bg);
 		}
 
 		&.black {
 			--bg: #000;
-			border-bottom: none;
+			box-shadow: 0 1px 0 0 #000;
 		}
 
 		&.trigger::after {

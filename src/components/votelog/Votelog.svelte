@@ -2,10 +2,11 @@
 	import VoteLegend from './VoteLegend.svelte';
 
 	export let hideHint = true;
+	export let hintPracharat = false;
 </script>
 
 <div class="votelog-container">
-	<VoteLegend {hideHint} />
+	<VoteLegend {hideHint} {hintPracharat} />
 	<div class="votelog-head">
 		<div class="votelog-head-spacer" />
 		<div class="votelog-head-columns">
@@ -16,12 +17,15 @@
 </div>
 
 <style lang="scss">
+	.votelog-container {
+		max-width: 100%;
+	}
+
 	.votelog-head,
 	.votelog-head-columns,
 	:global(.votelog-row),
 	:global(.votelog-value) {
 		display: flex;
-		justify-content: center;
 	}
 
 	.votelog-head {
@@ -48,6 +52,7 @@
 	.votelog-head-spacer,
 	:global(.votelog-icon) {
 		width: 48px;
+		flex: 0 0 48px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -71,10 +76,6 @@
 			pointer-events: none;
 			z-index: 2;
 		}
-	}
-
-	:global(.votelog-value.first-row) {
-		border-top: 1px solid #a0a0a0;
 	}
 
 	:global(.votelog-subject) {

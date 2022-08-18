@@ -15,7 +15,7 @@
 </script>
 
 <div class="s9-2-container black tc c">
-	<Votelog hideHint={false}>
+	<Votelog hideHint={false} hintPracharat>
 		<svelte:fragment slot="header">
 			<RP src="party/รวมแผ่นดิน.jpg" name="รวมแผ่นดิน" tooltip="top" color="#aac826" />
 			<RP src="party/ประชาภิวัฒน์.jpg" name="ประชาภิวัฒน์" tooltip="top" color="#288707" />
@@ -51,7 +51,7 @@
 					<div class="votelog-icon">
 						<Icon type={mati.icon} />
 					</div>
-					<div class="votelog-value" class:first-row={i === 0}>
+					<div class="votelog-value">
 						<div class="votelog-subject">{@html mati.html_name}</div>
 						{#each PART2_DATA[i] as vote, j}
 							{#if vote === 1}
@@ -80,6 +80,6 @@
 
 <style lang="scss">
 	.s9-2-container {
-		padding: 20vh 0;
+		padding: 0 0 10vh;
 	}
 </style>
