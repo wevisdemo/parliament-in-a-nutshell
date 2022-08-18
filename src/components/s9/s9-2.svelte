@@ -15,7 +15,7 @@
 </script>
 
 <div class="s9-2-container black tc c">
-	<Votelog>
+	<Votelog hideHint={false}>
 		<svelte:fragment slot="header">
 			<RP src="party/รวมแผ่นดิน.jpg" name="รวมแผ่นดิน" tooltip="top" color="#aac826" />
 			<RP src="party/ประชาภิวัฒน์.jpg" name="ประชาภิวัฒน์" tooltip="top" color="#288707" />

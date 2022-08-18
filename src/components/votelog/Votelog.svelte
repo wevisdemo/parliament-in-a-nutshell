@@ -1,4 +1,11 @@
+<script lang="ts">
+	import VoteLegend from './VoteLegend.svelte';
+
+	export let hideHint: boolean;
+</script>
+
 <div class="votelog-container">
+	<VoteLegend {hideHint} />
 	<div class="votelog-head">
 		<div class="votelog-head-spacer" />
 		<div class="votelog-head-columns">

@@ -1,0 +1,125 @@
+<script>
+	import VoteCell from './VoteCell.svelte';
+	import VoteIcon from './VoteIcon.svelte';
+
+	export let hideHint = true;
+</script>
+
+<div class:hideHint class="votelegend-container">
+	<div>
+		<div class="legend lg1">
+			<div class="type">
+				<VoteCell style="display:inline-block;border: 1px solid #a0a0a0" />
+				<span>=</span>
+				<span>เห็นด้วยกับฝ่ายรัฐบาล</span>
+			</div>
+			<div class="type">
+				<VoteCell side="opp" style="display:inline-block;border: 1px solid #a0a0a0" />
+				<span>=</span>
+				<span>เห็นด้วยกับฝ่ายรัฐบาล</span>
+			</div>
+		</div>
+	</div>
+	<div>
+		<div class="legend lg2">
+			<div class="type">
+				<div class="line" />
+				<span>=</span>
+				<span>จุดเวลาที่ย้ายขั้ว/สังกัดพรรค</span>
+			</div>
+			<div class="sep" />
+			<div class="type">
+				<VoteIcon type="choose" />
+				<span>=</span>
+				<span>การเลือกนายกรัฐมนตรี</span>
+			</div>
+			<div class="sep" />
+			<div class="type">
+				<VoteIcon />
+				<span>=</span>
+				<span>การลงมติทั่วไป</span>
+			</div>
+			<div class="sep" />
+			<div class="type">
+				<VoteIcon type="distrust" />
+				<span>=</span>
+				<span>การลงมติอภิปรายไม่ไว้วางใจ</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style lang="scss">
+	.votelegend-container {
+		z-index: 5;
+		margin-bottom: -32px;
+	}
+
+	.legend {
+		padding: 16px 48px;
+		border: 4px solid #fff;
+		display: inline-flex;
+		gap: 2rem;
+		border-radius: 999px;
+		margin-bottom: 1rem;
+		--distance: 52.5%;
+
+		&::before {
+			content: 'แนวโน้มการลงมติ';
+			position: absolute;
+			top: 50%;
+			left: calc(var(--distance) * -1);
+			font-family: 'Kanit', sans-serif;
+			text-align: right;
+			transform: translate(-100%, -50%);
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: calc(var(--distance) - 1rem);
+			height: 2px;
+			left: calc((var(--distance) - 1rem) * -1);
+			top: 50%;
+			transform: translate(0, -50%);
+			border-top: 4px dotted #fff;
+		}
+	}
+
+	.lg2 {
+		gap: 1rem;
+		--distance: 10%;
+		margin-bottom: 0;
+
+		&::before {
+			content: 'ประเภทการลงมติ';
+		}
+	}
+
+	.hideHint > div > .legend {
+		border: 4px solid transparent;
+		margin-bottom: 0;
+
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
+
+	.sep {
+		width: 2px;
+		background: #fff;
+	}
+
+	.line {
+		width: 4rem;
+		height: 5px;
+		background: #a0a0a0;
+	}
+
+	.type {
+		display: flex;
+		align-items: center;
+		gap: 1ch;
+	}
+</style>
