@@ -1,19 +1,18 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import 'styles/master.scss';
 	import '@wevisdemo/ui/styles/typography.css';
 	import '@wevisdemo/ui/styles/components.css';
+
+	import { onMount } from 'svelte';
 	import { weAreAlwaysHiring } from 'utils/we-are-hiring';
 
 	import Loader from 'components/loader/loader.svelte';
 
-	let all_import = 18 + 1; /* onMount + pages */
-	let complete_import = 0;
-	let status: string[] = [];
+	let total = 19; /* 1 onMount + 18 pages */
+	let loaded: number[] = [];
 
-	const finish_load = (what_loaded: string) => {
-		complete_import += 1;
-		status = [...status, what_loaded];
+	const finish_load = (what_loaded: number) => {
+		loaded = [...loaded, what_loaded];
 	};
 
 	let S1: any;
@@ -41,133 +40,131 @@
 
 	onMount(() => {
 		weAreAlwaysHiring();
-		finish_load('Svelte กำลังรัน');
+		finish_load(0);
 	});
 
 	import('components/s1/s1.svelte').then((c) => {
 		S1 = c.default;
-		finish_load('ส่วนที่ 1 สำเร็จ');
+		finish_load(1);
 	});
 
 	import('components/s2/s2.svelte').then((c) => {
 		S2 = c.default;
-		finish_load('ส่วนที่ 2 สำเร็จ');
+		finish_load(2);
 	});
 
 	import('components/s3/s3.svelte').then((c) => {
 		S3 = c.default;
-		finish_load('ส่วนที่ 3 สำเร็จ');
+		finish_load(3);
 	});
 
 	import('components/s4/s4.svelte').then((c) => {
 		S4 = c.default;
-		finish_load('ส่วนที่ 4 สำเร็จ');
+		finish_load(4);
 	});
 
 	import('components/s5/s5.svelte').then((c) => {
 		S5 = c.default;
-		finish_load('ส่วนที่ 5 สำเร็จ');
+		finish_load(5);
 	});
 
 	import('components/s6/s6.svelte').then((c) => {
 		S6 = c.default;
-		finish_load('ส่วนที่ 6 สำเร็จ');
+		finish_load(6);
 	});
 
 	import('components/s7/s7.svelte').then((c) => {
 		S7 = c.default;
-		finish_load('ส่วนที่ 7 สำเร็จ');
+		finish_load(7);
 	});
 
 	import('components/s8/s8.svelte').then((c) => {
 		S8 = c.default;
-		finish_load('ส่วนที่ 8 สำเร็จ');
+		finish_load(8);
 	});
 
 	import('components/s9/s9.svelte').then((c) => {
 		S9 = c.default;
-		finish_load('ส่วนที่ 9 สำเร็จ');
+		finish_load(9);
 	});
 
 	import('components/s10/s10.svelte').then((c) => {
 		S10 = c.default;
-		finish_load('ส่วนที่ 10 สำเร็จ');
+		finish_load(10);
 	});
 
 	import('components/s11/s11.svelte').then((c) => {
 		S11 = c.default;
-		finish_load('ส่วนที่ 11 สำเร็จ');
+		finish_load(11);
 	});
 
 	import('components/s12/s12.svelte').then((c) => {
 		S12 = c.default;
-		finish_load('ส่วนที่ 12 สำเร็จ');
+		finish_load(12);
 	});
 
 	import('components/s13/s13.svelte').then((c) => {
 		S13 = c.default;
-		finish_load('ส่วนที่ 13 สำเร็จ');
+		finish_load(13);
 	});
 
 	import('components/s14/s14.svelte').then((c) => {
 		S14 = c.default;
-		finish_load('ส่วนที่ 14 สำเร็จ');
+		finish_load(14);
 	});
 
 	import('components/s15/s15.svelte').then((c) => {
 		S15 = c.default;
-		finish_load('ส่วนที่ 15 สำเร็จ');
+		finish_load(15);
 	});
 
 	import('components/s16/s16.svelte').then((c) => {
 		S16 = c.default;
-		finish_load('ส่วนที่ 16 สำเร็จ');
+		finish_load(16);
 	});
 
 	import('components/s17/s17.svelte').then((c) => {
 		S17 = c.default;
-		finish_load('ส่วนที่ 17 สำเร็จ');
+		finish_load(17);
 	});
 
 	import('components/s18/s18.svelte').then((c) => {
 		S18 = c.default;
-		finish_load('ส่วนที่ 18 สำเร็จ');
+		finish_load(18);
 	});
-
-	$: load_percent = (complete_import / all_import) * 100;
 </script>
 
 <a
 	href="https://wevis.info/"
 	rel="nofollow noopener noreferrer"
 	style="position:fixed;top:.75rem;left:1rem;z-index:99;mix-blend-mode:difference"
+	title="WeVis"
 >
 	<img
 		src="/shaking-parliament/wevis-logo.svg"
-		alt=""
+		alt="WeVis"
 		decoding="async"
 		loading="eager"
 		style="height:1.75rem"
 	/>
 </a>
-<Loader {load_percent} {status} />
-{#if load_percent === 100}
-	<svelte:component this={S1} />
-	<svelte:component this={S2} />
-	<svelte:component this={S3} />
-	<svelte:component this={S4} />
-	<svelte:component this={S5} />
-	<svelte:component this={S6} />
-	<svelte:component this={S7} />
-	<svelte:component this={S8} />
-	<svelte:component this={S9} />
-	<svelte:component this={S10} />
-	<svelte:component this={S11} />
-	<svelte:component this={S12} />
-	<svelte:component this={S13} />
-	<svelte:component this={S14} />
-	<svelte:component this={S15} />
-	<svelte:component this={S16} />
-	<svelte:component this={S17} />
-	<svelte:component this={S18} />
-{/if}
+
+<Loader {total} {loaded} />
+{#if S1}<svelte:component this={S1} />{/if}
+{#if S2}<svelte:component this={S2} />{/if}
+{#if S3}<svelte:component this={S3} />{/if}
+{#if S4}<svelte:component this={S4} />{/if}
+{#if S5}<svelte:component this={S5} />{/if}
+{#if S6}<svelte:component this={S6} />{/if}
+{#if S7}<svelte:component this={S7} />{/if}
+{#if S8}<svelte:component this={S8} />{/if}
+{#if S9}<svelte:component this={S9} />{/if}
+{#if S10}<svelte:component this={S10} />{/if}
+{#if S11}<svelte:component this={S11} />{/if}
+{#if S12}<svelte:component this={S12} />{/if}
+{#if S13}<svelte:component this={S13} />{/if}
+{#if S14}<svelte:component this={S14} />{/if}
+{#if S15}<svelte:component this={S15} />{/if}
+{#if S16}<svelte:component this={S16} />{/if}
+{#if S17}<svelte:component this={S17} />{/if}
+{#if S18}<svelte:component this={S18} />{/if}

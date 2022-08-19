@@ -1,73 +1,138 @@
 <script lang="ts">
-	export let load_percent: number;
-	export let status: string[] = [];
+	import VoteIcon from 'components/votelog/VoteIcon.svelte';
 
-	$: bg = `conic-gradient(from ${
-		(load_percent / 100) * 180 + 90
-	}deg at 50% 100%,#5b5b5b 0%,#5b5b5b 50%,#dadada 50%,#dadada 100%)`;
+	export let total: number;
+	export let loaded: number[] = [];
+
+	let isReady: boolean = false;
+	$: percent = (loaded.length / total) * 100;
+	$: {
+		if (percent === 100) {
+			requestIdleCallback(() => (isReady = true));
+		}
+	}
 </script>
 
-<div class="h100 c loader-container" class:get-out={load_percent === 100}>
-	<svg width="0" height="0">
-		<defs>
-			<clipPath id="parliamentCurve" clipPathUnits="objectBoundingBox">
-				<path d="M0 1C0 0 .5 0 .5 0 .5 0 1 0 1 1L.7 1C.7.6.5.6.5.6.5.6.3.6.3 1Z" />
-			</clipPath>
-		</defs>
-	</svg>
-	<div class="parliament-container">
-		<div class="parliament" style:--bg={bg} />
-		<div class="percent-text">
-			<div class="loading-text">กำลังโหลดรัฐบาลไทย</div>
-			<div class="percent T1">{~~load_percent}%</div>
-			<div class="lastest-loaded">{status[status.length - 1] ?? 'กำลังรอ Svelte'}</div>
-			<!-- <details>
-				<summary>{status[status.length - 1]}</summary>
-				<div class="loaded-content">{status.join('\n')}</div>
-			</details> -->
+<div class="c loader-container" class:finish={isReady}>
+	<div class="content tc">
+		<div class="row" style="--gap:1rem">
+			<div class="icon" class:check={percent >= 25}>
+				<VoteIcon type="choose" />
+			</div>
+			<div class="icon" class:check={percent >= 50}>
+				<VoteIcon />
+			</div>
+			<div class="icon" class:check={percent >= 75}>
+				<VoteIcon type="distrust" />
+			</div>
+		</div>
+		<div class="text">LOADING ...</div>
+		<div class="load-bar">
+			{#each Array(total) as _, i}
+				<div class="load-block" class:loaded={loaded.includes(i)} />
+			{/each}
 		</div>
 	</div>
 </div>
 
-<style>
-	/* .loaded-content {
-		white-space: pre-wrap;
-	} */
-	.get-out {
+<style lang="scss">
+	@keyframes holdFade {
+		0%,
+		50% {
+			opacity: 1;
+		}
+		to {
+			opacity: 0;
+			display: none;
+		}
+	}
+
+	.loader-container {
 		position: fixed;
 		inset: 0;
-		opacity: 0;
+		z-index: 98;
+
+		background: url(/shaking-parliament/bg.jpg), #eee;
+		background-size: 100%;
+	}
+
+	.finish {
+		animation: holdFade 2s forwards;
 		pointer-events: none;
-		transform: translateY(-100%);
 
-		transition: all 0.5s;
+		> .content {
+			opacity: 0;
+			transition: opacity 1s;
+		}
 	}
 
-	.parliament-container {
-		width: 80%;
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(359deg);
+		}
 	}
 
-	.parliament {
-		aspect-ratio: 1/0.5;
+	.icon {
+		width: 4rem;
+		height: 4rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 1.5rem;
 
-		background: var(--bg);
-		clip-path: url(#parliamentCurve);
+		opacity: 0.25;
+		transition: opacity 0.3s;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 4rem;
+			height: 4rem;
+
+			border-radius: 50%;
+			border: 3px dotted #5b5b5b;
+		}
+
+		&.check {
+			opacity: 1;
+
+			&::before {
+				animation: spin 8s linear infinite;
+			}
+		}
+
+		> :global(svg) {
+			width: 1.5rem;
+			height: 1.5rem;
+			color: #5b5b5b;
+		}
 	}
 
-	.percent-text {
-		position: absolute;
-		bottom: 15%;
-		left: 50%;
-		transform: translate(-50%, 50%);
-		text-align: center;
+	.text {
+		font-style: italic;
+		font-weight: 700;
+		font-size: 1.5rem;
+		color: #5b5b5b;
+		letter-spacing: 0.04em;
+
+		margin-bottom: 1rem;
 	}
 
-	.loading-text {
-		font-size: 1.2rem;
-		/* font-weight: 700; */
+	.load-bar {
+		display: flex;
 	}
 
-	.percent {
-		font-size: 5rem;
+	.load-block {
+		width: 16px;
+		height: 8px;
+		background: #d5d5d5;
+		transition: background 0.3s;
+
+		&.loaded {
+			background: #5b5b5b;
+		}
 	}
 </style>
