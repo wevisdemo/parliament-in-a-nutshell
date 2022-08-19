@@ -351,18 +351,18 @@
 					<div class="votelog-value">
 						<div class="votelog-subject">{@html mati.html_name}</div>
 						{#each PART4_DATA[i] as vote, j}
-							{#if j === 0}
-								{#if vote === 1}
+							{#if vote === 1}
+								{#if i === 31 && j === 0}
 									<Cell
 										trigger={PART4_TRIGGER(i)}
 										on:inside={setShowTop(false)}
 										on:outside={setShowTop(true)}
 									/>
+								{:else if i === 31}
+									<Cell trigger={PART4_TRIGGER(i)} />
 								{:else}
-									<Cell side="opp" />
+									<Cell />
 								{/if}
-							{:else if vote === 1}
-								<Cell trigger={PART4_TRIGGER(i)} />
 							{:else if vote === 2}
 								<Cell side="black" />
 							{:else}
