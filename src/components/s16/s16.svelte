@@ -40,7 +40,7 @@
 </script>
 
 <div class="semi-circ" style="--h:30vh" />
-<div bind:this={el_dots_container} class="_3dots c row vert" style="--gap:3rem">
+<div bind:this={el_dots_container} class="_3dots c row vert" style="--gap:48px">
 	<div class="dot dot1" />
 	<div class="dot dot2" />
 	<div class="dot dot3" />
@@ -92,7 +92,7 @@
 	}
 
 	._3dots {
-		margin: 3rem 0 0;
+		margin: 48px 0 0;
 	}
 
 	.dot {

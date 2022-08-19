@@ -70,9 +70,9 @@
 		<div class="event-container" style="--gap:0">
 			<div class="event resign">
 				<h3 class="tc">ลาออก</h3>
-				<div class="row rp-grid" style="--gap:1rem">
+				<div class="row rp-grid" style="--gap:16px">
 					{#each PART1_DATA.resign as res_c}
-						<div class="col row vert" style="--gap:1rem">
+						<div class="col row vert" style="--gap:16px">
 							{#each res_c as rep}
 								<RP
 									size="34px"
@@ -103,9 +103,9 @@
 			<div class="sep" />
 			<div class="event pass">
 				<h3 class="tc">เสียชีวิต</h3>
-				<div class="row rp-grid" style="--gap:1rem">
+				<div class="row rp-grid" style="--gap:16px">
 					{#each PART1_DATA.pass as res_c}
-						<div class="col row vert" style="--gap:1rem">
+						<div class="col row vert" style="--gap:16px">
 							{#each res_c as rep}
 								<RP
 									size="34px"
@@ -136,9 +136,9 @@
 			<div class="sep" />
 			<div class="event fire">
 				<h3 class="tc">ศาลตัดสินให้พ้นสภาพ ส.ส.</h3>
-				<div class="row rp-grid" style="--gap:1rem">
+				<div class="row rp-grid" style="--gap:16px">
 					{#each PART1_DATA.fire as res_c}
-						<div class="col row vert" style="--gap:1rem">
+						<div class="col row vert" style="--gap:16px">
 							{#each res_c as rep}
 								<RP
 									size="34px"
@@ -215,12 +215,12 @@
 	.event {
 		// overflow: hidden;
 		border-radius: 12px;
-		padding: 2rem;
+		padding: 32px;
 	}
 
 	h3 {
 		white-space: nowrap;
-		margin-bottom: 1.5rem;
+		margin-bottom: 24px;
 	}
 
 	.sep {
@@ -252,11 +252,11 @@
 
 	.pill {
 		border-radius: 999px;
-		line-height: 3rem;
-		padding: 0 1.5rem;
+		line-height: 2;
+		padding: 0 24px;
 
 		font-size: 1.5rem;
-		margin: 2rem 0;
+		margin: 32px 0;
 
 		color: white;
 		background: #000;
@@ -332,7 +332,7 @@
 		transition: margin-right 0.5s;
 
 		&.showNewNum {
-			margin-right: -2rem;
+			margin-right: -32px;
 		}
 	}
 </style>

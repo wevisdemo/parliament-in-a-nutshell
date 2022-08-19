@@ -185,7 +185,7 @@
 		background: #000000;
 		border-radius: 20px;
 		padding: 20px 48px;
-		margin-top: 3rem;
+		margin-top: 48px;
 
 		letter-spacing: 0.01em;
 		cursor: pointer;
@@ -198,14 +198,14 @@
 
 	.share-text {
 		font-size: 1.5rem;
-		margin: 3rem 0 2rem;
+		margin: 48px 0 32px;
 	}
 
 	.they-work-container {
 		padding: 250px 0 200px;
 
 		> .header {
-			margin-bottom: 4rem;
+			margin-bottom: 64px;
 		}
 	}
 
@@ -232,13 +232,13 @@
 
 		.card-body {
 			background: #fff;
-			padding: 1rem;
+			padding: 16px;
 			text-align: left;
 
 			> .card-header {
 				font-size: 1.45rem;
 				font-weight: 700;
-				margin-bottom: 0.5rem;
+				margin-bottom: 8px;
 			}
 
 			p {

@@ -45,7 +45,7 @@
 
 	.choice {
 		display: flex;
-		margin: 0 auto 1.5rem;
+		margin: 0 auto 24px;
 		position: relative;
 		cursor: pointer;
 

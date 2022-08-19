@@ -15,7 +15,7 @@
 	<div class="ref_date">— สืบค้นเมื่อ กรกฎาคม 2565 —</div>
 	<div style="--h:20vh" />
 	<h1 class="T1">WeVis Interns</h1>
-	<div class="row" style="--gap:5rem">
+	<div class="row" style="--gap:80px">
 		<div class="col c tc intern">
 			<img
 				class="intern-portrait"
@@ -83,18 +83,18 @@
 	.pill {
 		border-radius: 999px;
 		border: 2px white solid;
-		line-height: 3rem;
-		padding: 0 1.5rem;
+		line-height: 2;
+		padding: 0 24px;
 
 		font-size: 1.5rem;
-		margin: 4rem 0 1rem;
+		margin: 64px 0 16px;
 	}
 
 	p {
 		font-style: italic;
 		font-weight: 500;
 		line-height: 2;
-		margin: 1rem 0;
+		margin: 16px 0;
 		font-size: 1.25rem;
 	}
 

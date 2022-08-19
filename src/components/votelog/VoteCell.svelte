@@ -46,7 +46,7 @@
 
 		background: var(--bg);
 		width: calc(72px - 1px);
-		height: calc(1.5rem - 1px);
+		height: calc(24px - 1px);
 		margin-left: 1px;
 		margin-top: 1px;
 		box-shadow: 0 0 0 1px #a0a0a0;

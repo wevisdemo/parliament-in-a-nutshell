@@ -208,7 +208,7 @@
 		</div>
 	</div>
 	<div class="c" bind:this={el_bridge_text1}>
-		<div style="--h:1rem" />
+		<div style="--h:16px" />
 		<h1 class="T1">
 			ตัวเลขที่ผันแปรเหล่านี้<br />
 			กำลังบอกอะไรเรา ?
@@ -255,7 +255,7 @@
 	.counter-decor {
 		position: absolute;
 		top: 0;
-		right: -3rem;
+		right: -48px;
 		transform: rotate(-90deg);
 		transform-origin: bottom right;
 		text-align: center;

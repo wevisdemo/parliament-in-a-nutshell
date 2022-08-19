@@ -49,7 +49,7 @@
 <a
 	href="https://wevis.info/"
 	rel="nofollow noopener noreferrer"
-	style="position:fixed;top:.75rem;left:1rem;z-index:99;mix-blend-mode:difference"
+	style="position:fixed;top:12px;left:16px;z-index:99;mix-blend-mode:difference"
 	title="WeVis"
 >
 	<img
@@ -57,7 +57,7 @@
 		alt="WeVis"
 		decoding="async"
 		loading="eager"
-		style="height:1.75rem"
+		style="height:28px"
 	/>
 </a>
 <Loader {loaded} {isReady} />

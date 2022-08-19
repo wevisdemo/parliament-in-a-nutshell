@@ -45,7 +45,7 @@
 	.compare {
 		display: grid;
 		grid-template-columns: 1fr auto 1fr;
-		gap: 2rem;
+		gap: 32px;
 
 		> .compare-opp {
 			justify-self: flex-end;
@@ -65,8 +65,8 @@
 
 		border-radius: 24px;
 
-		margin-bottom: 1.5rem;
-		padding: 0.75rem 2.5rem;
+		margin-bottom: 24px;
+		padding: 12px 40px;
 
 		background: #000;
 
@@ -85,8 +85,8 @@
 		font-weight: 700;
 		line-height: 1.2;
 		color: #ff6f21;
-		margin-top: 1.5rem;
-		transform: translateY(-1.5rem);
+		margin-top: 24px;
+		transform: translateY(-24px);
 	}
 
 	.bnt-bhumjaithai {

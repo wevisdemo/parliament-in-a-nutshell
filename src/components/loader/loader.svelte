@@ -7,15 +7,15 @@
 
 <div class="c loader-container" class:finish={isReady}>
 	<div class="content tc">
-		<div class="row" class:stop={loaded} style="--gap:1rem">
+		<div class="row" class:stop={loaded} style="--gap:16px">
 			<div class="icon">
-				<VoteIcon type="choose" style="height:1.5rem;width:1.5rem" />
+				<VoteIcon type="choose" style="height:24px;width:24px" />
 			</div>
 			<div class="icon">
-				<VoteIcon style="height:1.5rem;width:1.5rem" />
+				<VoteIcon style="height:24px;width:24px" />
 			</div>
 			<div class="icon">
-				<VoteIcon type="distrust" style="height:1.5rem;width:1.5rem" />
+				<VoteIcon type="distrust" style="height:24px;width:24px" />
 			</div>
 		</div>
 		<div class="text">LOADING ...</div>
@@ -80,12 +80,12 @@
 	}
 
 	.icon {
-		width: 4rem;
-		height: 4rem;
+		width: 64px;
+		height: 64px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin-bottom: 1.5rem;
+		margin-bottom: 24px;
 
 		color: #5b5b5b;
 
@@ -103,8 +103,8 @@
 		&::before {
 			content: '';
 			position: absolute;
-			width: 4rem;
-			height: 4rem;
+			width: 64px;
+			height: 64px;
 
 			border-radius: 50%;
 			border: 3px dotted #5b5b5b;
@@ -124,6 +124,6 @@
 		color: #5b5b5b;
 		letter-spacing: 0.04em;
 
-		margin-bottom: 1rem;
+		margin-bottom: 16px;
 	}
 </style>

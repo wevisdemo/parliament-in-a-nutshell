@@ -30,7 +30,7 @@
 	.base-num {
 		position: absolute;
 		right: -10%;
-		bottom: 1.5rem;
+		bottom: 24px;
 		width: 120%;
 
 		font-size: 7rem;
@@ -49,7 +49,7 @@
 	.unit {
 		position: absolute;
 		width: 100%;
-		bottom: 0rem;
+		bottom: 0;
 	}
 
 	@keyframes dashmove {

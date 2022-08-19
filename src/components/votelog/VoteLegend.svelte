@@ -73,9 +73,9 @@
 		padding: 16px 48px;
 		border: 4px solid #fff;
 		display: inline-flex;
-		gap: 2rem;
+		gap: 32px;
 		border-radius: 999px;
-		margin-bottom: 1rem;
+		margin-bottom: 16px;
 		--distance: 12%;
 
 		&::before {
@@ -93,9 +93,9 @@
 		&::after {
 			content: '';
 			position: absolute;
-			width: calc(var(--distance) - 1rem);
+			width: calc(var(--distance) - 16px);
 			height: 2px;
-			left: calc((var(--distance) - 1rem) * -1);
+			left: calc((var(--distance) - 16px) * -1);
 			top: 50%;
 			transform: translate(0, -50%);
 			border-top: 4px dotted #fff;
@@ -103,7 +103,7 @@
 	}
 
 	.lg2 {
-		gap: 1rem;
+		gap: 16px;
 		--distance: 10%;
 		margin-bottom: 0;
 
@@ -128,7 +128,7 @@
 	}
 
 	.line {
-		width: 4rem;
+		width: 64px;
 		height: 5px;
 		background: #a0a0a0;
 	}

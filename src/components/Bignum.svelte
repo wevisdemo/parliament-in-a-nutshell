@@ -74,7 +74,7 @@
 		width: 100%;
 		opacity: 0;
 
-		transform: translateY(0.5rem);
+		transform: translateY(8px);
 
 		transition-property: transform, opacity;
 		transition-duration: 0.5s;
@@ -86,7 +86,7 @@
 		bottom: 0;
 		width: 120%;
 
-		transform: translateY(-1.5rem);
+		transform: translateY(-24px);
 
 		transition-property: transform, color;
 		transition-duration: 0.5s;
@@ -110,7 +110,7 @@
 	.unit {
 		position: absolute;
 		width: 100%;
-		bottom: 0rem;
+		bottom: 0;
 
 		transition-property: opacity, transform;
 		transition-duration: 0.3s;
@@ -121,7 +121,7 @@
 		position: absolute;
 		left: 0;
 		width: 80%;
-		bottom: 2.8rem;
+		bottom: 44.8px;
 		transform: translateX(20%);
 
 		transition-property: opacity, transform;
@@ -136,12 +136,12 @@
 
 		.new-num {
 			opacity: 1;
-			transform: translate(-0.75rem, -1rem) scale(0.57);
+			transform: translate(-12px, -16px) scale(0.57);
 		}
 
 		.base-num {
 			color: var(--sidecolor);
-			transform: translate(2.5rem, 2.5rem) scale(0.42);
+			transform: translate(40px, 40px) scale(0.42);
 		}
 
 		.unit {

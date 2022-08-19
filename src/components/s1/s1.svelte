@@ -86,7 +86,7 @@
 	.T1 {
 		font-size: 4rem;
 		line-height: 1.2;
-		margin-bottom: 2.5rem;
+		margin-bottom: 40px;
 
 		position: relative;
 
@@ -120,7 +120,7 @@
 		border-radius: 20px;
 		padding: 20px 48px;
 
-		margin-top: 1rem;
+		margin-top: 16px;
 
 		letter-spacing: 0.01em;
 		cursor: pointer;
@@ -181,11 +181,11 @@
 		opacity: 0;
 		pointer-events: none;
 
-		margin-top: -3rem;
+		margin-top: -48px;
 
 		> img {
-			width: 2rem;
-			height: 2rem;
+			width: 32px;
+			height: 32px;
 			margin-right: 1ch;
 		}
 	}

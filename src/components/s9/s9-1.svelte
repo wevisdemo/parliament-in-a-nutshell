@@ -104,25 +104,25 @@
 			font-weight: 700;
 		}
 
-		margin: 5rem 0;
+		margin: 80px 0;
 	}
 
 	.s8-p {
 		margin: 0;
-		margin-bottom: 10rem;
+		margin-bottom: 160px;
 	}
 
 	.par-size {
 		width: 70%;
 
 		> .col {
-			padding: 1rem;
+			padding: 16px;
 
 			background: var(--bgc, #dadada);
 			color: var(--txc, #000);
 
 			font-size: 1.5rem;
-			padding: 3rem 0;
+			padding: 48px 0;
 			line-height: 1.2;
 
 			transition: flex 0.5s;

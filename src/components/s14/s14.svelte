@@ -66,7 +66,7 @@
 	โดยในเวลาต่อมา
 	<strong>ร.อ. ธรรมนัสได้นำทีม <span class="T1 num">18</span> ส.ส. เข้าสังกัด</strong><br />
 	<span class="T1 thaiecon">พรรคเศรษฐกิจไทย</span><br />
-	<span class="black" style="margin-top:.5rem"
+	<span class="black" style="margin-top:8px"
 		>ซึ่งมิได้ประกาศจุดยืนอย่างแน่ชัดว่าจะถือตนอยู่ในขั้วข้างใด</span
 	><br />
 	ในขณะที่อีก <span class="T1 num">3</span> ส.ส. ได้เข้าสังกัด<br />
@@ -139,8 +139,8 @@
 			display: inline-block;
 			background: #000;
 			color: white;
-			padding: 0.5rem 1rem;
-			margin: 0.1rem 0;
+			padding: 8px 16px;
+			margin: 1.6px 0;
 			line-height: 1.5;
 			font-weight: 700;
 		}

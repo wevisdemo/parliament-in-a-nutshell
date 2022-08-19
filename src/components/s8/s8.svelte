@@ -84,8 +84,8 @@
 			display: inline-block;
 			background: #000;
 			color: white;
-			padding: 0.5rem 1rem;
-			margin: 0.1rem 0;
+			padding: 8px 16px;
+			margin: 1.6px 0;
 			line-height: 1.5;
 			font-weight: 700;
 		}

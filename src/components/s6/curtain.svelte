@@ -3,9 +3,9 @@
 </script>
 
 <div class="curtain h100 c">
-	<h1 class="T1" style="margin-bottom:1.5rem">วิธีอ่านข้อมูล</h1>
+	<h1 class="T1" style="margin-bottom:24px">วิธีอ่านข้อมูล</h1>
 	<h2 class="pill">ข้อมูลทั่วไป</h2>
-	<div class="row" style="margin-bottom:1.5rem">
+	<div class="row" style="margin-bottom:24px">
 		<div class="col data-explain tc" style="--bgc:#5b5b5b;--txc:#fff">
 			<small>ข้อมูลเกี่ยวกับ</small><br />ฝ่ายรัฐบาล
 		</div>
@@ -104,15 +104,15 @@
 	.pill {
 		border-radius: 999px;
 		border: 2px white solid;
-		line-height: 3rem;
-		padding: 0 1.5rem;
+		line-height: 2;
+		padding: 0 24px;
 
 		font-size: 1.5rem;
-		margin: 2rem 0;
+		margin: 32px 0;
 	}
 
 	.side-explain {
-		margin: 1rem 0 0.5rem;
+		margin: 16px 0 8px;
 	}
 
 	.small-explain {
@@ -132,8 +132,8 @@
 		color: var(--txc, #000);
 
 		font-weight: 700;
-		padding: 0.5rem 3rem;
-		line-height: 1.2rem;
+		padding: 8px 48px;
+		line-height: 1.2;
 	}
 
 	.explainer {
@@ -144,7 +144,7 @@
 		z-index: 19;
 
 		border: 1px dashed #ffffff;
-		padding: 0.75rem;
+		padding: 12px;
 		white-space: nowrap;
 
 		&::before {

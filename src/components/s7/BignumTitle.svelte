@@ -35,7 +35,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: 0.5rem;
+		gap: 8px;
 
 		font-size: 1.5rem;
 		font-weight: 700;
