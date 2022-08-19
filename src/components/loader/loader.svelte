@@ -8,7 +8,11 @@
 	$: percent = (loaded.length / total) * 100;
 	$: {
 		if (percent === 100) {
-			requestIdleCallback(() => (isReady = true));
+			if (window?.requestIdleCallback) {
+				window.requestIdleCallback(() => (isReady = true));
+			} else {
+				window.requestAnimationFrame(() => (isReady = true));
+			}
 		}
 	}
 </script>
