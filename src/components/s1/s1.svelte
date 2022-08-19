@@ -203,5 +203,7 @@
 		pointer-events: none;
 		width: 100vw;
 		height: 100vh;
+		mask-image: linear-gradient(#000f 70%, #0000);
+		-webkit-mask-image: linear-gradient(#000f 70%, #0000);
 	}
 </style>
