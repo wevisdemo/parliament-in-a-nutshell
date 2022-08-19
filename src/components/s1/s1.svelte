@@ -5,6 +5,7 @@
 	import Choice from './choice.svelte';
 	import JSConfetti from 'js-confetti';
 
+	let el_canvas: any;
 	let jsConfetti: any;
 
 	let selected_choice: number | null = null;
@@ -15,26 +16,28 @@
 	];
 
 	let isSubmitted = false;
-	$: isCorrect = choices.find((c) => c.value === selected_choice)?.isCorrect;
-	$: img_file = `/shaking-parliament/quiz-${isCorrect ? '' : 'in'}correct.png`;
+	let isCorrect: boolean | undefined;
+	const submitAns = () => {
+		isSubmitted = true;
+		isCorrect = choices.find((c) => c.value === selected_choice)?.isCorrect;
+		removeHtmlClass('lock-body-scroll');
+
+		requestAnimationFrame(() => {
+			isCorrect &&
+				jsConfetti
+					?.addConfetti({
+						confettiColors: ['#ffbe0b', '#fb5607', '#ff006e', '#8338ec', '#3a86ff'],
+						confettiRadius: 8,
+						confettiNumber: 500
+					})
+					.then(() => (jsConfetti = null));
+		});
+	};
 
 	onMount(() => {
-		jsConfetti = new JSConfetti();
+		jsConfetti = new JSConfetti({ canvas: el_canvas });
 		addHtmlClass('lock-body-scroll');
 	});
-
-	$: {
-		if (isSubmitted) {
-			removeHtmlClass('lock-body-scroll');
-
-			isCorrect &&
-				jsConfetti?.addConfetti({
-					confettiColors: ['#ffbe0b', '#fb5607', '#ff006e', '#8338ec', '#3a86ff'],
-					confettiRadius: 8,
-					confettiNumber: 500
-				});
-		}
-	}
 </script>
 
 <section class="h100 c">
@@ -52,7 +55,7 @@
 		class="submit-ans-btn"
 		class:hide={!selected_choice || isSubmitted}
 		type="button"
-		on:click={() => (isSubmitted = true)}
+		on:click={submitAns}
 	>
 		ตรวจคำตอบ
 	</button>
@@ -68,9 +71,16 @@
 
 	{#if isSubmitted}
 		<div class="ans-img-container">
-			<img class="ans-img" class:correct={isCorrect} src={img_file} alt="" decoding="async" />
+			<img
+				class="ans-img"
+				class:correct={isCorrect}
+				src="/shaking-parliament/quiz-{isCorrect ? '' : 'in'}correct.png"
+				alt=""
+				decoding="async"
+			/>
 		</div>
 	{/if}
+	<canvas bind:this={el_canvas} />
 </section>
 
 <style lang="scss">
@@ -181,5 +191,13 @@
 		animation: bounce 4s linear infinite;
 		animation-delay: 2s;
 		transition: opacity 1s;
+	}
+
+	canvas {
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		width: 100vw;
+		height: 100vh;
 	}
 </style>
