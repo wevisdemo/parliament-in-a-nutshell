@@ -1,16 +1,16 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "_app/immutable/start-8fb56789.js",
+    "file": "_app/immutable/start-d9f826fc.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_index-22591318.js",
-      "_preload-helper-1f6d0e3b.js"
+      "_index-a746bea0.js"
     ],
     "dynamicImports": [
       ".svelte-kit/runtime/components/layout.svelte",
       ".svelte-kit/runtime/components/error.svelte",
-      "_index-30340a03.js"
+      "src/routes/index.svelte"
     ]
   },
   ".svelte-kit/runtime/components/layout.svelte": {
@@ -32,57 +32,29 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "_app/immutable/pages/index.svelte-d641a150.js",
+    "file": "_app/immutable/pages/index.svelte-b336df9c.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
+    "isDynamicEntry": true,
     "imports": [
       "_index-22591318.js",
-      "_index-30340a03.js",
-      "_preload-helper-1f6d0e3b.js"
+      "_index-a746bea0.js"
+    ],
+    "css": [
+      "_app/immutable/assets/index-40861036.css"
     ]
   },
   "_index-22591318.js": {
     "file": "_app/immutable/chunks/index-22591318.js"
   },
-  "_preload-helper-1f6d0e3b.js": {
-    "file": "_app/immutable/chunks/preload-helper-1f6d0e3b.js",
+  "_index-a746bea0.js": {
+    "file": "_app/immutable/chunks/index-a746bea0.js",
     "imports": [
       "_index-22591318.js"
     ]
   },
-  "_index-30340a03.js": {
-    "file": "_app/immutable/chunks/index-30340a03.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "_index-22591318.js",
-      "_preload-helper-1f6d0e3b.js"
-    ],
-    "dynamicImports": [
-      "src/components/s7/s8-bridge.svelte"
-    ],
-    "css": [
-      "_app/immutable/assets/index-dfff2eed.css"
-    ]
-  },
-  "src/components/s7/s8-bridge.svelte": {
-    "file": "_app/immutable/chunks/s8-bridge-e22d5505.js",
-    "src": "src/components/s7/s8-bridge.svelte",
-    "isDynamicEntry": true,
-    "imports": [
-      "_index-22591318.js",
-      "_index-30340a03.js",
-      "_preload-helper-1f6d0e3b.js"
-    ],
-    "css": [
-      "_app/immutable/assets/s8-bridge-bc9a1789.css"
-    ]
-  },
-  "src/components/s7/s8-bridge.css": {
-    "file": "_app/immutable/assets/s8-bridge-bc9a1789.css",
-    "src": "src/components/s7/s8-bridge.css"
-  },
-  "index.css": {
-    "file": "_app/immutable/assets/index-dfff2eed.css",
-    "src": "index.css"
+  "src/routes/index.css": {
+    "file": "_app/immutable/assets/index-40861036.css",
+    "src": "src/routes/index.css"
   }
 }
