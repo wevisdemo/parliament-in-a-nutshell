@@ -15,10 +15,12 @@
 			({ y }) => {
 				if (y.progress === 1 && showSeat !== true) {
 					showSeat = true;
+					gov_seat.set(254);
 					return;
 				}
 				if (y.progress !== 1 && showSeat === true) {
 					showSeat = false;
+					gov_seat.set(242);
 					return;
 				}
 			},
@@ -38,14 +40,6 @@
 			}
 		);
 	});
-
-	$: {
-		if (showSeat) {
-			gov_seat.set(254);
-		} else {
-			gov_seat.set(242);
-		}
-	}
 </script>
 
 <div class="c tc">
