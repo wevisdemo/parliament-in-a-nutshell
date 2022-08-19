@@ -6,16 +6,12 @@
 	import Bignum from 'components/Bignum.svelte';
 	import BignumTitle from './BignumTitle.svelte';
 	import Spareseat from './Spareseat.svelte';
+	import Bridge from './s8-bridge.svelte';
 
 	import { PART1_DATA } from 'data/part1';
 
 	let showReplaced = false;
 	let showNewNum = false;
-
-	let Bridge: any;
-	import('./s8-bridge.svelte').then((c) => {
-		Bridge = c.default;
-	});
 
 	let el_pill1: any;
 	let el_pill2: any;
@@ -202,9 +198,7 @@
 	<div class="pen" style="--h:5vh" />
 	<div class="pen" bind:this={el_trigger} style="--h:40vh" />
 </div>
-{#if Bridge}
-	<svelte:component this={Bridge} />
-{/if}
+<Bridge />
 
 <style lang="scss">
 	.event-container {
