@@ -9,6 +9,7 @@
 	class:correct={group === data.value && submitted && data.isCorrect}
 	class:incorrect={group === data.value && submitted && !data.isCorrect}
 	class="choice"
+	onclick={() => 0}
 >
 	<input type="radio" bind:group name="quiz" value={data.value} disabled={submitted} />
 	<span class="text">{data.value} คน</span>
@@ -49,9 +50,12 @@
 		position: relative;
 		cursor: pointer;
 
+		& > * {
+			pointer-events: none;
+		}
+
 		> input {
 			display: none;
-			pointer-events: none;
 		}
 
 		> .text {
@@ -61,9 +65,7 @@
 			padding: 16px 24px;
 			text-align: center;
 			width: 196px;
-
 			font-size: 1.5rem;
-			pointer-events: none;
 		}
 
 		&::before {
@@ -73,7 +75,6 @@
 			background: white;
 			border: 2px solid #000000;
 			border-right: none;
-			pointer-events: none;
 		}
 
 		> .cross {
@@ -81,7 +82,6 @@
 			top: 50%;
 			left: 24px;
 			mix-blend-mode: multiply;
-			pointer-events: none;
 		}
 	}
 
