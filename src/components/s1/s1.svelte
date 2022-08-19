@@ -43,8 +43,7 @@
 <section class="h100 c">
 	<h1 class="T1">
 		คุณรู้ไหม?<br />
-		ตอนนี้ในรัฐสภามี ส.ส. กี่คน
-		<small>(พ.ศ. 2565)</small>
+		<span class="year">ตอนนี้</span>ในรัฐสภามี ส.ส. กี่คน
 	</h1>
 
 	{#each choices as data}
@@ -91,16 +90,21 @@
 
 		position: relative;
 
-		> small {
-			position: absolute;
-			bottom: -0.5rem;
-			left: 13%;
-			transform: translateX(-50%);
+		> .year {
+			position: relative;
 
-			color: #7b7b7b;
-			font-weight: 600;
-			font-size: 1rem;
-			letter-spacing: 0.01em;
+			&::after {
+				content: '(พ.ศ. 2565)';
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+
+				color: #7b7b7b;
+				font-weight: 600;
+				font-size: 1rem;
+				letter-spacing: 0.01em;
+			}
 		}
 	}
 
