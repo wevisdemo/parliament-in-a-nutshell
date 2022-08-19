@@ -10,6 +10,8 @@
 		if (percent === 100) {
 			if (window?.requestIdleCallback) {
 				window.requestIdleCallback(() => (isReady = true));
+				// failsafe, the idle should not be long anyway
+				setTimeout(() => window.requestAnimationFrame(() => (isReady = true)), 3000);
 			} else {
 				window.requestAnimationFrame(() => (isReady = true));
 			}
