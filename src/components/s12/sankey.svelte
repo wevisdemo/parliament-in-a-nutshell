@@ -545,7 +545,7 @@
 			transform: translate(-50%, -100%);
 
 			font-style: italic;
-			font-weight: 600;
+			font-weight: 700;
 			font-size: 0.7rem;
 			line-height: 1;
 			white-space: nowrap;

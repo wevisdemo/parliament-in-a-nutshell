@@ -119,6 +119,7 @@
 		font-style: italic;
 		font-weight: 500;
 		font-size: 0.8rem;
+		letter-spacing: 0.5px;
 		line-height: 189%;
 
 		color: #ececec;

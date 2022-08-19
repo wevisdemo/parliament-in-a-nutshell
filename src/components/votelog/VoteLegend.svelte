@@ -83,7 +83,9 @@
 			position: absolute;
 			top: 50%;
 			left: calc(var(--distance) * -1);
-			font-family: 'Kanit', sans-serif;
+			font-family: 'Kanit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+				Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+			font-weight: 600;
 			text-align: right;
 			transform: translate(-100%, -50%);
 		}

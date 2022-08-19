@@ -101,6 +101,7 @@
 
 		> strong {
 			font-size: 1.5em;
+			font-weight: 700;
 		}
 
 		margin: 5rem 0;
