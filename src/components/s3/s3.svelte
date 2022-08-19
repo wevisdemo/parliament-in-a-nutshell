@@ -297,9 +297,7 @@
 		left: 15%;
 		top: 26vh;
 
-		> :global(.thanathorn-img) {
-			opacity: 0;
-		}
+		// .thanathorn-img is in the scss file
 
 		> .circle1,
 		> .circle2,
@@ -335,9 +333,7 @@
 		left: 8%;
 		top: 75vh;
 
-		> :global(.paiboon-img) {
-			opacity: 0;
-		}
+		// .paiboon-img is in the scss file
 
 		> .back {
 			position: absolute;
@@ -380,9 +376,7 @@
 		top: 142vh;
 		left: 15%;
 
-		> :global(.mongkonkit-img) {
-			opacity: 0;
-		}
+		// .mongkonkit-img is in the scss file
 
 		> .circle1,
 		> .circle2 {

@@ -525,6 +525,8 @@
 </div>
 
 <style lang="scss">
+	// `.sankey-people` is in `_global.scss`
+
 	.sankey {
 		margin-top: 40px;
 	}
@@ -579,12 +581,6 @@
 		position: absolute;
 		bottom: 0;
 		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-	}
-
-	.sankey-people,
-	:global(.sankey-people) {
-		margin: 8px 0;
-		opacity: 0;
 	}
 
 	.sankey-block {

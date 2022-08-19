@@ -9,13 +9,13 @@
 	<div class="content tc">
 		<div class="row" class:stop={loaded} style="--gap:1rem">
 			<div class="icon">
-				<VoteIcon type="choose" />
+				<VoteIcon type="choose" style="height:1.5rem;width:1.5rem" />
 			</div>
 			<div class="icon">
-				<VoteIcon />
+				<VoteIcon style="height:1.5rem;width:1.5rem" />
 			</div>
 			<div class="icon">
-				<VoteIcon type="distrust" />
+				<VoteIcon type="distrust" style="height:1.5rem;width:1.5rem" />
 			</div>
 		</div>
 		<div class="text">LOADING ...</div>
@@ -109,11 +109,6 @@
 			border-radius: 50%;
 			border: 3px dotted #5b5b5b;
 			animation: spin 8s linear infinite;
-		}
-
-		> :global(svg) {
-			width: 1.5rem;
-			height: 1.5rem;
 		}
 	}
 

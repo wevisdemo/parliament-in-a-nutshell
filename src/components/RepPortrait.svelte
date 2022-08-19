@@ -16,7 +16,13 @@
 	export let op: string = shift === '0' ? '0' : '0.3';
 </script>
 
-<div class="rp-container {clazz} tooltip-{tooltip}" class:showTop style:--s={size} style:--op={op}>
+<div
+	class="rp-container {clazz} tooltip-{tooltip}"
+	class:showTop
+	style:--s={size}
+	style:--op={op}
+	{...$$restProps}
+>
 	<img
 		src="/shaking-parliament/{src}"
 		alt={name}

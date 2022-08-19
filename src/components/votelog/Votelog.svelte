@@ -22,11 +22,11 @@
 	}
 
 	.votelog-head,
-	.votelog-head-columns,
-	:global(.votelog-row),
-	:global(.votelog-value) {
+	.votelog-head-columns {
 		display: flex;
 	}
+
+	// .votelog-row, .votelog-value are in scss file
 
 	.votelog-head {
 		position: sticky;
@@ -49,8 +49,7 @@
 		box-shadow: 0 0 16px #000;
 	}
 
-	.votelog-head-spacer,
-	:global(.votelog-icon) {
+	.votelog-head-spacer {
 		width: 48px;
 		flex: 0 0 48px;
 		display: flex;
@@ -58,63 +57,5 @@
 		justify-content: center;
 	}
 
-	:global(.votelog-icon) {
-		color: #a4a4a4;
-	}
-
-	:global(.votelog-body) {
-		margin-top: -16px;
-	}
-
-	:global(.votelog-value) {
-		transition: none;
-
-		&::before {
-			content: '';
-			position: absolute;
-			inset: -4px;
-			border: 4px #fff solid;
-			border-radius: 4px;
-			opacity: 0;
-			transition: none;
-			pointer-events: none;
-			z-index: 2;
-		}
-	}
-
-	:global(.votelog-subject) {
-		position: absolute;
-		bottom: 0;
-		transform: translateY(100%);
-		left: -4px;
-		background: #fff;
-		color: #000;
-		font-size: 0.8rem;
-		border-radius: 0 4px 4px 4px;
-		padding: 8px;
-		opacity: 0;
-		transition: none;
-		pointer-events: none;
-		box-shadow: 0 0 16px #000;
-	}
-
-	:global(.votelog-row:hover > .votelog-icon) {
-		stroke: #fff;
-	}
-
-	:global(.votelog-row:hover > .votelog-value) {
-		z-index: 2;
-		transition: opacity 0.1s;
-		box-shadow: 0 0 16px #000;
-
-		&::before {
-			opacity: 1;
-			transition: opacity 0.1s;
-		}
-	}
-
-	:global(.votelog-row:hover > .votelog-value > .votelog-subject) {
-		opacity: 1;
-		transition: opacity 0.1s;
-	}
+	// .votelog-icon, .votelog-body, .votelog-value, .votelog-subject are in scss file
 </style>
