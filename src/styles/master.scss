@@ -1,19 +1,10 @@
+@import 'reseter';
+
 @import 'animate';
 @import 'global';
 @import 'grid';
 @import 'helpers';
 @import 'typography';
-@import 'reseter';
-
-*,
-*::before,
-*::after {
-	--mt: 0;
-	--mb: 0;
-
-	margin-top: var(--mt);
-	margin-bottom: var(--mb);
-}
 
 html {
 	background: url(/shaking-parliament/bg.jpg), #eee;

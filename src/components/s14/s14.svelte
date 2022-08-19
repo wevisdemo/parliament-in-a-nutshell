@@ -53,10 +53,10 @@
 		loading="lazy"
 	/>
 </div>
-<div class="tc c" style="--mt:-30vh">
+<div class="tc c" style="margin-top:-30vh">
 	<img class="news-img" src="/shaking-parliament/pt4_newspaper.png" alt="" />
 </div>
-<p class="news-text tc" style="--mb:15vh">
+<p class="news-text tc">
 	&ldquo; มกราคม 2565 พล.อ.ประวิตร วงษ์สุวรรณ<br />
 	<span class="special-lh">หัวหน้าพรรคพลังประชารัฐ<br /></span>
 	<span class="black">ได้มีมติให้ขับ 21 ส.ส. &ldquo;ก๊วนธรรมนัส&rdquo; ออกจากพรรค</span><br />
@@ -73,6 +73,7 @@
 	<span class="T1 poomjaithai">พรรคภูมิใจไทย</span><br />
 	ตามที่มีกระแสข่าวก่อนหน้านี้ &rdquo;
 </p>
+<div style="--h:15vh" />
 <Sankey />
 <p class="circle-text c tc">
 	แน่นอนว่าด้วยฐานะ<br />
