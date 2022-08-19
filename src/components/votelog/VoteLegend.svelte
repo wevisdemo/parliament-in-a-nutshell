@@ -29,7 +29,7 @@
 				<div class="type">
 					<VoteCell side="black" style="display:inline-block;box-shadow:0 0 0 1px #a0a0a0" />
 					<span>=</span>
-					<span>ไม่อยู่ใน/ถูกระงับ/ลาออกจากการปฏิบัติหน้าที่</span>
+					<span>ลาออก/ถูกระงับ/ไม่อยู่ในการปฏิบัติหน้าที่</span>
 				</div>
 			{/if}
 		</div>
