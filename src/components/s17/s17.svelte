@@ -17,7 +17,7 @@
 	<div class="subheader">ก่อนเข้าสู่การเลือกตั้งครั้งถัดไปที่จะเกิดขึ้นในปี 2566</div>
 	<div class="share-text">แชร์เพื่อบอกเล่าเรื่องราวกับเพื่อนของคุณ</div>
 	<div class="social-container">
-		<div class="row">
+		<div class="row" style="--gap:32px">
 			<div class="col">
 				<a
 					class="social-share"

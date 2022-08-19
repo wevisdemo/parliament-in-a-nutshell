@@ -67,7 +67,7 @@
 
 <div style="--h:155vh">
 	<div class="h100 c stick">
-		<div class="event-container" style="--gap:0">
+		<div class="event-container">
 			<div class="event resign">
 				<h3 class="tc">ลาออก</h3>
 				<div class="row rp-grid" style="--gap:16px">
@@ -175,7 +175,7 @@
 				ส.ส. ที่เข้ามา<strong>แทนที่นั่ง</strong> ทั้งการเลือกตั้งซ่อมและการเลื่อนบัญชีรายชื่อ
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" style="--gap:32px">
 			<div class="shifter" class:showNewNum />
 			<div class="shifter" class:showNewNum />
 			<Bignum {showNewNum} oldNum={28} newNum={28}>
