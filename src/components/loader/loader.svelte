@@ -7,7 +7,7 @@
 
 <div class="c loader-container" class:finish={isReady}>
 	<div class="content tc">
-		<div class="row" class:stop={loaded} style="--gap:16px">
+		<div class="row" class:stop={loaded}>
 			<div class="icon">
 				<VoteIcon type="choose" style="height:24px;width:24px" />
 			</div>

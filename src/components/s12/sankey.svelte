@@ -119,9 +119,9 @@
 <div
 	bind:this={el_sankey1}
 	class="row sankey"
-	style="--gap:16px;--from-p:'พรรคอนาคตใหม่';--to-c:#065CAB;--to-p:'พรรคภูมิใจไทย'"
+	style="--from-p:'พรรคอนาคตใหม่';--to-c:#065CAB;--to-p:'พรรคภูมิใจไทย'"
 >
-	<div class="row vert sankey-people" style="--gap:16px">
+	<div class="row vert sankey-people">
 		<RP
 			src="rp/pt12-ศรีนวล.png"
 			color="#ff6f21"
@@ -163,7 +163,7 @@
 			tooltip="top"
 		/>
 	</div>
-	<div class="row vert sankey-people" style="--gap:16px">
+	<div class="row vert sankey-people">
 		<RP
 			src="rp/pt12-มณฑล.png"
 			color="#ff6f21"
@@ -208,7 +208,7 @@
 	<div class="sankey-block start" />
 	<div class="sankey-fade" />
 	<div class="sankey-block end" />
-	<div class="row vert sankey-people" style="--gap:16px">
+	<div class="row vert sankey-people">
 		<RP src="rp/pt12-ศรีนวล.png" color="#065cab" name="ศรีนวล บุญลือ" size="48px" tooltip="top" />
 		<RP
 			src="rp/pt12-กิตติชัย.png"
@@ -240,7 +240,7 @@
 		/>
 		<!-- <div /> -->
 	</div>
-	<div class="row vert sankey-people" style="--gap:16px">
+	<div class="row vert sankey-people">
 		<RP src="rp/pt12-มณฑล.png" color="#065cab" name="มณฑล โพธิ์คาย" size="48px" tooltip="top" />
 		<RP src="rp/pt12-วิรัช.png" color="#065cab" name="วิรัช พันธุมะผล" size="48px" tooltip="top" />
 		<RP src="rp/pt12-สำลี.png" color="#065cab" name="สำลี รักสุทธี" size="48px" tooltip="top" />
@@ -261,7 +261,7 @@
 	</div>
 </div>
 <!-- SANKEY X1 -->
-<div bind:this={el_sankeyX1} class="row sankey sankey-notop" style="--gap:16px;--to-c:#065CAB">
+<div bind:this={el_sankeyX1} class="row sankey sankey-notop" style="--to-c:#065CAB">
 	<div class="sankey-gap" />
 	<div class="sankey-block end" />
 	<RP
@@ -274,11 +274,7 @@
 	/>
 </div>
 <!-- SANKEY 2 -->
-<div
-	bind:this={el_sankey2}
-	class="row sankey"
-	style="--gap:16px;--to-c:#70D267;--to-p:'พรรคพลังท้องถิ่นไท'"
->
+<div bind:this={el_sankey2} class="row sankey" style="--to-c:#70D267;--to-p:'พรรคพลังท้องถิ่นไท'">
 	<RP
 		class="sankey-people"
 		src="rp/pt12-กวินนาถ.png"
@@ -318,11 +314,7 @@
 	/>
 </div>
 <!-- SANKEY 3 -->
-<div
-	bind:this={el_sankey3}
-	class="row sankey"
-	style="--gap:16px;--to-c:#0B3757;--to-p:'พรรคพลังประชารัฐ'"
->
+<div bind:this={el_sankey3} class="row sankey" style="--to-c:#0B3757;--to-p:'พรรคพลังประชารัฐ'">
 	<RP
 		class="sankey-people"
 		src="rp/pt12-ฐนภัทร.png"
@@ -345,11 +337,7 @@
 	/>
 </div>
 <!-- SANKEY 4 -->
-<div
-	bind:this={el_sankey4}
-	class="row sankey"
-	style="--gap:16px;--to-c:#CC8AE3;--to-p:'พรรคชาติไทยพัฒนา'"
->
+<div bind:this={el_sankey4} class="row sankey" style="--to-c:#CC8AE3;--to-p:'พรรคชาติไทยพัฒนา'">
 	<RP
 		class="sankey-people"
 		src="rp/pt12-จุลพันธ์.png"
@@ -372,11 +360,7 @@
 	/>
 </div>
 <!-- SANKEY 5 -->
-<div
-	bind:this={el_sankey5}
-	class="row sankey"
-	style="--gap:16px;--to-c:#FD980D;--to-p:'พรรคชาติพัฒนา'"
->
+<div bind:this={el_sankey5} class="row sankey" style="--to-c:#FD980D;--to-p:'พรรคชาติพัฒนา'">
 	<RP
 		class="sankey-people"
 		src="rp/pt12-สมัคร.png"
@@ -399,11 +383,7 @@
 	/>
 </div>
 <!-- SANKEY X2 -->
-<div
-	bind:this={el_sankeyX2}
-	class="row sankey"
-	style="--gap:16px;--from-c:#E50000;--from-p:'พรรคเพื่อไทย'"
->
+<div bind:this={el_sankeyX2} class="row sankey" style="--from-c:#E50000;--from-p:'พรรคเพื่อไทย'">
 	<RP
 		class="sankey-people"
 		src="rp/pt12-พรพิมล.png"
@@ -424,12 +404,8 @@
 	<div class="sankey-gap" />
 </div>
 <!-- SANKEY 6 -->
-<div
-	bind:this={el_sankey6}
-	class="row sankey"
-	style="--gap:16px;--from-c:#75328C;--from-p:'พรรคเศรษฐกิจใหม่'"
->
-	<div class="row vert sankey-people" style="--gap:16px">
+<div bind:this={el_sankey6} class="row sankey" style="--from-c:#75328C;--from-p:'พรรคเศรษฐกิจใหม่'">
+	<div class="row vert sankey-people">
 		<RP
 			src="rp/pt12-มนูญ.png"
 			color="#75328C"
@@ -447,7 +423,7 @@
 			tooltip="top"
 		/>
 	</div>
-	<div class="row vert sankey-people" style="--gap:16px">
+	<div class="row vert sankey-people">
 		<RP
 			src="rp/pt12-สุภดิช.png"
 			color="#75328C"
@@ -483,7 +459,7 @@
 		decoding="async"
 		loading="lazy"
 	/>
-	<div class="row vert sankey-people" style="--gap:16px">
+	<div class="row vert sankey-people">
 		<RP
 			src="rp/pt12-สุภดิช.png"
 			color="#75328C"
@@ -506,7 +482,7 @@
 			tooltip="top"
 		/>
 	</div>
-	<div class="row vert sankey-people" style="--gap:16px">
+	<div class="row vert sankey-people">
 		<RP
 			src="rp/pt12-มนูญ.png"
 			color="#75328C"

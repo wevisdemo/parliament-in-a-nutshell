@@ -70,9 +70,9 @@
 		<div class="event-container">
 			<div class="event resign">
 				<h3 class="tc">ลาออก</h3>
-				<div class="row rp-grid" style="--gap:16px">
+				<div class="row rp-grid">
 					{#each PART1_DATA.resign as res_c}
-						<div class="col row vert" style="--gap:16px">
+						<div class="col row vert">
 							{#each res_c as rep}
 								<RP
 									size="34px"
@@ -103,9 +103,9 @@
 			<div class="sep" />
 			<div class="event pass">
 				<h3 class="tc">เสียชีวิต</h3>
-				<div class="row rp-grid" style="--gap:16px">
+				<div class="row rp-grid">
 					{#each PART1_DATA.pass as res_c}
-						<div class="col row vert" style="--gap:16px">
+						<div class="col row vert">
 							{#each res_c as rep}
 								<RP
 									size="34px"
@@ -136,9 +136,9 @@
 			<div class="sep" />
 			<div class="event fire">
 				<h3 class="tc">ศาลตัดสินให้พ้นสภาพ ส.ส.</h3>
-				<div class="row rp-grid" style="--gap:16px">
+				<div class="row rp-grid">
 					{#each PART1_DATA.fire as res_c}
-						<div class="col row vert" style="--gap:16px">
+						<div class="col row vert">
 							{#each res_c as rep}
 								<RP
 									size="34px"
