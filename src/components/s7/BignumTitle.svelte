@@ -1,29 +1,37 @@
 <script lang="ts">
 	const SIDE_DATA = {
-		รัฐบาล: {
-			color: '#5b5b5b',
-			image: 'mini_rect.svg'
-		},
-		อิสระ: {
-			color: '#858585',
-			image: 'mini_hex.svg'
-		},
-		ค้าน: {
-			color: '#9f9e9e',
-			image: 'mini_circle.svg'
-		}
+		รัฐบาล: { color: '#5b5b5b' },
+		อิสระ: { color: '#858585' },
+		ค้าน: { color: '#9f9e9e' }
 	};
 
 	export let side: 'รัฐบาล' | 'ค้าน' | 'อิสระ' = 'รัฐบาล';
 </script>
 
 <div class="title-container">
-	<img
-		src="/shaking-parliament/part1/{SIDE_DATA[side].image}"
-		alt=""
-		decoding="async"
-		loading="lazy"
-	/>
+	{#if side === 'รัฐบาล'}
+		<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<rect x="1" y="1" width="24" height="24" rx="7" stroke="black" stroke-width="2" />
+		</svg>
+	{:else if side === 'ค้าน'}
+		<svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<circle cx="12" cy="12" r="11" stroke="black" stroke-width="2" />
+		</svg>
+	{:else}
+		<svg
+			width="28.6"
+			height="26"
+			viewBox="0 0 27 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				d="M19.2227 1.76846L25.2453 12.2L19.2227 22.6315L7.17737 22.6315L1.15472 12.2L7.17737 1.76846L19.2227 1.76846Z"
+				stroke="black"
+				stroke-width="2"
+			/>
+		</svg>
+	{/if}
 	<div class="bignum-text">
 		เป็น ส.ส.<br />
 		ฝ่าย<span style="color:{SIDE_DATA[side].color}">{side}</span>
