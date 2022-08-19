@@ -33,11 +33,13 @@
 			</div>
 		</div>
 		<div class="text">LOADING ...</div>
-		<div class="load-bar">
-			{#each Array(total) as _, i}
-				<div class="load-block" class:loaded={loaded.includes(i)} />
-			{/each}
-		</div>
+		{#if total > 1}
+			<div class="load-bar">
+				{#each Array(total) as _, i}
+					<div class="load-block" class:loaded={loaded.includes(i)} />
+				{/each}
+			</div>
+		{/if}
 	</div>
 </div>
 
