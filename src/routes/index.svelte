@@ -8,129 +8,41 @@
 
 	import Loader from 'components/loader/loader.svelte';
 
-	let total = 19; /* 1 onMount + 18 pages */
-	let loaded: number[] = [];
+	import S1 from 'components/s1/s1.svelte';
+	import S2 from 'components/s2/s2.svelte';
+	import S3 from 'components/s3/s3.svelte';
+	import S4 from 'components/s4/s4.svelte';
 
-	const finish_load = (what_loaded: number) => {
-		loaded = [...loaded, what_loaded];
-	};
+	import S5 from 'components/s5/s5.svelte';
+	import S6 from 'components/s6/s6.svelte';
+	import S7 from 'components/s7/s7.svelte';
+	import S8 from 'components/s8/s8.svelte';
 
-	let S1: any;
-	let S2: any;
-	let S3: any;
-	let S4: any;
+	import S9 from 'components/s9/s9.svelte';
+	import S10 from 'components/s10/s10.svelte';
+	import S11 from 'components/s11/s11.svelte';
+	import S12 from 'components/s12/s12.svelte';
 
-	let S5: any;
-	let S6: any;
-	let S7: any;
-	let S8: any;
+	import S13 from 'components/s13/s13.svelte';
+	import S14 from 'components/s14/s14.svelte';
+	import S15 from 'components/s15/s15.svelte';
+	import S16 from 'components/s16/s16.svelte';
 
-	let S9: any;
-	let S10: any;
-	let S11: any;
-	let S12: any;
+	import S17 from 'components/s17/s17.svelte';
+	import S18 from 'components/s18/s18.svelte';
 
-	let S13: any;
-	let S14: any;
-	let S15: any;
-	let S16: any;
-
-	let S17: any;
-	let S18: any;
-
+	let loaded = false;
+	let isReady = false;
 	onMount(() => {
 		weAreAlwaysHiring();
-		finish_load(0);
-	});
-
-	import('components/s1/s1.svelte').then((c) => {
-		S1 = c.default;
-		finish_load(1);
-	});
-
-	import('components/s2/s2.svelte').then((c) => {
-		S2 = c.default;
-		finish_load(2);
-	});
-
-	import('components/s3/s3.svelte').then((c) => {
-		S3 = c.default;
-		finish_load(3);
-	});
-
-	import('components/s4/s4.svelte').then((c) => {
-		S4 = c.default;
-		finish_load(4);
-	});
-
-	import('components/s5/s5.svelte').then((c) => {
-		S5 = c.default;
-		finish_load(5);
-	});
-
-	import('components/s6/s6.svelte').then((c) => {
-		S6 = c.default;
-		finish_load(6);
-	});
-
-	import('components/s7/s7.svelte').then((c) => {
-		S7 = c.default;
-		finish_load(7);
-	});
-
-	import('components/s8/s8.svelte').then((c) => {
-		S8 = c.default;
-		finish_load(8);
-	});
-
-	import('components/s9/s9.svelte').then((c) => {
-		S9 = c.default;
-		finish_load(9);
-	});
-
-	import('components/s10/s10.svelte').then((c) => {
-		S10 = c.default;
-		finish_load(10);
-	});
-
-	import('components/s11/s11.svelte').then((c) => {
-		S11 = c.default;
-		finish_load(11);
-	});
-
-	import('components/s12/s12.svelte').then((c) => {
-		S12 = c.default;
-		finish_load(12);
-	});
-
-	import('components/s13/s13.svelte').then((c) => {
-		S13 = c.default;
-		finish_load(13);
-	});
-
-	import('components/s14/s14.svelte').then((c) => {
-		S14 = c.default;
-		finish_load(14);
-	});
-
-	import('components/s15/s15.svelte').then((c) => {
-		S15 = c.default;
-		finish_load(15);
-	});
-
-	import('components/s16/s16.svelte').then((c) => {
-		S16 = c.default;
-		finish_load(16);
-	});
-
-	import('components/s17/s17.svelte').then((c) => {
-		S17 = c.default;
-		finish_load(17);
-	});
-
-	import('components/s18/s18.svelte').then((c) => {
-		S18 = c.default;
-		finish_load(18);
+		loaded = true;
+		if ('requestIdleCallback' in window) {
+			window.requestIdleCallback(() => (isReady = true));
+			// failsafe, the idle should not be long anyway
+			setTimeout(() => window.requestAnimationFrame(() => (isReady = true)), 3000);
+		} else {
+			window.requestAnimationFrame(() => (isReady = true));
+		}
 	});
 </script>
 
@@ -148,23 +60,22 @@
 		style="height:1.75rem"
 	/>
 </a>
-
-<Loader {total} {loaded} />
-{#if S1}<svelte:component this={S1} />{/if}
-{#if S2}<svelte:component this={S2} />{/if}
-{#if S3}<svelte:component this={S3} />{/if}
-{#if S4}<svelte:component this={S4} />{/if}
-{#if S5}<svelte:component this={S5} />{/if}
-{#if S6}<svelte:component this={S6} />{/if}
-{#if S7}<svelte:component this={S7} />{/if}
-{#if S8}<svelte:component this={S8} />{/if}
-{#if S9}<svelte:component this={S9} />{/if}
-{#if S10}<svelte:component this={S10} />{/if}
-{#if S11}<svelte:component this={S11} />{/if}
-{#if S12}<svelte:component this={S12} />{/if}
-{#if S13}<svelte:component this={S13} />{/if}
-{#if S14}<svelte:component this={S14} />{/if}
-{#if S15}<svelte:component this={S15} />{/if}
-{#if S16}<svelte:component this={S16} />{/if}
-{#if S17}<svelte:component this={S17} />{/if}
-{#if S18}<svelte:component this={S18} />{/if}
+<Loader {loaded} {isReady} />
+<S1 />
+<S2 />
+<S3 />
+<S4 />
+<S5 />
+<S6 />
+<S7 />
+<S8 />
+<S9 />
+<S10 />
+<S11 />
+<S12 />
+<S13 />
+<S14 />
+<S15 />
+<S16 />
+<S17 />
+<S18 />

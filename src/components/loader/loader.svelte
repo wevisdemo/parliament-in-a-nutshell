@@ -1,45 +1,24 @@
 <script lang="ts">
 	import VoteIcon from 'components/votelog/VoteIcon.svelte';
 
-	export let total: number;
-	export let loaded: number[] = [];
-
-	let isReady: boolean = false;
-	$: percent = (loaded.length / total) * 100;
-	$: {
-		if (percent === 100) {
-			if (window?.requestIdleCallback) {
-				window.requestIdleCallback(() => (isReady = true));
-				// failsafe, the idle should not be long anyway
-				setTimeout(() => window.requestAnimationFrame(() => (isReady = true)), 3000);
-			} else {
-				window.requestAnimationFrame(() => (isReady = true));
-			}
-		}
-	}
+	export let loaded = false;
+	export let isReady = false;
 </script>
 
 <div class="c loader-container" class:finish={isReady}>
 	<div class="content tc">
-		<div class="row" style="--gap:1rem">
-			<div class="icon" class:check={percent >= 25}>
+		<div class="row" class:stop={loaded} style="--gap:1rem">
+			<div class="icon">
 				<VoteIcon type="choose" />
 			</div>
-			<div class="icon" class:check={percent >= 50}>
+			<div class="icon">
 				<VoteIcon />
 			</div>
-			<div class="icon" class:check={percent >= 75}>
+			<div class="icon">
 				<VoteIcon type="distrust" />
 			</div>
 		</div>
 		<div class="text">LOADING ...</div>
-		{#if total > 1}
-			<div class="load-bar">
-				{#each Array(total) as _, i}
-					<div class="load-block" class:loaded={loaded.includes(i)} />
-				{/each}
-			</div>
-		{/if}
 	</div>
 </div>
 
@@ -83,6 +62,23 @@
 		}
 	}
 
+	@keyframes op {
+		0%,
+		66.67% {
+			opacity: 0.25;
+		}
+
+		33.33% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes op1 {
+		to {
+			opacity: 1;
+		}
+	}
+
 	.icon {
 		width: 4rem;
 		height: 4rem;
@@ -91,8 +87,18 @@
 		justify-content: center;
 		margin-bottom: 1.5rem;
 
+		color: #5b5b5b;
+
 		opacity: 0.25;
-		transition: opacity 0.3s;
+		animation: op 1.5s infinite;
+
+		&:nth-child(2) {
+			animation-delay: 0.5s;
+		}
+
+		&:nth-child(3) {
+			animation-delay: 1s;
+		}
 
 		&::before {
 			content: '';
@@ -102,21 +108,18 @@
 
 			border-radius: 50%;
 			border: 3px dotted #5b5b5b;
-		}
-
-		&.check {
-			opacity: 1;
-
-			&::before {
-				animation: spin 8s linear infinite;
-			}
+			animation: spin 8s linear infinite;
 		}
 
 		> :global(svg) {
 			width: 1.5rem;
 			height: 1.5rem;
-			color: #5b5b5b;
 		}
+	}
+
+	.stop > .icon {
+		opacity: 1;
+		animation: none;
 	}
 
 	.text {
@@ -127,20 +130,5 @@
 		letter-spacing: 0.04em;
 
 		margin-bottom: 1rem;
-	}
-
-	.load-bar {
-		display: flex;
-	}
-
-	.load-block {
-		width: 16px;
-		height: 8px;
-		background: #d5d5d5;
-		transition: background 0.3s;
-
-		&.loaded {
-			background: #5b5b5b;
-		}
 	}
 </style>
