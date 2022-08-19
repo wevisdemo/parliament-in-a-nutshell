@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "_app/immutable/start-9fa65acb.js",
+    "file": "_app/immutable/start-a28f35a8.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -11,7 +11,7 @@
     "dynamicImports": [
       ".svelte-kit/runtime/components/layout.svelte",
       ".svelte-kit/runtime/components/error.svelte",
-      "_index-bc62167e.js"
+      "_index-c5ad2f78.js"
     ]
   },
   ".svelte-kit/runtime/components/layout.svelte": {
@@ -33,13 +33,13 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "_app/immutable/pages/index.svelte-712d6277.js",
+    "file": "_app/immutable/pages/index.svelte-8d259adb.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "imports": [
       "_preload-helper-e35b6cd0.js",
       "_index-abb03b16.js",
-      "_index-bc62167e.js"
+      "_index-c5ad2f78.js"
     ]
   },
   "_index-abb03b16.js": {
@@ -54,8 +54,8 @@
   "_preload-helper-e35b6cd0.js": {
     "file": "_app/immutable/chunks/preload-helper-e35b6cd0.js"
   },
-  "_index-bc62167e.js": {
-    "file": "_app/immutable/chunks/index-bc62167e.js",
+  "_index-c5ad2f78.js": {
+    "file": "_app/immutable/chunks/index-c5ad2f78.js",
     "isDynamicEntry": true,
     "imports": [
       "_preload-helper-e35b6cd0.js",
@@ -279,7 +279,7 @@
     ]
   },
   "src/components/s9/s9.svelte": {
-    "file": "_app/immutable/chunks/s9-b032b699.js",
+    "file": "_app/immutable/chunks/s9-3410b2ad.js",
     "src": "src/components/s9/s9.svelte",
     "isDynamicEntry": true,
     "imports": [
@@ -287,9 +287,9 @@
       "_index-334d44bf.js",
       "_animate.es-1bcd160f.js",
       "_index.es-8149eef2.js",
-      "_Votelog-2241b119.js",
+      "_Votelog-ccb9043e.js",
       "_RepPortrait-c6e5fce4.js",
-      "_index-bc62167e.js",
+      "_index-c5ad2f78.js",
       "_index-078f40d2.js",
       "_resolve-elements.es-2caf236e.js",
       "_tslib.es6-58dba148.js",
@@ -300,12 +300,12 @@
       "_app/immutable/assets/s9-770fa11a.css"
     ]
   },
-  "_Votelog-2241b119.js": {
-    "file": "_app/immutable/chunks/Votelog-2241b119.js",
+  "_Votelog-ccb9043e.js": {
+    "file": "_app/immutable/chunks/Votelog-ccb9043e.js",
     "imports": [
       "_index-abb03b16.js",
       "_in-view.es-4b07ee39.js",
-      "_index-bc62167e.js"
+      "_index-c5ad2f78.js"
     ],
     "css": [
       "_app/immutable/assets/Votelog-f94b0ec6.css"
@@ -369,14 +369,14 @@
     ]
   },
   "src/components/s13/s13.svelte": {
-    "file": "_app/immutable/chunks/s13-eb05bff7.js",
+    "file": "_app/immutable/chunks/s13-9afb8a1d.js",
     "src": "src/components/s13/s13.svelte",
     "isDynamicEntry": true,
     "imports": [
       "_index-abb03b16.js",
-      "_Votelog-2241b119.js",
+      "_Votelog-ccb9043e.js",
       "_RepPortrait-c6e5fce4.js",
-      "_index-bc62167e.js",
+      "_index-c5ad2f78.js",
       "_in-view.es-4b07ee39.js",
       "_resolve-elements.es-2caf236e.js",
       "_preload-helper-e35b6cd0.js"
@@ -403,14 +403,14 @@
     ]
   },
   "src/components/s15/s15.svelte": {
-    "file": "_app/immutable/chunks/s15-fab4674f.js",
+    "file": "_app/immutable/chunks/s15-4fa3da60.js",
     "src": "src/components/s15/s15.svelte",
     "isDynamicEntry": true,
     "imports": [
       "_index-abb03b16.js",
-      "_Votelog-2241b119.js",
+      "_Votelog-ccb9043e.js",
       "_RepPortrait-c6e5fce4.js",
-      "_index-bc62167e.js",
+      "_index-c5ad2f78.js",
       "_in-view.es-4b07ee39.js",
       "_resolve-elements.es-2caf236e.js",
       "_preload-helper-e35b6cd0.js"
@@ -471,61 +471,17 @@
       "_app/immutable/assets/s8-bridge-bc9a1789.css"
     ]
   },
-  "src/components/s2/s2.css": {
-    "file": "_app/immutable/assets/s2-20efafd8.css",
-    "src": "src/components/s2/s2.css"
-  },
-  "src/components/s1/s1.css": {
-    "file": "_app/immutable/assets/s1-c2d52967.css",
-    "src": "src/components/s1/s1.css"
-  },
-  "RepPortrait.css": {
-    "file": "_app/immutable/assets/RepPortrait-7220fe58.css",
-    "src": "RepPortrait.css"
-  },
-  "src/components/s3/s3.css": {
-    "file": "_app/immutable/assets/s3-2c6bd4fc.css",
-    "src": "src/components/s3/s3.css"
-  },
   "index.css": {
     "file": "_app/immutable/assets/index-b6c417f4.css",
     "src": "index.css"
-  },
-  "src/components/s9/s9.css": {
-    "file": "_app/immutable/assets/s9-770fa11a.css",
-    "src": "src/components/s9/s9.css"
-  },
-  "src/components/s7/s7.css": {
-    "file": "_app/immutable/assets/s7-9832b372.css",
-    "src": "src/components/s7/s7.css"
-  },
-  "Bignum.css": {
-    "file": "_app/immutable/assets/Bignum-d9a8a040.css",
-    "src": "Bignum.css"
   },
   "src/components/s8/s8.css": {
     "file": "_app/immutable/assets/s8-33533da2.css",
     "src": "src/components/s8/s8.css"
   },
-  "src/components/s5/s5.css": {
-    "file": "_app/immutable/assets/s5-29778b35.css",
-    "src": "src/components/s5/s5.css"
-  },
-  "src/components/s4/s4.css": {
-    "file": "_app/immutable/assets/s4-dced7702.css",
-    "src": "src/components/s4/s4.css"
-  },
-  "src/components/s6/s6.css": {
-    "file": "_app/immutable/assets/s6-a592550e.css",
-    "src": "src/components/s6/s6.css"
-  },
-  "src/components/s12/s12.css": {
-    "file": "_app/immutable/assets/s12-421f651c.css",
-    "src": "src/components/s12/s12.css"
-  },
-  "src/components/s13/s13.css": {
-    "file": "_app/immutable/assets/s13-01c6bf86.css",
-    "src": "src/components/s13/s13.css"
+  "src/components/s9/s9.css": {
+    "file": "_app/immutable/assets/s9-770fa11a.css",
+    "src": "src/components/s9/s9.css"
   },
   "src/components/s10/s10.css": {
     "file": "_app/immutable/assets/s10-a6b44cb4.css",
@@ -539,32 +495,76 @@
     "file": "_app/immutable/assets/s11-7e2603e5.css",
     "src": "src/components/s11/s11.css"
   },
-  "src/components/s7/s8-bridge.css": {
-    "file": "_app/immutable/assets/s8-bridge-bc9a1789.css",
-    "src": "src/components/s7/s8-bridge.css"
+  "src/components/s12/s12.css": {
+    "file": "_app/immutable/assets/s12-421f651c.css",
+    "src": "src/components/s12/s12.css"
   },
-  "src/components/s15/s15.css": {
-    "file": "_app/immutable/assets/s15-bac81c5d.css",
-    "src": "src/components/s15/s15.css"
-  },
-  "src/components/s18/s18.css": {
-    "file": "_app/immutable/assets/s18-b14f3c04.css",
-    "src": "src/components/s18/s18.css"
-  },
-  "src/components/s17/s17.css": {
-    "file": "_app/immutable/assets/s17-a588b36d.css",
-    "src": "src/components/s17/s17.css"
+  "src/components/s13/s13.css": {
+    "file": "_app/immutable/assets/s13-01c6bf86.css",
+    "src": "src/components/s13/s13.css"
   },
   "src/components/s14/s14.css": {
     "file": "_app/immutable/assets/s14-3683dd35.css",
     "src": "src/components/s14/s14.css"
   },
-  "Votelog.css": {
-    "file": "_app/immutable/assets/Votelog-f94b0ec6.css",
-    "src": "Votelog.css"
+  "src/components/s15/s15.css": {
+    "file": "_app/immutable/assets/s15-bac81c5d.css",
+    "src": "src/components/s15/s15.css"
   },
   "src/components/s16/s16.css": {
     "file": "_app/immutable/assets/s16-6aae9993.css",
     "src": "src/components/s16/s16.css"
+  },
+  "Bignum.css": {
+    "file": "_app/immutable/assets/Bignum-d9a8a040.css",
+    "src": "Bignum.css"
+  },
+  "src/components/s17/s17.css": {
+    "file": "_app/immutable/assets/s17-a588b36d.css",
+    "src": "src/components/s17/s17.css"
+  },
+  "src/components/s1/s1.css": {
+    "file": "_app/immutable/assets/s1-c2d52967.css",
+    "src": "src/components/s1/s1.css"
+  },
+  "src/components/s2/s2.css": {
+    "file": "_app/immutable/assets/s2-20efafd8.css",
+    "src": "src/components/s2/s2.css"
+  },
+  "src/components/s3/s3.css": {
+    "file": "_app/immutable/assets/s3-2c6bd4fc.css",
+    "src": "src/components/s3/s3.css"
+  },
+  "RepPortrait.css": {
+    "file": "_app/immutable/assets/RepPortrait-7220fe58.css",
+    "src": "RepPortrait.css"
+  },
+  "src/components/s4/s4.css": {
+    "file": "_app/immutable/assets/s4-dced7702.css",
+    "src": "src/components/s4/s4.css"
+  },
+  "src/components/s5/s5.css": {
+    "file": "_app/immutable/assets/s5-29778b35.css",
+    "src": "src/components/s5/s5.css"
+  },
+  "src/components/s6/s6.css": {
+    "file": "_app/immutable/assets/s6-a592550e.css",
+    "src": "src/components/s6/s6.css"
+  },
+  "src/components/s7/s7.css": {
+    "file": "_app/immutable/assets/s7-9832b372.css",
+    "src": "src/components/s7/s7.css"
+  },
+  "src/components/s18/s18.css": {
+    "file": "_app/immutable/assets/s18-b14f3c04.css",
+    "src": "src/components/s18/s18.css"
+  },
+  "Votelog.css": {
+    "file": "_app/immutable/assets/Votelog-f94b0ec6.css",
+    "src": "Votelog.css"
+  },
+  "src/components/s7/s8-bridge.css": {
+    "file": "_app/immutable/assets/s8-bridge-bc9a1789.css",
+    "src": "src/components/s7/s8-bridge.css"
   }
 }
