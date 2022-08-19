@@ -53,10 +53,6 @@
 
 		color: var(--c);
 
-		&:last-of-type {
-			border-right: 1px solid #a0a0a0;
-		}
-
 		display: flex;
 		align-items: center;
 		justify-content: center;

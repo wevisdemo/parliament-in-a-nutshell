@@ -5,8 +5,8 @@
 	export let hintPracharat = false;
 </script>
 
+<VoteLegend {hideHint} {hintPracharat} />
 <div class="votelog-container">
-	<VoteLegend {hideHint} {hintPracharat} />
 	<div class="votelog-head">
 		<div class="votelog-head-spacer" />
 		<div class="votelog-head-columns">
@@ -36,7 +36,7 @@
 	}
 
 	.votelog-head-columns {
-		padding: 72px 8px 16px;
+		padding: 72px 9px 16px 8px;
 		gap: 16px;
 		background: #000a;
 		backdrop-filter: blur(8px);
@@ -56,6 +56,10 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	}
+
+	:global(.votelog-icon) {
+		color: #a4a4a4;
 	}
 
 	:global(.votelog-body) {

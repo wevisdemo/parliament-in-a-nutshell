@@ -10,24 +10,24 @@
 	<div>
 		<div class="legend lg1">
 			<div class="type">
-				<VoteCell style="display:inline-block;border: 1px solid #a0a0a0" />
+				<VoteCell style="display:inline-block" />
 				<span>=</span>
 				<span>เห็นด้วยกับฝ่ายรัฐบาล</span>
 			</div>
 			<div class="type">
-				<VoteCell side="opp" style="display:inline-block;border: 1px solid #a0a0a0" />
+				<VoteCell side="opp" style="display:inline-block" />
 				<span>=</span>
 				<span>ไม่เห็นด้วยกับฝ่ายรัฐบาล</span>
 			</div>
 			{#if hintPracharat}
 				<div class="type">
-					<VoteCell side="pracharat" style="display:inline-block;border: 1px solid #a0a0a0" />
+					<VoteCell side="pracharat" style="display:inline-block;box-shadow:0 0 0 1px #a0a0a0" />
 					<span>=</span>
 					<span>ยุบพรรคไปเข้าร่วมพรรคพลังประชารัฐ</span>
 				</div>
 			{:else}
 				<div class="type">
-					<VoteCell side="black" style="display:inline-block;border: 1px solid #a0a0a0" />
+					<VoteCell side="black" style="display:inline-block;box-shadow:0 0 0 1px #a0a0a0" />
 					<span>=</span>
 					<span>ไม่อยู่ใน/ถูกระงับ/ลาออกจากการปฏิบัติหน้าที่</span>
 				</div>
@@ -43,19 +43,19 @@
 			</div>
 			<div class="sep" />
 			<div class="type">
-				<VoteIcon type="choose" />
+				<VoteIcon style="color:#a4a4a4" type="choose" />
 				<span>=</span>
 				<span>การเลือกนายกรัฐมนตรี</span>
 			</div>
 			<div class="sep" />
 			<div class="type">
-				<VoteIcon />
+				<VoteIcon style="color:#a4a4a4" />
 				<span>=</span>
 				<span>การลงมติทั่วไป</span>
 			</div>
 			<div class="sep" />
 			<div class="type">
-				<VoteIcon type="distrust" />
+				<VoteIcon style="color:#a4a4a4" type="distrust" />
 				<span>=</span>
 				<span>การลงมติอภิปรายไม่ไว้วางใจ</span>
 			</div>
