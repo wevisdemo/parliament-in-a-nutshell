@@ -5,11 +5,10 @@
 </script>
 
 <label
-	class={[
-		group === data.value && submitted ? (data.isCorrect ? 'correct' : 'incorrect') : null,
-		submitted ? 'submitted' : null,
-		'choice'
-	].join(' ')}
+	class:submitted
+	class:correct={group === data.value && submitted && data.isCorrect}
+	class:incorrect={group === data.value && submitted && !data.isCorrect}
+	class="choice"
 >
 	<input type="radio" bind:group name="quiz" value={data.value} disabled={submitted} />
 	<span class="text">{data.value} คน</span>
@@ -52,6 +51,7 @@
 
 		> input {
 			display: none;
+			pointer-events: none;
 		}
 
 		> .text {
@@ -63,6 +63,7 @@
 			width: 196px;
 
 			font-size: 1.5rem;
+			pointer-events: none;
 		}
 
 		&::before {
@@ -72,6 +73,7 @@
 			background: white;
 			border: 2px solid #000000;
 			border-right: none;
+			pointer-events: none;
 		}
 
 		> .cross {
@@ -79,6 +81,7 @@
 			top: 50%;
 			left: 24px;
 			mix-blend-mode: multiply;
+			pointer-events: none;
 		}
 	}
 
