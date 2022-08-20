@@ -9,41 +9,29 @@
 	class:correct={group === data.value && submitted && data.isCorrect}
 	class:incorrect={group === data.value && submitted && !data.isCorrect}
 	class="choice"
-	onclick={() => 0}
 >
+	<div class="box" />
 	<input type="radio" bind:group name="quiz" value={data.value} disabled={submitted} />
 	<span class="text">{data.value} คน</span>
 	<div class="cross">
-		<img class="c1" src="/shaking-parliament/mark-tlbr.png" alt="" decoding="async" />
-		<img class="c2" src="/shaking-parliament/mark-bltr.png" alt="" decoding="async" />
+		<img
+			class="c1"
+			src="/shaking-parliament/mark-tlbr.png"
+			alt=""
+			decoding="async"
+			loading="eager"
+		/>
+		<img
+			class="c2"
+			src="/shaking-parliament/mark-bltr.png"
+			alt=""
+			decoding="async"
+			loading="eager"
+		/>
 	</div>
 </label>
 
 <style lang="scss">
-	.cross {
-		transform: translateY(-2px);
-		opacity: 0;
-		transition: opacity 0.3s;
-
-		> .c1,
-		> .c2 {
-			position: absolute;
-			mix-blend-mode: multiply;
-
-			transform: translate(-48%, -60%) rotate(53.75deg);
-			width: 95px;
-			height: auto;
-
-			clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-			transition: clip-path 0.3s;
-		}
-
-		> .c2 {
-			transform: translate(-50%, -25%) rotate(-52.25deg);
-			width: 115px;
-		}
-	}
-
 	.choice {
 		display: flex;
 		margin: 0 auto 24px;
@@ -52,6 +40,13 @@
 
 		& > * {
 			pointer-events: none;
+		}
+
+		.box {
+			width: 48px;
+			background: white;
+			border: 2px solid #000000;
+			border-right: none;
 		}
 
 		> input {
@@ -68,20 +63,33 @@
 			font-size: 1.5rem;
 		}
 
-		&::before {
-			content: '';
-			align-self: stretch;
-			width: 48px;
-			background: white;
-			border: 2px solid #000000;
-			border-right: none;
-		}
-
 		> .cross {
 			position: absolute;
 			top: 50%;
 			left: 24px;
 			mix-blend-mode: multiply;
+
+			transform: translateY(-2px);
+			opacity: 0;
+			transition: opacity 0.3s;
+
+			> .c1,
+			> .c2 {
+				position: absolute;
+				mix-blend-mode: multiply;
+
+				transform: translate(-48%, -60%) rotate(53.75deg);
+				width: 95px;
+				height: auto;
+
+				clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+				transition: clip-path 0.3s;
+			}
+
+			> .c2 {
+				transform: translate(-50%, -25%) rotate(-52.25deg);
+				width: 115px;
+			}
 		}
 	}
 
