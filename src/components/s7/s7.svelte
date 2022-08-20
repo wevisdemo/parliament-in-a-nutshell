@@ -254,7 +254,7 @@
 		font-size: 1.5rem;
 		margin: 32px 0;
 
-		color: white;
+		color: #fff;
 		background: #000;
 
 		display: inline-block;

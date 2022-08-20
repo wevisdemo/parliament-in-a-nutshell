@@ -73,7 +73,7 @@
 
 <style lang="scss">
 	.semi-circ {
-		background: black;
+		background: #000;
 		border-radius: 0% 0% 50% 50% / 0% 0% 100% 100%;
 	}
 
@@ -97,7 +97,7 @@
 
 	.dot {
 		--dot-size: 96px;
-		background: black;
+		background: #000;
 		width: var(--dot-size);
 		height: var(--dot-size);
 		border-radius: 25%;

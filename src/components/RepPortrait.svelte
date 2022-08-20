@@ -50,7 +50,7 @@
 		object-fit: contain;
 		object-position: 50% 50%;
 
-		background: var(--c, white);
+		background: var(--c, #fff);
 
 		width: var(--s);
 		height: var(--s);

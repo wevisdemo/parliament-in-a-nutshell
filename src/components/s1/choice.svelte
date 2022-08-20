@@ -44,8 +44,8 @@
 
 		.box {
 			width: 48px;
-			background: white;
-			border: 2px solid #000000;
+			background: #fff;
+			border: 2px solid #000;
 			border-right: none;
 		}
 
@@ -55,7 +55,7 @@
 
 		> .text {
 			display: inline-block;
-			border: 2px solid #000000;
+			border: 2px solid #000;
 			background: #cdcdcd;
 			padding: 16px 24px;
 			text-align: center;

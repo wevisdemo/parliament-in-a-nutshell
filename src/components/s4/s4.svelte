@@ -15,7 +15,7 @@
 			font-size: 3rem;
 			line-height: 1.3;
 			mix-blend-mode: difference;
-			color: white;
+			color: #fff;
 		}
 	}
 </style>

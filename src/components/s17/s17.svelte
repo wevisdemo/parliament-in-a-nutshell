@@ -186,10 +186,10 @@
 		font-weight: 700;
 		font-size: 1.5rem;
 		text-align: center;
-		color: #ffffff;
+		color: #fff;
 		text-decoration: none;
 
-		background: #000000;
+		background: #000;
 		border-radius: 20px;
 		padding: 20px 48px;
 		margin-top: 48px;

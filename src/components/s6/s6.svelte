@@ -157,7 +157,7 @@
 
 	.part1-circle {
 		background: #000;
-		color: white;
+		color: #fff;
 
 		width: 315px;
 		height: 315px;

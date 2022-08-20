@@ -125,9 +125,9 @@
 		font-weight: 700;
 		font-size: 1.5rem;
 		text-align: center;
-		color: #ffffff;
+		color: #fff;
 
-		background: #000000;
+		background: #000;
 		border-radius: 20px;
 		padding: 20px 48px;
 

@@ -70,7 +70,7 @@
 
 		background: #000;
 
-		color: white;
+		color: #fff;
 		font-size: 1.5rem;
 		line-height: 1.2;
 
@@ -100,7 +100,7 @@
 
 		.T1 {
 			font-size: 2.5rem;
-			color: white;
+			color: #fff;
 			line-height: 1.2;
 			letter-spacing: 1px;
 

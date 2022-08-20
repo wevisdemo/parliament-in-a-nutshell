@@ -92,7 +92,7 @@
 		position: absolute;
 		top: 0;
 
-		color: white;
+		color: #fff;
 
 		padding-bottom: 5%;
 	}
@@ -103,7 +103,7 @@
 
 	.pill {
 		border-radius: 999px;
-		border: 2px white solid;
+		border: 2px #fff solid;
 		line-height: 2;
 		padding: 0 24px;
 
@@ -143,7 +143,7 @@
 		transform: translateY(-50%);
 		z-index: 19;
 
-		border: 1px dashed #ffffff;
+		border: 1px dashed #fff;
 		padding: 12px;
 		white-space: nowrap;
 

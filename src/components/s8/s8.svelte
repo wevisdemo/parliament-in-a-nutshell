@@ -94,7 +94,7 @@
 		> .black {
 			display: inline-block;
 			background: #000;
-			color: white;
+			color: #fff;
 			padding: 8px 16px;
 			margin: 1.6px 0;
 			line-height: 1.5;

@@ -58,7 +58,7 @@
 		width: 60%;
 		height: 3px;
 
-		background: black;
+		background: #000;
 
 		top: 70%;
 		left: 37%;

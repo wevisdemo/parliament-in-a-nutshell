@@ -82,7 +82,7 @@
 
 	.pill {
 		border-radius: 999px;
-		border: 2px white solid;
+		border: 2px #fff solid;
 		line-height: 2;
 		padding: 0 24px;
 
@@ -120,7 +120,7 @@
 	}
 
 	.intern-sep {
-		border-bottom: 2px white dashed;
+		border-bottom: 2px #fff dashed;
 		width: 48px;
 		margin: 32px 0 24px;
 	}

@@ -259,8 +259,8 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				replace_by: {
 					name: 'ว่าง',
 					side: 'opp',
-					src: 'white.jpg',
-					color: '#FFFFFF'
+					src: 'w.png',
+					color: '#fff'
 				}
 			},
 			{
@@ -271,8 +271,8 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				replace_by: {
 					name: 'ว่าง',
 					side: 'opp',
-					src: 'white.jpg',
-					color: '#FFFFFF'
+					src: 'w.png',
+					color: '#fff'
 				}
 			},
 			{
@@ -437,8 +437,8 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				replace_by: {
 					name: 'ว่าง',
 					side: 'gov',
-					src: 'white.jpg',
-					color: '#FFFFFF'
+					src: 'w.png',
+					color: '#fff'
 				}
 			}
 		],
@@ -463,8 +463,8 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				replace_by: {
 					name: 'ว่าง',
 					side: 'opp',
-					src: 'white.jpg',
-					color: '#FFFFFF'
+					src: 'w.png',
+					color: '#fff'
 				}
 			},
 			{
@@ -475,8 +475,8 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				replace_by: {
 					name: 'ว่าง',
 					side: 'opp',
-					src: 'white.jpg',
-					color: '#FFFFFF'
+					src: 'w.png',
+					color: '#fff'
 				}
 			},
 			{
@@ -487,8 +487,8 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				replace_by: {
 					name: 'ว่าง',
 					side: 'opp',
-					src: 'white.jpg',
-					color: '#FFFFFF'
+					src: 'w.png',
+					color: '#fff'
 				}
 			},
 			{
@@ -499,8 +499,8 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				replace_by: {
 					name: 'ว่าง',
 					side: 'opp',
-					src: 'white.jpg',
-					color: '#FFFFFF'
+					src: 'w.png',
+					color: '#fff'
 				}
 			}
 		],
@@ -513,8 +513,8 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				replace_by: {
 					name: 'ว่าง',
 					side: 'opp',
-					src: 'white.jpg',
-					color: '#FFFFFF'
+					src: 'w.png',
+					color: '#fff'
 				}
 			},
 			{
@@ -525,8 +525,8 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				replace_by: {
 					name: 'ว่าง',
 					side: 'opp',
-					src: 'white.jpg',
-					color: '#FFFFFF'
+					src: 'w.png',
+					color: '#fff'
 				}
 			},
 			{
@@ -537,8 +537,8 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				replace_by: {
 					name: 'ว่าง',
 					side: 'opp',
-					src: 'white.jpg',
-					color: '#FFFFFF'
+					src: 'w.png',
+					color: '#fff'
 				}
 			},
 			{
@@ -549,8 +549,8 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				replace_by: {
 					name: 'ว่าง',
 					side: 'opp',
-					src: 'white.jpg',
-					color: '#FFFFFF'
+					src: 'w.png',
+					color: '#fff'
 				}
 			},
 			{
@@ -561,8 +561,8 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				replace_by: {
 					name: 'ว่าง',
 					side: 'opp',
-					src: 'white.jpg',
-					color: '#FFFFFF'
+					src: 'w.png',
+					color: '#fff'
 				}
 			}
 		],
@@ -575,8 +575,8 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				replace_by: {
 					name: 'ว่าง',
 					side: 'opp',
-					src: 'white.jpg',
-					color: '#FFFFFF'
+					src: 'w.png',
+					color: '#fff'
 				}
 			},
 			{
@@ -587,8 +587,8 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				replace_by: {
 					name: 'ว่าง',
 					side: 'opp',
-					src: 'white.jpg',
-					color: '#FFFFFF'
+					src: 'w.png',
+					color: '#fff'
 				}
 			},
 			{
@@ -599,8 +599,8 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				replace_by: {
 					name: 'ว่าง',
 					side: 'opp',
-					src: 'white.jpg',
-					color: '#FFFFFF'
+					src: 'w.png',
+					color: '#fff'
 				}
 			},
 			{

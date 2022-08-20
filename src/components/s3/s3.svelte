@@ -274,7 +274,7 @@
 		width: 0;
 		height: 131px;
 		margin: 32px 0 64px;
-		border-right: 2px black solid;
+		border-right: 2px #000 solid;
 	}
 
 	p {

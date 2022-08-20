@@ -139,7 +139,7 @@
 		> .black {
 			display: inline-block;
 			background: #000;
-			color: white;
+			color: #fff;
 			padding: 8px 16px;
 			margin: 1.6px 0;
 			line-height: 1.5;
@@ -174,7 +174,7 @@
 
 	.circle-text {
 		background: #000;
-		color: white;
+		color: #fff;
 
 		width: 315px;
 		height: 315px;
@@ -201,7 +201,7 @@
 
 		.bridge-text {
 			font-size: 2.5rem;
-			color: white;
+			color: #fff;
 			line-height: 1.2;
 			letter-spacing: 1px;
 
