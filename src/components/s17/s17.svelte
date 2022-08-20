@@ -24,6 +24,7 @@
 					href="https://www.facebook.com/sharer/sharer.php?u={SITE_LINK}"
 					target="_blank"
 					rel="nofollow noopener noreferrer"
+					title="Share on Facebook"
 				>
 					<svg
 						role="img"
@@ -44,6 +45,7 @@
 					href="https://twitter.com/intent/tweet?url={SITE_LINK}"
 					target="_blank"
 					rel="nofollow noopener noreferrer"
+					title="Share on Twitter"
 				>
 					<svg
 						role="img"
@@ -59,7 +61,12 @@
 				</a>
 			</div>
 			<div class="col">
-				<button type="button" class="social-share" on:click={copyLinkToClipboard}>
+				<button
+					type="button"
+					class="social-share"
+					aria-label="Copy link to clipboard"
+					on:click={copyLinkToClipboard}
+				>
 					<svg
 						role="img"
 						viewBox="0 0 24 24"

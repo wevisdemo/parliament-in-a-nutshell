@@ -120,6 +120,8 @@
 		white-space: nowrap;
 
 		user-select: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
 
 		opacity: 0;
 		transition: opacity 0s;

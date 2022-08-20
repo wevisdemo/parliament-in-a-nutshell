@@ -40,6 +40,11 @@
 	});
 </script>
 
+<!-- force load images so chrome wont scream at my face -->
+<div class="force-load">
+	<img src="/shaking-parliament/quiz-correct.png" alt="" decoding="async" loading="eager" />
+	<img src="/shaking-parliament/quiz-incorrect.png" alt="" decoding="async" loading="eager" />
+</div>
 <section class="h100 c">
 	<h1 class="T1">
 		คุณรู้ไหม?<br />
@@ -76,6 +81,7 @@
 				src="/shaking-parliament/quiz-{isCorrect ? '' : 'in'}correct.png"
 				alt=""
 				decoding="async"
+				loading="eager"
 			/>
 		</div>
 	{/if}
@@ -83,6 +89,11 @@
 </section>
 
 <style lang="scss">
+	.force-load {
+		opacity: 0;
+		height: 0;
+	}
+
 	.T1 {
 		font-size: 4rem;
 		line-height: 1.2;
@@ -146,6 +157,8 @@
 
 		> .ans-img {
 			backface-visibility: visible !important;
+			-webkit-backface-visibility: visible !important;
+			-moz-backface-visibility: visible !important;
 			animation: flipInY 1s;
 			width: 256px;
 		}
@@ -203,7 +216,7 @@
 		pointer-events: none;
 		width: 100vw;
 		height: 100vh;
-		mask-image: linear-gradient(#000f 70%, #0000);
 		-webkit-mask-image: linear-gradient(#000f 70%, #0000);
+		mask-image: linear-gradient(#000f 70%, #0000);
 	}
 </style>
