@@ -10,11 +10,11 @@
 		"sourceMap": true,
 		"strict": true,
 		"paths": {
-			"components/*": ["src/components/*"],
-			"data/*": ["src/data/*"],
-			"routes/*": ["src/routes/*"],
-			"styles/*": ["src/styles/*"],
-			"utils/*": ["src/utils/*"]
+			"components/*": ["./src/components/*"],
+			"data/*": ["./src/data/*"],
+			"routes/*": ["./src/routes/*"],
+			"styles/*": ["./src/styles/*"],
+			"utils/*": ["./src/utils/*"]
 		}
 	}
 }
