@@ -5,13 +5,44 @@
 <div class="black c tc ref-container">
 	<h1 class="T1">แหล่งที่มาของข้อมูล</h1>
 	<div class="pill">แหล่งที่มาชุดข้อมูลการลงมติ</div>
-	<p>ระบบฐานข้อมูลรายงานและบันทึกการประชุม สำนักเลขาธิการสมาชิกสภาผู้แทนราษฎร</p>
+	<a
+		class="link"
+		href="https://msbis.parliament.go.th/ewtadmin/ewt/parliament_report/main.php"
+		target="_blank"
+		rel="nofollow noopener noreferrer"
+		title="ระบบฐานข้อมูลรายงานและบันทึกการประชุม สำนักเลขาธิการสมาชิกสภาผู้แทนราษฎร"
+	>
+		ระบบฐานข้อมูลรายงานและบันทึกการประชุม สำนักเลขาธิการสมาชิกสภาผู้แทนราษฎร
+	</a>
 	<div class="pill">แหล่งที่มาข่าว</div>
-	<p>
-		เปิดเส้นทางพรรคเล็ก จาก ส.ส. ปัดเศษ สู่ผู้กำหนดชะตากรรมรัฐบาล (ilaw)<br />
-		ธรรมนัส พรหมเผ่า : พลังประชารัฐมีมติขับ ส.ส. 21 คน "ผิดจรรยาบรรณร้ายแรง" (BBC News)<br />
+	<a
+		class="link"
+		href="https://ilaw.or.th/node/6069"
+		target="_blank"
+		rel="nofollow noopener noreferrer"
+		title="เปิดเส้นทางพรรคเล็ก จาก ส.ส. ปัดเศษ สู่ผู้กำหนดชะตากรรมรัฐบาล (ilaw)"
+	>
+		เปิดเส้นทางพรรคเล็ก จาก ส.ส. ปัดเศษ สู่ผู้กำหนดชะตากรรมรัฐบาล (ilaw)
+	</a>
+	<a
+		class="link"
+		href="https://www.bbc.com/thai/thailand-60059393"
+		target="_blank"
+		rel="nofollow noopener noreferrer"
+		title={'ธรรมนัส พรหมเผ่า : พลังประชารัฐมีมติขับ ส.ส. 21 คน "ผิดจรรยาบรรณร้ายแรง" (BBC News)'}
+	>
+		ธรรมนัส พรหมเผ่า : พลังประชารัฐมีมติขับ ส.ส. 21 คน "ผิดจรรยาบรรณร้ายแรง" (BBC News)
+	</a>
+	<a
+		class="link"
+		href="https://www.thairath.co.th/news/politic/2300268"
+		target="_blank"
+		rel="nofollow noopener noreferrer"
+		title={'"ธรรมนัส" นำทีม 18 ส.ส.พปชร.แจ้งย้ายเข้า "เศรษฐกิจไทย" ไร้ชื่อ 3 ส.ส. (ไทยรัฐออนไลน์)'}
+	>
 		"ธรรมนัส" นำทีม 18 ส.ส.พปชร.แจ้งย้ายเข้า "เศรษฐกิจไทย" ไร้ชื่อ 3 ส.ส. (ไทยรัฐออนไลน์)
-	</p>
+	</a>
+	<p />
 	<div class="ref_date">— สืบค้นเมื่อ กรกฎาคม 2565 —</div>
 	<div style="--h:192px" />
 	<h1 class="T1">WeVis Interns</h1>
@@ -87,15 +118,25 @@
 		padding: 0 24px;
 
 		font-size: 1.5rem;
-		margin: 64px 0 16px;
+		margin: 64px 0 32px;
 	}
 
-	p {
+	.link {
 		font-style: italic;
 		font-weight: 500;
 		line-height: 2;
-		margin: 16px 0;
 		font-size: 1.25rem;
+
+		color: #fff;
+		text-decoration: none;
+
+		background: linear-gradient(#fff, #fff) no-repeat right bottom / 0 2px;
+		transition: background-size 0.3s;
+
+		&:hover {
+			background-size: 100% 2px;
+			background-position-x: left;
+		}
 	}
 
 	.ref_date {
@@ -103,6 +144,7 @@
 		font-weight: 500;
 		line-height: 2;
 		color: #b5b5b5;
+		margin-top: 16px;
 	}
 
 	.intern {
