@@ -93,7 +93,6 @@
 		}
 	}
 
-	.choice:not(.submitted):hover > .cross,
 	.choice > input:checked ~ .cross {
 		opacity: 0.5;
 
@@ -105,6 +104,22 @@
 
 		> .c2 {
 			transition-delay: 0.1s;
+		}
+	}
+
+	@media (hover) {
+		.choice:not(.submitted):hover > .cross {
+			opacity: 0.5;
+
+			> .c1,
+			> .c2 {
+				clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+				transition: clip-path 0.3s;
+			}
+
+			> .c2 {
+				transition-delay: 0.1s;
+			}
 		}
 	}
 
