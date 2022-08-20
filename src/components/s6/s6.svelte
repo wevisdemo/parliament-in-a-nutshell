@@ -38,6 +38,7 @@
 	});
 </script>
 
+<!-- VH skip check -->
 <div style="--h:calc(210vh + 480px)">
 	<div class="stick part1-section" style="--h:calc(110vh + 480px)">
 		<div bind:this={el_chair_container} class="part1-decor">

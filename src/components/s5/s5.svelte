@@ -64,12 +64,12 @@
 		> .logo-decor {
 			opacity: 0.3;
 
-			height: 70vh;
-			width: 70vw;
+			height: 70vh; /* O */
+			width: 70vw; /* O */
 			object-fit: contain;
 
 			position: absolute;
-			top: 15vh;
+			top: 15vh; /* O */
 		}
 
 		&.in-view {

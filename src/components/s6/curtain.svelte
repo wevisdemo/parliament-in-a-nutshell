@@ -84,7 +84,7 @@
 
 	.curtain {
 		width: 100%;
-		height: 100vh;
+		height: 100vh; /* O */
 		background: url(/shaking-parliament/curtain.png) repeat-x;
 		background-size: auto 100%;
 		background-position: center;

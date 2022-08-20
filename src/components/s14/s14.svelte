@@ -53,7 +53,7 @@
 		loading="lazy"
 	/>
 </div>
-<div class="tc c" style="margin-top:-30vh">
+<div class="tc c" style="margin-top:-30vh /* R */">
 	<img class="news-img" src="/shaking-parliament/pt4_newspaper.png" alt="" />
 </div>
 <p class="news-text tc">
@@ -73,7 +73,7 @@
 	<span class="T1 poomjaithai">พรรคภูมิใจไทย</span><br />
 	ตามที่มีกระแสข่าวก่อนหน้านี้ &rdquo;
 </p>
-<div style="--h:15vh" />
+<div style="--h:128px" />
 <Sankey />
 <p class="circle-text c tc">
 	แน่นอนว่าด้วยฐานะ<br />
@@ -95,13 +95,13 @@
 
 <style lang="scss">
 	.crack {
-		width: 100vw;
-		height: 70vh;
+		width: 100%;
+		height: 30vw;
 	}
 
 	.title-img {
 		width: min(70vw, 90vh);
-		margin-top: -30vh;
+		margin-top: -30vh /* R */;
 	}
 
 	.decor {
@@ -129,7 +129,7 @@
 	.news-img {
 		width: 80%;
 		max-width: 800px;
-		margin-bottom: 10vh;
+		margin-bottom: 96px;
 	}
 
 	.news-text {
@@ -181,7 +181,7 @@
 
 		border-radius: 50%;
 
-		margin: 15vh auto 0;
+		margin: 144px auto 0;
 
 		position: relative;
 		z-index: 1;
@@ -196,7 +196,7 @@
 
 	.bridge-15 {
 		background: linear-gradient(#0000, #000f);
-		height: 50vh;
+		height: 50vh; /* R */
 		justify-content: flex-end;
 
 		.bridge-text {
@@ -206,7 +206,7 @@
 			letter-spacing: 1px;
 
 			position: sticky;
-			bottom: 40vh;
+			bottom: 40vh; /* O */
 
 			padding: 64px 0;
 		}

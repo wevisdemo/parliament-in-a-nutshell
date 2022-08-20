@@ -42,6 +42,7 @@
 	});
 </script>
 
+<!-- VH skip check -->
 <div class="c tc">
 	<h1>
 		แล้ว 12 เก้าอี้ที่เพิ่มมา<br />

@@ -154,7 +154,7 @@
 	}
 
 	.fade {
-		height: 30vh;
+		height: 30vh; /* O */
 
 		background: linear-gradient(#000f, #0000);
 	}

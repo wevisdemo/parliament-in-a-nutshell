@@ -333,6 +333,6 @@
 
 <style>
 	svg {
-		max-height: min(80vh, 90vw);
+		max-height: min(80vh, 90vw); /* O */
 	}
 </style>

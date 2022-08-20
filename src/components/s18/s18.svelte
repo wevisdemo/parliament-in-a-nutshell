@@ -13,7 +13,7 @@
 		"ธรรมนัส" นำทีม 18 ส.ส.พปชร.แจ้งย้ายเข้า "เศรษฐกิจไทย" ไร้ชื่อ 3 ส.ส. (ไทยรัฐออนไลน์)
 	</p>
 	<div class="ref_date">— สืบค้นเมื่อ กรกฎาคม 2565 —</div>
-	<div style="--h:20vh" />
+	<div style="--h:192px" />
 	<h1 class="T1">WeVis Interns</h1>
 	<div class="row" style="--gap:80px">
 		<div class="col c tc intern">
@@ -70,7 +70,7 @@
 
 <style lang="scss">
 	.ref-container {
-		padding: 20vh 0 15vh;
+		padding: 192px 0 144px;
 		z-index: 3;
 		box-shadow: 0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%),
 			0 11px 15px -7px rgb(0 0 0 / 20%);

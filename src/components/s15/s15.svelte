@@ -378,6 +378,6 @@
 
 <style lang="scss">
 	.s15-container {
-		padding: 0 0 10vh;
+		padding: 0 0 96px;
 	}
 </style>

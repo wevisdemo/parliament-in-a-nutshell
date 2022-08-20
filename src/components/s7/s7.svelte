@@ -61,7 +61,8 @@
 	});
 </script>
 
-<div style="--h:155vh">
+<!-- VH skip check -->
+<div>
 	<div class="h100 c stick">
 		<div class="event-container">
 			<div class="event resign">
@@ -197,6 +198,7 @@
 	</div>
 	<div class="pen" style="--h:5vh" />
 	<div class="pen" bind:this={el_trigger} style="--h:40vh" />
+	<div class="pen" style="--h:10vh" />
 </div>
 <Bridge />
 

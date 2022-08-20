@@ -146,6 +146,6 @@
 
 <style lang="scss">
 	.s9-2-container {
-		padding: 0 0 10vh;
+		padding: 0 0 96px;
 	}
 </style>

@@ -466,6 +466,6 @@
 
 <style lang="scss">
 	.s13-container {
-		padding: 0 0 10vh;
+		padding: 0 0 96px;
 	}
 </style>

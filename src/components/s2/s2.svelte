@@ -30,6 +30,7 @@
 	});
 </script>
 
+<!-- VH skip check -->
 <section>
 	<div class="stick c" style="--h:120vh">
 		<Arc {show_current_data} />

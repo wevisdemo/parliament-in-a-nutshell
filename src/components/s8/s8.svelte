@@ -31,7 +31,7 @@
 	/>
 </div>
 <div style="--h:300px" />
-<div style="--h:90vh">
+<div class="news-container">
 	<img
 		src="/shaking-parliament/part2_papers.png"
 		alt=""
@@ -49,12 +49,11 @@
 			<span class="black">มีพรรคที่ได้ที่นั่งเพิ่มมาทั้งหมด 12 พรรค</span><br />
 			<span class="black">แต่ละพรรคได้ไป 1 ที่นั่ง</span><br />
 			หักปากกาบรรดาเซียน<br />
-			<span class="special-lh" style="--lh:2.5">ที่พยายามคำนวณที่นั่ง ส.ส. ไว้ก่อนหน้า &rdquo;</span
-			>
+			<span class="special-lh">ที่พยายามคำนวณที่นั่ง ส.ส. ไว้ก่อนหน้า &rdquo;</span>
 		</p>
-		<div style="--h:10vh" />
 	</div>
 </div>
+<div style="--h:96px" />
 
 <style lang="scss">
 	.bg {
@@ -69,11 +68,23 @@
 		width: min(60vw, 60vh);
 	}
 
+	.news-container {
+		display: flex;
+		gap: 32px;
+
+		max-height: 80vh; /* O */
+	}
+
+	.newspaper {
+		flex: 1 1 0%;
+
+		object-fit: contain;
+		object-position: right;
+	}
+
 	.news-text-container {
-		position: absolute;
-		left: 30vw;
-		height: 80vh;
-		width: 70vw;
+		flex: 1 1 0%;
+		align-items: flex-start;
 	}
 
 	.news-text {
@@ -89,16 +100,6 @@
 			line-height: 1.5;
 			font-weight: 700;
 		}
-	}
-
-	.newspaper {
-		position: absolute;
-		right: 40%;
-		height: 80vh;
-		width: 60vw;
-
-		object-fit: contain;
-		object-position: center;
 	}
 
 	.special-lh {

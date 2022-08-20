@@ -127,6 +127,7 @@
 	});
 </script>
 
+<!-- VH skip check -->
 <section class="s3-container">
 	<div class="T1 counter-decor">{rp_num}</div>
 	<div class="decor">
@@ -224,9 +225,8 @@
 			<br />
 			และอีกมากมาย …<br />
 		</p>
-		<div style="--h:15vh" />
 	</div>
-	<div style="--h:15vh" />
+	<div style="--h:288px" />
 	<div class="c">
 		<p class="s3-2 tc">
 			<strong class="bigger">เมื่อประชาธิปไตยไม่ได้จบแค่การเลือกตั้ง</strong><br />

@@ -39,7 +39,7 @@
 	});
 </script>
 
-<div class="semi-circ" style="--h:30vh" />
+<div class="semi-circ" style="--h:min(20vw,30vh) /* O */" />
 <div bind:this={el_dots_container} class="_3dots c row vert" style="--gap:48px">
 	<div class="dot dot1" />
 	<div class="dot dot2" />

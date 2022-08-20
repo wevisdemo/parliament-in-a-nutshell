@@ -3,7 +3,7 @@
 	import Sankey from './sankey.svelte';
 </script>
 
-<div style="--h:10vh" />
+<div style="--h:128px" />
 <div class="compare">
 	<div class="compare-opp">
 		<div class="black-lbl tc">
@@ -31,7 +31,7 @@
 		</Bignum>
 	</div>
 </div>
-<div style="--h:10vh" />
+<div style="--h:64px" />
 <Sankey />
 <div style="--h:32px" />
 <div class="bridge-13 tc c">
@@ -95,7 +95,7 @@
 
 	.bridge-13 {
 		background: linear-gradient(#0000, #000f);
-		height: 50vh;
+		height: 50vh; /* R */
 		justify-content: flex-end;
 
 		.T1 {
@@ -105,7 +105,7 @@
 			letter-spacing: 1px;
 
 			position: sticky;
-			bottom: 40vh;
+			bottom: 40vh; /* O */
 
 			padding: 64px 0;
 
