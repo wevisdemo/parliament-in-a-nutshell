@@ -5,7 +5,6 @@
 
 	import VoteLegend from './VoteLegend.svelte';
 
-	export let hideHint = true;
 	export let hintPracharat = false;
 
 	let el_header: any;
@@ -24,7 +23,7 @@
 	});
 </script>
 
-<VoteLegend {hideHint} {hintPracharat} />
+<VoteLegend {hintPracharat} />
 <div class="votelog-container">
 	<div bind:this={el_header} class="votelog-head">
 		<div class="votelog-head-spacer" />
