@@ -14,6 +14,8 @@
 	export let tooltip: 'top' | 'right' | null = null;
 	export let dashedBorder = false;
 	export let op: string = shift === '0' ? '0' : '0.3';
+
+	const removePx = (s: string) => s.replace(/px$/, '');
 </script>
 
 <div
@@ -34,6 +36,8 @@
 		decoding="async"
 		loading="lazy"
 		{style}
+		width={removePx(size)}
+		height={removePx(size)}
 	/>
 	<div class="tooltip">{name}</div>
 	<div class="top" style:--shift={shift}><slot /></div>

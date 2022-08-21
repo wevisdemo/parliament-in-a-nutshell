@@ -57,7 +57,8 @@
 		alt="WeVis"
 		decoding="async"
 		loading="eager"
-		style="height:28px"
+		width="93"
+		height="28"
 	/>
 </a>
 <Loader {loaded} {isReady} />

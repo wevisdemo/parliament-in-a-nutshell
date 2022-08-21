@@ -20,6 +20,8 @@
 			alt=""
 			decoding="async"
 			loading="eager"
+			width="95"
+			height="11"
 		/>
 		<img
 			class="c2"
@@ -27,6 +29,8 @@
 			alt=""
 			decoding="async"
 			loading="eager"
+			width="115"
+			height="15"
 		/>
 	</div>
 </label>

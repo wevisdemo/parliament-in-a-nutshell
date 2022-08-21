@@ -42,8 +42,22 @@
 
 <!-- force load images so chrome wont scream at my face -->
 <div class="force-load">
-	<img src="/shaking-parliament/quiz-correct.png" alt="" decoding="async" loading="eager" />
-	<img src="/shaking-parliament/quiz-incorrect.png" alt="" decoding="async" loading="eager" />
+	<img
+		src="/shaking-parliament/quiz-correct.png"
+		alt=""
+		decoding="async"
+		loading="eager"
+		width="256"
+		height="256"
+	/>
+	<img
+		src="/shaking-parliament/quiz-incorrect.png"
+		alt=""
+		decoding="async"
+		loading="eager"
+		width="256"
+		height="256"
+	/>
 </div>
 <section class="h100 c">
 	<h1 class="T1">
@@ -64,9 +78,23 @@
 		ตรวจคำตอบ
 	</button>
 	<div class="continue" class:show={isSubmitted}>
-		<img src="/shaking-parliament/thinking.png" alt="" decoding="async" loading="lazy" />
+		<img
+			src="/shaking-parliament/thinking.png"
+			alt=""
+			decoding="async"
+			loading="lazy"
+			width="32"
+			height="32"
+		/>
 		เกิดอะไรขึ้น? ไปดูกัน!
-		<img src="/shaking-parliament/hand-down.png" alt="" decoding="async" loading="lazy" />
+		<img
+			src="/shaking-parliament/hand-down.png"
+			alt=""
+			decoding="async"
+			loading="lazy"
+			width="32"
+			height="32"
+		/>
 	</div>
 
 	{#if isSubmitted && !isCorrect}
@@ -82,6 +110,8 @@
 				alt=""
 				decoding="async"
 				loading="eager"
+				width="256"
+				height="256"
 			/>
 		</div>
 	{/if}
@@ -161,6 +191,9 @@
 			-moz-backface-visibility: visible !important;
 			animation: flipInY 1s;
 			width: 256px;
+			height: 256px;
+			object-fit: contain;
+			object-position: center;
 		}
 
 		> .ans-img.correct {

@@ -54,6 +54,8 @@
 				alt=""
 				decoding="async"
 				loading="lazy"
+				width="250"
+				height="250"
 			/>
 			<div class="intern-name T1">ทินกร หวานแท้</div>
 			<div class="intern-sep" />
@@ -70,6 +72,8 @@
 				alt=""
 				decoding="async"
 				loading="lazy"
+				width="250"
+				height="250"
 			/>
 			<div class="intern-name T1">ณภัทร แต้เถา</div>
 			<div class="intern-sep" />
@@ -86,6 +90,8 @@
 				alt=""
 				decoding="async"
 				loading="lazy"
+				width="250"
+				height="250"
 			/>
 			<div class="intern-name T1">สุเทพ จันทร์ชูผล</div>
 			<div class="intern-sep" />
