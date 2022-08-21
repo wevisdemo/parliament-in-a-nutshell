@@ -92,7 +92,7 @@
 		</svelte:fragment>
 		<svelte:fragment>
 			{#each VOTE_METADATA as mati, i}
-				<div class="votelog-row">
+				<div class="votelog-row" class:last-row={i > VOTE_METADATA.length - 3}>
 					<div class="votelog-icon">
 						<Icon type={mati.icon} />
 					</div>

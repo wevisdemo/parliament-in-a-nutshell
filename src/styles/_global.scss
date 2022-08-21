@@ -56,6 +56,13 @@
 	box-shadow: 0 0 16px #000;
 }
 
+.votelog-row.last-row > .votelog-value > .votelog-subject {
+	bottom: unset;
+	transform: translateY(-100%);
+	top: 0;
+	border-radius: 4px 4px 4px 0;
+}
+
 .votelog-row:hover {
 	> .votelog-icon {
 		stroke: #fff;

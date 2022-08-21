@@ -50,10 +50,11 @@
 
 	.votelog-head {
 		position: sticky;
-		top: 0;
+		top: -1px;
 		z-index: 3;
 		margin-bottom: 24px;
 		overflow: hidden;
+		padding: 0 4px;
 	}
 
 	.votelog-head-columns {
@@ -82,7 +83,30 @@
 
 	.votelog-body {
 		margin-top: -16px;
+		padding: 4px;
 		overflow: auto hidden;
+
+		scrollbar-color: #a0a0a0 #5b5b5b;
+		scrollbar-width: thin;
+
+		&::-webkit-scrollbar {
+			height: 10px;
+			width: 10px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: #5b5b5b;
+			border-radius: 6px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: #a0a0a0;
+			border-radius: 6px;
+		}
+
+		&::-webkit-scrollbar-thumb:hover {
+			background: #d9d9d9;
+		}
 	}
 
 	// .votelog-icon, .votelog-value, .votelog-subject are in scss file
