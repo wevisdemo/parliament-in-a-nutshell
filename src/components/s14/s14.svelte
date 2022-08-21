@@ -28,7 +28,7 @@
 	});
 </script>
 
-<img class="crack" src="/shaking-parliament/crack.svg" alt="" width="100%" height="30vw" />
+<img class="crack" src="/shaking-parliament/crack.svg" alt="" />
 <div class="s14-container h100 tc c">
 	<div bind:this={el_decor_container} class="decor">
 		<img
