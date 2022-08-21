@@ -133,7 +133,7 @@
 			color="#ff6f21"
 			name="ศรีนวล บุญลือ"
 			side="opp"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
@@ -141,7 +141,7 @@
 			color="#ff6f21"
 			name="กิตติชัย เรืองสวัสดิ์"
 			side="opp"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
@@ -149,7 +149,7 @@
 			color="#ff6f21"
 			name="กฤติเดช สันติวชิระกุล"
 			side="opp"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
@@ -157,7 +157,7 @@
 			color="#ff6f21"
 			name="โชติพิพัฒน์ เตชะโสภณมณี"
 			side="opp"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
@@ -165,7 +165,7 @@
 			color="#ff6f21"
 			name="ฐิตินันท์ แสงนาค"
 			side="opp"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 	</div>
@@ -175,7 +175,7 @@
 			color="#ff6f21"
 			name="มณฑล โพธิ์คาย"
 			side="opp"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
@@ -183,7 +183,7 @@
 			color="#ff6f21"
 			name="วิรัช พันธุมะผล"
 			side="opp"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
@@ -191,7 +191,7 @@
 			color="#ff6f21"
 			name="สำลี รักสุทธี"
 			side="opp"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
@@ -199,7 +199,7 @@
 			color="#ff6f21"
 			name="อนาวิล รัตนสถาพร"
 			side="opp"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
@@ -207,7 +207,7 @@
 			color="#ff6f21"
 			name="เอกการ ซื่อทรงธรรม"
 			side="opp"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 	</div>
@@ -215,53 +215,46 @@
 	<div class="sankey-fade" />
 	<div class="sankey-block end" />
 	<div class="row vert sankey-people">
-		<RP src="rp/pt12-ศรีนวล.png" color="#065cab" name="ศรีนวล บุญลือ" size="48px" tooltip="top" />
+		<RP src="rp/pt12-ศรีนวล.png" color="#065cab" name="ศรีนวล บุญลือ" size="48" tooltip="top" />
 		<RP
 			src="rp/pt12-กิตติชัย.png"
 			color="#065cab"
 			name="กิตติชัย เรืองสวัสดิ์"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
 			src="rp/pt12-กฤติเดช.png"
 			color="#065cab"
 			name="กฤติเดช สันติวชิระกุล"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
 			src="rp/pt12-โชติพิพัฒน์.png"
 			color="#065cab"
 			name="โชติพิพัฒน์ เตชะโสภณมณี"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
 			src="rp/pt12-ฐิตินันท์.png"
 			color="#065cab"
 			name="ฐิตินันท์ แสงนาค"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
-		<!-- <div /> -->
 	</div>
 	<div class="row vert sankey-people">
-		<RP src="rp/pt12-มณฑล.png" color="#065cab" name="มณฑล โพธิ์คาย" size="48px" tooltip="top" />
-		<RP src="rp/pt12-วิรัช.png" color="#065cab" name="วิรัช พันธุมะผล" size="48px" tooltip="top" />
-		<RP src="rp/pt12-สำลี.png" color="#065cab" name="สำลี รักสุทธี" size="48px" tooltip="top" />
-		<RP
-			src="rp/pt12-อนาวิล.png"
-			color="#065cab"
-			name="อนาวิล รัตนสถาพร"
-			size="48px"
-			tooltip="top"
-		/>
+		<RP src="rp/pt12-มณฑล.png" color="#065cab" name="มณฑล โพธิ์คาย" size="48" tooltip="top" />
+		<RP src="rp/pt12-วิรัช.png" color="#065cab" name="วิรัช พันธุมะผล" size="48" tooltip="top" />
+		<RP src="rp/pt12-สำลี.png" color="#065cab" name="สำลี รักสุทธี" size="48" tooltip="top" />
+		<RP src="rp/pt12-อนาวิล.png" color="#065cab" name="อนาวิล รัตนสถาพร" size="48" tooltip="top" />
 		<RP
 			src="rp/pt12-เอกการ.png"
 			color="#065cab"
 			name="เอกการ ซื่อทรงธรรม"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 	</div>
@@ -275,7 +268,7 @@
 		src="rp/pt12-พรพิมล.png"
 		color="#065CAB"
 		name="พรพิมล ธรรมสาร"
-		size="48px"
+		size="48"
 		tooltip="top"
 	/>
 </div>
@@ -287,7 +280,7 @@
 		color="#ff6f21"
 		name="กวินนาถ ตาคีย์"
 		side="opp"
-		size="48px"
+		size="48"
 		tooltip="top"
 	/>
 	<RP
@@ -296,7 +289,7 @@
 		color="#ff6f21"
 		name="จารึก ศรีอ่อน"
 		side="opp"
-		size="48px"
+		size="48"
 		tooltip="top"
 	/>
 	<div class="sankey-block start" />
@@ -307,7 +300,7 @@
 		src="rp/pt12-กวินนาถ.png"
 		color="#70D267"
 		name="กวินนาถ ตาคีย์"
-		size="48px"
+		size="48"
 		tooltip="top"
 	/>
 	<RP
@@ -315,7 +308,7 @@
 		src="rp/pt12-จารึก.png"
 		color="#70D267"
 		name="จารึก ศรีอ่อน"
-		size="48px"
+		size="48"
 		tooltip="top"
 	/>
 </div>
@@ -327,7 +320,7 @@
 		color="#ff6f21"
 		name="ฐนภัทร กิตติวงศา"
 		side="opp"
-		size="48px"
+		size="48"
 		tooltip="top"
 	/>
 	<div class="sankey-block start" />
@@ -338,7 +331,7 @@
 		src="rp/pt12-ฐนภัทร.png"
 		color="#0B3757"
 		name="ฐนภัทร กิตติวงศา"
-		size="48px"
+		size="48"
 		tooltip="top"
 	/>
 </div>
@@ -350,7 +343,7 @@
 		color="#ff6f21"
 		name="จุลพันธ์ โนนศรีชัย"
 		side="opp"
-		size="48px"
+		size="48"
 		tooltip="top"
 	/>
 	<div class="sankey-block start" />
@@ -361,7 +354,7 @@
 		src="rp/pt12-จุลพันธ์.png"
 		color="#CC8AE3"
 		name="จุลพันธ์ โนนศรีชัย"
-		size="48px"
+		size="48"
 		tooltip="top"
 	/>
 </div>
@@ -373,7 +366,7 @@
 		color="#ff6f21"
 		name="สมัคร ป้องวงษ์"
 		side="opp"
-		size="48px"
+		size="48"
 		tooltip="top"
 	/>
 	<div class="sankey-block start" />
@@ -384,7 +377,7 @@
 		src="rp/pt12-สมัคร.png"
 		color="#FD980D"
 		name="สมัคร ป้องวงษ์"
-		size="48px"
+		size="48"
 		tooltip="top"
 	/>
 </div>
@@ -396,7 +389,7 @@
 		color="#E50000"
 		name="พรพิมล ธรรมสาร"
 		side="opp"
-		size="48px"
+		size="48"
 		tooltip="top"
 	/>
 	<div class="sankey-block start" />
@@ -416,7 +409,7 @@
 			src="rp/pt12-มนูญ.png"
 			color="#75328C"
 			name="มนูญ สิวาภิรมย์รัตน์"
-			size="48px"
+			size="48"
 			side="opp"
 			tooltip="top"
 		/>
@@ -424,7 +417,7 @@
 			src="rp/pt12-มารศรี.png"
 			color="#75328C"
 			name="มารศรี ขจรเรืองโรจน์"
-			size="48px"
+			size="48"
 			side="opp"
 			tooltip="top"
 		/>
@@ -434,7 +427,7 @@
 			src="rp/pt12-สุภดิช.png"
 			color="#75328C"
 			name="สุภดิช อากาศฤกษ์"
-			size="48px"
+			size="48"
 			side="opp"
 			tooltip="top"
 		/>
@@ -442,7 +435,7 @@
 			src="rp/pt12-นิยม.png"
 			color="#75328C"
 			name="นิยม วิวรรธนดิฐกุล"
-			size="48px"
+			size="48"
 			side="opp"
 			tooltip="top"
 		/>
@@ -450,7 +443,7 @@
 			src="rp/pt12-ภาสกร.png"
 			color="#75328C"
 			name="ภาสกร เงินเจริญกุล"
-			size="48px"
+			size="48"
 			side="opp"
 			tooltip="top"
 		/>
@@ -466,41 +459,23 @@
 		loading="lazy"
 	/>
 	<div class="row vert sankey-people">
-		<RP
-			src="rp/pt12-สุภดิช.png"
-			color="#75328C"
-			name="สุภดิช อากาศฤกษ์"
-			size="48px"
-			tooltip="top"
-		/>
-		<RP
-			src="rp/pt12-นิยม.png"
-			color="#75328C"
-			name="นิยม วิวรรธนดิฐกุล"
-			size="48px"
-			tooltip="top"
-		/>
-		<RP
-			src="rp/pt12-ภาสกร.png"
-			color="#75328C"
-			name="ภาสกร เงินเจริญกุล"
-			size="48px"
-			tooltip="top"
-		/>
+		<RP src="rp/pt12-สุภดิช.png" color="#75328C" name="สุภดิช อากาศฤกษ์" size="48" tooltip="top" />
+		<RP src="rp/pt12-นิยม.png" color="#75328C" name="นิยม วิวรรธนดิฐกุล" size="48" tooltip="top" />
+		<RP src="rp/pt12-ภาสกร.png" color="#75328C" name="ภาสกร เงินเจริญกุล" size="48" tooltip="top" />
 	</div>
 	<div class="row vert sankey-people">
 		<RP
 			src="rp/pt12-มนูญ.png"
 			color="#75328C"
 			name="มนูญ สิวาภิรมย์รัตน์"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
 			src="rp/pt12-มารศรี.png"
 			color="#75328C"
 			name="มารศรี ขจรเรืองโรจน์"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 	</div>

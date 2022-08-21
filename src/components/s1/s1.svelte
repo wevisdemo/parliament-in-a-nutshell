@@ -59,7 +59,7 @@
 		height="256"
 	/>
 </div>
-<section class="h100 c">
+<div class="h100 c">
 	<h1 class="T1">
 		คุณรู้ไหม?<br />
 		<span class="year">ตอนนี้</span>ในรัฐสภามี ส.ส. กี่คน
@@ -116,7 +116,7 @@
 		</div>
 	{/if}
 	<canvas bind:this={el_canvas} />
-</section>
+</div>
 
 <style lang="scss">
 	.force-load {

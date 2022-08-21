@@ -1,4 +1,3 @@
-<!-- Representative Portrait -->
 <script lang="ts">
 	export let src: string;
 	export let side: 'gov' | 'opp' | 'free' = 'gov';
@@ -14,8 +13,6 @@
 	export let tooltip: 'top' | 'right' | null = null;
 	export let dashedBorder = false;
 	export let op: string = shift === '0' ? '0' : '0.3';
-
-	const removePx = (s: string) => s.replace(/px$/, '');
 </script>
 
 <div
@@ -36,8 +33,8 @@
 		decoding="async"
 		loading="lazy"
 		{style}
-		width={removePx(size)}
-		height={removePx(size)}
+		width={size}
+		height={size}
 	/>
 	<div class="tooltip">{name}</div>
 	<div class="top" style:--shift={shift}><slot /></div>
@@ -45,8 +42,8 @@
 
 <style lang="scss">
 	.rp-container {
-		width: var(--s);
-		height: var(--s);
+		width: calc(var(--s) * 1px);
+		height: calc(var(--s) * 1px);
 	}
 
 	.portrait {
@@ -56,8 +53,8 @@
 
 		background: var(--c, #fff);
 
-		width: var(--s);
-		height: var(--s);
+		width: calc(var(--s) * 1px);
+		height: calc(var(--s) * 1px);
 
 		opacity: 1;
 		// filter: saturate(1);
@@ -78,8 +75,6 @@
 		&.free {
 			clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
 			transform: scale(1.1);
-			// width: calc(var(--s) * 1.1);
-			// In the future use `aspect-ratio: 1.1/1` and with fixed `height`.
 		}
 
 		&.dashedBorder {
@@ -89,8 +84,8 @@
 
 	.top {
 		position: absolute;
-		top: var(--shift, calc(var(--s) * 0.25));
-		left: var(--shift, calc(var(--s) * 0.25));
+		top: var(--shift, calc(var(--s) * 0.25 * 1px));
+		left: var(--shift, calc(var(--s) * 0.25 * 1px));
 
 		pointer-events: none;
 		opacity: 0;

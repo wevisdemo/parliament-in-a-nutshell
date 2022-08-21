@@ -1,4 +1,3 @@
-<!-- SECTION 2 - OVERALL NUMBER -->
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { scroll, ScrollOffset, timeline, animate } from 'motion';
@@ -61,7 +60,7 @@
 	});
 </script>
 
-<section>
+<div>
 	<div bind:this={el_pill} class="h100 c tc stick">
 		<div class="pill">{year}</div>
 		<div class="title-container">
@@ -81,7 +80,7 @@
 	<div class="pen" style="--h:10vh" />
 	<div bind:this={el_trigger} class="pen" style="--h:40vh" />
 	<div class="pen" style="--h:20vh" />
-</section>
+</div>
 
 <style lang="scss">
 	.arc-container {

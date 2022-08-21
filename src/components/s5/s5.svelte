@@ -15,7 +15,7 @@
 	});
 </script>
 
-<section class="h100 s5-container c" class:in-view={is_logo_inview} bind:this={el_logo_container}>
+<div class="h100 s5-container c" class:in-view={is_logo_inview} bind:this={el_logo_container}>
 	<img
 		class="logo-decor"
 		src="/shaking-parliament/title_decor.svg"
@@ -24,7 +24,7 @@
 		loading="lazy"
 	/>
 	<img class="logo" src="/shaking-parliament/title.png" alt="" decoding="async" loading="lazy" />
-</section>
+</div>
 
 <style lang="scss">
 	@keyframes flickering {

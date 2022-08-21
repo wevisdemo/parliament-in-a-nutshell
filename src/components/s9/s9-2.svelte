@@ -35,14 +35,38 @@
 <div class="s9-2-container black tc c">
 	<Votelog hintPracharat>
 		<svelte:fragment slot="header">
-			<RP src="party/รวมแผ่นดิน.jpg" name="รวมแผ่นดิน" tooltip="top" color="#aac826" />
-			<RP src="party/ประชาภิวัฒน์.jpg" name="ประชาภิวัฒน์" tooltip="top" color="#288707" />
-			<RP src="party/เพื่อชาติไทย.jpg" name="เพื่อชาติไทย" tooltip="top" color="#afbcd8" />
-			<RP src="party/ครูไทย.jpg" name="ครูไทยเพื่อประชาชน" tooltip="top" color="#ca5d3b" />
-			<RP src="party/พลเมืองไทย.jpg" name="พลเมืองไทย" tooltip="top" color="#4f5285" />
-			<RP src="party/ปชตใหม่.jpg" name="ประชาธิปไตยใหม่" tooltip="top" color="#e19164" />
-			<RP src="party/พลังธรรมใหม่.jpg" name="พลังธรรมใหม่" tooltip="top" color="#507b9b" />
-			<RP src="party/ไทรักธรรม.jpg" name="ไทรักธรรม" tooltip="top" color="#ff7e62" />
+			<RP src="party/รวมแผ่นดิน.jpg" name="รวมแผ่นดิน" tooltip="top" color="#aac826" size="56" />
+			<RP
+				src="party/ประชาภิวัฒน์.jpg"
+				name="ประชาภิวัฒน์"
+				tooltip="top"
+				color="#288707"
+				size="56"
+			/>
+			<RP
+				src="party/เพื่อชาติไทย.jpg"
+				name="เพื่อชาติไทย"
+				tooltip="top"
+				color="#afbcd8"
+				size="56"
+			/>
+			<RP
+				src="party/ครูไทย.jpg"
+				name="ครูไทยเพื่อประชาชน"
+				tooltip="top"
+				color="#ca5d3b"
+				size="56"
+			/>
+			<RP src="party/พลเมืองไทย.jpg" name="พลเมืองไทย" tooltip="top" color="#4f5285" size="56" />
+			<RP src="party/ปชตใหม่.jpg" name="ประชาธิปไตยใหม่" tooltip="top" color="#e19164" size="56" />
+			<RP
+				src="party/พลังธรรมใหม่.jpg"
+				name="พลังธรรมใหม่"
+				tooltip="top"
+				color="#507b9b"
+				size="56"
+			/>
+			<RP src="party/ไทรักธรรม.jpg" name="ไทรักธรรม" tooltip="top" color="#ff7e62" size="56" />
 			<RP
 				src="party/ปชชปฏิรูป.jpg"
 				name="ประชาชนปฏิรูป"
@@ -50,8 +74,15 @@
 				color="#f3c628"
 				showTop={ppcMoved}
 				shift="0"
+				size="56"
 			>
-				<RP src="party/ปชชปฏิรูป2.jpg" name="ประชาชนปฏิรูป" tooltip="top" color="#f3c628" />
+				<RP
+					src="party/ปชชปฏิรูป2.jpg"
+					name="ประชาชนปฏิรูป"
+					tooltip="top"
+					color="#f3c628"
+					size="56"
+				/>
 			</RP>
 			<RP
 				src="party/ประชานิยม.jpg"
@@ -60,8 +91,9 @@
 				color="#de2559"
 				showTop={pnyMoved}
 				shift="0"
+				size="56"
 			>
-				<RP src="party/ประชานิยม2.jpg" name="ประชานิยม" tooltip="top" color="#de2559" />
+				<RP src="party/ประชานิยม2.jpg" name="ประชานิยม" tooltip="top" color="#de2559" size="56" />
 			</RP>
 			<RP
 				src="party/ประชาธรรมไทย.jpg"
@@ -70,8 +102,15 @@
 				color="#2f2fea"
 				showTop={pttMoved}
 				shift="0"
+				size="56"
 			>
-				<RP src="party/ประชาธรรมไทย2.jpg" name="ประชาธรรมไทย" tooltip="top" color="#2f2fea" />
+				<RP
+					src="party/ประชาธรรมไทย2.jpg"
+					name="ประชาธรรมไทย"
+					tooltip="top"
+					color="#2f2fea"
+					size="56"
+				/>
 			</RP>
 			<RP
 				src="party/ไทยศรีวิไลย์.jpg"
@@ -80,6 +119,7 @@
 				color="#85e8fe"
 				showTop={taeMoved}
 				shift="0"
+				size="56"
 			>
 				<RP
 					src="party/ไทยศรีวิไลย์.jpg"
@@ -87,6 +127,7 @@
 					tooltip="top"
 					color="#85e8fe"
 					side="free"
+					size="56"
 				/>
 			</RP>
 		</svelte:fragment>

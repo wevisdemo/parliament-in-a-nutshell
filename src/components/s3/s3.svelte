@@ -128,7 +128,7 @@
 </script>
 
 <!-- VH skip check -->
-<section class="s3-container">
+<div class="s3-container">
 	<div class="T1 counter-decor">{rp_num}</div>
 	<div class="decor">
 		<div bind:this={el_thanathorn} class="thanathorn-img-container">
@@ -139,7 +139,7 @@
 				class="thanathorn-img"
 				color="#ff6f21"
 				name="ธนาธร จึงรุ่งเรืองกิจ"
-				size="170px"
+				size="170"
 				side="opp"
 				src="rp/ศาลตัด-ธนาธร.png"
 			/>
@@ -148,7 +148,7 @@
 			<RP
 				color="#f0da8c"
 				name="ธรรมนัส พรหมเผ่า"
-				size="170px"
+				size="170"
 				side="free"
 				src="rp/pt14-ธรรมนัส.png"
 			/>
@@ -165,30 +165,24 @@
 				class="paiboon-img"
 				color="#f3c628"
 				name="ไพบูลย์ นิติตะวัน"
-				size="170px"
+				size="170"
 				side="gov"
 				src="rp/paiboon.png"
 			/>
 		</div>
 		<div bind:this={el_parina} class="parina-img">
-			<RP
-				color="#0b3757"
-				name="ปารีณา ไกรคุปต์"
-				size="170px"
-				side="gov"
-				src="rp/ศาลตัด-ปารีณา.png"
-			/>
+			<RP color="#0b3757" name="ปารีณา ไกรคุปต์" size="170" side="gov" src="rp/ศาลตัด-ปารีณา.png" />
 		</div>
 		<div bind:this={el_pornpimol} class="pornpimol-img-container">
 			<div class="back" />
-			<RP color="#e50000" name="พรพิมล ธรรมสาร" size="170px" side="opp" src="rp/pt12-พรพิมล.png" />
+			<RP color="#e50000" name="พรพิมล ธรรมสาร" size="170" side="opp" src="rp/pt12-พรพิมล.png" />
 		</div>
 		<div bind:this={el_mongkonkit} class="mongkonkit-img-container">
 			<RP
 				class="mongkonkit-img"
 				color="#85e8fe"
 				name="มงคลกิตติ์ สุขสินธารานนท์"
-				size="170px"
+				size="170"
 				side="free"
 				src="rp/mongkonkit.png"
 			/>
@@ -240,7 +234,7 @@
 			นับตั้งแต่เปิดสภา พฤษภาคม 2562
 		</p>
 	</div>
-</section>
+</div>
 
 <style lang="scss">
 	.s3-container {

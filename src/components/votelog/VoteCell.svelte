@@ -23,7 +23,7 @@
 	});
 </script>
 
-<div bind:this={el} class="cell {side}" class:trigger style="--trigger:{trigger}" {...$$restProps}>
+<div bind:this={el} class="cell {side}" class:trigger style:--trigger={trigger} {...$$restProps}>
 	{#if side === 'gov'}
 		<svg width="9" height="9" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path

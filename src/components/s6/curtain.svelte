@@ -22,7 +22,7 @@
 			<RP
 				color="#0b3757"
 				name="ปารีณา ไกรคุปต์"
-				size="96px"
+				size="96"
 				side="gov"
 				src="rp/ศาลตัด-ปารีณา.png"
 				tooltip="top"
@@ -34,7 +34,7 @@
 			<RP
 				color="#85e8fe"
 				name="มงคลกิตติ์ สุขสินธารานนท์"
-				size="96px"
+				size="96"
 				side="free"
 				src="rp/mongkonkit.png"
 				tooltip="top"
@@ -46,7 +46,7 @@
 			<RP
 				color="#ff6f21"
 				name="วิโรจน์ ลักขณาอดิศร"
-				size="96px"
+				size="96"
 				side="opp"
 				src="rp/ลาออก-วิโรจน์.png"
 				tooltip="top"

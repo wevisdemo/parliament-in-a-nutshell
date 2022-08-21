@@ -79,96 +79,84 @@
 	style="--from-c:#0b3757;--from-p:'พรรคพลังประชารัฐ';--to-c:#f0da8c;--to-p:'พรรคเศรษฐกิจไทย';--to-c-text:#cbb979"
 >
 	<div class="row vert sankey-people">
-		<RP
-			src="rp/pt14-ธรรมนัส.png"
-			color="#0b3757"
-			name="ธรรมนัส พรหมเผ่า"
-			size="48px"
-			tooltip="top"
-		/>
-		<RP src="rp/pt14-เกษม.png" color="#0b3757" name="เกษม ศุภรานนท์" size="48px" tooltip="top" />
-		<RP src="rp/pt14-ไผ่.png" color="#0b3757" name="ไผ่ ลิกค์" size="48px" tooltip="top" />
+		<RP src="rp/pt14-ธรรมนัส.png" color="#0b3757" name="ธรรมนัส พรหมเผ่า" size="48" tooltip="top" />
+		<RP src="rp/pt14-เกษม.png" color="#0b3757" name="เกษม ศุภรานนท์" size="48" tooltip="top" />
+		<RP src="rp/pt14-ไผ่.png" color="#0b3757" name="ไผ่ ลิกค์" size="48" tooltip="top" />
 	</div>
 	<div class="row vert sankey-people">
 		<RP
 			src="rp/pt14-สะถิระ.png"
 			color="#0b3757"
 			name="สะถิระ เผือกประพันธุ์"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
 			src="rp/pt14-บุญสิงห์.png"
 			color="#0b3757"
 			name="บุญสิงห์ วรินทร์รักษ์"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
-		<RP src="rp/pt14-จีรเดช.png" color="#0b3757" name="จีรเดช ศรีวิราช" size="48px" tooltip="top" />
-		<RP src="rp/pt14-พรชัย.png" color="#0b3757" name="พรชัย อินทร์สุข" size="48px" tooltip="top" />
+		<RP src="rp/pt14-จีรเดช.png" color="#0b3757" name="จีรเดช ศรีวิราช" size="48" tooltip="top" />
+		<RP src="rp/pt14-พรชัย.png" color="#0b3757" name="พรชัย อินทร์สุข" size="48" tooltip="top" />
 	</div>
 	<div class="row vert sankey-people">
-		<RP src="rp/pt14-ปัญญา.png" color="#0b3757" name="ปัญญา จีนาคำ" size="48px" tooltip="top" />
+		<RP src="rp/pt14-ปัญญา.png" color="#0b3757" name="ปัญญา จีนาคำ" size="48" tooltip="top" />
 		<RP
 			src="rp/pt14-ธนะสิทธิ์.png"
 			color="#0b3757"
 			name="ธนะสิทธิ์ โควสุรัตน์"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
-		<RP src="rp/pt14-วัฒนา.png" color="#0b3757" name="วัฒนา สิทธิวัง" size="48px" tooltip="top" />
-		<RP
-			src="rp/pt14-ยงยุทธ.png"
-			color="#0b3757"
-			name="ยงยุทธ เทพจำนงค์"
-			size="48px"
-			tooltip="top"
-		/>
+		<RP src="rp/pt14-วัฒนา.png" color="#0b3757" name="วัฒนา สิทธิวัง" size="48" tooltip="top" />
+		<RP src="rp/pt14-ยงยุทธ.png" color="#0b3757" name="ยงยุทธ เทพจำนงค์" size="48" tooltip="top" />
 	</div>
 	<div class="row vert sankey-people">
 		<RP
 			src="rp/pt14-จอมขวัญ.png"
 			color="#0b3757"
 			name="จอมขวัญ กลับบ้านเกาะ"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
 			src="rp/pt14-ทัศนาพร.png"
 			color="#0b3757"
 			name="ทัศนาพร เกษเมธีการุณ"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
 			src="rp/pt14-ธนัสถ์.png"
 			color="#0b3757"
 			name="ธนัสถ์ ทวีเกื้อกูลกิจ"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
 			src="rp/pt14-ภาคภูมิ.png"
 			color="#0b3757"
 			name="ภาคภูมิ บูลย์ประมุข"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 	</div>
 	<div class="row vert sankey-people">
-		<RP src="rp/pt14-ยุทธนา.png" color="#0b3757" name="ยุทธนา โพธสุธน" size="48px" tooltip="top" />
+		<RP src="rp/pt14-ยุทธนา.png" color="#0b3757" name="ยุทธนา โพธสุธน" size="48" tooltip="top" />
 		<RP
 			src="rp/pt14-สมศักดิ์.png"
 			color="#0b3757"
 			name="สมศักดิ์ คุณเงิน"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
 			src="rp/pt14-ณัฏฐพล.png"
 			color="#0b3757"
 			name="ณัฏฐพล จรัสรพีพงษ์"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 	</div>
@@ -181,7 +169,7 @@
 			color="#f0da8c"
 			side="free"
 			name="ธรรมนัส พรหมเผ่า"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
@@ -189,7 +177,7 @@
 			color="#f0da8c"
 			side="free"
 			name="เกษม ศุภรานนท์"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
@@ -197,7 +185,7 @@
 			color="#f0da8c"
 			side="free"
 			name="ไผ่ ลิกค์"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 	</div>
@@ -207,7 +195,7 @@
 			color="#f0da8c"
 			side="free"
 			name="สะถิระ เผือกประพันธุ์"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
@@ -215,7 +203,7 @@
 			color="#f0da8c"
 			side="free"
 			name="บุญสิงห์ วรินทร์รักษ์"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
@@ -223,7 +211,7 @@
 			color="#f0da8c"
 			side="free"
 			name="จีรเดช ศรีวิราช"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
@@ -231,7 +219,7 @@
 			color="#f0da8c"
 			side="free"
 			name="พรชัย อินทร์สุข"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 	</div>
@@ -241,7 +229,7 @@
 			color="#f0da8c"
 			side="free"
 			name="ปัญญา จีนาคำ"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
@@ -249,7 +237,7 @@
 			color="#f0da8c"
 			side="free"
 			name="ธนะสิทธิ์ โควสุรัตน์"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
@@ -257,7 +245,7 @@
 			color="#f0da8c"
 			side="free"
 			name="วัฒนา สิทธิวัง"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
@@ -265,7 +253,7 @@
 			color="#f0da8c"
 			side="free"
 			name="ยงยุทธ เทพจำนงค์"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 	</div>
@@ -275,7 +263,7 @@
 			color="#f0da8c"
 			side="free"
 			name="จอมขวัญ กลับบ้านเกาะ"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
@@ -283,7 +271,7 @@
 			color="#f0da8c"
 			side="free"
 			name="ทัศนาพร เกษเมธีการุณ"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
@@ -291,7 +279,7 @@
 			color="#f0da8c"
 			side="free"
 			name="ธนัสถ์ ทวีเกื้อกูลกิจ"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
@@ -299,7 +287,7 @@
 			color="#f0da8c"
 			side="free"
 			name="ภาคภูมิ บูลย์ประมุข"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 	</div>
@@ -309,7 +297,7 @@
 			color="#f0da8c"
 			side="free"
 			name="ยุทธนา โพธสุธน"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
@@ -317,7 +305,7 @@
 			color="#f0da8c"
 			side="free"
 			name="สมศักดิ์ คุณเงิน"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 		<RP
@@ -325,7 +313,7 @@
 			color="#f0da8c"
 			side="free"
 			name="ณัฏฐพล จรัสรพีพงษ์"
-			size="48px"
+			size="48"
 			tooltip="top"
 		/>
 	</div>
@@ -336,7 +324,7 @@
 		src="rp/pt14s-วัฒนา.png"
 		color="#0b3757"
 		name="วัฒนา ช่างเหลา"
-		size="48px"
+		size="48"
 		tooltip="top"
 	/>
 	<RP
@@ -344,7 +332,7 @@
 		src="rp/pt14s-สมศักดิ์.png"
 		color="#0b3757"
 		name="สมศักดิ์ พันธ์เกษม"
-		size="48px"
+		size="48"
 		tooltip="top"
 	/>
 	<RP
@@ -352,7 +340,7 @@
 		src="rp/pt14-เอกราช.png"
 		color="#0b3757"
 		name="เอกราช ช่างเหลา"
-		size="48px"
+		size="48"
 		tooltip="top"
 	/>
 	<div class="empty-people" />
@@ -378,7 +366,7 @@
 		src="rp/pt14s-วัฒนา.png"
 		color="#065CAB"
 		name="วัฒนา ช่างเหลา"
-		size="48px"
+		size="48"
 		tooltip="top"
 	/>
 	<RP
@@ -386,7 +374,7 @@
 		src="rp/pt14s-สมศักดิ์.png"
 		color="#065CAB"
 		name="สมศักดิ์ พันธ์เกษม"
-		size="48px"
+		size="48"
 		tooltip="top"
 	/>
 	<RP
@@ -394,7 +382,7 @@
 		src="rp/pt14-เอกราช.png"
 		color="#065CAB"
 		name="เอกราช ช่างเหลา"
-		size="48px"
+		size="48"
 		tooltip="top"
 	/>
 	<div class="empty-people" />

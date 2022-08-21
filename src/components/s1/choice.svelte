@@ -10,10 +10,10 @@
 	class:incorrect={group === data.value && submitted && !data.isCorrect}
 	class="choice"
 >
-	<div class="box" />
+	<span class="box" />
 	<input type="radio" bind:group name="quiz" value={data.value} disabled={submitted} />
 	<span class="text">{data.value} คน</span>
-	<div class="cross">
+	<span class="cross">
 		<img
 			class="c1"
 			src="/shaking-parliament/mark-tlbr.png"
@@ -32,7 +32,7 @@
 			width="115"
 			height="15"
 		/>
-	</div>
+	</span>
 </label>
 
 <style lang="scss">
@@ -51,6 +51,7 @@
 			background: #fff;
 			border: 2px solid #000;
 			border-right: none;
+			// display: block;
 		}
 
 		> input {

@@ -76,7 +76,7 @@
 						<div class="col row vert">
 							{#each res_c as rep}
 								<RP
-									size="34px"
+									size="34"
 									color={rep.color}
 									name={rep.name}
 									side={rep.side}
@@ -86,7 +86,7 @@
 								>
 									{#if rep.replace_by}
 										<RP
-											size="34px"
+											size="34"
 											color={rep.replace_by.color}
 											name={rep.replace_by.name}
 											side={rep.replace_by.side}
@@ -109,7 +109,7 @@
 						<div class="col row vert">
 							{#each res_c as rep}
 								<RP
-									size="34px"
+									size="34"
 									color={rep.color}
 									name={rep.name}
 									side={rep.side}
@@ -119,7 +119,7 @@
 								>
 									{#if rep.replace_by}
 										<RP
-											size="34px"
+											size="34"
 											color={rep.replace_by.color}
 											name={rep.replace_by.name}
 											side={rep.replace_by.side}
@@ -142,7 +142,7 @@
 						<div class="col row vert">
 							{#each res_c as rep}
 								<RP
-									size="34px"
+									size="34"
 									color={rep.color}
 									name={rep.name}
 									side={rep.side}
@@ -152,7 +152,7 @@
 								>
 									{#if rep.replace_by}
 										<RP
-											size="34px"
+											size="34"
 											color={rep.replace_by.color}
 											name={rep.replace_by.name}
 											side={rep.replace_by.side}
