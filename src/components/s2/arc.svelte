@@ -65,7 +65,7 @@
 	let update;
 
 	const width = 550,
-		height = 400,
+		height = 300,
 		radius = 200;
 
 	// #region [ARC INIT]
