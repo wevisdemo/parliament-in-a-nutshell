@@ -10,7 +10,7 @@
 			() => {
 				is_logo_inview = true;
 			},
-			{ amount: 0.5 }
+			{ amount: 0.3 }
 		);
 	});
 </script>
