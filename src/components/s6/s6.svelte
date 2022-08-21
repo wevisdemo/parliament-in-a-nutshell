@@ -10,12 +10,12 @@
 			el_circle_container,
 			() => {
 				const [first, ...rest] = el_circle_container.children;
-				animate(first, { opacity: 1 }, { duration: 1 });
+				animate(first, { opacity: [0, 1] }, { duration: 1 });
 				animate(
 					rest,
 					{
-						opacity: 1,
-						transform: [`translateY(-100px)`, `translateY(0px)`]
+						opacity: [0, 1],
+						transform: [`translateY(-100px)`, `translateY(0)`]
 					},
 					{ duration: 1, delay: stagger(0.25) }
 				);
@@ -25,10 +25,26 @@
 
 		const el_chairchild = el_chair_container.children;
 		const seq: TimelineDefinition = [
-			[el_chairchild[0], { transform: 'translateY(600px)' }, { easing: 'linear' }],
-			[el_chairchild[1], { transform: 'translateY(600px)' }, { easing: 'linear', at: '<' }],
-			[el_chairchild[2], { transform: 'translateY(400px)' }, { easing: 'linear', at: '<' }],
-			[el_chairchild[3], { transform: 'translateY(400px)' }, { easing: 'linear', at: '<' }]
+			[
+				el_chairchild[0],
+				{ transform: ['translateY(0)', 'translateY(600px)'] },
+				{ easing: 'linear' }
+			],
+			[
+				el_chairchild[1],
+				{ transform: ['translateY(0)', 'translateY(600px)'] },
+				{ easing: 'linear', at: '<' }
+			],
+			[
+				el_chairchild[2],
+				{ transform: ['translateY(0)', 'translateY(400px)'] },
+				{ easing: 'linear', at: '<' }
+			],
+			[
+				el_chairchild[3],
+				{ transform: ['translateY(0)', 'translateY(400px)'] },
+				{ easing: 'linear', at: '<' }
+			]
 		];
 
 		scroll(timeline(seq), {

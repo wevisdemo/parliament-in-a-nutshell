@@ -13,8 +13,8 @@
 				animate(
 					el_dots_container.children,
 					{
-						opacity: 1,
-						transform: `translateY(0)`
+						opacity: [0, 1],
+						transform: ['translateY(-100%)', 'translateY(0)']
 					},
 					{ duration: 1, delay: stagger(0.25) }
 				);
@@ -24,7 +24,11 @@
 
 		const el_decochild = el_deco_container.children;
 		const seq: TimelineDefinition = [
-			[el_decochild[0], { transform: 'translateY(30%)' }, { easing: 'linear' }],
+			[
+				el_decochild[0],
+				{ transform: ['translateY(-40%)', 'translateY(30%)'] },
+				{ easing: 'linear' }
+			],
 			[
 				el_decochild[1],
 				{ transform: ['translateY(-40%) translateX(-20%)', 'translateY(30%) translateX(-20%)'] },

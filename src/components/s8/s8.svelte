@@ -5,10 +5,17 @@
 	let el_title_section: any;
 	let el_bg: any;
 	onMount(() => {
-		scroll(animate(el_bg, { transform: 'translateY(150px)' }, { easing: 'linear' }), {
-			target: el_title_section,
-			offset: ['start end', 'end start']
-		});
+		scroll(
+			animate(
+				el_bg,
+				{ transform: ['translateY(-150px)', 'translateY(150px)'] },
+				{ easing: 'linear' }
+			),
+			{
+				target: el_title_section,
+				offset: ['start end', 'end start']
+			}
+		);
 	});
 </script>
 

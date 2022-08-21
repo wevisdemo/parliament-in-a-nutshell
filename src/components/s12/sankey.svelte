@@ -7,19 +7,19 @@
 	const animate2ColSankey = (el: any) => {
 		const el_c = el.children;
 		const sequence: TimelineDefinition = [
-			[el_c[0], { opacity: 1 }, { duration: 0.5 }],
-			[el_c[1], { opacity: 1 }, { duration: 0.5, at: '<' }],
-			[el_c[2], { opacity: 1 }, { duration: 0.5, at: '-0.25' }],
+			[el_c[0], { opacity: [0, 1] }, { duration: 0.5 }],
+			[el_c[1], { opacity: [0, 1] }, { duration: 0.5, at: '<' }],
+			[el_c[2], { opacity: [0, 1] }, { duration: 0.5, at: '-0.25' }],
 			[
 				el_c[3],
 				{
-					clipPath: 'polygon(0 0, 101% 0, 101% 100%, 0% 100%)'
+					clipPath: ['polygon(0 0, 0 0, 0 100%, 0 100%)', 'polygon(0 0, 101% 0, 101% 100%, 0 100%)']
 				},
 				{ duration: 1, at: '-0.25' }
 			],
-			[el_c[4], { opacity: 1 }, { duration: 0.5, at: '-0.1' }],
-			[el_c[5], { opacity: 1 }, { duration: 0.5, at: '-0.25' }],
-			[el_c[6], { opacity: 1 }, { duration: 0.5, at: '<' }]
+			[el_c[4], { opacity: [0, 1] }, { duration: 0.5, at: '-0.1' }],
+			[el_c[5], { opacity: [0, 1] }, { duration: 0.5, at: '-0.25' }],
+			[el_c[6], { opacity: [0, 1] }, { duration: 0.5, at: '<' }]
 		];
 		timeline(sequence);
 	};
@@ -27,17 +27,17 @@
 	const animate1ColSankey = (el: any) => {
 		const el_c = el.children;
 		const sequence: TimelineDefinition = [
-			[el_c[0], { opacity: 1 }, { duration: 0.5 }],
-			[el_c[1], { opacity: 1 }, { duration: 0.5, at: '-0.25' }],
+			[el_c[0], { opacity: [0, 1] }, { duration: 0.5 }],
+			[el_c[1], { opacity: [0, 1] }, { duration: 0.5, at: '-0.25' }],
 			[
 				el_c[2],
 				{
-					clipPath: 'polygon(0 0, 101% 0, 101% 100%, 0% 100%)'
+					clipPath: ['polygon(0 0, 0 0, 0 100%, 0 100%)', 'polygon(0 0, 101% 0, 101% 100%, 0 100%)']
 				},
 				{ duration: 1, at: '-0.25' }
 			],
-			[el_c[3], { opacity: 1 }, { duration: 0.5, at: '-0.1' }],
-			[el_c[4], { opacity: 1 }, { duration: 0.5, at: '-0.25' }]
+			[el_c[3], { opacity: [0, 1] }, { duration: 0.5, at: '-0.1' }],
+			[el_c[4], { opacity: [0, 1] }, { duration: 0.5, at: '-0.25' }]
 		];
 		timeline(sequence);
 	};
@@ -65,17 +65,20 @@
 				const x1_c = el_sankeyX1.children;
 				const x2_c = el_sankeyX2.children;
 				const sequence: TimelineDefinition = [
-					[x2_c[0], { opacity: 1 }, { duration: 0.5 }],
-					[x2_c[1], { opacity: 1 }, { duration: 0.5, at: '-0.25' }],
+					[x2_c[0], { opacity: [0, 1] }, { duration: 0.5 }],
+					[x2_c[1], { opacity: [0, 1] }, { duration: 0.5, at: '-0.25' }],
 					[
 						x2_c[2],
 						{
-							clipPath: 'polygon(0 0, 101% 0, 101% 100%, 0% 100%)'
+							clipPath: [
+								'polygon(0 0, 0 0, 0 100%, 0 100%)',
+								'polygon(0 0, 101% 0, 101% 100%, 0 100%)'
+							]
 						},
 						{ duration: 1, at: '-0.25' }
 					],
-					[x1_c[1], { opacity: 1 }, { duration: 0.5, at: '-0.1' }],
-					[x1_c[2], { opacity: 1 }, { duration: 0.5, at: '-0.25' }]
+					[x1_c[1], { opacity: [0, 1] }, { duration: 0.5, at: '-0.1' }],
+					[x1_c[2], { opacity: [0, 1] }, { duration: 0.5, at: '-0.25' }]
 				];
 				timeline(sequence);
 			},
@@ -86,27 +89,30 @@
 			() => {
 				const el_c = el_sankey6.children;
 				const sequence: TimelineDefinition = [
-					[el_c[0], { opacity: 1 }, { duration: 0.5 }],
-					[el_c[1], { opacity: 1 }, { duration: 0.5, at: '<' }],
-					[el_c[2], { opacity: 1 }, { duration: 0.5, at: '-0.25' }],
+					[el_c[0], { opacity: [0, 1] }, { duration: 0.5 }],
+					[el_c[1], { opacity: [0, 1] }, { duration: 0.5, at: '<' }],
+					[el_c[2], { opacity: [0, 1] }, { duration: 0.5, at: '-0.25' }],
 					[
 						el_c[3],
 						{
-							clipPath: 'polygon(0 0, 101% 0, 101% 100%, 0% 100%)'
+							clipPath: [
+								'polygon(0 0, 0 0, 0 100%, 0 100%)',
+								'polygon(0 0, 101% 0, 101% 100%, 0 100%)'
+							]
 						},
 						{ duration: 1, at: '-0.25' }
 					],
 					[
 						el_c[5],
 						{
-							opacity: 1,
+							opacity: [0, 1],
 							transform: ['translateX(-50%) scale(0)', 'translateX(-50%) scale(1)']
 						},
 						{ duration: 0.5, at: '<' }
 					],
-					[el_c[6], { opacity: 1 }, { duration: 0.5, at: '-0.1' }],
-					[el_c[7], { opacity: 1 }, { duration: 0.5, at: '-0.25' }],
-					[el_c[8], { opacity: 1 }, { duration: 0.5, at: '<' }]
+					[el_c[6], { opacity: [0, 1] }, { duration: 0.5, at: '-0.1' }],
+					[el_c[7], { opacity: [0, 1] }, { duration: 0.5, at: '-0.25' }],
+					[el_c[8], { opacity: [0, 1] }, { duration: 0.5, at: '<' }]
 				];
 				timeline(sequence);
 			},

@@ -33,7 +33,7 @@
 				animate(
 					el_thammanas,
 					{
-						opacity: 1,
+						opacity: [0, 1],
 						transform: [`scale(0)`, `scale(1)`]
 					},
 					{ duration: 1 }
@@ -48,8 +48,8 @@
 				animate(
 					[...el_thanathorn.children],
 					{
-						opacity: 1,
-						transform: [`translateY(100px)`, `translateY(0px)`]
+						opacity: [0, 1],
+						transform: [`translateY(100px)`, `translateY(0)`]
 					},
 					{ duration: 1, delay: stagger(0.25) }
 				);
@@ -63,7 +63,7 @@
 				animate(
 					el_paiboon.children[0],
 					{
-						opacity: 1,
+						opacity: [0, 1],
 						transform: [`translate(-70%, 10%) scale(0)`, `translate(-70%, 10%) scale(1)`]
 					},
 					{ duration: 1 }
@@ -71,8 +71,8 @@
 				animate(
 					el_paiboon.children[1],
 					{
-						opacity: 1,
-						transform: [`translateX(-500px)`, `translateX(0px)`]
+						opacity: [0, 1],
+						transform: [`translateX(-500px)`, `translateX(0)`]
 					},
 					{ duration: 1 }
 				);
@@ -86,8 +86,8 @@
 				animate(
 					el_parina,
 					{
-						opacity: 1,
-						transform: [`translateY(-101px)`, `translateY(0px)`]
+						opacity: [0, 1],
+						transform: [`translateY(-101px)`, `translateY(0)`]
 					},
 					{ duration: 1 }
 				);
@@ -101,8 +101,8 @@
 				animate(
 					el_pornpimol,
 					{
-						opacity: 1,
-						transform: [`translateX(500px)`, `translateX(0px)`]
+						opacity: [0, 1],
+						transform: [`translateX(500px)`, `translateX(0)`]
 					},
 					{ duration: 1 }
 				);
@@ -116,7 +116,7 @@
 				animate(
 					[...el_mongkonkit.children],
 					{
-						opacity: 1,
+						opacity: [0, 1],
 						transform: [`scale(0)`, `scale(1)`]
 					},
 					{ duration: 1, delay: stagger(0.25) }

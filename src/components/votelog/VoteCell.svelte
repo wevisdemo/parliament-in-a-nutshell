@@ -6,7 +6,7 @@
 
 	export let side: 'gov' | 'opp' | 'pracharat' | 'black' = 'gov';
 	export let trigger: string = '';
-	export let margin: string = '-216px 0px 1500px 0px';
+	export let margin: string = '-216px 0% 1500px 0%';
 
 	let el: any;
 	onMount(() => {

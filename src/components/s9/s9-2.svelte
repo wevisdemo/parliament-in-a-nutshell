@@ -105,28 +105,28 @@
 										trigger={PART2_TRIGGER(i)(j)}
 										on:inside={setTaeMoved(false)}
 										on:outside={setTaeMoved(true)}
-										margin="-168px 0px 1500px 0px"
+										margin="-168px 0% 1500px 0%"
 									/>
 								{:else if j === 8 && i === 0}
 									<Cell
 										trigger={PART2_TRIGGER(i)(j)}
 										on:inside={setPpcMoved(false)}
 										on:outside={setPpcMoved(true)}
-										margin="-168px 0px 1500px 0px"
+										margin="-168px 0% 1500px 0%"
 									/>
 								{:else if j === 9 && i === 22}
 									<Cell
 										trigger={PART2_TRIGGER(i)(j)}
 										on:inside={setPnyMoved(false)}
 										on:outside={setPnyMoved(true)}
-										margin="-168px 0px 1500px 0px"
+										margin="-168px 0% 1500px 0%"
 									/>
 								{:else if j === 10 && i === 29}
 									<Cell
 										trigger={PART2_TRIGGER(i)(j)}
 										on:inside={setPttMoved(false)}
 										on:outside={setPttMoved(true)}
-										margin="-168px 0px 1500px 0px"
+										margin="-168px 0% 1500px 0%"
 									/>
 								{:else}
 									<Cell />

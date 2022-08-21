@@ -32,7 +32,7 @@
 
 		scroll(
 			animate(el_fade, {
-				height: ['0vh', '50vh']
+				height: ['0', '50vh']
 			}),
 			{
 				target: el_trigger2,
@@ -178,6 +178,7 @@
 	.fade-container {
 		overflow: hidden;
 		width: 100%;
+		will-change: height;
 	}
 
 	.fade {

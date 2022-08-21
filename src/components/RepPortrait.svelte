@@ -124,7 +124,7 @@
 		-moz-user-select: none;
 
 		opacity: 0;
-		transition: opacity 0s;
+		transition: opacity 0;
 		pointer-events: none;
 	}
 

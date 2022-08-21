@@ -9,7 +9,7 @@
 		inView(
 			el_circle1,
 			() => {
-				animate(el_circle1, { opacity: 1 }, { duration: 1 });
+				animate(el_circle1, { opacity: [0, 1] }, { duration: 1 });
 			},
 			{ amount: 1 }
 		);
@@ -18,12 +18,12 @@
 			el_circle2,
 			() => {
 				const [first, ...rest] = el_circle2.children;
-				animate(first, { opacity: 1 }, { duration: 1 });
+				animate(first, { opacity: [0, 1] }, { duration: 1 });
 				animate(
 					rest,
 					{
-						opacity: 1,
-						transform: [`translateY(-100px)`, `translateY(0px)`]
+						opacity: [0, 1],
+						transform: [`translateY(-100px)`, `translateY(0)`]
 					},
 					{ duration: 1, delay: stagger(0.25) }
 				);
@@ -33,9 +33,21 @@
 
 		const el_decorchild = el_decor_container.children;
 		const seq: TimelineDefinition = [
-			[el_decorchild[0], { transform: 'translateY(100px)' }, { easing: 'ease-out' }],
-			[el_decorchild[1], { transform: 'translateY(200px)' }, { easing: 'linear', at: '<' }],
-			[el_decorchild[2], { transform: 'translateY(200px)' }, { easing: 'ease-out', at: '<' }]
+			[
+				el_decorchild[0],
+				{ transform: ['translateY(-300px)', 'translateY(100px)'] },
+				{ easing: 'ease-out' }
+			],
+			[
+				el_decorchild[1],
+				{ transform: ['translateY(-200px)', 'translateY(200px)'] },
+				{ easing: 'linear', at: '<' }
+			],
+			[
+				el_decorchild[2],
+				{ transform: ['translateY(-300px)', 'translateY(200px)'] },
+				{ easing: 'ease-out', at: '<' }
+			]
 		];
 
 		scroll(timeline(seq), {

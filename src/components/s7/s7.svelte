@@ -20,18 +20,22 @@
 	let new_num_timeout: NodeJS.Timeout;
 	onMount(() => {
 		const seq: TimelineDefinition = [
-			[el_pill1, { opacity: [1, 1, 0, 0], transform: ['', '', 'translateY(-100px)'] }],
+			[
+				el_pill1,
+				{ opacity: [1, 0], transform: ['', '', 'translateY(-100px)'] },
+				{ easing: 'ease-out' }
+			],
 			[
 				el_pill2,
 				{
-					opacity: [0, 0, 1, 1],
+					opacity: [0, 1],
 					transform: [
 						'translateX(-50%) translateY(100px)',
 						'translateX(-50%) translateY(100px)',
 						'translateX(-50%)'
 					]
 				},
-				{ at: '<' }
+				{ easing: 'ease-in', at: '<' }
 			]
 		];
 

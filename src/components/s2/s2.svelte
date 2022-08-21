@@ -41,23 +41,6 @@
 			}
 		);
 
-		scroll(
-			({ y }) => {
-				if (y.progress === 1 && show_current_data === false) {
-					show_current_data = true;
-					return;
-				}
-				if (y.progress !== 1 && show_current_data === true) {
-					show_current_data = false;
-					return;
-				}
-			},
-			{
-				target: el_trigger,
-				offset: ScrollOffset.Enter
-			}
-		);
-
 		const seq: TimelineDefinition = [
 			[
 				el_t1,
