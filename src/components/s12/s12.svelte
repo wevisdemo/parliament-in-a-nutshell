@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Bignum from 'components/Bignum.svelte';
 	import Sankey from './sankey.svelte';
+	import TableBridge from 'components/TableBridge.svelte';
 </script>
 
 <div style="--h:128px" />
@@ -34,12 +35,12 @@
 <div style="--h:64px" />
 <Sankey />
 <div style="--h:32px" />
-<div class="bridge-13 tc c">
+<TableBridge>
 	<div class="T1">
 		ถึงอย่างนั้น จำนวนเก้าอี้ฝ่ายรัฐบาลที่เพิ่มขึ้น<br />
 		<span class="bigger">เกื้อหนุน</span> การลงมติของ &ldquo;ขั้วรัฐบาล&rdquo; มากน้อยแค่ไหน ?
 	</div>
-</div>
+</TableBridge>
 
 <style lang="scss">
 	.compare {
@@ -93,25 +94,16 @@
 		color: #065cab;
 	}
 
-	.bridge-13 {
-		background: linear-gradient(#0000, #000f);
-		height: 50vh; /* R */
-		justify-content: flex-end;
+	.T1 {
+		font-size: 2.5rem;
+		color: #fff;
+		line-height: 1.2;
+		letter-spacing: 1px;
 
-		.T1 {
-			font-size: 2.5rem;
-			color: #fff;
-			line-height: 1.2;
-			letter-spacing: 1px;
+		padding: 64px 0 96px;
 
-			position: sticky;
-			bottom: 40vh; /* O */
-
-			padding: 64px 0;
-
-			.bigger {
-				font-size: 1.2em;
-			}
+		.bigger {
+			font-size: 1.2em;
 		}
 	}
 </style>

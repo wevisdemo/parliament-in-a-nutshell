@@ -3,6 +3,7 @@
 	import { timeline, scroll } from 'motion';
 
 	import Sankey from './sankey.svelte';
+	import TableBridge from 'components/TableBridge.svelte';
 
 	let el_decor_container: any;
 	onMount(() => {
@@ -86,12 +87,12 @@
 	<strong>จึงเป็นที่น่าจับตามอง</strong>
 	<strong>อย่างยิ่ง</strong>
 </p>
-<div class="bridge-15 tc c">
+<TableBridge>
 	<div class="bridge-text">
 		ลองมาสำรวจสถิติการลงมติของ <strong>18 สมาชิก</strong>พรรคเศรษฐกิจไทย<br />
 		ว่าพวกเขา <strong>&ldquo;เข้าข้าง&rdquo; หรือ &ldquo;ตรงข้าม&rdquo; กับฝ่ายรัฐบาล</strong> มากน้อยเพียงใด
 	</div>
-</div>
+</TableBridge>
 
 <style lang="scss">
 	.crack {
@@ -194,21 +195,12 @@
 		}
 	}
 
-	.bridge-15 {
-		background: linear-gradient(#0000, #000f);
-		height: 50vh; /* R */
-		justify-content: flex-end;
+	.bridge-text {
+		font-size: 2.5rem;
+		color: #fff;
+		line-height: 1.2;
+		letter-spacing: 1px;
 
-		.bridge-text {
-			font-size: 2.5rem;
-			color: #fff;
-			line-height: 1.2;
-			letter-spacing: 1px;
-
-			position: sticky;
-			bottom: 40vh; /* O */
-
-			padding: 64px 0;
-		}
+		padding: 64px 0 96px;
 	}
 </style>
