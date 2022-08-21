@@ -268,6 +268,8 @@
 	.decor {
 		position: absolute;
 		inset: 0;
+
+		// overflow: hidden visible;
 	}
 
 	.line {

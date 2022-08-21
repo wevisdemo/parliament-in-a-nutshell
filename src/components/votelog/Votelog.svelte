@@ -1,19 +1,40 @@
 <script lang="ts">
+	import { scroll } from 'motion';
+
+	import { onMount } from 'svelte';
+
 	import VoteLegend from './VoteLegend.svelte';
 
 	export let hideHint = true;
 	export let hintPracharat = false;
+
+	let el_header: any;
+	let el_body: any;
+
+	onMount(() => {
+		scroll(
+			({ x }) => {
+				el_header?.scrollTo?.(x.current, 0);
+			},
+			{
+				container: el_body,
+				axis: 'x'
+			}
+		);
+	});
 </script>
 
 <VoteLegend {hideHint} {hintPracharat} />
 <div class="votelog-container">
-	<div class="votelog-head">
+	<div bind:this={el_header} class="votelog-head">
 		<div class="votelog-head-spacer" />
 		<div class="votelog-head-columns">
 			<slot name="header" />
 		</div>
 	</div>
-	<slot />
+	<div bind:this={el_body} class="votelog-body">
+		<slot />
+	</div>
 </div>
 
 <style lang="scss">
@@ -33,6 +54,7 @@
 		top: 0;
 		z-index: 3;
 		margin-bottom: 24px;
+		overflow: hidden;
 	}
 
 	.votelog-head-columns {
@@ -59,5 +81,10 @@
 		justify-content: center;
 	}
 
-	// .votelog-icon, .votelog-body, .votelog-value, .votelog-subject are in scss file
+	.votelog-body {
+		margin-top: -16px;
+		overflow: auto hidden;
+	}
+
+	// .votelog-icon, .votelog-value, .votelog-subject are in scss file
 </style>

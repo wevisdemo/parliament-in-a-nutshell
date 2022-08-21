@@ -210,6 +210,7 @@
 
 	.they-work-container {
 		padding: 250px 0 200px;
+		overflow: hidden;
 
 		> .header {
 			margin-bottom: 64px;

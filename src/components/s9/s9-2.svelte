@@ -90,7 +90,7 @@
 				/>
 			</RP>
 		</svelte:fragment>
-		<div class="votelog-body">
+		<svelte:fragment>
 			{#each VOTE_METADATA as mati, i}
 				<div class="votelog-row">
 					<div class="votelog-icon">
@@ -140,7 +140,7 @@
 					</div>
 				</div>
 			{/each}
-		</div>
+		</svelte:fragment>
 	</Votelog>
 </div>
 

@@ -46,7 +46,7 @@
 	<div class="ref_date">— สืบค้นเมื่อ กรกฎาคม 2565 —</div>
 	<div style="--h:192px" />
 	<h1 class="T1">WeVis Interns</h1>
-	<div class="row" style="--gap:80px">
+	<div class="row intern-container" style="--gap:80px">
 		<div class="col c tc intern">
 			<img
 				class="intern-portrait"
@@ -155,6 +155,8 @@
 	.intern-portrait {
 		border-radius: 999px;
 		margin: 80px 0 40px;
+
+		width: min(20vw, 250px);
 	}
 
 	.intern-name.T1 {
@@ -175,5 +177,11 @@
 		color: #787878;
 		font-weight: 700;
 		margin-top: 12px;
+	}
+
+	@media screen and (max-width: 1240px) {
+		.intern-container {
+			flex-direction: column;
+		}
 	}
 </style>
