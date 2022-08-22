@@ -163,6 +163,7 @@
 		margin: 80px 0 40px;
 
 		width: min(20vw, 250px);
+		height: min(20vw, 250px);
 	}
 
 	.intern-name.T1 {
