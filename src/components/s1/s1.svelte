@@ -233,6 +233,7 @@
 	.continue {
 		display: flex;
 		align-items: center;
+		gap: 1ch;
 
 		opacity: 0;
 		pointer-events: none;
@@ -242,7 +243,6 @@
 		> img {
 			width: 32px;
 			height: 32px;
-			margin-right: 1ch;
 		}
 	}
 
