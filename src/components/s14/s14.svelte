@@ -11,12 +11,12 @@
 		const seq: TimelineDefinition = [
 			[
 				el_decorchild[0],
-				{ transform: ['translateY(-300px)', 'translateY(300px)'] },
+				{ transform: ['translateY(0)', 'translateY(950px)'] },
 				{ easing: 'linear' }
 			],
 			[
 				el_decorchild[1],
-				{ transform: ['translateY(-300px)', 'translateY(200px)'] },
+				{ transform: ['translateY(0)', 'translateY(1500px)'] },
 				{ easing: 'linear', at: '<' }
 			]
 		];
@@ -28,8 +28,8 @@
 	});
 </script>
 
-<img class="crack" src="/shaking-parliament/crack.svg" alt="" />
-<div class="s14-container h100 tc c">
+<div class="s14-container tc c">
+	<img class="crack" src="/shaking-parliament/crack.svg" alt="" />
 	<div bind:this={el_decor_container} class="decor">
 		<img
 			class="d1"
@@ -53,27 +53,25 @@
 		decoding="async"
 		loading="lazy"
 	/>
-</div>
-<div class="tc c" style="margin-top:-30vh /* R */">
 	<img class="news-img" src="/shaking-parliament/pt4_newspaper.png" alt="" />
+	<p class="news-text tc">
+		&ldquo; มกราคม 2565 พล.อ.ประวิตร วงษ์สุวรรณ<br />
+		<span class="special-lh">หัวหน้าพรรคพลังประชารัฐ<br /></span>
+		<span class="black">ได้มีมติให้ขับ 21 ส.ส. &ldquo;ก๊วนธรรมนัส&rdquo; ออกจากพรรค</span><br />
+		ด้วยเห็นว่าในช่วงหลายเดือนที่ผ่านมา<br />
+		<span class="black">มีเหตุแห่งความร้ายแรงของพรรค ที่เกิดจากคนทั้ง 21 คน</span>
+		<br /><br /><br /><br />
+		โดยในเวลาต่อมา
+		<strong>ร.อ. ธรรมนัสได้นำทีม <span class="T1 num">18</span> ส.ส. เข้าสังกัด</strong><br />
+		<span class="T1 thaiecon">พรรคเศรษฐกิจไทย</span><br />
+		<span class="black" style="margin-top:8px"
+			>ซึ่งมิได้ประกาศจุดยืนอย่างแน่ชัดว่าจะถือตนอยู่ในขั้วข้างใด</span
+		><br />
+		ในขณะที่อีก <span class="T1 num">3</span> ส.ส. ได้เข้าสังกัด<br />
+		<span class="T1 poomjaithai">พรรคภูมิใจไทย</span><br />
+		ตามที่มีกระแสข่าวก่อนหน้านี้ &rdquo;
+	</p>
 </div>
-<p class="news-text tc">
-	&ldquo; มกราคม 2565 พล.อ.ประวิตร วงษ์สุวรรณ<br />
-	<span class="special-lh">หัวหน้าพรรคพลังประชารัฐ<br /></span>
-	<span class="black">ได้มีมติให้ขับ 21 ส.ส. &ldquo;ก๊วนธรรมนัส&rdquo; ออกจากพรรค</span><br />
-	ด้วยเห็นว่าในช่วงหลายเดือนที่ผ่านมา<br />
-	<span class="black">มีเหตุแห่งความร้ายแรงของพรรค ที่เกิดจากคนทั้ง 21 คน</span>
-	<br /><br /><br /><br />
-	โดยในเวลาต่อมา
-	<strong>ร.อ. ธรรมนัสได้นำทีม <span class="T1 num">18</span> ส.ส. เข้าสังกัด</strong><br />
-	<span class="T1 thaiecon">พรรคเศรษฐกิจไทย</span><br />
-	<span class="black" style="margin-top:8px"
-		>ซึ่งมิได้ประกาศจุดยืนอย่างแน่ชัดว่าจะถือตนอยู่ในขั้วข้างใด</span
-	><br />
-	ในขณะที่อีก <span class="T1 num">3</span> ส.ส. ได้เข้าสังกัด<br />
-	<span class="T1 poomjaithai">พรรคภูมิใจไทย</span><br />
-	ตามที่มีกระแสข่าวก่อนหน้านี้ &rdquo;
-</p>
 <div style="--h:128px" />
 <Sankey />
 <p class="circle-text c tc">
@@ -102,7 +100,7 @@
 
 	.title-img {
 		width: min(70vw, 90vh);
-		margin-top: -30vh /* R */;
+		margin: 96px 0;
 	}
 
 	.decor {
@@ -111,20 +109,17 @@
 		height: 100%;
 		width: 100%;
 
-		// overflow: hidden visible;
+		overflow: hidden;
 
 		> img {
 			position: absolute;
-			top: -30%;
+			top: 0;
 			left: 0;
-			z-index: 0;
-			transform: translateY(-300px);
 
 			&.d2 {
 				left: unset;
-				top: 25%;
-				right: -10%;
-				transform: translateY(-300px);
+				top: 20vw;
+				right: 0;
 			}
 		}
 	}

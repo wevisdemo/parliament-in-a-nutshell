@@ -257,8 +257,8 @@
 		position: absolute;
 		inset: 0;
 		pointer-events: none;
-		width: 100vw;
-		height: 100vh;
+		width: 100%;
+		height: 100%;
 		-webkit-mask-image: linear-gradient(#000f 70%, #0000);
 		mask-image: linear-gradient(#000f 70%, #0000);
 	}
