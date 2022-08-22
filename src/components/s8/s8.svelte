@@ -37,7 +37,6 @@
 		style="position:relative"
 	/>
 </div>
-<div style="--h:300px" />
 <div class="news-container">
 	<img
 		src="/shaking-parliament/part2_papers.png"
@@ -46,21 +45,18 @@
 		decoding="async"
 		loading="lazy"
 	/>
-	<div class="news-text-container c">
-		<p class="news-text tc">
-			<span class="special-lh">&ldquo; ผ่านไป 45 วัน<br /></span>
-			หลังจากที่สังคมทราบผลการเลือกตั้ง<br />
-			<span class="black">กกต. จึงได้เปิดเผยตัวเลขที่นั่งในสภาออกมา</span><br />
-			<br />
-			ผลปรากฏคือ<br />
-			<span class="black">มีพรรคที่ได้ที่นั่งเพิ่มมาทั้งหมด 12 พรรค</span><br />
-			<span class="black">แต่ละพรรคได้ไป 1 ที่นั่ง</span><br />
-			หักปากกาบรรดาเซียน<br />
-			<span class="special-lh">ที่พยายามคำนวณที่นั่ง ส.ส. ไว้ก่อนหน้า &rdquo;</span>
-		</p>
-	</div>
+	<p class="news-text tc">
+		<span class="special-lh">&ldquo; ผ่านไป 45 วัน<br /></span>
+		หลังจากที่สังคมทราบผลการเลือกตั้ง<br />
+		<span class="black">กกต. จึงได้เปิดเผยตัวเลขที่นั่งในสภาออกมา</span><br />
+		<br />
+		ผลปรากฏคือ<br />
+		<span class="black">มีพรรคที่ได้ที่นั่งเพิ่มมาทั้งหมด 12 พรรค</span><br />
+		<span class="black">แต่ละพรรคได้ไป 1 ที่นั่ง</span><br />
+		หักปากกาบรรดาเซียน<br />
+		<span class="special-lh">ที่พยายามคำนวณที่นั่ง ส.ส. ไว้ก่อนหน้า &rdquo;</span>
+	</p>
 </div>
-<div style="--h:96px" />
 
 <style lang="scss">
 	.bg {
@@ -77,21 +73,25 @@
 
 	.news-container {
 		display: flex;
-		gap: 32px;
+		justify-content: center;
+		align-items: center;
 
-		max-height: 80vh; /* O */
+		gap: 32px;
+		padding: 0 32px;
+		height: 80vh;
+
+		margin-top: 300px;
+		margin-bottom: 96px;
 	}
 
 	.newspaper {
-		flex: 1 1 0%;
-
 		object-fit: contain;
 		object-position: right;
-	}
 
-	.news-text-container {
-		flex: 1 1 0%;
-		align-items: flex-start;
+		min-height: 0;
+		height: 70vh;
+		min-width: 0;
+		width: auto;
 	}
 
 	.news-text {
