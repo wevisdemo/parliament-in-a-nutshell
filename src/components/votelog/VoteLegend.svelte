@@ -8,24 +8,24 @@
 <div class="votelegend-container">
 	<div class="legend fw">
 		<div class="type">
-			<VoteCell style="display:inline-block" />
+			<VoteCell />
 			<span>=</span>
 			<span>เห็นด้วยกับฝ่ายรัฐบาล</span>
 		</div>
 		<div class="type">
-			<VoteCell side="opp" style="display:inline-block" />
+			<VoteCell side="opp" />
 			<span>=</span>
 			<span>ไม่เห็นด้วยกับฝ่ายรัฐบาล</span>
 		</div>
 		{#if hintPracharat}
 			<div class="type">
-				<VoteCell side="pracharat" style="display:inline-block;box-shadow:0 0 0 1px #a0a0a0" />
+				<VoteCell side="pracharat" style="box-shadow:0 0 0 1px #a0a0a0" />
 				<span>=</span>
 				<span>ยุบพรรคไปเข้าร่วมพรรคพลังประชารัฐ</span>
 			</div>
 		{:else}
 			<div class="type">
-				<VoteCell side="black" style="display:inline-block;box-shadow:0 0 0 1px #a0a0a0" />
+				<VoteCell side="black" style="box-shadow:0 0 0 1px #a0a0a0" />
 				<span>=</span>
 				<span>ลาออก/ถูกระงับ/ไม่อยู่ในการปฏิบัติหน้าที่</span>
 			</div>
