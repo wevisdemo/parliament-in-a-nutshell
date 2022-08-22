@@ -61,8 +61,10 @@
 </div>
 <div class="h100 c">
 	<h1 class="T1">
-		คุณรู้ไหม?<br />
-		<span class="year">ตอนนี้</span>ในรัฐสภามี ส.ส. กี่คน
+		<span class="nw">คุณรู้ไหม?</span><br />
+		<span class="year nw">ตอนนี้</span><span class="nw">ในรัฐสภา</span><span class="nw"
+			>มี ส.ส. กี่คน</span
+		>
 	</h1>
 
 	{#each choices as data}
@@ -102,7 +104,11 @@
 	{/if}
 
 	{#if isSubmitted}
-		<div class="ans-img-container">
+		<div
+			class="ans-img-container"
+			class:choice2={selected_choice === 471}
+			class:choice3={selected_choice === 479}
+		>
 			<img
 				class="ans-img"
 				class:correct={isCorrect}
@@ -145,6 +151,7 @@
 				font-weight: 600;
 				font-size: 1rem;
 				letter-spacing: 0.01em;
+				white-space: nowrap;
 			}
 		}
 	}
@@ -194,6 +201,9 @@
 			height: 256px;
 			object-fit: contain;
 			object-position: center;
+
+			width: 256px;
+			height: 256px;
 		}
 
 		> .ans-img.correct {
@@ -251,5 +261,26 @@
 		height: 100vh;
 		-webkit-mask-image: linear-gradient(#000f 70%, #0000);
 		mask-image: linear-gradient(#000f 70%, #0000);
+	}
+
+	@media screen and (max-width: 1000px) {
+		.ans-img-container {
+			top: calc(50% - 16px);
+			left: calc(50% + 144px);
+			transform: translate(-50%, -50%);
+
+			> .ans-img {
+				width: 128px;
+				height: 128px;
+			}
+
+			&.choice2 {
+				top: calc(50% + 76px);
+			}
+
+			&.choice3 {
+				top: calc(50% + 164px);
+			}
+		}
 	}
 </style>
