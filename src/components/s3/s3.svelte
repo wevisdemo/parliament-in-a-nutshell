@@ -129,8 +129,8 @@
 
 <!-- VH skip check -->
 <div class="s3-container">
-	<div class="T1 counter-decor">{rp_num}</div>
 	<div class="decor">
+		<div class="T1 counter-decor">{rp_num}</div>
 		<div bind:this={el_thanathorn} class="thanathorn-img-container">
 			<div class="circle1" />
 			<div class="circle2" />
@@ -240,6 +240,9 @@
 	.s3-container {
 		margin-top: -15vh;
 		padding-top: 30vh;
+
+		padding-bottom: 50vh;
+		margin-bottom: -50vh;
 	}
 
 	.T1 {
@@ -263,7 +266,7 @@
 		position: absolute;
 		inset: 0;
 
-		// overflow: hidden visible;
+		overflow: hidden;
 	}
 
 	.line {
