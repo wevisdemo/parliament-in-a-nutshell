@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { computePosition, offset, shift as fshift } from '@floating-ui/dom';
+
 	export let src: string;
 	export let side: 'gov' | 'opp' | 'free' = 'gov';
 	export let color: string;
@@ -13,19 +16,54 @@
 	export let tooltip: 'top' | 'right' | null = null;
 	export let dashedBorder = false;
 	export let op: string = shift === '0' ? '0' : '0.3';
+
+	let showTooltip = () => {};
+	let hideTooltip = () => {};
+	let el_image: any;
+	let el_tooltip: any;
+	onMount(() => {
+		showTooltip = () => {
+			if (showTop) return;
+			el_tooltip.classList.add('show');
+
+			computePosition(el_image, el_tooltip, {
+				placement: tooltip ?? 'top',
+				middleware: [offset(8), fshift({ padding: 8 })]
+			}).then(({ x, y }) => {
+				Object.assign(el_tooltip.style, {
+					left: `${x}px`,
+					top: `${y}px`,
+					bottom: 'unset',
+					right: 'unset'
+				});
+			});
+		};
+
+		hideTooltip = () => {
+			el_tooltip.classList.remove('show');
+			Object.assign(el_tooltip.style, {
+				left: null,
+				top: null,
+				bottom: null,
+				right: null
+			});
+		};
+	});
 </script>
 
 <div
-	class="rp-container {clazz} tooltip-{tooltip}"
+	class="rp-container {clazz}"
 	class:showTop
 	style:--s={size}
 	style:--op={op}
+	bind:this={el_image}
+	on:mouseenter={showTooltip}
+	on:mouseleave={hideTooltip}
 	{...$$restProps}
 >
 	<img
 		src="/shaking-parliament/{src}"
 		alt={name}
-		title={tooltip ? null : name}
 		class="portrait {side}"
 		class:dashedBorder
 		style:--c={color}
@@ -36,7 +74,7 @@
 		width={size}
 		height={size}
 	/>
-	<div class="tooltip">{name}</div>
+	<div bind:this={el_tooltip} class="tooltip">{name}</div>
 	<div class="top" style:--shift={shift}><slot /></div>
 </div>
 
@@ -106,8 +144,11 @@
 
 	.tooltip {
 		position: absolute;
-		top: -8px;
-		z-index: 18;
+		bottom: 0;
+		right: 0;
+		z-index: 20;
+
+		padding: 12px;
 
 		background: #000d;
 		border-radius: 8px;
@@ -115,6 +156,7 @@
 		display: flex;
 
 		color: #fff;
+		letter-spacing: 0.3px;
 		line-height: 1;
 		white-space: nowrap;
 
@@ -125,26 +167,8 @@
 		opacity: 0;
 		transition: opacity 0;
 		pointer-events: none;
-	}
 
-	.tooltip-right .tooltip {
-		left: -8px;
-		padding: 8px 12px 8px calc(100% + 16px);
-		height: calc(100% + 16px);
-		align-items: center;
-	}
-
-	.tooltip-top .tooltip {
-		left: 50%;
-		padding: 12px;
-		transform: translate(-50%, -100%);
-		letter-spacing: 0.3px;
-	}
-
-	.rp-container:is(.tooltip-right, .tooltip-top):not(.showTop) > .portrait:hover {
-		z-index: 19;
-
-		+ .tooltip {
+		&.show {
 			opacity: 1;
 			pointer-events: auto;
 			transition: opacity 0.1s;

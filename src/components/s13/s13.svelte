@@ -61,13 +61,7 @@
 				tooltip="top"
 				showTop={srinuanMoved}
 			>
-				<RP
-					src="rp/pt12-จารึก.png"
-					color="#70d267"
-					name="จารึก ศรีอ่อน"
-					size="56"
-					tooltip="top"
-				/>
+				<RP src="rp/pt12-จารึก.png" color="#70d267" name="จารึก ศรีอ่อน" size="56" tooltip="top" />
 			</RP>
 			<RP
 				src="rp/pt12-ฐนภัทร.png"
