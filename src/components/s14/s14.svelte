@@ -133,6 +133,7 @@
 	.news-text {
 		font-size: 2rem;
 		line-height: 1.2;
+		position: relative;
 
 		> .black {
 			display: inline-block;
