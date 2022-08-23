@@ -61,15 +61,15 @@
 		padding: 72px 9px 16px 8px;
 		gap: 16px;
 		background: #000a;
-		backdrop-filter: blur(8px);
 		-webkit-backdrop-filter: blur(8px);
+		backdrop-filter: blur(8px);
 		box-shadow: 0 0 16px #000;
 	}
 
 	.votelog-head-spacer {
 		background: #000a;
-		backdrop-filter: blur(8px);
 		-webkit-backdrop-filter: blur(8px);
+		backdrop-filter: blur(8px);
 		box-shadow: 0 0 16px #000;
 	}
 
