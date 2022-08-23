@@ -393,6 +393,7 @@
 
 	.sankey {
 		margin-top: 40px;
+		padding: 0 16px;
 	}
 
 	.sankey-block {
