@@ -4,6 +4,7 @@
 
 	import Sankey from './sankey.svelte';
 	import TableBridge from 'components/TableBridge.svelte';
+	import Circle from 'components/Circle.svelte';
 
 	let el_decor_container: any;
 	onMount(() => {
@@ -74,17 +75,17 @@
 </div>
 <div style="--h:128px" />
 <Sankey />
-<p class="circle-text c tc">
+<Circle style="margin:144px auto 0;font-size:1rem">
 	แน่นอนว่าด้วยฐานะ<br />
 	&ldquo;อดีต&rdquo; คนใกล้ชิดของ<br />
 	หัวหน้าพรรคพลังประชารัฐ<br />
 	<br />
-	<span>การวางตัวเป็น <strong>&ldquo;ฝ่ายอิสระ&rdquo;</strong></span>
+	<span>การวางตัวเป็น <strong style="font-size:1.3em">&ldquo;ฝ่ายอิสระ&rdquo;</strong></span>
 	<span>ของ<span class="thaiecon-light">พรรคเศรษฐกิจไทย</span></span>
 	ซึ่งนำโดย ร.อ. ธรรมนัส<br />
-	<strong>จึงเป็นที่น่าจับตามอง</strong>
-	<strong>อย่างยิ่ง</strong>
-</p>
+	<strong style="font-size:1.3em">จึงเป็นที่น่าจับตามอง</strong>
+	<strong style="font-size:1.3em">อย่างยิ่ง</strong>
+</Circle>
 <TableBridge>
 	<div class="bridge-text">
 		ลองมาสำรวจสถิติการลงมติของ <strong>18 สมาชิก</strong>พรรคเศรษฐกิจไทย<br />
@@ -169,28 +170,6 @@
 
 	.poomjaithai {
 		color: #065cab;
-	}
-
-	.circle-text {
-		background: #000;
-		color: #fff;
-
-		width: 315px;
-		height: 315px;
-
-		border-radius: 50%;
-
-		margin: 144px auto 0;
-
-		position: relative;
-		z-index: 1;
-
-		font-size: 1rem;
-		line-height: 1.5;
-
-		strong {
-			font-size: 1.3em;
-		}
 	}
 
 	.bridge-text {

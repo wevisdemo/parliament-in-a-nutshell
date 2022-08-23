@@ -1,36 +1,12 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { animate, inView, stagger, timeline, scroll } from 'motion';
+	import { timeline, scroll } from 'motion';
 
-	let el_circle1: any;
-	let el_circle2: any;
+	import Circle from 'components/Circle.svelte';
+	import CircleFold from 'components/CircleFold.svelte';
+
 	let el_decor_container: any;
 	onMount(() => {
-		inView(
-			el_circle1,
-			() => {
-				animate(el_circle1, { opacity: [0, 1] }, { duration: 1 });
-			},
-			{ amount: 1 }
-		);
-
-		inView(
-			el_circle2,
-			() => {
-				const [first, ...rest] = el_circle2.children;
-				animate(first, { opacity: [0, 1] }, { duration: 1 });
-				animate(
-					rest,
-					{
-						opacity: [0, 1],
-						transform: [`translateY(-100px)`, `translateY(0)`]
-					},
-					{ duration: 1, delay: stagger(0.25) }
-				);
-			},
-			{ amount: 0.2 }
-		);
-
 		const el_decorchild = el_decor_container.children;
 		const seq: TimelineDefinition = [
 			[
@@ -90,49 +66,34 @@
 		loading="lazy"
 	/>
 </div>
-<p bind:this={el_circle1} class="circle-text c tc">
+<Circle style="font-size:1rem">
 	แน่นอนว่ามันเป็นไปได้ยาก<br />
 	ที่ภายในพรรคหนึ่งพรรค<br />
-	จะออกเสียงตามมติพรรคได้โดยเอกฉันท์ <br />
-	<span>ดังนั้น<strong>การโหวตสวนมติพรรค</strong></span>
+	จะออกเสียงตามมติพรรคได้โดยเอกฉันท์<br />
+	<span>ดังนั้น<strong style="font-size:1.3em">การโหวตสวนมติพรรค</strong></span>
 	ของ ส.ส. บางรายจึงปรากฎให้เห็น<br />
 	บนหน้าข่าวอยู่เรื่อยไป
-</p>
+</Circle>
 <div style="--h:128px" />
-<div bind:this={el_circle2} style="--h:480px">
-	<p class="circle-text c tc">
-		ซึ่งในหลาย ๆ ครั้ง<br />
-		การโหวตสวนมติพรรคก็ได้นำไปสู่<br />
-		<span>
-			<strong>&ldquo;การขับพ้นพรรค&rdquo;</strong> <span class="big">และ</span>
-		</span>
-		<strong>&ldquo;การเปลี่ยนขั้วย้ายค่าย&rdquo;</strong>
-		สร้างตัวเลขที่ไม่หยุดนิ่ง<br />
-		ต่อจำนวนเก้าอี้ส.ส.ฝ่ายค้าน<br />
-		และฝ่ายรัฐบาล
-	</p>
-	<img
-		class="deco-circle c1"
-		src="/shaking-parliament/part3_deco1.svg"
-		alt=""
-		decoding="async"
-		loading="lazy"
-	/>
-	<img
-		class="deco-circle c2"
-		src="/shaking-parliament/part3_deco2.svg"
-		alt=""
-		decoding="async"
-		loading="lazy"
-	/>
-	<img
-		class="deco-circle c3"
-		src="/shaking-parliament/part3_deco3.svg"
-		alt=""
-		decoding="async"
-		loading="lazy"
-	/>
-</div>
+<CircleFold
+	decorSrc={[
+		'/shaking-parliament/part3_deco1.svg',
+		'/shaking-parliament/part3_deco2.svg',
+		'/shaking-parliament/part3_deco3.svg'
+	]}
+	circleStyle="font-size:1rem"
+>
+	ซึ่งในหลาย ๆ ครั้ง<br />
+	การโหวตสวนมติพรรคก็ได้นำไปสู่<br />
+	<span>
+		<strong style="font-size:1.3em">&ldquo;การขับพ้นพรรค&rdquo;</strong>
+		<span style="font-size:1.3em">และ</span>
+	</span>
+	<strong style="font-size:1.3em">&ldquo;การเปลี่ยนขั้วย้ายค่าย&rdquo;</strong>
+	สร้างตัวเลขที่ไม่หยุดนิ่ง<br />
+	ต่อจำนวนเก้าอี้ส.ส.ฝ่ายค้าน<br />
+	และฝ่ายรัฐบาล
+</CircleFold>
 
 <style lang="scss">
 	.title-img {
@@ -169,49 +130,5 @@
 		height: 30vh; /* O */
 
 		background: linear-gradient(#000f, #0000);
-	}
-
-	.circle-text {
-		background: #000;
-		color: #fff;
-
-		width: 315px;
-		height: 315px;
-
-		border-radius: 50%;
-
-		margin: auto;
-
-		position: relative;
-		z-index: 1;
-
-		font-size: 1rem;
-		line-height: 1.5;
-
-		opacity: 0;
-
-		strong,
-		.big {
-			font-size: 1.3em;
-		}
-	}
-
-	.deco-circle {
-		position: absolute;
-		top: 54px;
-		left: calc(50% - 315px / 2);
-
-		width: 315px;
-		height: 315px;
-
-		opacity: 0;
-
-		&.c2 {
-			top: 108px;
-		}
-
-		&.c3 {
-			top: 162px;
-		}
 	}
 </style>
