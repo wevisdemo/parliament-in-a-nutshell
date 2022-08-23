@@ -71,10 +71,12 @@
 		width={size}
 		height={size}
 	/>
-	{#if !tooltip}
+	{#if tooltip}
 		<div bind:this={el_tooltip} class="tooltip">{name}</div>
 	{/if}
-	<div class="top" style:--shift={shift}><slot /></div>
+	{#if $$slots.default}
+		<div class="top" style:--shift={shift}><slot /></div>
+	{/if}
 </div>
 
 <style lang="scss">
