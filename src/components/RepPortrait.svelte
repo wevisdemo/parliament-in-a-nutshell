@@ -22,6 +22,7 @@
 	let el_image: any;
 	let el_tooltip: any;
 	onMount(() => {
+		if (!tooltip) return;
 		showTooltip = () => {
 			if (showTop) return;
 			el_tooltip.classList.add('show');
@@ -32,9 +33,7 @@
 			}).then(({ x, y }) => {
 				Object.assign(el_tooltip.style, {
 					left: `${x}px`,
-					top: `${y}px`,
-					bottom: 'unset',
-					right: 'unset'
+					top: `${y}px`
 				});
 			});
 		};
@@ -43,9 +42,7 @@
 			el_tooltip.classList.remove('show');
 			Object.assign(el_tooltip.style, {
 				left: null,
-				top: null,
-				bottom: null,
-				right: null
+				top: null
 			});
 		};
 	});
@@ -74,7 +71,9 @@
 		width={size}
 		height={size}
 	/>
-	<div bind:this={el_tooltip} class="tooltip">{name}</div>
+	{#if !tooltip}
+		<div bind:this={el_tooltip} class="tooltip">{name}</div>
+	{/if}
 	<div class="top" style:--shift={shift}><slot /></div>
 </div>
 
@@ -144,8 +143,8 @@
 
 	.tooltip {
 		position: absolute;
-		bottom: 0;
-		right: 0;
+		top: 0;
+		left: 0;
 		z-index: 20;
 
 		padding: 12px;
@@ -160,15 +159,17 @@
 		line-height: 1;
 		white-space: nowrap;
 
-		user-select: none;
 		-webkit-user-select: none;
 		-moz-user-select: none;
+		user-select: none;
 
+		font-size: 0;
 		opacity: 0;
 		transition: opacity 0;
 		pointer-events: none;
 
 		&.show {
+			font-size: 1rem;
 			opacity: 1;
 			pointer-events: auto;
 			transition: opacity 0.1s;
