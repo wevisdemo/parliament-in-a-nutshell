@@ -192,6 +192,8 @@
 				alt=""
 				decoding="async"
 				loading="lazy"
+				width="443"
+				height="443"
 			/>
 			<img
 				class="circle2"
@@ -199,6 +201,8 @@
 				alt=""
 				decoding="async"
 				loading="lazy"
+				width="443"
+				height="443"
 			/>
 		</div>
 	</div>
