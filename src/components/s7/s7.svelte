@@ -250,23 +250,6 @@
 		margin: auto;
 	}
 
-	.pill {
-		border-radius: 999px;
-		line-height: 2;
-		padding: 0 24px;
-
-		font-size: 1.5rem;
-		margin: 32px 0;
-
-		color: #fff;
-		background: #000;
-
-		display: inline-block;
-		white-space: nowrap;
-
-		pointer-events: none;
-	}
-
 	.new-pill {
 		position: absolute;
 		top: 0;

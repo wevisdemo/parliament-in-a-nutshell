@@ -4,7 +4,7 @@
 
 <div class="curtain h100 c">
 	<h1 class="T1" style="margin-bottom:24px">วิธีอ่านข้อมูล</h1>
-	<h2 class="pill">ข้อมูลทั่วไป</h2>
+	<h2 class="pill dark">ข้อมูลทั่วไป</h2>
 	<div class="row" style="--gap:32px;margin-bottom:24px">
 		<div class="col data-explain tc" style="--bgc:#5b5b5b;--txc:#fff">
 			<small>ข้อมูลเกี่ยวกับ</small><br />ฝ่ายรัฐบาล
@@ -16,7 +16,7 @@
 			<small>ข้อมูลเกี่ยวกับ</small><br />ฝ่ายค้าน
 		</div>
 	</div>
-	<h2 class="pill">ข้อมูล ส.ส. รายคน</h2>
+	<h2 class="pill dark">ข้อมูล ส.ส. รายคน</h2>
 	<div class="row" style="--gap:32px">
 		<div class="col tc">
 			<RP
@@ -99,16 +99,6 @@
 
 	.T1 {
 		font-size: 4rem;
-	}
-
-	.pill {
-		border-radius: 999px;
-		border: 2px #fff solid;
-		line-height: 2;
-		padding: 0 24px;
-
-		font-size: 1.5rem;
-		margin: 32px 0;
 	}
 
 	.side-explain {

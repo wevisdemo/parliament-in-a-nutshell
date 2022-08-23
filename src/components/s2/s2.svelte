@@ -89,21 +89,12 @@
 	}
 
 	.pill {
-		background: #000;
-		border-radius: 999px;
-
-		color: #fff;
 		font-size: 2.25rem;
 		letter-spacing: 2px;
-		line-height: 2;
-		white-space: nowrap;
 
-		display: inline-block;
-		margin-bottom: 8px;
+		margin: 0 0 8px;
 		padding: 0 36px;
 		z-index: 1;
-
-		pointer-events: none;
 	}
 
 	.T1 {

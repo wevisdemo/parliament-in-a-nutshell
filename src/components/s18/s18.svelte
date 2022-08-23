@@ -4,7 +4,7 @@
 
 <div class="black c tc ref-container">
 	<h1 class="T1">แหล่งที่มาของข้อมูล</h1>
-	<div class="pill">แหล่งที่มาชุดข้อมูลการลงมติ</div>
+	<div class="pill dark">แหล่งที่มาชุดข้อมูลการลงมติ</div>
 	<a
 		class="link"
 		href="https://msbis.parliament.go.th/ewtadmin/ewt/parliament_report/main.php"
@@ -14,7 +14,7 @@
 	>
 		ระบบฐานข้อมูลรายงานและบันทึกการประชุม สำนักเลขาธิการสมาชิกสภาผู้แทนราษฎร
 	</a>
-	<div class="pill">แหล่งที่มาข่าว</div>
+	<div class="pill dark">แหล่งที่มาข่าว</div>
 	<a
 		class="link"
 		href="https://ilaw.or.th/node/6069"
@@ -118,12 +118,6 @@
 	}
 
 	.pill {
-		border-radius: 999px;
-		border: 2px #fff solid;
-		line-height: 2;
-		padding: 0 24px;
-
-		font-size: 1.5rem;
 		margin: 64px 0 32px;
 	}
 
