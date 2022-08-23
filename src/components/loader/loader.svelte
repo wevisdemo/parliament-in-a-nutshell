@@ -110,8 +110,8 @@
 			height: 64px;
 
 			border-radius: 50%;
-			border: 3px dotted #5b5b5b;
 			animation: spin 8s linear infinite;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='38.5' stroke='%235B5B5B' stroke-dasharray='3 3' stroke-width='3'/%3E%3C/svg%3E");
 		}
 	}
 
