@@ -8,7 +8,7 @@
 	import Spareseat from './Spareseat.svelte';
 	import Bridge from './s8-bridge.svelte';
 
-	import { PART1_DATA } from 'data/part1';
+	import { PART1_DATA } from 'data/overall_change';
 
 	let showReplaced = false;
 	let showNewNum = false;

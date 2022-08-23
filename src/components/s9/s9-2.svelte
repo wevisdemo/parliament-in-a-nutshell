@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { VOTE_METADATA } from 'data/vote_metadata';
-	import { PART2_DATA, PART2_TRIGGER } from 'data/part2';
+	import { PART2_DATA } from 'data/12parties';
 
 	import Votelog from 'components/votelog/Votelog.svelte';
 	import RP from 'components/RepPortrait.svelte';
@@ -8,27 +8,27 @@
 	import Icon from 'components/votelog/VoteIcon.svelte';
 
 	let taeMoved = false;
-	const setTaeMoved = (val: boolean) => () => {
-		if (val === taeMoved) return;
-		taeMoved = val;
+	const setTaeMoved = ({ detail }: { detail: boolean }) => {
+		if (detail === taeMoved) return;
+		taeMoved = detail;
 	};
 
 	let ppcMoved = false;
-	const setPpcMoved = (val: boolean) => () => {
-		if (val === ppcMoved) return;
-		ppcMoved = val;
+	const setPpcMoved = ({ detail }: { detail: boolean }) => {
+		if (detail === ppcMoved) return;
+		ppcMoved = detail;
 	};
 
 	let pnyMoved = false;
-	const setPnyMoved = (val: boolean) => () => {
-		if (val === pnyMoved) return;
-		pnyMoved = val;
+	const setPnyMoved = ({ detail }: { detail: boolean }) => {
+		if (detail === pnyMoved) return;
+		pnyMoved = detail;
 	};
 
 	let pttMoved = false;
-	const setPttMoved = (val: boolean) => () => {
-		if (val === pttMoved) return;
-		pttMoved = val;
+	const setPttMoved = ({ detail }: { detail: boolean }) => {
+		if (detail === pttMoved) return;
+		pttMoved = detail;
 	};
 </script>
 
@@ -132,43 +132,23 @@
 			</RP>
 		</svelte:fragment>
 		<svelte:fragment>
-			{#each VOTE_METADATA as mati, i}
-				<div class="votelog-row" class:last-row={i > VOTE_METADATA.length - 3}>
+			{#each VOTE_METADATA as mati, mati_index}
+				<div class="votelog-row" class:last-row={mati_index > VOTE_METADATA.length - 3}>
 					<div class="votelog-icon">
 						<Icon type={mati.icon} />
 					</div>
 					<div class="votelog-value">
 						<div class="votelog-subject">{@html mati.html_name}</div>
-						{#each PART2_DATA[i] as vote, j}
+						{#each PART2_DATA[mati_index] as vote, person_index}
 							{#if vote === 1}
-								{#if j === 11 && i === 0}
-									<Cell
-										trigger={PART2_TRIGGER(i)(j)}
-										on:inside={setTaeMoved(false)}
-										on:outside={setTaeMoved(true)}
-										margin="-168px 0% 1500px 0%"
-									/>
-								{:else if j === 8 && i === 0}
-									<Cell
-										trigger={PART2_TRIGGER(i)(j)}
-										on:inside={setPpcMoved(false)}
-										on:outside={setPpcMoved(true)}
-										margin="-168px 0% 1500px 0%"
-									/>
-								{:else if j === 9 && i === 22}
-									<Cell
-										trigger={PART2_TRIGGER(i)(j)}
-										on:inside={setPnyMoved(false)}
-										on:outside={setPnyMoved(true)}
-										margin="-168px 0% 1500px 0%"
-									/>
-								{:else if j === 10 && i === 29}
-									<Cell
-										trigger={PART2_TRIGGER(i)(j)}
-										on:inside={setPttMoved(false)}
-										on:outside={setPttMoved(true)}
-										margin="-168px 0% 1500px 0%"
-									/>
+								{#if person_index === 11 && mati_index === 0}
+									<Cell line="#85e8ff" fireEvent on:moved={setTaeMoved} threshold={144} />
+								{:else if person_index === 8 && mati_index === 0}
+									<Cell line="#0b3757" fireEvent on:moved={setPpcMoved} threshold={144} />
+								{:else if person_index === 9 && mati_index === 22}
+									<Cell line="#0b3757" fireEvent on:moved={setPnyMoved} threshold={144} />
+								{:else if person_index === 10 && mati_index === 29}
+									<Cell line="#0b3757" fireEvent on:moved={setPttMoved} threshold={144} />
 								{:else}
 									<Cell />
 								{/if}

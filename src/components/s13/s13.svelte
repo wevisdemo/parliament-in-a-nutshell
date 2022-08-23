@@ -1,32 +1,63 @@
 <script lang="ts">
 	import { VOTE_METADATA } from 'data/vote_metadata';
-	import { PART3_DATA, PART3_TRIGGER } from 'data/part3';
+	import { PART3_DATA } from 'data/side_shift';
 
 	import Votelog from 'components/votelog/Votelog.svelte';
 	import RP from 'components/RepPortrait.svelte';
 	import Cell from 'components/votelog/VoteCell.svelte';
 	import Icon from 'components/votelog/VoteIcon.svelte';
 
+	const isSrinuanGroup = (mati_index: number, person_index: number) =>
+		mati_index === 3 && [0, 1, 2, 3].includes(person_index);
+	const isAnakinGroup = (mati_index: number, person_index: number) =>
+		mati_index === 4 && [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].includes(person_index);
+	const isNeweconGroup = (mati_index: number, person_index: number) =>
+		mati_index === 3 && [16, 17, 18, 19, 20].includes(person_index);
+
+	const PART3_TRIGGER = (mati_index: number, person_index: number): string => {
+		// กลุ่มคุณศรีนวล
+		if (isSrinuanGroup(mati_index, person_index))
+			return ['#70d267', '#70d267', '#0b3757', '#065cab'][person_index];
+		// กลุ่มเศรษฐกิจใหม่
+		if (isNeweconGroup(mati_index, person_index)) return '#75328c';
+		// กลุ่มอาณาคินใหม่
+		if (isAnakinGroup(mati_index, person_index))
+			return [
+				'#065cab',
+				'#065cab',
+				'#065cab',
+				'#065cab',
+				'#065cab',
+				'#065cab',
+				'#065cab',
+				'#065cab',
+				'#065cab',
+				'#cc8ae3',
+				'#fd980d'
+			][person_index - 4];
+		return '';
+	};
+
 	let srinuanMoved = false;
 	let neweconMoved = false;
 	let anakinMoved = false;
 	let pornpimolMoved = false;
 
-	const setSrinuanMoved = (val: boolean) => () => {
-		if (val === srinuanMoved) return;
-		srinuanMoved = val;
+	const setSrinuanMoved = ({ detail }: { detail: boolean }) => {
+		if (detail === srinuanMoved) return;
+		srinuanMoved = detail;
 	};
-	const setNeweconMoved = (val: boolean) => () => {
-		if (val === neweconMoved) return;
-		neweconMoved = val;
+	const setNeweconMoved = ({ detail }: { detail: boolean }) => {
+		if (detail === neweconMoved) return;
+		neweconMoved = detail;
 	};
-	const setAnakinMoved = (val: boolean) => () => {
-		if (val === anakinMoved) return;
-		anakinMoved = val;
+	const setAnakinMoved = ({ detail }: { detail: boolean }) => {
+		if (detail === anakinMoved) return;
+		anakinMoved = detail;
 	};
-	const setPornpimolMoved = (val: boolean) => () => {
-		if (val === pornpimolMoved) return;
-		pornpimolMoved = val;
+	const setPornpimolMoved = ({ detail }: { detail: boolean }) => {
+		if (detail === pornpimolMoved) return;
+		pornpimolMoved = detail;
 	};
 </script>
 
@@ -407,48 +438,45 @@
 			>
 		</svelte:fragment>
 		<svelte:fragment>
-			{#each VOTE_METADATA as mati, i}
-				<div class="votelog-row" class:last-row={i > VOTE_METADATA.length - 3}>
+			{#each VOTE_METADATA as mati, mati_index}
+				<div class="votelog-row" class:last-row={mati_index > VOTE_METADATA.length - 3}>
 					<div class="votelog-icon">
 						<Icon type={mati.icon} />
 					</div>
 					<div class="votelog-value">
 						<div class="votelog-subject">{@html mati.html_name}</div>
-						{#each PART3_DATA[i] as vote, j}
-							{#if vote === 1}
-								<Cell trigger={PART3_TRIGGER(i)(j)} />
-							{:else if j === 0}
-								<Cell
-									trigger={PART3_TRIGGER(i)(j)}
-									on:inside={setSrinuanMoved(false)}
-									on:outside={setSrinuanMoved(true)}
-									side="opp"
-								/>
-							{:else if j === 4}
-								<Cell
-									trigger={PART3_TRIGGER(i)(j)}
-									on:inside={setAnakinMoved(false)}
-									on:outside={setAnakinMoved(true)}
-									side="opp"
-								/>
-							{:else if j === 15}
-								<Cell
-									trigger={PART3_TRIGGER(i)(j)}
-									on:inside={setPornpimolMoved(false)}
-									on:outside={setPornpimolMoved(true)}
-									side="opp"
-								/>
-							{:else if j === 18}
-								<Cell
-									trigger={PART3_TRIGGER(i)(j)}
-									on:inside={setNeweconMoved(false)}
-									on:outside={setNeweconMoved(true)}
-									side="opp"
-								/>
+						{#each PART3_DATA[mati_index] as vote, person_index}
+							{#if vote === 0}
+								{#if isSrinuanGroup(mati_index, person_index)}
+									<Cell
+										line={PART3_TRIGGER(mati_index, person_index)}
+										fireEvent={person_index === 3}
+										on:moved={setSrinuanMoved}
+										side="opp"
+									/>
+								{:else if isAnakinGroup(mati_index, person_index)}
+									<Cell
+										line={PART3_TRIGGER(mati_index, person_index)}
+										fireEvent={person_index === 9}
+										on:moved={setAnakinMoved}
+										side="opp"
+									/>
+								{:else if mati_index === 28 && person_index === 15}
+									<Cell line="#065cab" fireEvent on:moved={setPornpimolMoved} side="opp" />
+								{:else if isNeweconGroup(mati_index, person_index)}
+									<Cell
+										line={PART3_TRIGGER(mati_index, person_index)}
+										fireEvent={person_index === 18}
+										on:moved={setNeweconMoved}
+										side="opp"
+									/>
+								{:else}
+									<Cell side="opp" />
+								{/if}
 							{:else if vote === 2}
 								<Cell side="black" />
 							{:else}
-								<Cell trigger={PART3_TRIGGER(i)(j)} side="opp" />
+								<Cell line={PART3_TRIGGER(mati_index, person_index)} />
 							{/if}
 						{/each}
 					</div>

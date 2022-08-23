@@ -46,15 +46,3 @@ export const PART2_DATA = [
 	/* votelog.__95 */ [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 0],
 	/* votelog.__96 */ [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 0]
 ];
-
-export const PART2_TRIGGER =
-	(mati_index: number) =>
-	(person_index: number): string => {
-		// if (mati_index === 0 && person_index === 1) return '#288707';
-		// if (mati_index === 29 && person_index === 0) return '#aac926';
-		if (mati_index === 0 && person_index === 8) return '#0b3757';
-		if (mati_index === 22 && person_index === 9) return '#0b3757';
-		if (mati_index === 29 && person_index === 10) return '#0b3757';
-		if (mati_index === 0 && person_index === 11) return '#85e8ff';
-		return '';
-	};

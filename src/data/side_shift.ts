@@ -46,31 +46,3 @@ export const PART3_DATA = [
 	/* votelog.__95 */ [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1],
 	/* votelog.__96 */ [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1]
 ];
-
-export const PART3_TRIGGER =
-	(mati_index: number) =>
-	(person_index: number): string => {
-		// กลุ่มคุณศรีนวล
-		if (mati_index === 3 && [0, 1, 2, 3].includes(person_index))
-			return ['#70d267', '#70d267', '#0b3757', '#065cab'][person_index];
-		// กลุ่มเศรษฐกิจใหม่
-		if (mati_index === 3 && [16, 17, 18, 19, 20].includes(person_index)) return '#75328c';
-		// กลุ่มอาณาคินใหม่
-		if (mati_index === 4 && [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].includes(person_index))
-			return [
-				'#065cab',
-				'#065cab',
-				'#065cab',
-				'#065cab',
-				'#065cab',
-				'#065cab',
-				'#065cab',
-				'#065cab',
-				'#065cab',
-				'#cc8ae3',
-				'#fd980d'
-			][person_index - 4];
-		// คุณพรพิมล
-		if (mati_index === 28 && person_index === 15) return '#065cab';
-		return '';
-	};

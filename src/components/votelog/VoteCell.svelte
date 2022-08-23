@@ -1,29 +1,30 @@
 <script lang="ts">
 	import { onMount, createEventDispatcher } from 'svelte';
-	import { inView } from 'motion';
+	import { scroll } from 'motion';
 
 	const dispatch = createEventDispatcher();
 
 	export let side: 'gov' | 'opp' | 'pracharat' | 'black' = 'gov';
-	export let trigger: string = '';
-	export let margin: string = '-216px 0% 1500px 0%';
+	export let line: string = '';
+	export let fireEvent: boolean = false;
+	export let threshold: number = 192; // 120 + unit ละ 24 px
 
 	let el: any;
+	let y_progress_mem: number = 1;
 	onMount(() => {
-		if (!trigger) return;
-		inView(
-			el,
-			() => {
-				dispatch('inside');
-
-				return () => dispatch('outside');
+		if (!fireEvent) return;
+		scroll(
+			({ y }) => {
+				if (y_progress_mem === y.progress) return;
+				y_progress_mem = y.progress;
+				return dispatch('moved', y.targetOffset - y.current <= threshold);
 			},
-			{ margin }
+			{ target: el }
 		);
 	});
 </script>
 
-<div bind:this={el} class="cell {side}" class:trigger style:--trigger={trigger} {...$$restProps}>
+<div bind:this={el} class="cell {side}" class:line style:--line={line} {...$$restProps}>
 	{#if side === 'gov'}
 		<svg width="9" height="9" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path
@@ -72,14 +73,14 @@
 			box-shadow: 0 1px 0 0 #000;
 		}
 
-		&.trigger::after {
+		&.line::after {
 			content: '';
 			position: absolute;
 			bottom: -3px;
 			left: 0;
 			width: 100%;
 			height: 5px;
-			background: var(--trigger);
+			background: var(--line);
 			z-index: 1;
 		}
 	}

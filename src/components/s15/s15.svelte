@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { VOTE_METADATA } from 'data/vote_metadata';
-	import { PART4_DATA, PART4_TRIGGER } from 'data/part4';
+	import { PART4_DATA } from 'data/thammanas';
 
 	import Votelog from 'components/votelog/Votelog.svelte';
 	import RP from 'components/RepPortrait.svelte';
@@ -8,9 +8,9 @@
 	import Icon from 'components/votelog/VoteIcon.svelte';
 
 	let showTop = false;
-	const setShowTop = (val: boolean) => () => {
-		if (val === showTop) return;
-		showTop = val;
+	const setShowTop = ({ detail }: { detail: boolean }) => {
+		if (detail === showTop) return;
+		showTop = detail;
 	};
 </script>
 
@@ -343,23 +343,21 @@
 			</RP>
 		</svelte:fragment>
 		<svelte:fragment>
-			{#each VOTE_METADATA as mati, i}
-				<div class="votelog-row" class:last-row={i > VOTE_METADATA.length - 3}>
+			{#each VOTE_METADATA as mati, mati_index}
+				<div class="votelog-row" class:last-row={mati_index > VOTE_METADATA.length - 3}>
 					<div class="votelog-icon">
 						<Icon type={mati.icon} />
 					</div>
 					<div class="votelog-value">
 						<div class="votelog-subject">{@html mati.html_name}</div>
-						{#each PART4_DATA[i] as vote, j}
+						{#each PART4_DATA[mati_index] as vote, person_index}
 							{#if vote === 1}
-								{#if i === 31 && j === 0}
-									<Cell
-										trigger={PART4_TRIGGER(i)}
-										on:inside={setShowTop(false)}
-										on:outside={setShowTop(true)}
-									/>
-								{:else if i === 31}
-									<Cell trigger={PART4_TRIGGER(i)} />
+								{#if mati_index === 31}
+									{#if person_index === 9}
+										<Cell line="#f0da8c" fireEvent on:moved={setShowTop} />
+									{:else}
+										<Cell line="#f0da8c" />
+									{/if}
 								{:else}
 									<Cell />
 								{/if}
