@@ -8,6 +8,7 @@
 
 	import Loader from 'components/loader/loader.svelte';
 	import GoTop from 'components/GoTop.svelte';
+	import ScreenNotice from 'components/ScreenNotice.svelte';
 
 	import S1 from 'components/s1/s1.svelte';
 	import S2 from 'components/s2/s2.svelte';
@@ -62,6 +63,7 @@
 		height="28"
 	/>
 </a>
+<ScreenNotice />
 <Loader {loaded} {isReady} />
 <GoTop />
 <S1 />
