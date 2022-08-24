@@ -17,6 +17,7 @@
 		</div>
 	</div>
 	<h2 class="pill dark">ข้อมูล ส.ส. รายคน</h2>
+	<div class="small-explain hover-rp">วางเมาส์เหนือรูปภาพเพื่อดูชื่อ ส.ส.</div>
 	<div class="row" style="--gap:32px">
 		<div class="col tc">
 			<RP
@@ -84,7 +85,6 @@
 
 	.curtain {
 		width: 100%;
-		height: 100vh; /* O */
 		background: url(/shaking-parliament/curtain.png) repeat-x;
 		background-size: auto 100%;
 		background-position: center;
@@ -161,5 +161,9 @@
 			left: -50%;
 			transform: translate(-50%, -50%);
 		}
+	}
+
+	.hover-rp {
+		margin: -1rem 0 1rem;
 	}
 </style>
