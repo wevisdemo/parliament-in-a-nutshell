@@ -461,7 +461,7 @@
 										on:moved={setAnakinMoved}
 										side="opp"
 									/>
-								{:else if mati_index === 28 && person_index === 15}
+								{:else if mati_index === 34 && person_index === 15}
 									<Cell line="#065cab" fireEvent on:moved={setPornpimolMoved} side="opp" />
 								{:else if isNeweconGroup(mati_index, person_index)}
 									<Cell

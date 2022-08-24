@@ -145,9 +145,9 @@
 									<Cell line="#85e8ff" fireEvent on:moved={setTaeMoved} threshold={144} />
 								{:else if person_index === 8 && mati_index === 0}
 									<Cell line="#0b3757" fireEvent on:moved={setPpcMoved} threshold={144} />
-								{:else if person_index === 9 && mati_index === 22}
+								{:else if person_index === 9 && mati_index === 28}
 									<Cell line="#0b3757" fireEvent on:moved={setPnyMoved} threshold={144} />
-								{:else if person_index === 10 && mati_index === 29}
+								{:else if person_index === 10 && mati_index === 35}
 									<Cell line="#0b3757" fireEvent on:moved={setPttMoved} threshold={144} />
 								{:else}
 									<Cell />

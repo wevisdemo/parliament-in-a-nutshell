@@ -64,15 +64,15 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				}
 			},
 			{
-				name: 'พลตรีทรงกลด ทิพย์รัตน์',
+				name: 'ณัฏฐพล ทีปสุวรรณ',
 				side: 'gov',
-				src: 'rp/ลาออก-ทรงกลด.png',
-				color: '#AAC826',
+				src: 'rp/ศาลตัด-ณัฏฐพล.png',
+				color: '#0B3757',
 				replace_by: {
-					name: 'บุญญาพร นาตะธนภัทร',
-					side: 'gov',
-					src: 'rp/แทน-บุญญาพร.png',
-					color: '#AAC826'
+					name: 'ยุทธนา โพธสุธน',
+					side: 'free',
+					src: 'rp/pt14-ยุทธนา.png',
+					color: '#F0DA8C'
 				}
 			}
 		],
@@ -126,15 +126,15 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				}
 			},
 			{
-				name: 'สมเกียรติ ศรลัมพ์',
+				name: 'พลตรีทรงกลด ทิพย์รัตน์',
 				side: 'gov',
-				src: 'rp/ลาออก-สมเกียรติ.png',
-				color: '#288707',
+				src: 'rp/ลาออก-ทรงกลด.png',
+				color: '#AAC826',
 				replace_by: {
-					name: 'นันทนา สงฆ์ประชา',
+					name: 'บุญญาพร นาตะธนภัทร',
 					side: 'gov',
-					src: 'rp/แทน-นันทนา.png',
-					color: '#288707'
+					src: 'rp/แทน-บุญญาพร.png',
+					color: '#AAC826'
 				}
 			}
 		],
@@ -185,6 +185,18 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 					side: 'gov',
 					src: 'rp/แทน-สุเนตตา.png',
 					color: '#18246D'
+				}
+			},
+			{
+				name: 'สมเกียรติ ศรลัมพ์',
+				side: 'gov',
+				src: 'rp/ลาออก-สมเกียรติ.png',
+				color: '#288707',
+				replace_by: {
+					name: 'นันทนา สงฆ์ประชา',
+					side: 'gov',
+					src: 'rp/แทน-นันทนา.png',
+					color: '#288707'
 				}
 			}
 		],
@@ -319,18 +331,6 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 	],
 	fire: [
 		[
-			{
-				name: 'ณัฏฐพล ทีปสุวรรณ',
-				side: 'gov',
-				src: 'rp/ศาลตัด-ณัฏฐพล.png',
-				color: '#0B3757',
-				replace_by: {
-					name: 'ยุทธนา โพธสุธน',
-					side: 'free',
-					src: 'rp/pt14-ยุทธนา.png',
-					color: '#F0DA8C'
-				}
-			},
 			{
 				name: 'พุทธิพงษ์ ปุณณกันต์',
 				side: 'gov',

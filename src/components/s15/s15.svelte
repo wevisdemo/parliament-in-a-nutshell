@@ -352,7 +352,7 @@
 						<div class="votelog-subject">{@html mati.html_name}</div>
 						{#each PART4_DATA[mati_index] as vote, person_index}
 							{#if vote === 1}
-								{#if mati_index === 31}
+								{#if mati_index === 37}
 									{#if person_index === 9}
 										<Cell line="#f0da8c" fireEvent on:moved={setShowTop} />
 									{:else}
@@ -362,7 +362,11 @@
 									<Cell />
 								{/if}
 							{:else if vote === 2}
-								<Cell side="black" />
+								{#if mati_index === 37 && person_index === 12}
+									<Cell line="#f0da8c" side="black" />
+								{:else}
+									<Cell side="black" />
+								{/if}
 							{:else}
 								<Cell side="opp" />
 							{/if}
