@@ -91,13 +91,23 @@
 </div>
 <div class="they-work-container c tc">
 	<div class="decor">
-		<img class="d1" src="/shaking-parliament/star_01.svg" alt="" decoding="async" loading="lazy" />
+		<img
+			class="d1"
+			src="/shaking-parliament/star_01.svg"
+			alt=""
+			decoding="async"
+			loading="lazy"
+			width="326"
+			height="342"
+		/>
 		<img
 			class="d2"
 			src="/shaking-parliament/circles_02.svg"
 			alt=""
 			decoding="async"
 			loading="lazy"
+			width="443"
+			height="443"
 		/>
 		<img
 			class="d3"
@@ -105,6 +115,8 @@
 			alt=""
 			decoding="async"
 			loading="lazy"
+			width="443"
+			height="443"
 		/>
 	</div>
 	<div class="header">ติดตามการลงมติในสภาเพิ่มเติมได้ที่</div>

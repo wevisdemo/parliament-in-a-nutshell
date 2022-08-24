@@ -24,24 +24,6 @@
 		timeline(sequence);
 	};
 
-	const animate1ColSankey = (el: any) => {
-		const el_c = el.children;
-		const sequence: TimelineDefinition = [
-			[el_c[0], { opacity: [0, 1] }, { duration: 0.5 }],
-			[el_c[1], { opacity: [0, 1] }, { duration: 0.5, at: '-0.25' }],
-			[
-				el_c[2],
-				{
-					clipPath: ['polygon(0 0, 0 0, 0 100%, 0 100%)', 'polygon(0 0, 101% 0, 101% 100%, 0 100%)']
-				},
-				{ duration: 1, at: '-0.25' }
-			],
-			[el_c[3], { opacity: [0, 1] }, { duration: 0.5, at: '-0.1' }],
-			[el_c[4], { opacity: [0, 1] }, { duration: 0.5, at: '-0.25' }]
-		];
-		timeline(sequence);
-	};
-
 	let el_sankey1: any;
 	let el_sankey2: any;
 	let el_sankey3: any;
@@ -56,19 +38,19 @@
 	onMount(() => {
 		inView(el_sankey1, () => animate2ColSankey(el_sankey1), { amount: 1 });
 		inView(el_sankey2, () => animate2ColSankey(el_sankey2), { amount: 1 });
-		inView(el_sankey3, () => animate1ColSankey(el_sankey3), { amount: 1 });
-		inView(el_sankey4, () => animate1ColSankey(el_sankey4), { amount: 1 });
-		inView(el_sankey5, () => animate1ColSankey(el_sankey5), { amount: 1 });
+		inView(el_sankey3, () => animate2ColSankey(el_sankey3), { amount: 1 });
+		inView(el_sankey4, () => animate2ColSankey(el_sankey4), { amount: 1 });
+		inView(el_sankey5, () => animate2ColSankey(el_sankey5), { amount: 1 });
 		inView(
 			el_sankeyX2,
 			() => {
 				const x1_c = el_sankeyX1.children;
 				const x2_c = el_sankeyX2.children;
 				const sequence: TimelineDefinition = [
-					[x2_c[0], { opacity: [0, 1] }, { duration: 0.5 }],
-					[x2_c[1], { opacity: [0, 1] }, { duration: 0.5, at: '-0.25' }],
+					[x2_c[1], { opacity: [0, 1] }, { duration: 0.5 }],
+					[x2_c[2], { opacity: [0, 1] }, { duration: 0.5, at: '-0.25' }],
 					[
-						x2_c[2],
+						x2_c[3].children[0],
 						{
 							clipPath: [
 								'polygon(0 0, 0 0, 0 100%, 0 100%)',
@@ -77,8 +59,8 @@
 						},
 						{ duration: 1, at: '-0.25' }
 					],
-					[x1_c[1], { opacity: [0, 1] }, { duration: 0.5, at: '-0.1' }],
-					[x1_c[2], { opacity: [0, 1] }, { duration: 0.5, at: '-0.25' }]
+					[x1_c[4], { opacity: [0, 1] }, { duration: 0.5, at: '-0.1' }],
+					[x1_c[5], { opacity: [0, 1] }, { duration: 0.5, at: '-0.25' }]
 				];
 				timeline(sequence);
 			},
@@ -93,7 +75,7 @@
 					[el_c[1], { opacity: [0, 1] }, { duration: 0.5, at: '<' }],
 					[el_c[2], { opacity: [0, 1] }, { duration: 0.5, at: '-0.25' }],
 					[
-						el_c[3],
+						el_c[3].children[0],
 						{
 							clipPath: [
 								'polygon(0 0, 0 0, 0 100%, 0 100%)',
@@ -103,16 +85,16 @@
 						{ duration: 1, at: '-0.25' }
 					],
 					[
-						el_c[5],
+						el_c[3].children[1],
 						{
 							opacity: [0, 1],
 							transform: ['translateX(-50%) scale(0)', 'translateX(-50%) scale(1)']
 						},
 						{ duration: 0.5, at: '<' }
 					],
-					[el_c[6], { opacity: [0, 1] }, { duration: 0.5, at: '-0.1' }],
-					[el_c[7], { opacity: [0, 1] }, { duration: 0.5, at: '-0.25' }],
-					[el_c[8], { opacity: [0, 1] }, { duration: 0.5, at: '<' }]
+					[el_c[5], { opacity: [0, 1] }, { duration: 0.5, at: '-0.1' }],
+					[el_c[6], { opacity: [0, 1] }, { duration: 0.5, at: '-0.25' }],
+					[el_c[7], { opacity: [0, 1] }, { duration: 0.5, at: '<' }]
 				];
 				timeline(sequence);
 			},
@@ -261,7 +243,10 @@
 </div>
 <!-- SANKEY X1 -->
 <div bind:this={el_sankeyX1} class="row sankey sankey-notop" style="--to-c:#065CAB">
-	<div class="sankey-gap" />
+	<div class="sankey-people-gap" />
+	<div class="sankey-people-gap" />
+	<div class="sankey-block-gap" />
+	<div class="sankey-connector-container" />
 	<div class="sankey-block end" />
 	<RP
 		class="sankey-people"
@@ -271,6 +256,7 @@
 		size="48"
 		tooltip="top"
 	/>
+	<div class="sankey-people-gap" />
 </div>
 <!-- SANKEY 2 -->
 <div bind:this={el_sankey2} class="row sankey" style="--to-c:#70D267;--to-p:'พรรคพลังท้องถิ่นไท'">
@@ -314,6 +300,7 @@
 </div>
 <!-- SANKEY 3 -->
 <div bind:this={el_sankey3} class="row sankey" style="--to-c:#0B3757;--to-p:'พรรคพลังประชารัฐ'">
+	<div class="sankey-people-gap" />
 	<RP
 		class="sankey-people"
 		src="rp/pt12-ฐนภัทร.png"
@@ -334,9 +321,11 @@
 		size="48"
 		tooltip="top"
 	/>
+	<div class="sankey-people-gap" />
 </div>
 <!-- SANKEY 4 -->
 <div bind:this={el_sankey4} class="row sankey" style="--to-c:#CC8AE3;--to-p:'พรรคชาติไทยพัฒนา'">
+	<div class="sankey-people-gap" />
 	<RP
 		class="sankey-people"
 		src="rp/pt12-จุลพันธ์.png"
@@ -357,9 +346,11 @@
 		size="48"
 		tooltip="top"
 	/>
+	<div class="sankey-people-gap" />
 </div>
 <!-- SANKEY 5 -->
 <div bind:this={el_sankey5} class="row sankey" style="--to-c:#FD980D;--to-p:'พรรคชาติพัฒนา'">
+	<div class="sankey-people-gap" />
 	<RP
 		class="sankey-people"
 		src="rp/pt12-สมัคร.png"
@@ -380,9 +371,11 @@
 		size="48"
 		tooltip="top"
 	/>
+	<div class="sankey-people-gap" />
 </div>
 <!-- SANKEY X2 -->
 <div bind:this={el_sankeyX2} class="row sankey" style="--from-c:#E50000;--from-p:'พรรคเพื่อไทย'">
+	<div class="sankey-people-gap" />
 	<RP
 		class="sankey-people"
 		src="rp/pt12-พรพิมล.png"
@@ -393,14 +386,19 @@
 		tooltip="top"
 	/>
 	<div class="sankey-block start" />
-	<img
-		class="sankey-connector"
-		src="/shaking-parliament/sankey-connector.svg"
-		alt=""
-		decoding="async"
-		loading="lazy"
-	/>
-	<div class="sankey-gap" />
+	<div class="sankey-connector-container">
+		<img
+			class="sankey-connector"
+			src="/shaking-parliament/sankey1.svg"
+			alt=""
+			decoding="async"
+			loading="lazy"
+			height="584"
+		/>
+	</div>
+	<div class="sankey-block-gap" />
+	<div class="sankey-people-gap" />
+	<div class="sankey-people-gap" />
 </div>
 <!-- SANKEY 6 -->
 <div bind:this={el_sankey6} class="row sankey" style="--from-c:#75328C;--from-p:'พรรคเศรษฐกิจใหม่'">
@@ -449,15 +447,17 @@
 		/>
 	</div>
 	<div class="sankey-block start" />
-	<div class="sankey-fade-newecon" />
-	<div class="sankey-gap-newecon" />
-	<img
-		class="sankey-img-newecon"
-		src="/shaking-parliament/part12.png"
-		alt=""
-		decoding="async"
-		loading="lazy"
-	/>
+	<div class="sankey-connector-container">
+		<div class="sankey-fade-newecon" />
+		<img
+			class="sankey-img-newecon"
+			src="/shaking-parliament/part12.png"
+			alt=""
+			decoding="async"
+			loading="lazy"
+		/>
+	</div>
+	<div class="sankey-block-gap" />
 	<div class="row vert sankey-people">
 		<RP src="rp/pt12-สุภดิช.png" color="#75328C" name="สุภดิช อากาศฤกษ์" size="48" tooltip="top" />
 		<RP src="rp/pt12-นิยม.png" color="#75328C" name="นิยม วิวรรธนดิฐกุล" size="48" tooltip="top" />
@@ -527,8 +527,18 @@
 		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 	}
 
-	.sankey-gap {
-		width: 432px;
+	.sankey-connector-container {
+		width: 288px;
+		margin: 0 -16px;
+	}
+
+	.sankey-block-gap {
+		width: 96px;
+	}
+
+	.sankey-people-gap {
+		width: 48px;
+		flex: 0 0 48px;
 	}
 
 	.sankey-notop {
@@ -538,6 +548,7 @@
 	.sankey-connector {
 		position: absolute;
 		bottom: 0;
+		width: 100%;
 		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 	}
 
@@ -550,15 +561,10 @@
 		opacity: 0.6;
 
 		position: absolute;
-		width: 400px;
+		width: 133%;
 		height: 100%;
-		transform: translateX(56px);
 
 		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-	}
-
-	.sankey-gap-newecon {
-		width: 368px;
 	}
 
 	.sankey-img-newecon {
@@ -566,7 +572,10 @@
 		bottom: 0;
 		height: 100%;
 		opacity: 0;
-		left: calc(48px + 50%);
+		left: 66.5%;
 		transform: translateX(-50%) scale(0);
+
+		max-width: 100%;
+		object-fit: contain;
 	}
 </style>

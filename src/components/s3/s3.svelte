@@ -160,6 +160,8 @@
 				alt=""
 				decoding="async"
 				loading="lazy"
+				width="326"
+				height="342"
 			/>
 			<RP
 				class="paiboon-img"

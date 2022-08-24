@@ -47,12 +47,12 @@
 				const el_c1 = el_sankey2.children;
 				const el_c2 = el_sankey3.children;
 				const sequence: TimelineDefinition = [
-					[el_c1[0], { opacity: [0, 1] }, { duration: 0.5 }],
-					[el_c1[1], { opacity: [0, 1] }, { duration: 0.5, at: '<' }],
+					[el_c1[1], { opacity: [0, 1] }, { duration: 0.5 }],
 					[el_c1[2], { opacity: [0, 1] }, { duration: 0.5, at: '<' }],
-					[el_c1[4], { opacity: [0, 1] }, { duration: 0.5, at: '-0.25' }],
+					[el_c1[3], { opacity: [0, 1] }, { duration: 0.5, at: '<' }],
+					[el_c1[5], { opacity: [0, 1] }, { duration: 0.5, at: '-0.25' }],
 					[
-						el_c2[0],
+						el_c2[6].children[0],
 						{
 							clipPath: [
 								'polygon(0 0, 0 0, 0 100%, 0 100%)',
@@ -61,10 +61,10 @@
 						},
 						{ duration: 1, at: '-0.25' }
 					],
-					[el_c2[2], { opacity: [0, 1] }, { duration: 0.5, at: '-0.1' }],
-					[el_c2[3], { opacity: [0, 1] }, { duration: 0.5, at: '-0.25' }],
-					[el_c2[4], { opacity: [0, 1] }, { duration: 0.5, at: '<' }],
-					[el_c2[5], { opacity: [0, 1] }, { duration: 0.5, at: '<' }]
+					[el_c2[7], { opacity: [0, 1] }, { duration: 0.5, at: '-0.1' }],
+					[el_c2[8], { opacity: [0, 1] }, { duration: 0.5, at: '-0.25' }],
+					[el_c2[9], { opacity: [0, 1] }, { duration: 0.5, at: '<' }],
+					[el_c2[10], { opacity: [0, 1] }, { duration: 0.5, at: '<' }]
 				];
 				timeline(sequence);
 			},
@@ -319,6 +319,7 @@
 	</div>
 </div>
 <div bind:this={el_sankey2} class="row sankey sankey-notop" style="--from-c:#0b3757">
+	<div class="sankey-people-gap" />
 	<RP
 		class="sankey-people"
 		src="rp/pt14s-วัฒนา.png"
@@ -343,23 +344,37 @@
 		size="48"
 		tooltip="top"
 	/>
-	<div class="empty-people" />
+	<div class="sankey-people-gap" />
 	<div class="sankey-block start" />
-	<div class="sankey-gap" />
+	<div class="sankey-connector-container" />
+	<div class="sankey-block-gap" />
+	<div class="sankey-people-gap" />
+	<div class="sankey-people-gap" />
+	<div class="sankey-people-gap" />
+	<div class="sankey-people-gap" />
+	<div class="sankey-people-gap" />
 </div>
 <div
 	bind:this={el_sankey3}
 	class="row sankey sankey-overlap"
 	style="--to-c:#065CAB;--to-p:'พรรคภูมิใจไทย'"
 >
-	<img
-		class="sankey-connector"
-		src="/shaking-parliament/sankey2.svg"
-		alt=""
-		decoding="async"
-		loading="lazy"
-	/>
-	<div class="sankey-gap" />
+	<div class="sankey-people-gap" />
+	<div class="sankey-people-gap" />
+	<div class="sankey-people-gap" />
+	<div class="sankey-people-gap" />
+	<div class="sankey-people-gap" />
+	<div class="sankey-block-gap" />
+	<div class="sankey-connector-container">
+		<img
+			class="sankey-connector"
+			src="/shaking-parliament/sankey2.svg"
+			alt=""
+			decoding="async"
+			loading="lazy"
+			height="104"
+		/>
+	</div>
 	<div class="sankey-block end" />
 	<RP
 		class="sankey-people"
@@ -385,7 +400,8 @@
 		size="48"
 		tooltip="top"
 	/>
-	<div class="empty-people" />
+	<div class="sankey-people-gap" />
+	<div class="sankey-people-gap" />
 </div>
 
 <style lang="scss">
@@ -434,8 +450,18 @@
 		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 	}
 
-	.sankey-gap {
-		width: 624px;
+	.sankey-connector-container {
+		width: 288px;
+		margin: 0 -16px;
+	}
+
+	.sankey-block-gap {
+		width: 96px;
+	}
+
+	.sankey-people-gap {
+		width: 48px;
+		flex: 0 0 48px;
 	}
 
 	.sankey-notop {
@@ -450,13 +476,10 @@
 		margin-top: -24px;
 	}
 
-	.empty-people {
-		width: 48px;
-	}
-
 	.sankey-connector {
 		position: absolute;
 		bottom: 0;
+		width: 100%;
 		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 	}
 </style>

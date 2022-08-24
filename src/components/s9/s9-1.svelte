@@ -68,6 +68,8 @@
 			class="middle-line"
 			decoding="async"
 			loading="lazy"
+			width="126"
+			height="283"
 		/>
 	</div>
 	<svg width="0" height="0">

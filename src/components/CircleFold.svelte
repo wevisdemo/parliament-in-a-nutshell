@@ -63,6 +63,8 @@
 		alt=""
 		decoding="async"
 		loading="lazy"
+		width="315"
+		height="315"
 	/>
 	<img
 		bind:this={el_decor_2}
@@ -71,6 +73,8 @@
 		alt=""
 		decoding="async"
 		loading="lazy"
+		width="315"
+		height="315"
 	/>
 	<img
 		bind:this={el_decor_3}
@@ -79,6 +83,8 @@
 		alt=""
 		decoding="async"
 		loading="lazy"
+		width="315"
+		height="315"
 	/>
 </div>
 
