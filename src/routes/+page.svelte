@@ -7,6 +7,7 @@
 	import { weAreAlwaysHiring } from 'utils/we-are-hiring';
 
 	import Loader from 'components/loader/loader.svelte';
+	import GoTop from 'components/GoTop.svelte';
 
 	import S1 from 'components/s1/s1.svelte';
 	import S2 from 'components/s2/s2.svelte';
@@ -62,6 +63,7 @@
 	/>
 </a>
 <Loader {loaded} {isReady} />
+<GoTop />
 <S1 />
 <S2 />
 <S3 />
