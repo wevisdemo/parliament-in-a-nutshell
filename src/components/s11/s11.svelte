@@ -1,26 +1,27 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { timeline, scroll } from 'motion';
+	import { timeline, inView, scroll, animate } from 'motion';
 
 	import Circle from 'components/Circle.svelte';
 	import CircleFold from 'components/CircleFold.svelte';
 
 	let el_decor_container: any;
+	let el_logo: any;
 	onMount(() => {
 		const el_decorchild = el_decor_container.children;
 		const seq: TimelineDefinition = [
 			[
-				el_decorchild[0],
+				el_decorchild[1],
 				{ transform: ['translateY(-300px)', 'translateY(100px)'] },
 				{ easing: 'ease-out' }
 			],
 			[
-				el_decorchild[1],
+				el_decorchild[2],
 				{ transform: ['translateY(-200px)', 'translateY(200px)'] },
 				{ easing: 'linear', at: '<' }
 			],
 			[
-				el_decorchild[2],
+				el_decorchild[3],
 				{ transform: ['translateY(-300px)', 'translateY(200px)'] },
 				{ easing: 'ease-out', at: '<' }
 			]
@@ -30,12 +31,35 @@
 			target: el_decor_container,
 			offset: ['start end', 'end start']
 		});
+
+		inView(
+			el_logo,
+			() => {
+				animate(
+					el_decorchild[0],
+					{
+						transform: ['translate(-94%, -47%) scale(0)', 'translate(-94%, -47%) scale(1)']
+					},
+					{ duration: 0.5 }
+				);
+			},
+			{ amount: 1 }
+		);
 	});
 </script>
 
 <div class="fade" />
 <div class="s11-container h100 tc c">
 	<div bind:this={el_decor_container} class="decor">
+		<img
+			class="star"
+			src="/shaking-parliament/star_02.svg"
+			alt=""
+			decoding="async"
+			loading="lazy"
+			width="384"
+			height="396"
+		/>
 		<img
 			class="hand1"
 			src="/shaking-parliament/part3_bg1.png"
@@ -59,6 +83,7 @@
 		/>
 	</div>
 	<img
+		bind:this={el_logo}
 		class="title-img"
 		src="/shaking-parliament/part3_title.png"
 		alt=""
@@ -112,6 +137,12 @@
 			left: 0;
 			z-index: 0;
 			transform: translateY(-300px);
+
+			&.star {
+				top: 50%;
+				left: 50%;
+				transform: translate(-94%, -47%) scale(0);
+			}
 
 			&.hand2 {
 				left: unset;

@@ -1,22 +1,23 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { timeline, scroll } from 'motion';
+	import { timeline, scroll, inView, animate } from 'motion';
 
 	import Sankey from './sankey.svelte';
 	import TableBridge from 'components/TableBridge.svelte';
 	import Circle from 'components/Circle.svelte';
 
 	let el_decor_container: any;
+	let el_logo: any;
 	onMount(() => {
 		const el_decorchild = el_decor_container.children;
 		const seq: TimelineDefinition = [
 			[
-				el_decorchild[0],
+				el_decorchild[1],
 				{ transform: ['translateY(0)', 'translateY(950px)'] },
 				{ easing: 'linear' }
 			],
 			[
-				el_decorchild[1],
+				el_decorchild[2],
 				{ transform: ['translateY(0)', 'translateY(1500px)'] },
 				{ easing: 'linear', at: '<' }
 			]
@@ -26,12 +27,35 @@
 			target: el_decor_container,
 			offset: ['start end', 'end start']
 		});
+
+		inView(
+			el_logo,
+			() => {
+				animate(
+					el_decorchild[0],
+					{
+						transform: ['translateX(-117%) scale(0)', 'translateX(-117%) scale(1)']
+					},
+					{ duration: 0.5 }
+				);
+			},
+			{ amount: 1 }
+		);
 	});
 </script>
 
 <div class="s14-container tc c">
 	<img class="crack" src="/shaking-parliament/crack.svg" alt="" />
 	<div bind:this={el_decor_container} class="decor">
+		<img
+			class="star"
+			src="/shaking-parliament/star_02.svg"
+			alt=""
+			decoding="async"
+			loading="lazy"
+			width="384"
+			height="396"
+		/>
 		<img
 			class="d1"
 			src="/shaking-parliament/part1_bg4.png"
@@ -48,6 +72,7 @@
 		/>
 	</div>
 	<img
+		bind:this={el_logo}
 		class="title-img"
 		src="/shaking-parliament/part4_title.png"
 		alt=""
@@ -116,6 +141,12 @@
 			position: absolute;
 			top: 0;
 			left: 0;
+
+			&.star {
+				top: calc(30vw + 84px);
+				left: 50%;
+				transform: translateX(-117%) scale(0);
+			}
 
 			&.d2 {
 				left: unset;
