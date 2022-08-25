@@ -31,7 +31,7 @@
 			</div>
 		{/if}
 	</div>
-	<div class="legend fw">
+	<div class="legend fw" style="gap:0 32px">
 		<div class="type">
 			<div class="line" />
 			<span>=</span>
@@ -43,7 +43,7 @@
 			<span>=</span>
 			<span>การเลือกนายกรัฐมนตรี</span>
 		</div>
-		<div class="sep" />
+		<div class="sep s2" />
 		<div class="type">
 			<VoteIcon style="color:#a4a4a4" />
 			<span>=</span>
@@ -68,7 +68,7 @@
 		display: flex;
 		justify-content: center;
 		padding: 16px 48px;
-		gap: 32px;
+		gap: 24px 32px;
 		margin-bottom: 16px;
 	}
 
@@ -87,5 +87,23 @@
 		display: flex;
 		align-items: center;
 		gap: 1ch;
+	}
+
+	@media screen and (max-width: 1200px) {
+		.s2 {
+			width: 0;
+			height: 24px;
+			background: #000;
+			flex-basis: 100%;
+		}
+	}
+
+	@media screen and (max-width: 700px) {
+		.sep {
+			width: 0;
+			height: 24px;
+			background: #000;
+			flex-basis: 100%;
+		}
 	}
 </style>
