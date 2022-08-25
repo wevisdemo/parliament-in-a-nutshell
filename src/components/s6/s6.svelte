@@ -48,6 +48,8 @@
 				alt=""
 				decoding="async"
 				loading="lazy"
+				width="348"
+				height="286"
 			/>
 			<img
 				class="chair2"
@@ -55,6 +57,8 @@
 				alt=""
 				decoding="async"
 				loading="lazy"
+				width="430"
+				height="372"
 			/>
 			<img
 				class="chair3"
@@ -62,6 +66,8 @@
 				alt=""
 				decoding="async"
 				loading="lazy"
+				width="487"
+				height="578"
 			/>
 			<img
 				class="chair4"
@@ -69,6 +75,8 @@
 				alt=""
 				decoding="async"
 				loading="lazy"
+				width="537"
+				height="660"
 			/>
 		</div>
 		<div class="h100 c">
@@ -101,11 +109,13 @@
 
 		> img {
 			position: absolute;
+			object-fit: contain;
+			object-position: center;
 
 			&.chair1 {
 				top: 0;
 				left: 3%;
-				max-width: 30vw;
+				max-width: 40vw;
 			}
 
 			&.chair2 {
@@ -117,7 +127,7 @@
 			&.chair3 {
 				top: 25%;
 				left: 0;
-				max-width: 40vw;
+				max-width: 30vw;
 			}
 
 			&.chair4 {

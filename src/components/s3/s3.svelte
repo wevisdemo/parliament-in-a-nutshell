@@ -113,11 +113,20 @@
 		inView(
 			el_mongkonkit,
 			() => {
+				const [rp, ...decor] = [...el_mongkonkit.children];
 				animate(
-					[...el_mongkonkit.children],
+					rp,
 					{
 						opacity: [0, 1],
 						transform: [`scale(0)`, `scale(1)`]
+					},
+					{ duration: 1 }
+				);
+				animate(
+					decor,
+					{
+						opacity: [0, 1],
+						transform: [`translateX(-60%) scale(0)`, `translateX(-60%) scale(1)`]
 					},
 					{ duration: 1, delay: stagger(0.25) }
 				);
@@ -136,7 +145,7 @@
 			<div class="circle2" />
 			<div class="circle3" />
 			<RP
-				class="thanathorn-img"
+				class="thanathorn-img deco-people"
 				color="#ff6f21"
 				name="ธนาธร จึงรุ่งเรืองกิจ"
 				size="170"
@@ -146,6 +155,7 @@
 		</div>
 		<div bind:this={el_thammanas} class="thammanas-img">
 			<RP
+				class="deco-people"
 				color="#f0da8c"
 				name="ธรรมนัส พรหมเผ่า"
 				size="170"
@@ -164,7 +174,7 @@
 				height="342"
 			/>
 			<RP
-				class="paiboon-img"
+				class="paiboon-img deco-people"
 				color="#f3c628"
 				name="ไพบูลย์ นิติตะวัน"
 				size="170"
@@ -173,15 +183,29 @@
 			/>
 		</div>
 		<div bind:this={el_parina} class="parina-img">
-			<RP color="#0b3757" name="ปารีณา ไกรคุปต์" size="170" side="gov" src="rp/ศาลตัด-ปารีณา.png" />
+			<RP
+				class="deco-people"
+				color="#0b3757"
+				name="ปารีณา ไกรคุปต์"
+				size="170"
+				side="gov"
+				src="rp/ศาลตัด-ปารีณา.png"
+			/>
 		</div>
 		<div bind:this={el_pornpimol} class="pornpimol-img-container">
 			<div class="back" />
-			<RP color="#e50000" name="พรพิมล ธรรมสาร" size="170" side="opp" src="rp/pt12-พรพิมล.png" />
+			<RP
+				class="deco-people"
+				color="#e50000"
+				name="พรพิมล ธรรมสาร"
+				size="170"
+				side="opp"
+				src="rp/pt12-พรพิมล.png"
+			/>
 		</div>
 		<div bind:this={el_mongkonkit} class="mongkonkit-img-container">
 			<RP
-				class="mongkonkit-img"
+				class="mongkonkit-img deco-people"
 				color="#85e8fe"
 				name="มงคลกิตติ์ สุขสินธารานนท์"
 				size="170"
@@ -302,6 +326,10 @@
 		left: 15%;
 		top: 26vh;
 
+		@media screen and (max-width: 1500px) {
+			left: 7.5%;
+		}
+
 		// .thanathorn-img is in the scss file
 
 		> .circle1,
@@ -311,18 +339,21 @@
 			z-index: -1;
 			width: 170px;
 			height: 170px;
-			top: 60px;
+			top: min(60px, 4vw);
 			border: 2px solid #bfbebe;
 			border-radius: 50%;
 			opacity: 0;
+
+			max-width: 10vw;
+			max-height: 10vw;
 		}
 
 		> .circle2 {
-			top: 120px;
+			top: min(120px, 7.5vw);
 		}
 
 		> .circle1 {
-			top: 180px;
+			top: min(180px, 11vw);
 		}
 	}
 
@@ -331,6 +362,10 @@
 		right: 15%;
 		top: 20vh;
 		opacity: 0;
+
+		@media screen and (max-width: 1500px) {
+			right: 7.5%;
+		}
 	}
 
 	.paiboon-img-container {
@@ -351,15 +386,19 @@
 	.parina-img {
 		position: absolute;
 		right: 8%;
-		top: 85vh;
+		top: 900px;
 		opacity: 0;
 	}
 
 	.pornpimol-img-container {
 		position: absolute;
-		top: 110vh;
+		top: 1400px;
 		right: 15%;
 		opacity: 0;
+
+		@media screen and (max-width: 1500px) {
+			right: 7.5%;
+		}
 
 		> .back {
 			position: absolute;
@@ -368,8 +407,9 @@
 			background: #cecccc;
 			width: 100vw;
 			height: 170px;
+			max-height: 10vw;
 
-			transform-origin: 85px;
+			transform-origin: min(85px, 5vw);
 			transform: rotate(45deg);
 			border-radius: 170px;
 			z-index: -1;
@@ -381,19 +421,28 @@
 		top: 142vh;
 		left: 15%;
 
+		@media screen and (max-width: 1500px) {
+			left: 7.5%;
+		}
+
 		// .mongkonkit-img is in the scss file
 
 		> .circle1,
 		> .circle2 {
 			position: absolute;
 			top: 35px;
-			left: -295px;
+			left: 0;
 			opacity: 0;
 			z-index: -1;
+
+			transform: translateX(-60%);
+
+			max-width: 30vw;
+			max-height: 30vw;
 		}
 
 		> .circle2 {
-			top: 181px;
+			top: 15vw;
 		}
 	}
 </style>

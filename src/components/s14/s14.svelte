@@ -62,6 +62,8 @@
 			alt=""
 			decoding="async"
 			loading="lazy"
+			width="537"
+			height="660"
 		/>
 		<img
 			class="d2"
@@ -69,6 +71,8 @@
 			alt=""
 			decoding="async"
 			loading="lazy"
+			width="487"
+			height="578"
 		/>
 	</div>
 	<img
@@ -141,11 +145,15 @@
 			position: absolute;
 			top: 0;
 			left: 0;
+			object-fit: contain;
+			object-position: center;
+			max-width: 25vw;
 
 			&.star {
 				top: calc(30vw + 84px);
 				left: 50%;
 				transform: translateX(-117%) scale(0);
+				max-width: initial;
 			}
 
 			&.d2 {

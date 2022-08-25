@@ -66,6 +66,8 @@
 			alt=""
 			decoding="async"
 			loading="lazy"
+			width="507"
+			height="297"
 		/>
 		<img
 			class="hand2"
@@ -73,6 +75,8 @@
 			alt=""
 			decoding="async"
 			loading="lazy"
+			width="507"
+			height="347"
 		/>
 		<img
 			class="hand3"
@@ -80,6 +84,8 @@
 			alt=""
 			decoding="async"
 			loading="lazy"
+			width="559"
+			height="420"
 		/>
 	</div>
 	<img
@@ -137,11 +143,15 @@
 			left: 0;
 			z-index: 0;
 			transform: translateY(-300px);
+			object-fit: contain;
+			object-position: center;
+			max-width: 30vw;
 
 			&.star {
 				top: 50%;
 				left: 50%;
 				transform: translate(-94%, -47%) scale(0);
+				max-width: initial;
 			}
 
 			&.hand2 {

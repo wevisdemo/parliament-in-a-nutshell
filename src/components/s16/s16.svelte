@@ -26,12 +26,12 @@
 		const seq: TimelineDefinition = [
 			[
 				el_decochild[0],
-				{ transform: ['translateY(-40%)', 'translateY(30%)'] },
+				{ transform: ['translateY(-50%)', 'translateY(30%)'] },
 				{ easing: 'linear' }
 			],
 			[
 				el_decochild[1],
-				{ transform: ['translateY(-40%) translateX(-20%)', 'translateY(30%) translateX(-20%)'] },
+				{ transform: ['translateY(-40%) translateX(-20%)', 'translateY(20%) translateX(-20%)'] },
 				{ easing: 'linear', at: '<' }
 			]
 		];
@@ -57,6 +57,8 @@
 			alt=""
 			decoding="async"
 			loading="lazy"
+			width="471"
+			height="267"
 		/>
 		<img
 			class="d2"
@@ -64,6 +66,8 @@
 			alt=""
 			decoding="async"
 			loading="lazy"
+			width="487"
+			height="578"
 		/>
 	</div>
 	<p>
@@ -126,18 +130,23 @@
 		position: absolute;
 		inset: 0;
 
-		> .d1 {
+		> img {
 			position: absolute;
 			top: 0;
-			right: 0;
-			transform: translateY(-40%);
-		}
+			object-fit: contain;
+			object-position: center;
 
-		> .d2 {
-			position: absolute;
-			left: 0;
-			top: 30%;
-			transform: translateY(-40%) translateX(-20%);
+			&.d1 {
+				right: 0;
+				transform: translateY(-50%);
+				max-width: 30vw;
+			}
+			&.d2 {
+				top: 30%;
+				left: 0;
+				transform: translateY(-40%) translateX(-20%);
+				max-width: 30vw;
+			}
 		}
 	}
 </style>

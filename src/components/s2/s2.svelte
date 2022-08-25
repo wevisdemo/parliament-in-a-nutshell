@@ -84,7 +84,7 @@
 
 <style lang="scss">
 	.arc-container {
-		padding-top: 15%;
+		padding-top: min(30vh);
 		z-index: 1;
 	}
 
@@ -98,7 +98,7 @@
 	}
 
 	.T1 {
-		font-size: 3.75rem;
+		font-size: min(3.75rem, 5vw, 7vh);
 		line-height: 0.8;
 		will-change: transform, opacity;
 	}
