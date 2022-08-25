@@ -28,5 +28,6 @@
 		background: linear-gradient(#0000, #000f);
 		height: 50vh; /* R */
 		justify-content: flex-end;
+		padding: 0 16px;
 	}
 </style>

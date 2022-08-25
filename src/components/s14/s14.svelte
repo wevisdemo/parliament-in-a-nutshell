@@ -89,13 +89,15 @@
 		<span class="special-lh">หัวหน้าพรรคพลังประชารัฐ<br /></span>
 		<span class="black">ได้มีมติให้ขับ 21 ส.ส. &ldquo;ก๊วนธรรมนัส&rdquo; ออกจากพรรค</span><br />
 		ด้วยเห็นว่าในช่วงหลายเดือนที่ผ่านมา<br />
-		<span class="black">มีเหตุแห่งความร้ายแรงของพรรค ที่เกิดจากคนทั้ง 21 คน</span>
+		<span class="black"
+			>มีเหตุแห่งความร้ายแรงของพรรค ที่เกิดจากคน<span class="nw">ทั้ง 21 คน</span></span
+		>
 		<br /><br /><br /><br />
 		โดยในเวลาต่อมา
 		<strong>ร.อ. ธรรมนัสได้นำทีม <span class="T1 num">18</span> ส.ส. เข้าสังกัด</strong><br />
 		<span class="T1 thaiecon">พรรคเศรษฐกิจไทย</span><br />
 		<span class="black" style="margin-top:8px"
-			>ซึ่งมิได้ประกาศจุดยืนอย่างแน่ชัดว่าจะถือตนอยู่ในขั้วข้างใด</span
+			>ซึ่งมิได้ประกาศจุดยืนอย่างแน่ชัดว่าจะถือตนอยู่ใน<span class="nw">ขั้วข้างใด</span></span
 		><br />
 		ในขณะที่อีก <span class="T1 num">3</span> ส.ส. ได้เข้าสังกัด<br />
 		<span class="T1 poomjaithai">พรรคภูมิใจไทย</span><br />
@@ -117,8 +119,15 @@
 </Circle>
 <TableBridge>
 	<div class="bridge-text">
-		ลองมาสำรวจสถิติการลงมติของ <strong>18 สมาชิก</strong>พรรคเศรษฐกิจไทย<br />
-		ว่าพวกเขา <strong>&ldquo;เข้าข้าง&rdquo; หรือ &ldquo;ตรงข้าม&rdquo; กับฝ่ายรัฐบาล</strong> มากน้อยเพียงใด
+		ลองมาสำรวจสถิติ<span class="nw">การลงมติ</span><span class="nw"
+			>ของ <strong>18 สมาชิก</strong></span
+		><span class="nw">พรรคเศรษฐกิจไทย</span><br />
+		ว่าพวกเขา
+		<strong
+			><span class="nw">&ldquo;เข้าข้าง&rdquo;</span> หรือ
+			<span class="nw">&ldquo;ตรงข้าม&rdquo;</span>
+			<span class="nw">กับ ฝ่ายรัฐบาล</span></strong
+		> <span class="nw">มากน้อยเพียงใด</span>
 	</div>
 </TableBridge>
 

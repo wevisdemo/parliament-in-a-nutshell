@@ -37,8 +37,9 @@
 <div style="--h:32px" />
 <TableBridge>
 	<div class="T1">
-		ถึงอย่างนั้น จำนวนเก้าอี้ฝ่ายรัฐบาลที่เพิ่มขึ้น<br />
-		<span class="bigger">เกื้อหนุน</span> การลงมติของ &ldquo;ขั้วรัฐบาล&rdquo; มากน้อยแค่ไหน ?
+		ถึงอย่างนั้น จำนวนเก้าอี้ฝ่ายรัฐบาล<span class="nw">ที่เพิ่มขึ้น</span><br />
+		<span class="bigger">เกื้อหนุน</span> การลงมติของ &ldquo;ขั้วรัฐบาล&rdquo;
+		<span class="nw">มากน้อยแค่ไหน ?</span>
 	</div>
 </TableBridge>
 

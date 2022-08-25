@@ -86,9 +86,15 @@
 				<div style="--h:5vh" />
 				<div bind:this={el_trigger2} style="--h:30vh;display:flex">
 					<p class="s9-2bridge tc">
-						อย่างไรก็ดี <br />
-						ลองมาสำรวจสถิติการลงมติของ 12 พรรคเล็ก ใน <strong>มติที่สำคัญตลอดสมัยสภา</strong><br />
-						ว่าพวกเขา <strong>“เข้าข้าง”</strong> หรือ <strong>“ตรงข้าม”</strong> กับฝ่ายรัฐบาล มากน้อยเพียงใด
+						อย่างไรก็ดี<br />
+						ลองมาสำรวจสถิติ<span class="nw">การลงมติ</span><span class="nw">ของ 12 พรรคเล็ก</span>
+						<span class="nw"
+							>ใน
+							<strong>มติที่สำคัญ</strong></span
+						><span class="nw"><strong>ตลอดสมัยสภา</strong></span><br />
+						ว่าพวกเขา <strong class="nw">“เข้าข้าง”</strong> หรือ
+						<strong class="nw">“ตรงข้าม”</strong>
+						กับ<span class="nw">ฝ่ายรัฐบาล</span> <span class="nw">มากน้อยเพียงใด</span>
 					</p>
 				</div>
 			</div>
@@ -195,6 +201,7 @@
 		line-height: 1.5;
 		align-self: flex-end;
 		width: 100%;
+		padding: 0 16px;
 	}
 
 	.s9-2sep {

@@ -13,7 +13,7 @@
 </script>
 
 <div class="s-16 container c tc">
-	<div class="header">ร่วมจับตาดูความเคลื่อนไหวในสภาอย่างต่อเนื่อง</div>
+	<div class="header">ร่วมจับตาดูความเคลื่อนไหวในสภา<span class="nw">อย่างต่อเนื่อง</span></div>
 	<div class="subheader">ก่อนเข้าสู่การเลือกตั้งครั้งถัดไปที่จะเกิดขึ้นในปี 2566</div>
 	<div class="share-text">แชร์เพื่อบอกเล่าเรื่องราวกับเพื่อนของคุณ</div>
 	<div class="social-container">
