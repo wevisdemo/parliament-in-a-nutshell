@@ -17,7 +17,7 @@
 		</div>
 	</div>
 	<h2 class="pill dark">ข้อมูล ส.ส. รายคน</h2>
-	<div class="small-explain hover-rp">วางเมาส์เหนือรูปภาพเพื่อดูชื่อ ส.ส.</div>
+	<div class="small-explain hover-rp">รูปภาพเพื่อดูชื่อ ส.ส.</div>
 	<div class="row" style="--gap:32px">
 		<div class="col tc">
 			<RP
@@ -142,5 +142,15 @@
 
 	.hover-rp {
 		margin: -1rem 0 1rem;
+
+		&::before {
+			content: 'แตะที่';
+		}
+
+		@media (hover) {
+			&::before {
+				content: 'วางเมาส์เหนือ';
+			}
+		}
 	}
 </style>
