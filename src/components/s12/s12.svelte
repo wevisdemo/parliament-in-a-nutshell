@@ -99,6 +99,7 @@
 		color: #fff;
 		line-height: 1.2;
 		letter-spacing: 1px;
+		text-shadow: 0 1px 2px #000c;
 
 		padding: 64px 0 96px;
 
