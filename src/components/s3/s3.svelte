@@ -6,6 +6,8 @@
 	import RP from 'components/RepPortrait.svelte';
 
 	let el_bridge_text1: any;
+	let el_counter: any;
+
 	let el_thanathorn: any;
 	let el_thammanas: any;
 	let el_paiboon: any;
@@ -21,6 +23,20 @@
 			({ y }) => {
 				rp_num = ~~rp_scalar(y.progress);
 			},
+			{
+				target: el_bridge_text1,
+				offset: [...ScrollOffset.Enter]
+			}
+		);
+
+		scroll(
+			animate(
+				el_counter,
+				{
+					transform: ['translateY(-50%) rotate(-90deg)', 'translateY(50%) rotate(-90deg)']
+				},
+				{ easing: 'linear' }
+			),
 			{
 				target: el_bridge_text1,
 				offset: [...ScrollOffset.Enter]
@@ -139,7 +155,7 @@
 <!-- VH skip check -->
 <div class="s3-container">
 	<div class="decor">
-		<div class="T1 counter-decor">{rp_num}</div>
+		<div bind:this={el_counter} class="T1 counter-decor">{rp_num}</div>
 		<div bind:this={el_thanathorn} class="thanathorn-img-container">
 			<div class="circle1" />
 			<div class="circle2" />
@@ -232,7 +248,7 @@
 			/>
 		</div>
 	</div>
-	<div class="c" bind:this={el_bridge_text1}>
+	<div class="c" bind:this={el_bridge_text1} style="padding-bottom:288px">
 		<div style="--h:16px" />
 		<h1 class="T1">
 			ตัวเลขที่ผันแปรเหล่านี้<br />
@@ -250,7 +266,7 @@
 			และอีกมากมาย …<br />
 		</p>
 	</div>
-	<div style="--h:288px" />
+	<!-- <div style="--h:288px" /> -->
 	<div class="c">
 		<p class="s3-2 tc">
 			<strong class="bigger">เมื่อประชาธิปไตยไม่ได้จบแค่การเลือกตั้ง</strong><br />
@@ -283,7 +299,7 @@
 		position: absolute;
 		top: 0;
 		right: -48px;
-		transform: rotate(-90deg);
+		transform: translateY(-50%) rotate(-90deg);
 		transform-origin: bottom right;
 		text-align: center;
 
@@ -375,10 +391,19 @@
 
 		// .paiboon-img is in the scss file
 
+		@media screen and (max-width: 1500px) {
+			left: 4%;
+		}
+
 		> .back {
 			position: absolute;
 			opacity: 0;
 			transform: translate(-70%, 10%);
+
+			@media screen and (max-width: 1500px) {
+				top: -50%;
+			}
+
 			z-index: -1;
 		}
 	}
@@ -386,13 +411,17 @@
 	.parina-img {
 		position: absolute;
 		right: 8%;
-		top: 900px;
+		top: 1050px;
 		opacity: 0;
+
+		@media screen and (max-width: 1500px) {
+			right: 4%;
+		}
 	}
 
 	.pornpimol-img-container {
 		position: absolute;
-		top: 1400px;
+		top: 1500px;
 		right: 15%;
 		opacity: 0;
 
