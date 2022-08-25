@@ -569,8 +569,8 @@
 
 	.sankey-img-newecon {
 		position: absolute;
-		bottom: 0;
-		height: 100%;
+		bottom: 10%;
+		height: 80%;
 		opacity: 0;
 		left: 66.5%;
 		transform: translateX(-50%) scale(0);
