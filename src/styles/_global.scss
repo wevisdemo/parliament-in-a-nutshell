@@ -48,7 +48,7 @@
 	background: #fff;
 	color: #000;
 	font-size: 0.8rem;
-	border-radius: 0 4px 4px 4px;
+	border-radius: 0 0 4px 4px;
 	padding: 8px;
 	opacity: 0;
 	transition: none;
@@ -59,8 +59,8 @@
 .votelog-row.last-row > .votelog-value > .votelog-subject {
 	bottom: unset;
 	transform: translateY(-100%);
-	top: 0;
-	border-radius: 4px 4px 4px 0;
+	top: -1px;
+	border-radius: 4px 4px 0 0;
 }
 
 .votelog-row:hover {
