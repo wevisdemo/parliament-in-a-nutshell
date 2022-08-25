@@ -23,17 +23,6 @@
 </div>
 
 <style lang="scss">
-	@keyframes holdFade {
-		0%,
-		50% {
-			opacity: 1;
-		}
-		to {
-			opacity: 0;
-			display: none;
-		}
-	}
-
 	.loader-container {
 		position: fixed;
 		top: 0;
@@ -53,32 +42,6 @@
 		> .content {
 			opacity: 0;
 			transition: opacity 1s;
-		}
-	}
-
-	@keyframes spin {
-		0% {
-			transform: rotate(0);
-		}
-		to {
-			transform: rotate(359deg);
-		}
-	}
-
-	@keyframes op {
-		0%,
-		66.67% {
-			opacity: 0.25;
-		}
-
-		33.33% {
-			opacity: 1;
-		}
-	}
-
-	@keyframes op1 {
-		to {
-			opacity: 1;
 		}
 	}
 

@@ -6,6 +6,8 @@
 	import TableBridge from 'components/TableBridge.svelte';
 	import Circle from 'components/Circle.svelte';
 
+	let play_star_animation = false;
+
 	let el_decor_container: any;
 	let el_logo: any;
 	onMount(() => {
@@ -28,19 +30,7 @@
 			offset: ['start end', 'end start']
 		});
 
-		inView(
-			el_logo,
-			() => {
-				animate(
-					el_decorchild[0],
-					{
-						transform: ['translateX(-117%) scale(0)', 'translateX(-117%) scale(1)']
-					},
-					{ duration: 0.5 }
-				);
-			},
-			{ amount: 1 }
-		);
+		inView(el_logo, () => void (play_star_animation = true), { amount: 1 });
 	});
 </script>
 
@@ -49,6 +39,7 @@
 	<div bind:this={el_decor_container} class="decor">
 		<img
 			class="star"
+			class:play_star_animation
 			src="/shaking-parliament/star_02.svg"
 			alt=""
 			decoding="async"
@@ -160,9 +151,13 @@
 
 			&.star {
 				top: calc(30vw + 84px);
-				left: 50%;
-				transform: translateX(-117%) scale(0);
+				left: 32%;
+				transform: translateX(-50%) scale(0);
 				max-width: initial;
+
+				&.play_star_animation {
+					animation: bounceInPt4 1s forwards;
+				}
 			}
 
 			&.d2 {

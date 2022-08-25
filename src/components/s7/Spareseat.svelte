@@ -52,11 +52,6 @@
 		bottom: 0;
 	}
 
-	@keyframes dashmove {
-		to {
-			stroke-dashoffset: -9;
-		}
-	}
 	.svg15 {
 		stroke-dasharray: 6 3;
 		animation: dashmove 1.5s linear infinite;

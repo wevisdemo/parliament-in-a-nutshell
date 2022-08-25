@@ -5,6 +5,8 @@
 	import Circle from 'components/Circle.svelte';
 	import CircleFold from 'components/CircleFold.svelte';
 
+	let play_star_animation = false;
+
 	let el_decor_container: any;
 	let el_logo: any;
 	onMount(() => {
@@ -32,19 +34,7 @@
 			offset: ['start end', 'end start']
 		});
 
-		inView(
-			el_logo,
-			() => {
-				animate(
-					el_decorchild[0],
-					{
-						transform: ['translate(-94%, -47%) scale(0)', 'translate(-94%, -47%) scale(1)']
-					},
-					{ duration: 0.5 }
-				);
-			},
-			{ amount: 1 }
-		);
+		inView(el_logo, () => void (play_star_animation = true), { amount: 1 });
 	});
 </script>
 
@@ -53,6 +43,7 @@
 	<div bind:this={el_decor_container} class="decor">
 		<img
 			class="star"
+			class:play_star_animation
 			src="/shaking-parliament/star_02.svg"
 			alt=""
 			decoding="async"
@@ -152,6 +143,10 @@
 				left: 50%;
 				transform: translate(-94%, -47%) scale(0);
 				max-width: initial;
+
+				&.play_star_animation {
+					animation: bounceInPt3 1s forwards;
+				}
 			}
 
 			&.hand2 {

@@ -60,29 +60,6 @@
 </div>
 
 <style lang="scss">
-	@keyframes flickering {
-		70.1%,
-		100% {
-			opacity: 1;
-		}
-
-		50%,
-		60%,
-		20% {
-			opacity: 0.5;
-		}
-
-		0%,
-		19.9%,
-		20.1%,
-		49.9%,
-		50.1%,
-		69.9%,
-		99.9% {
-			opacity: 0.1;
-		}
-	}
-
 	.curtain {
 		width: 100%;
 		background: url(/shaking-parliament/curtain.png) repeat-x;

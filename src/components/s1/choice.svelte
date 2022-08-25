@@ -133,28 +133,6 @@
 		transition: none !important;
 	}
 
-	@keyframes shakeX {
-		from,
-		to {
-			transform: translate3d(0, 0, 0);
-		}
-
-		10%,
-		30%,
-		50%,
-		70%,
-		90% {
-			transform: translate3d(-10px, 0, 0);
-		}
-
-		20%,
-		40%,
-		60%,
-		80% {
-			transform: translate3d(10px, 0, 0);
-		}
-	}
-
 	.choice.correct > .text {
 		background: #92da1f;
 		transition: background 0.3s;

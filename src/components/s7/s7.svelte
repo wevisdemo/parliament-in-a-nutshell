@@ -300,16 +300,6 @@
 		}
 	}
 
-	@keyframes slide-right {
-		0%,
-		60% {
-			transform: translateX(-50px);
-		}
-		to {
-			transform: translateX(0);
-		}
-	}
-
 	.shifter {
 		margin-right: 0;
 		transition: margin-right 0.5s;

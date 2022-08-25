@@ -211,15 +211,6 @@
 		}
 	}
 
-	@keyframes incorrect {
-		0% {
-			background: hsla(0, 66%, 61%, 0.5);
-		}
-		to {
-			background: hsla(0, 66%, 61%, 0);
-		}
-	}
-
 	.incorrect-overlay {
 		position: absolute;
 		inset: 0;
