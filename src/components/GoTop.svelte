@@ -4,12 +4,15 @@
 	import { scroll } from 'motion';
 
 	let scroll_top_enabled = false;
+	let shift_footer = false;
 	let goTop: any;
 
 	onMount(() => {
 		scroll(({ y }) => {
-			if (y.current >= 500 && scroll_top_enabled === false) return (scroll_top_enabled = true);
-			if (y.current < 500 && scroll_top_enabled === true) return (scroll_top_enabled = false);
+			if (y.current < 500 && scroll_top_enabled) return (scroll_top_enabled = false);
+			if (y.current >= 500 && !scroll_top_enabled) return (scroll_top_enabled = true);
+			if (y.progress < 0.99 && shift_footer) return (shift_footer = false);
+			if (y.progress >= 0.99 && !shift_footer) return (shift_footer = true);
 		});
 
 		goTop = () => {
@@ -35,6 +38,7 @@
 	<button
 		type="button"
 		class="gotop-button no-print"
+		class:shift_footer
 		in:goTopTransition={{ duration: 250, easing: cubicOut }}
 		out:goTopTransition={{ duration: 200, easing: quadIn }}
 		on:click={goTop}
@@ -61,6 +65,7 @@
 		align-items: center;
 		justify-content: center;
 
+		transition: transform 0.2s;
 		will-change: transform, opacity;
 		mix-blend-mode: difference;
 		overflow: hidden;
@@ -99,6 +104,10 @@
 			&::after {
 				transform: translateY(-9px) rotate(45deg);
 			}
+		}
+
+		&.shift_footer {
+			transform: translateY(-46px);
 		}
 	}
 </style>
