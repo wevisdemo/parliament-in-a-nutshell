@@ -1,0 +1,37 @@
+.h100 {
+	height: 100vh;
+}
+
+.stick {
+	position: sticky;
+	top: 0;
+}
+
+.c {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.tc {
+	text-align: center;
+}
+
+.pen {
+	pointer-events: none;
+	z-index: -1;
+}
+
+.black {
+	color: #fff;
+	background-color: #000;
+}
+
+.fw {
+	flex-wrap: wrap;
+}
+
+.nw {
+	white-space: nowrap;
+}

@@ -1,0 +1,67 @@
+@import 'reseter';
+
+@import 'animate';
+@import 'global';
+@import 'grid';
+@import 'helpers';
+@import 'pill';
+@import 'typography';
+
+html {
+	background: url(/shaking-parliament/bg.jpg), #eee;
+	background-size: 100%;
+
+	font-size: 16px;
+}
+
+body {
+	font-family: 'Bai Jamjuree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	letter-spacing: 0.01em; // 1/100 of an em
+	font-weight: 500;
+	font-size: 1rem;
+	font-variant-ligatures: normal;
+
+	overflow-x: hidden;
+	width: 100%;
+	position: relative;
+
+	scroll-behavior: smooth;
+}
+
+div,
+section {
+	--h: auto;
+	position: relative;
+	height: var(--h);
+}
+
+h1,
+h2,
+h3,
+p {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.lock-body-scroll {
+	position: fixed;
+	overflow-y: scroll;
+	width: 100%;
+
+	> body {
+		overflow-y: hidden;
+	}
+}
+
+p {
+	font-size: 1.5rem;
+}
+
+img {
+	position: relative;
+}
+
+svg text {
+	letter-spacing: normal;
+}

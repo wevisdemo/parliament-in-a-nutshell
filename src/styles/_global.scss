@@ -1,0 +1,96 @@
+// extracted `:global(...)` to here to see if some of the global styles are conflicted or not
+.thanathorn-img,
+.paiboon-img,
+.mongkonkit-img,
+.sankey-people {
+	opacity: 0;
+}
+
+.deco-people {
+	max-width: 10vw;
+	max-height: 10vw;
+
+	> img {
+		max-width: 10vw;
+		max-height: 10vw;
+	}
+}
+
+.sankey-people {
+	margin: 8px 0;
+}
+
+.votelog-row,
+.votelog-value {
+	display: flex;
+}
+
+.votelog-icon {
+	width: 48px;
+	flex: 0 0 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #a4a4a4;
+}
+
+.votelog-value {
+	transition: none;
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: -4px;
+		border: 4px #fff solid;
+		border-radius: 4px;
+		opacity: 0;
+		transition: none;
+		pointer-events: none;
+		z-index: 2;
+	}
+}
+
+.votelog-subject {
+	position: absolute;
+	bottom: 0;
+	transform: translateY(100%);
+	left: -4px;
+	background: #fff;
+	color: #000;
+	font-size: 0.8rem;
+	border-radius: 0 0 4px 4px;
+	padding: 8px;
+	opacity: 0;
+	transition: none;
+	pointer-events: none;
+	box-shadow: 0 0 16px #000;
+}
+
+.votelog-row.last-row > .votelog-value > .votelog-subject {
+	bottom: unset;
+	transform: translateY(-100%);
+	top: -1px;
+	border-radius: 4px 4px 0 0;
+}
+
+.votelog-row:hover {
+	> .votelog-icon {
+		stroke: #fff;
+	}
+
+	> .votelog-value {
+		z-index: 2;
+		transition: opacity 0.1s;
+		box-shadow: 0 0 16px #000;
+
+		&::before {
+			opacity: 1;
+			transition: opacity 0.1s;
+		}
+
+		> .votelog-subject {
+			opacity: 1;
+			transition: opacity 0.1s;
+		}
+	}
+}
