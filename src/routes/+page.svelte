@@ -11,7 +11,7 @@
 	import ScreenNotice from 'components/ScreenNotice.svelte';
 
 	import S1 from 'components/s1/s1.svelte';
-	import S2 from 'components/s2/s2.svelte';
+	// import S2 from 'components/s2/s2.svelte';
 	import S3 from 'components/s3/s3.svelte';
 	import S4 from 'components/s4/s4.svelte';
 
@@ -67,7 +67,7 @@
 <Loader {loaded} {isReady} />
 <GoTop />
 <S1 />
-<S2 />
+<!-- <S2 /> -->
 <S3 />
 <S4 />
 <S5 />
