@@ -1,33 +1,7 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { animate, scroll } from 'motion';
-
-	let el_title_section: any;
-	let el_bg: any;
-	onMount(() => {
-		scroll(
-			animate(
-				el_bg,
-				{ transform: ['translateY(-150px)', 'translateY(150px)'] },
-				{ easing: 'linear' }
-			),
-			{
-				target: el_title_section,
-				offset: ['start end', 'end start']
-			}
-		);
-	});
 </script>
 
-<div bind:this={el_title_section} class="h100 c tc part2-title">
-	<img
-		bind:this={el_bg}
-		src="/shaking-parliament/part2_bg.png"
-		alt=""
-		class="bg"
-		decoding="async"
-		loading="lazy"
-	/>
+<div class="h100 c tc part2-title">
 	<img
 		class="title-img"
 		src="/shaking-parliament/part2_title.png"
@@ -69,14 +43,6 @@
 </div>
 
 <style lang="scss">
-	.bg {
-		position: absolute;
-		top: 50%;
-		width: 80vw;
-		object-fit: contain;
-		transform: translateY(-150px);
-	}
-
 	.title-img {
 		width: min(60vw, 60vh);
 	}
@@ -90,7 +56,6 @@
 		padding: 0 32px;
 		height: 80vh;
 
-		margin-top: 300px;
 		margin-bottom: 96px;
 	}
 
