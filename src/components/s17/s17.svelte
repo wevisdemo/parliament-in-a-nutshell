@@ -241,9 +241,15 @@
 		color: #000;
 		text-decoration: none;
 
+		border-radius: 8px;
+
 		box-shadow: 15px 17px 18px rgba(0, 0, 0, 0.29);
 		transition-property: box-shadow;
 		transition-duration: 0.3s;
+
+		&:hover {
+			box-shadow: 30px 34px 72px rgba(0, 0, 0, 0.29);
+		}
 
 		img {
 			width: 100%;
