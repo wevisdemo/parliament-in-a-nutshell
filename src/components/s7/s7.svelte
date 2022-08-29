@@ -179,16 +179,12 @@
 		<div class="row" style="--gap:32px">
 			<div class="shifter" class:showNewNum />
 			<div class="shifter" class:showNewNum />
-			<Bignum {showNewNum} oldNum={28} newNum={28}>
+			<Bignum {showNewNum} oldNum={28} newNum={27}>
 				<BignumTitle slot="header" />
 			</Bignum>
-			<div class="will-show" class:showNewNum>
-				<div class="bignum-container">
-					<Bignum {showNewNum} side="อิสระ" oldNum={0} newNum={2}>
-						<BignumTitle side="อิสระ" slot="header" />
-					</Bignum>
-				</div>
-			</div>
+			<Bignum {showNewNum} side="อิสระ" oldNum={0} newNum={2}>
+				<BignumTitle side="อิสระ" slot="header" />
+			</Bignum>
 			<Bignum {showNewNum} side="ค้าน" oldNum={20} newNum={4}>
 				<BignumTitle side="ค้าน" slot="header" />
 			</Bignum>
