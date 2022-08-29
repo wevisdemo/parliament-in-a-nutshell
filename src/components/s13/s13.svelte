@@ -439,7 +439,7 @@
 		</svelte:fragment>
 		<svelte:fragment>
 			{#each VOTE_METADATA as mati, mati_index}
-				<div class="votelog-row" class:last-row={mati_index > VOTE_METADATA.length - 3}>
+				<div class="votelog-row" class:top-row={mati_index < 2}>
 					<div class="votelog-icon">
 						<Icon type={mati.icon} />
 					</div>

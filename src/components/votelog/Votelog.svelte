@@ -6,6 +6,8 @@
 	import VoteLegend from './VoteLegend.svelte';
 
 	export let hintPracharat = false;
+	export let lineColor =
+		'linear-gradient(90deg,#70d267 25%,#0b3757 25%,#0b3757 50%,#065cab 50%,#065cab 75%,#75328c 75%)';
 
 	let el_header: any;
 	let el_body: any;
@@ -23,7 +25,7 @@
 	});
 </script>
 
-<VoteLegend {hintPracharat} />
+<VoteLegend {hintPracharat} {lineColor} />
 <div class="votelog-container">
 	<div bind:this={el_header} class="votelog-head">
 		<div class="votelog-head-spacer" />
@@ -33,6 +35,9 @@
 	</div>
 	<div bind:this={el_body} class="votelog-body">
 		<slot />
+	</div>
+	<div class="votelog-note">
+		<strong>หมายเหตุ:</strong> มติที่นำมาแสดงผลในงานชิ้นนี้เป็นเพียงชุดตัวอย่าง (Sample) ของข้อมูลการลงมติทั้งหมด
 	</div>
 </div>
 
@@ -110,4 +115,12 @@
 	}
 
 	// .votelog-icon, .votelog-value, .votelog-subject are in scss file
+
+	.votelog-note {
+		text-align: left;
+		font-size: 0.8em;
+		width: 100%;
+		padding-top: 8px;
+		margin-left: 52px;
+	}
 </style>

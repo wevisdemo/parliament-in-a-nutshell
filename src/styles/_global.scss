@@ -52,25 +52,27 @@
 
 .votelog-subject {
 	position: absolute;
-	bottom: 0;
-	transform: translateY(100%);
+	top: 0;
+	transform: translateY(-100%);
 	left: -4px;
 	background: #fff;
 	color: #000;
 	font-size: 0.8rem;
-	border-radius: 0 0 4px 4px;
+	border-radius: 4px 4px 0 0;
 	padding: 8px;
 	opacity: 0;
 	transition: none;
 	pointer-events: none;
 	box-shadow: 0 0 16px #000;
+	text-align: left;
+	// width: min-content;
 }
 
-.votelog-row.last-row > .votelog-value > .votelog-subject {
-	bottom: unset;
-	transform: translateY(-100%);
-	top: -1px;
-	border-radius: 4px 4px 0 0;
+.votelog-row.top-row > .votelog-value > .votelog-subject {
+	top: unset;
+	bottom: 0;
+	transform: translateY(100%);
+	border-radius: 0 0 4px 4px;
 }
 
 .votelog-row:hover {

@@ -33,7 +33,7 @@
 </script>
 
 <div class="s9-2-container black tc c">
-	<Votelog hintPracharat>
+	<Votelog hintPracharat lineColor="linear-gradient(90deg,#0b3757 50%,#85e8ff 50%)">
 		<svelte:fragment slot="header">
 			<RP src="party/รวมแผ่นดิน.jpg" name="รวมแผ่นดิน" tooltip="top" color="#aac826" size="56" />
 			<RP
@@ -133,12 +133,15 @@
 		</svelte:fragment>
 		<svelte:fragment>
 			{#each VOTE_METADATA as mati, mati_index}
-				<div class="votelog-row" class:last-row={mati_index > VOTE_METADATA.length - 3}>
+				<div class="votelog-row" class:top-row={mati_index < 2}>
 					<div class="votelog-icon">
 						<Icon type={mati.icon} />
 					</div>
 					<div class="votelog-value">
-						<div class="votelog-subject">{@html mati.html_name}</div>
+						<div class="votelog-subject">
+							<!-- {@html mati.pass ? '✔&#xFE0F;' : '❌&#xFE0F;'} -->
+							{@html mati.html_name}
+						</div>
 						{#each PART2_DATA[mati_index] as vote, person_index}
 							{#if vote === 1}
 								{#if person_index === 11 && mati_index === 0}
@@ -159,6 +162,9 @@
 							{/if}
 						{/each}
 					</div>
+					<!-- <div class="votelog-icon">
+						{mati.pass}
+					</div> -->
 				</div>
 			{/each}
 		</svelte:fragment>
