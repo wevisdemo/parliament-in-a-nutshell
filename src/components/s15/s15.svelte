@@ -347,7 +347,7 @@
 			{#each VOTE_METADATA as mati, mati_index}
 				<div class="votelog-row" class:top-row={mati_index < 2}>
 					<div class="votelog-icon">
-						<Icon type={mati.icon} />
+						<Icon type={mati.icon} style={`color:#${mati.pass ? '92da1f' : 'dd5a5a'}`} />
 					</div>
 					<div class="votelog-value">
 						<div class="votelog-subject">{@html mati.html_name}</div>

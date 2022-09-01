@@ -58,6 +58,19 @@
 			<span>การลงมติอภิปรายไม่ไว้วางใจ</span>
 		</div>
 	</div>
+	<div class="legend fw">
+		<div class="type">
+			<VoteIcon style="color:#92da1f" />
+			<span>=</span>
+			<span>มติผ่าน</span>
+		</div>
+		<!-- <div class="sep" /> -->
+		<div class="type">
+			<VoteIcon style="color:#dd5a5a" />
+			<span>=</span>
+			<span>มติไม่ผ่าน</span>
+		</div>
+	</div>
 </div>
 
 <style lang="scss">
