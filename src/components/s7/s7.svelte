@@ -92,8 +92,20 @@
 											side={rep.replace_by.side}
 											src={rep.replace_by.src}
 											dashedBorder={rep.replace_by.name === 'ว่าง'}
+											showTop={!!rep.replace_by.replace_by}
 											tooltip="right"
-										/>
+										>
+											{#if rep.replace_by.replace_by}
+												<RP
+													size="34"
+													color={rep.replace_by.replace_by.color}
+													name={rep.replace_by.replace_by.name}
+													side={rep.replace_by.replace_by.side}
+													src={rep.replace_by.replace_by.src}
+													tooltip="right"
+												/>
+											{/if}
+										</RP>
 									{/if}
 								</RP>
 							{/each}
@@ -125,8 +137,20 @@
 											side={rep.replace_by.side}
 											src={rep.replace_by.src}
 											dashedBorder={rep.replace_by.name === 'ว่าง'}
+											showTop={!!rep.replace_by.replace_by}
 											tooltip="right"
-										/>
+										>
+											{#if rep.replace_by.replace_by}
+												<RP
+													size="34"
+													color={rep.replace_by.replace_by.color}
+													name={rep.replace_by.replace_by.name}
+													side={rep.replace_by.replace_by.side}
+													src={rep.replace_by.replace_by.src}
+													tooltip="right"
+												/>
+											{/if}
+										</RP>
 									{/if}
 								</RP>
 							{/each}

@@ -1,4 +1,3 @@
-// TODO: Change the name
 type RP_TYPE = {
 	name: string;
 	side: 'gov' | 'opp' | 'free';
@@ -222,7 +221,13 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 					name: 'นราพัฒน์ แก้วทอง',
 					side: 'gov',
 					src: 'rp/แทน-นราพัฒน์.png',
-					color: '#349EE9'
+					color: '#349EE9',
+					replace_by: {
+						name: 'เจือ ราชสีห์',
+						side: 'gov',
+						src: 'rp/แทน-เจือ.png',
+						color: '#349EE9'
+					}
 				}
 			},
 			{
@@ -234,7 +239,13 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 					name: 'ไชยยศ จิรเมธากร',
 					side: 'gov',
 					src: 'rp/แทน-ไชยยศ.png',
-					color: '#349EE9'
+					color: '#349EE9',
+					replace_by: {
+						name: 'มัลลิกา บุญมีตระกูล มหาสุข',
+						side: 'gov',
+						src: 'rp/แทน-มัลลิกา.png',
+						color: '#349EE9'
+					}
 				}
 			},
 			{
@@ -321,10 +332,16 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				src: 'rp/เสียชีวิต-อิทธิรัตน์.png',
 				color: '#E50000',
 				replace_by: {
-					name: 'เดชทวี ศรีวิชัย',
-					side: 'opp',
-					src: 'rp/แทน-เดชทวี.png',
-					color: '#D4B41E'
+					name: 'วัฒนา สิทธิวัง',
+					side: 'free',
+					src: 'rp/pt14-วัฒนา.png',
+					color: '#f0da8c',
+					replace_by: {
+						name: 'เดชทวี ศรีวิชัย',
+						side: 'opp',
+						src: 'rp/แทน-เดชทวี.png',
+						color: '#D4B41E'
+					}
 				}
 			}
 		]
