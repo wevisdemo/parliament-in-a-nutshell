@@ -35,7 +35,6 @@
 		"@floating-ui/dom": "^1.0.1",
 		"@wevisdemo/ui": "^4.0.0",
 		"d3": "^7.6.1",
-		"js-confetti": "^0.10.2",
 		"motion": "^10.13.1"
 	}
 }

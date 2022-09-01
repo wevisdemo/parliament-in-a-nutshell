@@ -3,62 +3,22 @@
 	import { onMount } from 'svelte';
 
 	import Choice from './choice.svelte';
-	import JSConfetti from 'js-confetti';
-
-	let el_canvas: any;
-	let jsConfetti: any;
 
 	let selected_choice: number | null = null;
-	const choices = [
-		{ value: 485, isCorrect: true },
-		{ value: 471, isCorrect: false },
-		{ value: 479, isCorrect: false }
-	];
+	const choices = [{ value: 500 }, { value: 485 }, { value: 478 }];
 
 	let isSubmitted = false;
 	let isCorrect: boolean | undefined;
 	const submitAns = () => {
 		isSubmitted = true;
-		isCorrect = choices.find((c) => c.value === selected_choice)?.isCorrect;
 		removeHtmlClass('lock-body-scroll');
-
-		requestAnimationFrame(() => {
-			isCorrect &&
-				jsConfetti
-					?.addConfetti({
-						confettiColors: ['#ffbe0b', '#fb5607', '#ff006e', '#8338ec', '#3a86ff'],
-						confettiRadius: 8,
-						confettiNumber: 500
-					})
-					.then(() => (jsConfetti = null));
-		});
 	};
 
 	onMount(() => {
-		jsConfetti = new JSConfetti({ canvas: el_canvas });
 		addHtmlClass('lock-body-scroll');
 	});
 </script>
 
-<!-- force load images so chrome wont scream at my face -->
-<div class="force-load">
-	<img
-		src="/shaking-parliament/quiz-correct.png"
-		alt=""
-		decoding="async"
-		loading="eager"
-		width="256"
-		height="256"
-	/>
-	<img
-		src="/shaking-parliament/quiz-incorrect.png"
-		alt=""
-		decoding="async"
-		loading="eager"
-		width="256"
-		height="256"
-	/>
-</div>
 <div class="h100 c">
 	<h1 class="T1">
 		<span class="nw">คุณรู้ไหม?</span><br />
@@ -104,15 +64,10 @@
 	{/if}
 
 	{#if isSubmitted}
-		<div
-			class="ans-img-container"
-			class:choice2={selected_choice === 471}
-			class:choice3={selected_choice === 479}
-		>
+		<div class="ans-img-container">
 			<img
 				class="ans-img"
-				class:correct={isCorrect}
-				src="/shaking-parliament/quiz-{isCorrect ? '' : 'in'}correct.png"
+				src="/shaking-parliament/quiz-stamp.png"
 				alt=""
 				decoding="async"
 				loading="eager"
@@ -121,15 +76,9 @@
 			/>
 		</div>
 	{/if}
-	<canvas bind:this={el_canvas} />
 </div>
 
 <style lang="scss">
-	.force-load {
-		opacity: 0;
-		height: 0;
-	}
-
 	.T1 {
 		font-size: 4rem;
 		line-height: 1.2;
@@ -188,15 +137,11 @@
 
 	.ans-img-container {
 		position: absolute;
-		top: calc(50% + 48px);
+		top: calc(50% + 80px);
 		left: calc(50% + 304px);
 		transform: translate(-50%, -50%);
 
 		> .ans-img {
-			backface-visibility: visible !important;
-			-webkit-backface-visibility: visible !important;
-			-moz-backface-visibility: visible !important;
-			animation: flipInY 1s;
 			width: 256px;
 			height: 256px;
 			object-fit: contain;
@@ -204,9 +149,6 @@
 
 			width: 256px;
 			height: 256px;
-		}
-
-		> .ans-img.correct {
 			animation: bounceIn 1s;
 		}
 	}
@@ -244,33 +186,15 @@
 		transition: opacity 1s;
 	}
 
-	canvas {
-		position: absolute;
-		inset: 0;
-		pointer-events: none;
-		width: 100%;
-		height: 100%;
-		-webkit-mask-image: linear-gradient(#000f 70%, #0000);
-		mask-image: linear-gradient(#000f 70%, #0000);
-	}
-
 	@media screen and (max-width: 1000px) {
 		.ans-img-container {
-			top: calc(50% - 16px);
-			left: calc(50% + 144px);
+			top: calc(50% + 80px);
+			left: calc(50% + 244px);
 			transform: translate(-50%, -50%);
 
 			> .ans-img {
-				width: 128px;
-				height: 128px;
-			}
-
-			&.choice2 {
-				top: calc(50% + 76px);
-			}
-
-			&.choice3 {
-				top: calc(50% + 164px);
+				width: 196px;
+				height: 196px;
 			}
 		}
 	}

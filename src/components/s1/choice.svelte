@@ -1,15 +1,10 @@
 <script lang="ts">
-	export let data = { value: 0, isCorrect: false };
+	export let data = { value: 0 };
 	export let group: any;
 	export let submitted = false;
 </script>
 
-<label
-	class:submitted
-	class:correct={group === data.value && submitted && data.isCorrect}
-	class:incorrect={group === data.value && submitted && !data.isCorrect}
-	class="choice"
->
+<label class:submitted={group === data.value && submitted} class="choice">
 	<span class="box" />
 	<input type="radio" bind:group name="quiz" value={data.value} disabled={submitted} />
 	<span class="text">{data.value} คน</span>
@@ -133,20 +128,12 @@
 		transition: none !important;
 	}
 
-	.choice.correct > .text {
-		background: #92da1f;
-		transition: background 0.3s;
-	}
-
-	.choice.incorrect {
+	.choice.submitted {
+		cursor: default;
 		animation: shakeX 0.5s;
 
 		> .text {
 			background: #dd5a5a;
 		}
-	}
-
-	.choice.submitted {
-		cursor: default;
 	}
 </style>
