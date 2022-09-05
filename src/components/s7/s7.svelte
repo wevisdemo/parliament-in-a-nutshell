@@ -230,6 +230,19 @@
 	.event-container {
 		display: grid;
 		grid-template-columns: 1fr auto auto auto 1fr;
+
+		&::after {
+			content: 'อัพเดตข้อมูลวันที่ 6 กันยายน 2562';
+
+			font-size: 0.8rem;
+			letter-spacing: 0.5px;
+			color: #5b5b5b;
+
+			position: absolute;
+			top: -8px;
+			right: 0;
+			transform: translateY(-100%);
+		}
 	}
 
 	.event {
