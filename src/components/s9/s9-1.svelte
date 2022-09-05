@@ -49,7 +49,7 @@
 		<strong>เกื้อหนุน</strong> ฝั่งรัฐบาลมากน้อยแค่ไหน?
 	</h1>
 	<p class="s8-p">
-		การเข้าสภาของ 12 พรรคเล็ก ส่งผลให้ส.ส.ฝ่ายรัฐบาล <strong>พลิกเป็นเสียงข้างมาก</strong>
+		การเข้าสภาของ 12 พรรคเล็ก ส่งผลให้ ส.ส.ฝ่ายรัฐบาล <strong>พลิกเป็นเสียงข้างมาก</strong>
 	</p>
 	<div class="row par-size" style="--gap:0" class:showSeat>
 		<div class="col c tc gov" style="--bgc:#5b5b5b;--txc:#fff">
