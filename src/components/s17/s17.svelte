@@ -1,13 +1,18 @@
 <script lang="ts">
 	const SITE_LINK = 'https://wevisdemo.github.io/shaking-parliament/';
+
+	let copy_class = '';
 	const copyLinkToClipboard = () => {
 		navigator.clipboard
 			.writeText(SITE_LINK)
 			.then(() => {
-				// TODO: make button green
+				copy_class = 'success';
 			})
 			.catch(() => {
-				// TODO: make button red and shake
+				copy_class = 'fail';
+			})
+			.finally(() => {
+				setTimeout(() => (copy_class = ''), 100);
 			});
 	};
 </script>
@@ -63,7 +68,7 @@
 			<div class="col">
 				<button
 					type="button"
-					class="social-share"
+					class={`social-share copy ${copy_class}`}
 					aria-label="Copy link to clipboard"
 					on:click={copyLinkToClipboard}
 				>
@@ -191,6 +196,32 @@
 			&::before {
 				transform: scale(1);
 			}
+		}
+	}
+
+	.social-share.copy {
+		--cpy-c: #6a6a6a;
+		border: 2px var(--cpy-c) solid;
+		transition: color 0.3s, border 0.3s;
+
+		&::before {
+			background: var(--cpy-c);
+			border: 2px var(--cpy-c) solid;
+			transition: transform 0.3s, background 0.3s, border 0.3s;
+		}
+
+		&.success,
+		&.fail {
+			--cpy-c: #92da1f;
+			transition: color 0.3s;
+
+			&::before {
+				transition: transform 0.3s;
+			}
+		}
+
+		&.fail {
+			--cpy-c: #dd5a5a;
 		}
 	}
 
