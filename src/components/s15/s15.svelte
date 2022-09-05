@@ -363,7 +363,7 @@
 									<Cell />
 								{/if}
 							{:else if vote === 2}
-								{#if mati_index === 37 && person_index === 12}
+								{#if mati_index === 37 && person_index === 7}
 									<Cell line="#f0da8c" side="black" />
 								{:else}
 									<Cell side="black" />
