@@ -1,4 +1,4 @@
-type RP_TYPE = {
+export type RP_TYPE = {
 	name: string;
 	side: 'gov' | 'opp' | 'free';
 	src: string;

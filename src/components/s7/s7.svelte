@@ -2,15 +2,15 @@
 	import { onMount } from 'svelte';
 	import { scroll, ScrollOffset, timeline } from 'motion';
 
-	import RP from 'components/RepPortrait.svelte';
 	import Bignum from 'components/Bignum.svelte';
 	import BignumTitle from './BignumTitle.svelte';
 	import Spareseat from './Spareseat.svelte';
 	import Bridge from './s8-bridge.svelte';
+	import RpStack from './RpStack.svelte';
 
 	import { PART1_DATA } from 'data/overall_change';
 
-	let showReplaced = false;
+	let showAll = false;
 	let showNewNum = false;
 
 	let el_pill1: any;
@@ -48,13 +48,13 @@
 			({ y }) => {
 				if (y.progress === prev_scroll_progress) return;
 				if ((prev_scroll_progress = y.progress) === 1) {
-					showReplaced = true;
+					showAll = true;
 					new_num_timeout = setTimeout(() => {
 						showNewNum = true;
 					}, 500);
 				} else {
 					clearTimeout(new_num_timeout);
-					showNewNum = showReplaced = false;
+					showNewNum = showAll = false;
 				}
 			},
 			{
@@ -75,39 +75,7 @@
 					{#each PART1_DATA.resign as res_c}
 						<div class="col row vert">
 							{#each res_c as rep}
-								<RP
-									size="34"
-									color={rep.color}
-									name={rep.name}
-									side={rep.side}
-									src={rep.src}
-									showTop={showReplaced}
-									tooltip="right"
-								>
-									{#if rep.replace_by}
-										<RP
-											size="34"
-											color={rep.replace_by.color}
-											name={rep.replace_by.name}
-											side={rep.replace_by.side}
-											src={rep.replace_by.src}
-											dashedBorder={rep.replace_by.name === 'ว่าง'}
-											showTop={!!rep.replace_by.replace_by}
-											tooltip="right"
-										>
-											{#if rep.replace_by.replace_by}
-												<RP
-													size="34"
-													color={rep.replace_by.replace_by.color}
-													name={rep.replace_by.replace_by.name}
-													side={rep.replace_by.replace_by.side}
-													src={rep.replace_by.replace_by.src}
-													tooltip="right"
-												/>
-											{/if}
-										</RP>
-									{/if}
-								</RP>
+								<RpStack data={rep} {showAll} />
 							{/each}
 						</div>
 					{/each}
@@ -120,39 +88,7 @@
 					{#each PART1_DATA.pass as res_c}
 						<div class="col row vert">
 							{#each res_c as rep}
-								<RP
-									size="34"
-									color={rep.color}
-									name={rep.name}
-									side={rep.side}
-									src={rep.src}
-									showTop={showReplaced}
-									tooltip="right"
-								>
-									{#if rep.replace_by}
-										<RP
-											size="34"
-											color={rep.replace_by.color}
-											name={rep.replace_by.name}
-											side={rep.replace_by.side}
-											src={rep.replace_by.src}
-											dashedBorder={rep.replace_by.name === 'ว่าง'}
-											showTop={!!rep.replace_by.replace_by}
-											tooltip="right"
-										>
-											{#if rep.replace_by.replace_by}
-												<RP
-													size="34"
-													color={rep.replace_by.replace_by.color}
-													name={rep.replace_by.replace_by.name}
-													side={rep.replace_by.replace_by.side}
-													src={rep.replace_by.replace_by.src}
-													tooltip="right"
-												/>
-											{/if}
-										</RP>
-									{/if}
-								</RP>
+								<RpStack data={rep} {showAll} />
 							{/each}
 						</div>
 					{/each}
@@ -165,27 +101,7 @@
 					{#each PART1_DATA.fire as res_c}
 						<div class="col row vert">
 							{#each res_c as rep}
-								<RP
-									size="34"
-									color={rep.color}
-									name={rep.name}
-									side={rep.side}
-									src={rep.src}
-									showTop={showReplaced}
-									tooltip="right"
-								>
-									{#if rep.replace_by}
-										<RP
-											size="34"
-											color={rep.replace_by.color}
-											name={rep.replace_by.name}
-											side={rep.replace_by.side}
-											src={rep.replace_by.src}
-											dashedBorder={rep.replace_by.name === 'ว่าง'}
-											tooltip="right"
-										/>
-									{/if}
-								</RP>
+								<RpStack data={rep} {showAll} />
 							{/each}
 						</div>
 					{/each}
