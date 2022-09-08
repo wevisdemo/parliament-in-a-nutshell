@@ -22,11 +22,29 @@
 	});
 </script>
 
-<div class="rp-container {clazz}" class:showTop style:--s={size} {...$$restProps}>
+{#if $$slots.default}
+	<div class="rp-container {clazz}" class:showTop style:--s={size} {...$$restProps}>
+		<img
+			src="/shaking-parliament/{src}"
+			alt={name}
+			class="portrait {side}"
+			class:dashedBorder
+			style:--c={color}
+			style:--s={size}
+			decoding="async"
+			loading="lazy"
+			width={size}
+			height={size}
+			on:mouseenter={showTooltip}
+			on:mouseleave={hideTooltip}
+		/>
+		<div class="top"><slot /></div>
+	</div>
+{:else}
 	<img
 		src="/shaking-parliament/{src}"
 		alt={name}
-		class="portrait {side}"
+		class="portrait {side} {clazz}"
 		class:dashedBorder
 		style:--c={color}
 		style:--s={size}
@@ -36,11 +54,9 @@
 		height={size}
 		on:mouseenter={showTooltip}
 		on:mouseleave={hideTooltip}
+		{...$$restProps}
 	/>
-	{#if $$slots.default}
-		<div class="top"><slot /></div>
-	{/if}
-</div>
+{/if}
 
 <style lang="scss">
 	.rp-container {
@@ -58,7 +74,6 @@
 		width: calc(var(--s) * 1px);
 		height: calc(var(--s) * 1px);
 
-		opacity: 1;
 		transition: opacity 0.3s;
 
 		overflow: hidden;
