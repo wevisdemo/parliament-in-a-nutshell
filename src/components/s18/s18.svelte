@@ -5,7 +5,7 @@
 <div class="black c tc ref-container">
 	<h1 class="T1">แหล่งที่มาของข้อมูล</h1>
 	<div class="pill dark">แหล่งที่มาชุดข้อมูลการลงมติ</div>
-	<div>
+	<div style="width:95%">
 		<a
 			class="link"
 			href="https://msbis.parliament.go.th/ewtadmin/ewt/parliament_report/main.php"
@@ -17,7 +17,7 @@
 		</a>
 	</div>
 	<div class="pill dark">แหล่งที่มาข่าว</div>
-	<div>
+	<div style="width:95%">
 		<a
 			class="link"
 			href="https://ilaw.or.th/node/6069"
@@ -28,7 +28,7 @@
 			เปิดเส้นทางพรรคเล็ก จาก ส.ส. ปัดเศษ สู่ผู้กำหนดชะตากรรมรัฐบาล (ilaw)
 		</a>
 	</div>
-	<div>
+	<div style="width:95%">
 		<a
 			class="link"
 			href="https://www.bbc.com/thai/thailand-60059393"
@@ -39,7 +39,7 @@
 			ธรรมนัส พรหมเผ่า : พลังประชารัฐมีมติขับ ส.ส. 21 คน "ผิดจรรยาบรรณร้ายแรง" (BBC News)
 		</a>
 	</div>
-	<div>
+	<div style="width:95%">
 		<a
 			class="link"
 			href="https://www.thairath.co.th/news/politic/2300268"
