@@ -16,4 +16,8 @@ declare global {
 		| [ElementOrSelector, MotionKeyframesDefinition, AnimationListOptions]
 		| [ElementOrSelector, MotionKeyframesDefinition];
 	type TimelineDefinition = TimelineSegment[];
+
+	interface Window {
+		el_tooltip: HTMLElement;
+	}
 }

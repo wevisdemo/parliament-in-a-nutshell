@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { computePosition, offset, shift } from '@floating-ui/dom';
+	import { showTooltip as _showTooltip, hideTooltip as _hideTooltip } from 'utils/tooltip';
 
 	export let src: string;
 	export let side: 'gov' | 'opp' | 'free' = 'gov';
@@ -15,34 +15,10 @@
 	export let showTop = false;
 	export let dashedBorder = false;
 
-	let showTooltip = () => {};
-	let hideTooltip = () => {};
-	let el_image: any;
-	let el_tooltip: any;
+	let showTooltip = tooltip ? _showTooltip : () => {};
+	let hideTooltip = tooltip ? _hideTooltip : () => {};
 	onMount(() => {
 		if (!tooltip) return;
-		showTooltip = () => {
-			if (showTop) return;
-			el_tooltip.classList.add('show');
-
-			computePosition(el_image, el_tooltip, {
-				placement: 'top',
-				middleware: [offset(8), shift({ padding: 8 })]
-			}).then(({ x, y }) => {
-				Object.assign(el_tooltip.style, {
-					left: `${x}px`,
-					top: `${y}px`
-				});
-			});
-		};
-
-		hideTooltip = () => {
-			el_tooltip.classList.remove('show');
-			Object.assign(el_tooltip.style, {
-				left: null,
-				top: null
-			});
-		};
 	});
 </script>
 
@@ -50,7 +26,6 @@
 	<img
 		src="/shaking-parliament/{src}"
 		alt={name}
-		bind:this={el_image}
 		class="portrait {side}"
 		class:dashedBorder
 		style:--c={color}
@@ -62,9 +37,6 @@
 		on:mouseenter={showTooltip}
 		on:mouseleave={hideTooltip}
 	/>
-	{#if tooltip}
-		<div bind:this={el_tooltip} class="tooltip">{name}</div>
-	{/if}
 	{#if $$slots.default}
 		<div class="top"><slot /></div>
 	{/if}
@@ -128,41 +100,6 @@
 		> .top {
 			opacity: 1;
 			pointer-events: auto;
-		}
-	}
-
-	.tooltip {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 20;
-
-		padding: 12px;
-
-		background: #000d;
-		border-radius: 8px;
-
-		display: flex;
-
-		color: #fff;
-		letter-spacing: 0.3px;
-		line-height: 1;
-		white-space: nowrap;
-
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		user-select: none;
-
-		font-size: 0;
-		opacity: 0;
-		transition: opacity 0;
-		pointer-events: none;
-
-		&.show {
-			font-size: 1rem;
-			opacity: 1;
-			pointer-events: auto;
-			transition: opacity 0.1s;
 		}
 	}
 </style>

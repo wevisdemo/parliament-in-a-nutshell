@@ -35,9 +35,11 @@
 
 	let loaded = false;
 	let isReady = false;
+	let el_tooltip: HTMLElement;
 	onMount(() => {
 		weAreAlwaysHiring();
 		loaded = true;
+		window.el_tooltip = el_tooltip;
 		if ('requestIdleCallback' in window) {
 			window.requestIdleCallback(() => (isReady = true));
 			// failsafe, the idle should not be long anyway
@@ -84,3 +86,4 @@
 <S16 />
 <S17 />
 <S18 />
+<div bind:this={el_tooltip} class="tooltip" />
