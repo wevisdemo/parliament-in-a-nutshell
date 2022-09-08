@@ -119,7 +119,6 @@
 	.votelog-note {
 		text-align: left;
 		font-size: 0.8em;
-		width: 100%;
 		padding-top: 8px;
 		margin-left: 52px;
 	}
