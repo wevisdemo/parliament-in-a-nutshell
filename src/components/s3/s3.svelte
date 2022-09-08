@@ -167,6 +167,7 @@
 				size="170"
 				side="opp"
 				src="rp/ศาลตัด-ธนาธร.png"
+				tooltip={false}
 			/>
 		</div>
 		<div bind:this={el_thammanas} class="thammanas-img">
@@ -177,6 +178,7 @@
 				size="170"
 				side="free"
 				src="rp/pt14-ธรรมนัส.png"
+				tooltip={false}
 			/>
 		</div>
 		<div bind:this={el_paiboon} class="paiboon-img-container">
@@ -196,6 +198,7 @@
 				size="170"
 				side="gov"
 				src="rp/paiboon.png"
+				tooltip={false}
 			/>
 		</div>
 		<div bind:this={el_parina} class="parina-img">
@@ -206,6 +209,7 @@
 				size="170"
 				side="gov"
 				src="rp/ศาลตัด-ปารีณา.png"
+				tooltip={false}
 			/>
 		</div>
 		<div bind:this={el_pornpimol} class="pornpimol-img-container">
@@ -217,6 +221,7 @@
 				size="170"
 				side="opp"
 				src="rp/pt12-พรพิมล.png"
+				tooltip={false}
 			/>
 		</div>
 		<div bind:this={el_mongkonkit} class="mongkonkit-img-container">
@@ -227,6 +232,7 @@
 				size="170"
 				side="free"
 				src="rp/mongkonkit.png"
+				tooltip={false}
 			/>
 			<img
 				class="circle1"

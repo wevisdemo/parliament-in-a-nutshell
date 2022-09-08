@@ -20,14 +20,7 @@
 	<div class="small-explain hover-rp">รูปภาพเพื่อดูชื่อ ส.ส.</div>
 	<div class="row" style="--gap:32px">
 		<div class="col tc">
-			<RP
-				color="#0b3757"
-				name="ปารีณา ไกรคุปต์"
-				size="96"
-				side="gov"
-				src="rp/ศาลตัด-ปารีณา.png"
-				tooltip="top"
-			/>
+			<RP color="#0b3757" name="ปารีณา ไกรคุปต์" size="96" side="gov" src="rp/ศาลตัด-ปารีณา.png" />
 			<div class="side-explain">ส.ส.<br />ฝ่ายรัฐบาล</div>
 			<div class="small-explain">(ไอคอนสี่เหลี่ยม)</div>
 		</div>
@@ -38,7 +31,6 @@
 				size="96"
 				side="free"
 				src="rp/mongkonkit.png"
-				tooltip="top"
 			/>
 			<div class="side-explain">ส.ส.<br />ฝ่ายอิสระ</div>
 			<div class="small-explain">(ไอคอนหกเหลี่ยม)</div>
@@ -50,7 +42,6 @@
 				size="96"
 				side="opp"
 				src="rp/ลาออก-วิโรจน์.png"
-				tooltip="top"
 			/>
 			<div class="side-explain">ส.ส.<br />ฝ่ายค้าน</div>
 			<div class="small-explain">(ไอคอนวงกลม)</div>

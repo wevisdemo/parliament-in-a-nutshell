@@ -1,21 +1,19 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { computePosition, offset, shift as fshift } from '@floating-ui/dom';
+	import { computePosition, offset, shift } from '@floating-ui/dom';
 
 	export let src: string;
 	export let side: 'gov' | 'opp' | 'free' = 'gov';
 	export let color: string;
 	export let name: string;
 	export let size: string = '';
-	export let style: string = '';
+	export let tooltip = true;
+
 	let clazz: string = '';
 	export { clazz as class };
 
-	export let showTop: boolean = false;
-	export let shift: string = '6px';
-	export let tooltip: 'top' | 'right' | null = null;
+	export let showTop = false;
 	export let dashedBorder = false;
-	export let op: string = shift === '0' ? '0' : '0.3';
 
 	let showTooltip = () => {};
 	let hideTooltip = () => {};
@@ -28,8 +26,8 @@
 			el_tooltip.classList.add('show');
 
 			computePosition(el_image, el_tooltip, {
-				placement: tooltip ?? 'top',
-				middleware: [offset(8), fshift({ padding: 8 })]
+				placement: 'top',
+				middleware: [offset(8), shift({ padding: 8 })]
 			}).then(({ x, y }) => {
 				Object.assign(el_tooltip.style, {
 					left: `${x}px`,
@@ -48,34 +46,27 @@
 	});
 </script>
 
-<div
-	class="rp-container {clazz}"
-	class:showTop
-	style:--s={size}
-	style:--op={op}
-	bind:this={el_image}
-	on:mouseenter={showTooltip}
-	on:mouseleave={hideTooltip}
-	{...$$restProps}
->
+<div class="rp-container {clazz}" class:showTop style:--s={size} {...$$restProps}>
 	<img
 		src="/shaking-parliament/{src}"
 		alt={name}
+		bind:this={el_image}
 		class="portrait {side}"
 		class:dashedBorder
 		style:--c={color}
 		style:--s={size}
 		decoding="async"
 		loading="lazy"
-		{style}
 		width={size}
 		height={size}
+		on:mouseenter={showTooltip}
+		on:mouseleave={hideTooltip}
 	/>
 	{#if tooltip}
 		<div bind:this={el_tooltip} class="tooltip">{name}</div>
 	{/if}
 	{#if $$slots.default}
-		<div class="top" style:--shift={shift}><slot /></div>
+		<div class="top"><slot /></div>
 	{/if}
 </div>
 
@@ -96,9 +87,7 @@
 		height: calc(var(--s) * 1px);
 
 		opacity: 1;
-		// filter: saturate(1);
-		transition: opacity 0.3s /*, filter 0.3s*/;
-		// will-change: opacity /*, filter*/;
+		transition: opacity 0.3s;
 
 		overflow: hidden;
 
@@ -123,8 +112,8 @@
 
 	.top {
 		position: absolute;
-		top: var(--shift, calc(var(--s) * 0.25 * 1px));
-		left: var(--shift, calc(var(--s) * 0.25 * 1px));
+		top: 0;
+		left: 0;
 
 		pointer-events: none;
 		opacity: 0;
@@ -133,8 +122,7 @@
 
 	.rp-container.showTop {
 		> .portrait {
-			opacity: var(--op, 0.3);
-			// filter: saturate(0.5);
+			opacity: 0;
 		}
 
 		> .top {
