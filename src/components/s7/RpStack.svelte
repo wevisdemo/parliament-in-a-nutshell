@@ -6,7 +6,7 @@
 </script>
 
 <div class="stack-rp-container">
-	<div class="plbl">{data.name}</div>
+	<div class="plbl showAll">{data.name}</div>
 	<img
 		src="/shaking-parliament/{data.src}"
 		alt={data.name}
@@ -20,7 +20,7 @@
 		height="34"
 	/>
 	{#if data.replace_by}
-		<div class="plbl lbl2">{data.replace_by.name}</div>
+		<div class="plbl lbl2" class:showAll>{data.replace_by.name}</div>
 		<img
 			src="/shaking-parliament/{data.replace_by.src}"
 			alt={data.replace_by.name}
@@ -36,7 +36,7 @@
 			height="34"
 		/>
 		{#if data.replace_by.replace_by}
-			<div class="plbl lbl3">{data.replace_by.replace_by.name}</div>
+			<div class="plbl lbl3" class:showAll>{data.replace_by.replace_by.name}</div>
 			<img
 				src="/shaking-parliament/{data.replace_by.replace_by.src}"
 				alt={data.replace_by.replace_by.name}
@@ -164,26 +164,26 @@
 				opacity: 1;
 			}
 
-			> .ly2 {
+			> .ly2.showAll {
 				opacity: 1;
 				--pt: translate(100%, calc(100% + 8px));
 			}
 
-			> .ly3 {
+			> .ly3.showAll {
 				--pt: translate(200%, calc(200% + 16px));
 			}
 
-			> .plbl {
+			> .plbl.showAll {
 				opacity: 1;
 				pointer-events: auto;
-				transition: opacity 0.3s;
+				transition: opacity 0.1s;
 			}
 
-			> .lbl2 {
+			> .lbl2.showAll {
 				--pt: translate(34px, calc(100% - 8px));
 			}
 
-			> .lbl3 {
+			> .lbl3.showAll {
 				--pt: translate(68px, calc(200% - 16px));
 			}
 		}
