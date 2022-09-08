@@ -30,7 +30,6 @@
 			class="portrait {side}"
 			class:dashedBorder
 			style:--c={color}
-			style:--s={size}
 			decoding="async"
 			loading="lazy"
 			width={size}
@@ -47,7 +46,6 @@
 		class="portrait {side} {clazz}"
 		class:dashedBorder
 		style:--c={color}
-		style:--s={size}
 		decoding="async"
 		loading="lazy"
 		width={size}
@@ -70,9 +68,6 @@
 		object-position: 50% 50%;
 
 		background: var(--c, #fff);
-
-		width: calc(var(--s) * 1px);
-		height: calc(var(--s) * 1px);
 
 		transition: opacity 0.3s;
 

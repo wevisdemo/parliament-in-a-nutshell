@@ -13,7 +13,6 @@
 		class="portrait ly1 {data.side}"
 		class:showAll
 		style:--c={data.color}
-		style:--s="34"
 		decoding="async"
 		loading="lazy"
 		width="34"
@@ -29,7 +28,6 @@
 			class:dashedBorder={data.replace_by.name === 'ว่าง'}
 			class:has3layers={data.replace_by.replace_by}
 			style:--c={data.replace_by.color}
-			style:--s="34"
 			decoding="async"
 			loading="lazy"
 			width="34"
@@ -43,7 +41,6 @@
 				class="portrait ly3 {data.replace_by.replace_by.side}"
 				class:showAll
 				style:--c={data.replace_by.replace_by.color}
-				style:--s="34"
 				decoding="async"
 				loading="lazy"
 				width="34"
@@ -68,10 +65,6 @@
 
 		background: var(--c, #fff);
 
-		width: calc(var(--s) * 1px);
-		height: calc(var(--s) * 1px);
-
-		opacity: 1;
 		transition: opacity 0.3s, transform 0.3s;
 
 		overflow: hidden;
