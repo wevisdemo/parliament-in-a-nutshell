@@ -218,7 +218,7 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				src: 'rp/ลาออก-อภิชัย.png',
 				color: '#349EE9',
 				replace_by: {
-					name: 'นราพัฒน์ แก้วทอง',
+					name: 'นราพัฒน์ แก้วทอง (ลาออก)',
 					side: 'gov',
 					src: 'rp/แทน-นราพัฒน์.png',
 					color: '#349EE9',
@@ -236,7 +236,7 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				src: 'rp/ลาออก-วีระชัย.png',
 				color: '#349EE9',
 				replace_by: {
-					name: 'ไชยยศ จิรเมธากร',
+					name: 'ไชยยศ จิรเมธากร (ลาออก)',
 					side: 'gov',
 					src: 'rp/แทน-ไชยยศ.png',
 					color: '#349EE9',
@@ -332,7 +332,7 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				src: 'rp/เสียชีวิต-อิทธิรัตน์.png',
 				color: '#E50000',
 				replace_by: {
-					name: 'วัฒนา สิทธิวัง',
+					name: 'วัฒนา สิทธิวัง (แพ้เลือกตั้งซ่อม)',
 					side: 'free',
 					src: 'rp/pt14-วัฒนา.png',
 					color: '#f0da8c',
