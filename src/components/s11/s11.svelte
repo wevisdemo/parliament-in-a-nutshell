@@ -119,7 +119,10 @@
 
 <style lang="scss">
 	.title-img {
-		width: min(75vw, 75vh);
+		width: 75vw;
+		height: 75vh;
+		object-fit: contain;
+		object-position: center;
 	}
 
 	.decor {
@@ -140,9 +143,10 @@
 
 			&.star {
 				top: 50%;
-				left: 50%;
-				transform: translate(-94%, -47%) scale(0);
+				left: 38%;
+				transform: translate(-50%, -50%) scale(0);
 				max-width: initial;
+				height: 40vh;
 
 				&.play_star_animation {
 					animation: bounceInPt3 1s forwards;

@@ -129,7 +129,10 @@
 	}
 
 	.title-img {
-		width: min(70vw, 90vh);
+		width: 70vw;
+		height: 50vh;
+		object-fit: contain;
+		object-position: center;
 		margin: 96px 0;
 	}
 
@@ -150,10 +153,11 @@
 			max-width: 25vw;
 
 			&.star {
-				top: calc(30vw + 84px);
-				left: 32%;
+				top: calc(30vw + 96px + 5vh);
+				left: 30%;
 				transform: translateX(-50%) scale(0);
 				max-width: initial;
+				height: 40vh;
 
 				&.play_star_animation {
 					animation: bounceInPt4 1s forwards;
