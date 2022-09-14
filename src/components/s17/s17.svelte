@@ -170,7 +170,9 @@
 		width: 80px;
 		height: 80px;
 
-		transition: color 0.3s;
+		outline: none;
+		transition-property: color, box-shadow;
+		transition-duration: 0.3s;
 
 		> svg {
 			height: 44px;
@@ -193,12 +195,16 @@
 			transition: transform 0.3s;
 		}
 
-		&:hover {
+		&:is(:hover, :focus) {
 			color: #fff;
 
 			&::before {
 				transform: scale(1);
 			}
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 8px #6a6a6a80;
 		}
 	}
 
@@ -226,6 +232,14 @@
 		&.fail {
 			--cpy-c: #dd5a5a;
 		}
+
+		&.success:focus {
+			box-shadow: 0 0 0 8px #92da1f80;
+		}
+
+		&.fail:focus {
+			box-shadow: 0 0 0 8px #dd5a5a80;
+		}
 	}
 
 	.home-btn {
@@ -244,8 +258,16 @@
 		cursor: pointer;
 		display: inline-block;
 
-		&:hover {
+		outline: none;
+		transition-property: box-shadow;
+		transition-duration: 0.3s;
+
+		&:is(:hover, :focus) {
 			background: #333;
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 8px #3338;
 		}
 	}
 
@@ -277,12 +299,17 @@
 
 		border-radius: 8px;
 
-		box-shadow: 15px 17px 18px rgba(0, 0, 0, 0.29);
+		box-shadow: 0 0 0 0 #f3b8d080, 15px 17px 18px rgba(0, 0, 0, 0.29);
 		transition-property: box-shadow;
 		transition-duration: 0.3s;
+		outline: none;
 
 		&:hover {
-			box-shadow: 30px 34px 72px rgba(0, 0, 0, 0.29);
+			box-shadow: 0 0 0 0 #f3b8d080, 30px 34px 72px rgba(0, 0, 0, 0.29);
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 8px #f3b8d080, 15px 17px 18px rgba(0, 0, 0, 0.29);
 		}
 
 		img {

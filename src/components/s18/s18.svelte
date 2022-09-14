@@ -140,8 +140,9 @@
 
 		background: linear-gradient(#fff, #fff) no-repeat right bottom / 0 2px;
 		transition: background-size 0.3s;
+		outline: none;
 
-		&:hover {
+		&:is(:hover, :focus) {
 			background-size: 100% 2px;
 			background-position-x: left;
 		}

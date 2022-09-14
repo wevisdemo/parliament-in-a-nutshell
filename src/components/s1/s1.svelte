@@ -36,9 +36,29 @@
 		class:hide={!selected_choice || isSubmitted}
 		type="button"
 		on:click={submitAns}
+		tabindex={!selected_choice || isSubmitted ? -1 : 0}
 	>
 		ตรวจคำตอบ
 	</button>
+
+	{#if isSubmitted && !isCorrect}
+		<div class="incorrect-overlay" />
+	{/if}
+
+	{#if isSubmitted}
+		<div class="ans-img-container">
+			<img
+				class="ans-img"
+				src="/shaking-parliament/quiz-stamp.png"
+				alt="ไม่มีคำตอบที่ตายตัวหรอก เพราะที่นั่ง ส.ส. เปลี่ยนแปลงไปแทบทุกวัน"
+				decoding="async"
+				loading="eager"
+				width="256"
+				height="256"
+			/>
+		</div>
+	{/if}
+
 	<div class="continue" class:show={isSubmitted}>
 		<img
 			src="/shaking-parliament/thinking.png"
@@ -60,24 +80,6 @@
 			aria-hidden="true"
 		/>
 	</div>
-
-	{#if isSubmitted && !isCorrect}
-		<div class="incorrect-overlay" />
-	{/if}
-
-	{#if isSubmitted}
-		<div class="ans-img-container">
-			<img
-				class="ans-img"
-				src="/shaking-parliament/quiz-stamp.png"
-				alt="ไม่มีคำตอบที่ตายตัวหรอก เพราะที่นั่ง ส.ส. เปลี่ยนแปลงไปแทบทุกวัน"
-				decoding="async"
-				loading="eager"
-				width="256"
-				height="256"
-			/>
-		</div>
-	{/if}
 </div>
 
 <style lang="scss">
@@ -132,8 +134,12 @@
 			opacity: 0;
 		}
 
-		&:hover {
+		&:is(:hover, :focus) {
 			background: #333;
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 8px #3338;
 		}
 	}
 
@@ -169,6 +175,7 @@
 		display: flex;
 		align-items: center;
 		gap: 1ch;
+		white-space: nowrap;
 
 		opacity: 0;
 		pointer-events: none;

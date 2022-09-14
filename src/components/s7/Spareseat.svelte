@@ -5,7 +5,7 @@
 	</div>
 	<div class="title-container" />
 	<div class="base-num T1 tc">
-		<svg viewBox="-4 -4 89 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<svg viewBox="-4 -4 89 72" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="15">
 			<path
 				class="svg15"
 				stroke="#000"

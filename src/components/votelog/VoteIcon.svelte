@@ -9,6 +9,7 @@
 		viewBox="0 0 14 16"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
+		aria-label="การเลือกนายกรัฐมนตรี"
 		{...$$restProps}
 	>
 		<path
@@ -41,6 +42,7 @@
 		viewBox="0 0 15 14"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
+		aria-label="การลงมติแก้รัฐธรรมนูญหรือมติทั่วไป"
 		{...$$restProps}
 	>
 		<path
@@ -64,6 +66,7 @@
 		viewBox="0 0 17 18"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
+		aria-label="การลงมติอภิปรายไม่ไว้วางใจ"
 		{...$$restProps}
 	>
 		<path

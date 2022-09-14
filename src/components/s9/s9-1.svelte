@@ -70,6 +70,7 @@
 			loading="lazy"
 			width="126"
 			height="283"
+			aria-hidden="true"
 		/>
 	</div>
 	<svg width="0" height="0">

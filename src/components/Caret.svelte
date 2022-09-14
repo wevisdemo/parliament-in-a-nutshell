@@ -8,6 +8,7 @@
 	viewBox="0 0 53 28"
 	fill="none"
 	xmlns="http://www.w3.org/2000/svg"
+	aria-hidden="true"
 	{...$$restProps}
 >
 	<path d="M2 2L27.6893 25L51 2" stroke={color} stroke-width="4" />
