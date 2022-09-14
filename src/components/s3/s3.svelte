@@ -154,7 +154,7 @@
 
 <!-- VH skip check -->
 <div class="s3-container">
-	<div class="decor">
+	<div class="decor" aria-hidden="true">
 		<div bind:this={el_counter} class="T1 counter-decor">{rp_num}</div>
 		<div bind:this={el_thanathorn} class="thanathorn-img-container">
 			<div class="circle1" />
@@ -290,8 +290,7 @@
 
 <style lang="scss">
 	.s3-container {
-		margin-top: -15vh;
-		padding-top: 30vh;
+		padding-top: 15vh;
 
 		padding-bottom: 50vh;
 		margin-bottom: -50vh;
@@ -317,8 +316,9 @@
 	.decor {
 		position: absolute;
 		inset: 0;
-
+		top: -15vh;
 		overflow: hidden;
+		pointer-events: none;
 	}
 
 	.line {

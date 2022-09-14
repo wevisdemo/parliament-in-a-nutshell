@@ -4,11 +4,23 @@
 	export let submitted = false;
 </script>
 
-<label class:submitted={group === data.value && submitted} class="choice">
-	<span class="box" />
-	<input type="radio" bind:group name="quiz" value={data.value} disabled={submitted} />
+<input
+	type="radio"
+	id="quiz-{data.value}"
+	bind:group
+	name="quiz"
+	value={data.value}
+	disabled={submitted}
+/>
+<label
+	for="quiz-{data.value}"
+	class:disabled={submitted}
+	class:submitted={group === data.value && submitted}
+	class="choice"
+>
+	<span class="box" aria-hidden="true" />
 	<span class="text">{data.value} คน</span>
-	<span class="cross">
+	<span class="cross" aria-hidden="true">
 		<img
 			class="c1"
 			src="/shaking-parliament/mark-tlbr.png"
@@ -17,6 +29,7 @@
 			loading="eager"
 			width="95"
 			height="11"
+			aria-hidden="true"
 		/>
 		<img
 			class="c2"
@@ -26,11 +39,19 @@
 			loading="eager"
 			width="115"
 			height="15"
+			aria-hidden="true"
 		/>
 	</span>
 </label>
 
 <style lang="scss">
+	input {
+		position: absolute;
+		opacity: 0;
+		width: 0;
+		pointer-events: none;
+	}
+
 	.choice {
 		display: flex;
 		margin: 0 auto 24px;
@@ -46,11 +67,6 @@
 			background: #fff;
 			border: 2px solid #000;
 			border-right: none;
-			// display: block;
-		}
-
-		> input {
-			display: none;
 		}
 
 		> .text {
@@ -93,8 +109,8 @@
 		}
 	}
 
-	.choice > input:checked ~ .cross {
-		opacity: 0.5;
+	input:is(:focus, :checked) + .choice > .cross {
+		opacity: 1;
 
 		> .c1,
 		> .c2 {
@@ -108,7 +124,7 @@
 	}
 
 	@media (hover) {
-		.choice:not(.submitted):hover > .cross {
+		.choice:hover > .cross {
 			opacity: 0.5;
 
 			> .c1,
@@ -121,11 +137,14 @@
 				transition-delay: 0.1s;
 			}
 		}
+
+		.choice.disabled:not(.submitted):hover > .cross {
+			opacity: 0;
+		}
 	}
 
-	.choice > input:checked ~ .cross {
-		opacity: 1 !important;
-		transition: none !important;
+	.choice.disabled {
+		cursor: default;
 	}
 
 	.choice.submitted {

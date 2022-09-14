@@ -50,40 +50,42 @@
 	});
 </script>
 
-<a
-	href="https://wevis.info/"
-	rel="nofollow noopener noreferrer"
-	style="position:fixed;top:12px;left:16px;z-index:99;mix-blend-mode:difference"
-	title="WeVis"
->
-	<img
-		src="/shaking-parliament/wevis-logo.svg"
-		alt="WeVis"
-		decoding="async"
-		loading="eager"
-		width="93"
-		height="28"
-	/>
-</a>
 <ScreenNotice />
 <Loader {loaded} {isReady} />
 <GoTop />
-<S1 />
-<!-- <S2 /> -->
-<S3 />
-<S4 />
-<S5 />
-<S6 />
-<S7 />
-<S8 />
-<S9 />
-<S10 />
-<S11 />
-<S12 />
-<S13 />
-<S14 />
-<S15 />
-<S16 />
-<S17 />
-<S18 />
+<main>
+	<a
+		href="https://wevis.info/"
+		rel="nofollow noopener noreferrer"
+		style="position:fixed;top:12px;left:16px;z-index:99;mix-blend-mode:difference"
+		title="WeVis"
+	>
+		<img
+			src="/shaking-parliament/wevis-logo.svg"
+			alt="WeVis"
+			decoding="async"
+			loading="eager"
+			width="93"
+			height="28"
+		/>
+	</a>
+	<S1 />
+	<!-- <S2 /> -->
+	<S3 />
+	<S4 />
+	<S5 />
+	<S6 />
+	<S7 />
+	<S8 />
+	<S9 />
+	<S10 />
+	<S11 />
+	<S12 />
+	<S13 />
+	<S14 />
+	<S15 />
+	<S16 />
+	<S17 />
+	<S18 />
+</main>
 <div bind:this={el_tooltip} class="tooltip" />

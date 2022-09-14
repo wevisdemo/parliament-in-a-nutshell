@@ -47,6 +47,7 @@
 			loading="lazy"
 			width="32"
 			height="32"
+			aria-hidden="true"
 		/>
 		เกิดอะไรขึ้น? ไปดูกัน!
 		<img
@@ -56,6 +57,7 @@
 			loading="lazy"
 			width="32"
 			height="32"
+			aria-hidden="true"
 		/>
 	</div>
 
@@ -68,7 +70,7 @@
 			<img
 				class="ans-img"
 				src="/shaking-parliament/quiz-stamp.png"
-				alt=""
+				alt="ไม่มีคำตอบที่ตายตัวหรอก เพราะที่นั่ง ส.ส. เปลี่ยนแปลงไปแทบทุกวัน"
 				decoding="async"
 				loading="eager"
 				width="256"

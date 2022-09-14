@@ -5,7 +5,7 @@
 	export let isReady = false;
 </script>
 
-<div class="c loader-container" class:finish={isReady}>
+<div class="c loader-container" class:finish={isReady} aria-hidden={isReady}>
 	<div class="content tc">
 		<div class="row" class:stop={loaded}>
 			<div class="icon">
