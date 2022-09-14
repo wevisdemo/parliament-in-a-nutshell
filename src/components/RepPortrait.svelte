@@ -20,13 +20,15 @@
 	onMount(() => {
 		if (!tooltip) return;
 	});
+
+	const altSide = side === 'gov' ? 'ฝ่ายรัฐบาล' : side === 'opp' ? 'ฝ่ายค้าน' : 'ฝ่ายค้านอิสระ';
 </script>
 
 {#if $$slots.default}
 	<div class="rp-container {clazz}" class:showTop style:--s={size} {...$$restProps}>
 		<img
 			src="/shaking-parliament/{src}"
-			alt={name}
+			alt="{name} ({altSide})"
 			class="portrait {side}"
 			class:dashedBorder
 			style:--c={color}
@@ -42,7 +44,7 @@
 {:else}
 	<img
 		src="/shaking-parliament/{src}"
-		alt={name}
+		alt="{name} ({altSide})"
 		class="portrait {side} {clazz}"
 		class:dashedBorder
 		style:--c={color}
