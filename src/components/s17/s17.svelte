@@ -18,10 +18,10 @@
 </script>
 
 <div class="s-16 container c tc">
-	<h1 class="header mtb0">
+	<h2 class="header mtb0">
 		ร่วมจับตาดูความเคลื่อนไหวในสภา<span class="nw">อย่างต่อเนื่อง</span><br />
 		<small class="subheader">ก่อนเข้าสู่การเลือกตั้งครั้งถัดไปที่จะเกิดขึ้นในปี 2566</small>
-	</h1>
+	</h2>
 	<div class="share-text">แชร์เพื่อบอกเล่าเรื่องราวกับเพื่อนของคุณ</div>
 	<div class="social-container">
 		<div class="row" style="--gap:32px">

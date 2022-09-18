@@ -3,7 +3,7 @@
 </script>
 
 <footer class="black c tc ref-container">
-	<h1 class="T1">แหล่งที่มาของข้อมูล</h1>
+	<h2 class="T1 title">แหล่งที่มาของข้อมูล</h2>
 	<div class="pill dark">แหล่งที่มาชุดข้อมูลการลงมติ</div>
 	<div style="width:95%">
 		<a
@@ -118,6 +118,10 @@
 		z-index: 3;
 		box-shadow: 0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%),
 			0 11px 15px -7px rgb(0 0 0 / 20%);
+	}
+
+	.title {
+		margin: 0.67em 0;
 	}
 
 	.T1 {

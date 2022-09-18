@@ -79,7 +79,7 @@
 				height="660"
 			/>
 		</div>
-		<h1 class="h100 c mtb0">
+		<h2 class="h100 c mtb0">
 			<img
 				class="title-img"
 				src="/shaking-parliament/part1_title.png"
@@ -87,7 +87,7 @@
 				decoding="async"
 				loading="lazy"
 			/>
-		</h1>
+		</h2>
 		<CircleFold>
 			มาสำรวจสถิติ<br />
 			<strong style="font-size:2rem;line-height:1.2">

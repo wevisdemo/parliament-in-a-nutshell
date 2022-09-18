@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<h1 class="h100 c tc part2-title mtb0">
+<h2 class="h100 c tc part2-title mtb0">
 	<img
 		class="title-img"
 		src="/shaking-parliament/part2_title.png"
@@ -10,7 +10,7 @@
 		loading="lazy"
 		style="position:relative"
 	/>
-</h1>
+</h2>
 <div class="news-container">
 	<img
 		src="/shaking-parliament/part2_papers.png"

@@ -66,7 +66,7 @@
 			height="578"
 		/>
 	</div>
-	<h1 class="mtb0">
+	<h2 class="mtb0">
 		<img
 			bind:this={el_logo}
 			class="title-img"
@@ -75,7 +75,7 @@
 			decoding="async"
 			loading="lazy"
 		/>
-	</h1>
+	</h2>
 	<img
 		class="news-img"
 		src="/shaking-parliament/pt4_newspaper.png"

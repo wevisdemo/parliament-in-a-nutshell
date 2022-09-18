@@ -70,7 +70,7 @@
 	<div class="h100 c stick">
 		<div class="event-container">
 			<div class="event resign">
-				<h3 class="tc">ลาออก</h3>
+				<span class="tc">ลาออก</span>
 				<div class="row rp-grid">
 					{#each PART1_DATA.resign as res_c}
 						<div class="col row vert">
@@ -83,7 +83,7 @@
 			</div>
 			<div class="sep" />
 			<div class="event pass">
-				<h3 class="tc">เสียชีวิต</h3>
+				<span class="tc">เสียชีวิต</span>
 				<div class="row rp-grid">
 					{#each PART1_DATA.pass as res_c}
 						<div class="col row vert">
@@ -96,7 +96,7 @@
 			</div>
 			<div class="sep" />
 			<div class="event fire">
-				<h3 class="tc">ศาลตัดสินให้พ้นสภาพ ส.ส.</h3>
+				<span class="tc">ศาลตัดสินให้พ้นสภาพ ส.ส.</span>
 				<div class="row rp-grid">
 					{#each PART1_DATA.fire as res_c}
 						<div class="col row vert">
@@ -167,9 +167,13 @@
 		padding: 32px;
 	}
 
-	h3 {
+	.tc {
 		white-space: nowrap;
-		margin-bottom: 24px;
+		margin: 0 0 24px;
+		text-align: center;
+		display: block;
+		font-size: 1.17em;
+		font-weight: 700;
 	}
 
 	.sep {
