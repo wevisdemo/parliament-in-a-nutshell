@@ -37,6 +37,8 @@
 		type="button"
 		on:click={submitAns}
 		tabindex={!selected_choice || isSubmitted ? -1 : 0}
+		aria-hidden={isSubmitted}
+		disabled={!selected_choice || isSubmitted}
 	>
 		ตรวจคำตอบ
 	</button>
@@ -59,7 +61,7 @@
 		</div>
 	{/if}
 
-	<div class="continue" class:show={isSubmitted}>
+	<div class="continue" class:show={isSubmitted} aria-hidden={!isSubmitted}>
 		<img
 			src="/shaking-parliament/thinking.png"
 			alt=""
