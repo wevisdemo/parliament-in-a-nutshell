@@ -18,8 +18,10 @@
 </script>
 
 <div class="s-16 container c tc">
-	<div class="header">ร่วมจับตาดูความเคลื่อนไหวในสภา<span class="nw">อย่างต่อเนื่อง</span></div>
-	<div class="subheader">ก่อนเข้าสู่การเลือกตั้งครั้งถัดไปที่จะเกิดขึ้นในปี 2566</div>
+	<h1 class="header mtb0">
+		ร่วมจับตาดูความเคลื่อนไหวในสภา<span class="nw">อย่างต่อเนื่อง</span><br />
+		<small class="subheader">ก่อนเข้าสู่การเลือกตั้งครั้งถัดไปที่จะเกิดขึ้นในปี 2566</small>
+	</h1>
 	<div class="share-text">แชร์เพื่อบอกเล่าเรื่องราวกับเพื่อนของคุณ</div>
 	<div class="social-container">
 		<div class="row" style="--gap:32px">
@@ -127,15 +129,21 @@
 			height="443"
 		/>
 	</div>
-	<div class="header">ติดตามการลงมติในสภาเพิ่มเติมได้ที่</div>
+	<h2 class="header" style="line-height:1.5">ติดตามการลงมติในสภาเพิ่มเติมได้ที่</h2>
 	<a
 		class="card"
 		href="https://theyworkforus.wevis.info/"
 		target="_blank"
 		rel="nofollow noopener noreferrer"
 	>
-		<img src="/shaking-parliament/theywork.png" alt="" />
-		<div class="card-body">
+		<img
+			src="/shaking-parliament/theywork.png"
+			alt=""
+			aria-labelledby="theywork-content"
+			decoding="async"
+			loading="lazy"
+		/>
+		<div class="card-body" id="theywork-content">
 			<div class="card-header">They Work For Us รู้จักและติดตาม 'ผู้แทน' ในสภาของเรา</div>
 			<p>ใครเป็นใคร เคยทำอะไรมาบ้าง ตอนนี้อยู่ตำแหน่งไหน และยกมือสนับสนุนอะไรในสภา</p>
 		</div>
@@ -147,7 +155,6 @@
 	.subheader {
 		font-weight: 700;
 		font-size: 3rem;
-		line-height: 1.5;
 	}
 
 	.subheader {

@@ -35,7 +35,7 @@
 </script>
 
 <div class="s14-container tc c">
-	<img class="crack" src="/shaking-parliament/crack.svg" alt="" />
+	<img class="crack" src="/shaking-parliament/crack.svg" alt="" decoding="async" loading="lazy" />
 	<div bind:this={el_decor_container} class="decor">
 		<img
 			class="star"
@@ -66,15 +66,23 @@
 			height="578"
 		/>
 	</div>
+	<h1 class="mtb0">
+		<img
+			bind:this={el_logo}
+			class="title-img"
+			src="/shaking-parliament/part4_title.png"
+			alt="บทที่ 4 — สภาคลอน ขั้วรัฐแตกพ่าย เกิดการโยกย้ายขนานใหญ่"
+			decoding="async"
+			loading="lazy"
+		/>
+	</h1>
 	<img
-		bind:this={el_logo}
-		class="title-img"
-		src="/shaking-parliament/part4_title.png"
-		alt=""
+		class="news-img"
+		src="/shaking-parliament/pt4_newspaper.png"
+		alt="28 มกราคม 2565 ธรรมนัสนำทีมย้ายขั้ว"
 		decoding="async"
 		loading="lazy"
 	/>
-	<img class="news-img" src="/shaking-parliament/pt4_newspaper.png" alt="" />
 	<p class="news-text tc">
 		&ldquo; มกราคม 2565 พล.อ.ประวิตร วงษ์สุวรรณ<br />
 		<span class="special-lh">หัวหน้าพรรคพลังประชารัฐ<br /></span>

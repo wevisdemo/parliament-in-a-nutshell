@@ -69,23 +69,35 @@
 			height="28"
 		/>
 	</a>
-	<S1 />
-	<!-- <S2 /> -->
-	<S3 />
-	<S4 />
-	<S5 />
-	<S6 />
-	<S7 />
-	<S8 />
-	<S9 />
-	<S10 />
-	<S11 />
-	<S12 />
-	<S13 />
-	<S14 />
-	<S15 />
-	<S16 />
-	<S17 />
-	<S18 />
+	<section>
+		<S1 />
+		<!-- <S2 /> -->
+		<S3 />
+		<S4 />
+		<S5 />
+	</section>
+	<section>
+		<S6 />
+		<S7 />
+	</section>
+	<section>
+		<S8 />
+		<S9 />
+		<S10 />
+	</section>
+	<section>
+		<S11 />
+		<S12 />
+		<S13 />
+	</section>
+	<section>
+		<S14 />
+		<S15 />
+	</section>
+	<section>
+		<S16 />
+		<S17 />
+	</section>
 </main>
+<S18 />
 <div bind:this={el_tooltip} class="tooltip" />

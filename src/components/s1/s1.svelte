@@ -20,12 +20,12 @@
 </script>
 
 <div class="h100 c">
-	<h1 class="T1">
+	<h2 class="T1">
 		<span class="nw">คุณรู้ไหม?</span><br />
 		<span class="year nw">ตอนนี้</span><span class="nw">ในรัฐสภา</span><span class="nw"
 			>มี ส.ส. กี่คน</span
 		>
-	</h1>
+	</h2>
 
 	{#each choices as data}
 		<Choice bind:group={selected_choice} {data} submitted={isSubmitted} />
@@ -42,7 +42,7 @@
 	</button>
 
 	{#if isSubmitted && !isCorrect}
-		<div class="incorrect-overlay" />
+		<div class="incorrect-overlay" aria-hidden="true" />
 	{/if}
 
 	{#if isSubmitted}
@@ -75,7 +75,7 @@
 			alt=""
 			decoding="async"
 			loading="lazy"
-			width="32"
+			width="21"
 			height="32"
 			aria-hidden="true"
 		/>
@@ -185,6 +185,10 @@
 		> img {
 			width: 32px;
 			height: 32px;
+
+			&:last-of-type {
+				width: 21px;
+			}
 		}
 	}
 

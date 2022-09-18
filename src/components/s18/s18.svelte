@@ -2,7 +2,7 @@
 	import WvFooter from '@wevisdemo/ui/components/footer.svelte';
 </script>
 
-<div class="black c tc ref-container">
+<footer class="black c tc ref-container">
 	<h1 class="T1">แหล่งที่มาของข้อมูล</h1>
 	<div class="pill dark">แหล่งที่มาชุดข้อมูลการลงมติ</div>
 	<div style="width:95%">
@@ -50,16 +50,15 @@
 			"ธรรมนัส" นำทีม 18 ส.ส.พปชร.แจ้งย้ายเข้า "เศรษฐกิจไทย" ไร้ชื่อ 3 ส.ส. (ไทยรัฐออนไลน์)
 		</a>
 	</div>
-	<p />
 	<div class="ref_date">— สืบค้นเมื่อ กรกฎาคม 2565 —</div>
 	<div style="--h:192px" />
-	<h1 class="T1">WeVis Interns</h1>
+	<h2 class="T1">WeVis Interns</h2>
 	<div class="row intern-container" style="--gap:80px">
 		<div class="col c tc intern">
 			<img
 				class="intern-portrait"
 				src="/shaking-parliament/i1.jpg"
-				alt=""
+				alt="ทินกร หวานแท้ — Intern Project Coordinator"
 				decoding="async"
 				loading="lazy"
 				width="250"
@@ -77,7 +76,7 @@
 			<img
 				class="intern-portrait"
 				src="/shaking-parliament/i2.jpg"
-				alt=""
+				alt="ณภัทร แต้เถา — Intern Digital Designer"
 				decoding="async"
 				loading="lazy"
 				width="250"
@@ -95,7 +94,7 @@
 			<img
 				class="intern-portrait"
 				src="/shaking-parliament/i3.jpg"
-				alt=""
+				alt="สุเทพ จันทร์ชูผล — Intern Web Developer"
 				decoding="async"
 				loading="lazy"
 				width="250"
@@ -110,7 +109,7 @@
 			<div class="intern-role">Intern Web Developer</div>
 		</div>
 	</div>
-</div>
+</footer>
 <WvFooter dark />
 
 <style lang="scss">

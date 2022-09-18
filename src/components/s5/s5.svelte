@@ -23,14 +23,22 @@
 		decoding="async"
 		loading="lazy"
 	/>
-	<img class="logo" src="/shaking-parliament/title.png" alt="" decoding="async" loading="lazy" />
+	<h1 class="mtb0">
+		<img
+			class="logo"
+			src="/shaking-parliament/title.png"
+			alt="ส.ส. เคลื่อน มติสั่น สภาคลอน"
+			decoding="async"
+			loading="lazy"
+		/>
+	</h1>
 </div>
 
 <style lang="scss">
 	.s5-container {
 		background: #000;
 
-		> .logo {
+		> h1 > .logo {
 			opacity: 0.1;
 
 			height: 60vh;
@@ -50,7 +58,7 @@
 		}
 
 		&.in-view {
-			> .logo {
+			> h1 > .logo {
 				opacity: 1;
 				animation: flickering 1s linear forwards;
 			}

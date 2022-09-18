@@ -1,20 +1,20 @@
 <script lang="ts">
 </script>
 
-<div class="h100 c tc part2-title">
+<h1 class="h100 c tc part2-title mtb0">
 	<img
 		class="title-img"
 		src="/shaking-parliament/part2_title.png"
-		alt=""
+		alt="บทที่ 2 — เพลงไม่ทันเปิด เกิดกฏิกาพิเศษ ส.ส. ปัดเศษ เข้าสภา"
 		decoding="async"
 		loading="lazy"
 		style="position:relative"
 	/>
-</div>
+</h1>
 <div class="news-container">
 	<img
 		src="/shaking-parliament/part2_papers.png"
-		alt=""
+		alt="ตะลึง! 12 พรรคเล็ก ผุดที่นั่งหนุนรัฐบาล"
 		class="newspaper"
 		decoding="async"
 		loading="lazy"

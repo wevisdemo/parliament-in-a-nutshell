@@ -323,7 +323,7 @@
 		<img
 			class="sankey-img-newecon"
 			src="/shaking-parliament/part12.png"
-			alt=""
+			alt="พรรคเศรษฐกิจใหม่ ย้ายขั้วไปรัฐบาล"
 			decoding="async"
 			loading="lazy"
 		/>

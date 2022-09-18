@@ -17,6 +17,7 @@
 	class:disabled={submitted}
 	class:submitted={group === data.value && submitted}
 	class="choice"
+	aria-hidden="true"
 >
 	<span class="box" aria-hidden="true" />
 	<span class="text">{data.value} คน</span>

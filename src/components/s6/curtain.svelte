@@ -2,9 +2,9 @@
 	import RP from 'components/RepPortrait.svelte';
 </script>
 
-<div class="curtain h100 c">
-	<h1 class="T1" style="margin-bottom:24px">วิธีอ่านข้อมูล</h1>
-	<h2 class="pill dark">ข้อมูลทั่วไป</h2>
+<div class="curtain h100 c" aria-hidden="true">
+	<h2 class="T1" style="margin-bottom:24px">วิธีอ่านข้อมูล</h2>
+	<h3 class="pill dark">ข้อมูลทั่วไป</h3>
 	<div class="row" style="--gap:32px;margin-bottom:24px">
 		<div class="col data-explain tc" style="--bgc:#5b5b5b;--txc:#fff">
 			<small>ข้อมูลเกี่ยวกับ</small><br />ฝ่ายรัฐบาล
@@ -16,7 +16,7 @@
 			<small>ข้อมูลเกี่ยวกับ</small><br />ฝ่ายค้าน
 		</div>
 	</div>
-	<h2 class="pill dark">ข้อมูล ส.ส. รายคน</h2>
+	<h3 class="pill dark">ข้อมูล ส.ส. รายคน</h3>
 	<div class="small-explain hover-rp">รูปภาพเพื่อดูชื่อ ส.ส.</div>
 	<div class="row" style="--gap:32px">
 		<div class="col tc">

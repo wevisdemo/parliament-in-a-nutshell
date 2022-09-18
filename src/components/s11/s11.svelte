@@ -79,14 +79,16 @@
 			height="420"
 		/>
 	</div>
-	<img
-		bind:this={el_logo}
-		class="title-img"
-		src="/shaking-parliament/part3_title.png"
-		alt=""
-		decoding="async"
-		loading="lazy"
-	/>
+	<h1 class="mtb0">
+		<img
+			bind:this={el_logo}
+			class="title-img"
+			src="/shaking-parliament/part3_title.png"
+			alt="บทที่ 3 — เพราะภายในมีจุดยืนต่าง ขั้วข้างจึงสั่นคลอน"
+			decoding="async"
+			loading="lazy"
+		/>
+	</h1>
 </div>
 <Circle style="font-size:1rem">
 	แน่นอนว่ามันเป็นไปได้ยาก<br />
