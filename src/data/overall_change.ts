@@ -101,39 +101,33 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				}
 			},
 			{
-				name: 'กนกวรรณ วิลาวัลย์',
-				side: 'gov',
-				src: 'rp/ลาออก-กนกวรรณ.png',
-				color: '#065CAB',
-				replace_by: {
-					name: 'สุชาติ โชคชัยวัฒนากร',
-					side: 'gov',
-					src: 'rp/แทน-สุชาติ.png',
-					color: '#065CAB'
-				}
-			},
-			{
 				name: 'หม่อมราชวงศ์จัตุมงคล โสณกุล',
 				side: 'gov',
 				src: 'rp/ลาออก-จัตุมงคล.png',
 				color: '#18246D',
 				replace_by: {
-					name: 'จุฑาฑัตต เหล่าธรรมทัศน์',
+					name: 'ทวีศักดิ์ ณ ตะกั่วทุ่ง (ลาออก)',
 					side: 'gov',
-					src: 'rp/แทน-จุฑาฑัตต.png',
-					color: '#18246D'
+					src: 'rp/แทน-ทวีศักดิ์.png',
+					color: '#18246D',
+					replace_by: {
+						name: 'จุฑาฑัตต เหล่าธรรมทัศน์',
+						side: 'gov',
+						src: 'rp/แทน-จุฑาฑัตต.png',
+						color: '#18246D'
+					}
 				}
 			},
 			{
-				name: 'พลตรีทรงกลด ทิพย์รัตน์',
+				name: 'เพชรชมพู กิจบูรณะ',
 				side: 'gov',
-				src: 'rp/ลาออก-ทรงกลด.png',
-				color: '#AAC826',
+				src: 'rp/ลาออก-เพชรชมพู.png',
+				color: '#18246D',
 				replace_by: {
-					name: 'บุญญาพร นาตะธนภัทร',
+					name: 'สุเนตตา แซ่โก๊ะ',
 					side: 'gov',
-					src: 'rp/แทน-บุญญาพร.png',
-					color: '#AAC826'
+					src: 'rp/แทน-สุเนตตา.png',
+					color: '#18246D'
 				}
 			}
 		],
@@ -175,27 +169,15 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				}
 			},
 			{
-				name: 'เพชรชมพู กิจบูรณะ',
+				name: 'พลตรีทรงกลด ทิพย์รัตน์',
 				side: 'gov',
-				src: 'rp/ลาออก-เพชรชมพู.png',
-				color: '#18246D',
+				src: 'rp/ลาออก-ทรงกลด.png',
+				color: '#AAC826',
 				replace_by: {
-					name: 'สุเนตตา แซ่โก๊ะ',
+					name: 'บุญญาพร นาตะธนภัทร',
 					side: 'gov',
-					src: 'rp/แทน-สุเนตตา.png',
-					color: '#18246D'
-				}
-			},
-			{
-				name: 'สมเกียรติ ศรลัมพ์',
-				side: 'gov',
-				src: 'rp/ลาออก-สมเกียรติ.png',
-				color: '#288707',
-				replace_by: {
-					name: 'นันทนา สงฆ์ประชา',
-					side: 'gov',
-					src: 'rp/แทน-นันทนา.png',
-					color: '#288707'
+					src: 'rp/แทน-บุญญาพร.png',
+					color: '#AAC826'
 				}
 			}
 		],
@@ -249,15 +231,15 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				}
 			},
 			{
-				name: 'มิ่งขวัญ แสงสุวรรณ',
-				side: 'opp',
-				src: 'rp/ลาออก-มิ่งขวัญ.png',
-				color: '#75328C',
+				name: 'สมเกียรติ ศรลัมพ์',
+				side: 'gov',
+				src: 'rp/ลาออก-สมเกียรติ.png',
+				color: '#288707',
 				replace_by: {
-					name: 'จิราพร นาคดิลก',
+					name: 'นันทนา สงฆ์ประชา',
 					side: 'gov',
-					src: 'rp/แทน-จิราพร.png',
-					color: '#75328C'
+					src: 'rp/แทน-นันทนา.png',
+					color: '#288707'
 				}
 			}
 		],
@@ -308,6 +290,18 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 					side: 'opp',
 					src: 'rp/แทน-ทวี.png',
 					color: '#D87A0E'
+				}
+			},
+			{
+				name: 'มิ่งขวัญ แสงสุวรรณ',
+				side: 'opp',
+				src: 'rp/ลาออก-มิ่งขวัญ.png',
+				color: '#75328C',
+				replace_by: {
+					name: 'จิราพร นาคดิลก',
+					side: 'gov',
+					src: 'rp/แทน-จิราพร.png',
+					color: '#75328C'
 				}
 			}
 		]
@@ -394,6 +388,24 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 					side: 'gov',
 					src: 'rp/แทน-เพชรภูมิ.png',
 					color: '#0B3757'
+				}
+			},
+			{
+				name: 'นาที รัชกิจประการ',
+				side: 'gov',
+				src: 'rp/แทน-นาที.png',
+				color: '#065CAB',
+				replace_by: {
+					name: 'กนกวรรณ วิลาวัลย์ (ลาออก)',
+					side: 'gov',
+					src: 'rp/ลาออก-กนกวรรณ.png',
+					color: '#065CAB',
+					replace_by: {
+						name: 'สุชาติ โชคชัยวัฒนากร',
+						side: 'gov',
+						src: 'rp/แทน-สุชาติ.png',
+						color: '#065CAB'
+					}
 				}
 			}
 		],
@@ -497,27 +509,15 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				}
 			},
 			{
-				name: 'จารุวรรณ ศรัณย์เกตุ',
+				name: 'นวัธ เตาะเจริญสุข',
 				side: 'opp',
-				src: 'rp/ศาลตัด-จารุวรรณ.png',
-				color: '#ff6f21',
+				src: 'rp/ศาลตัด-นวัธ.png',
+				color: '#e50000',
 				replace_by: {
-					name: 'ว่าง',
-					side: 'opp',
-					src: 'w.png',
-					color: '#fff'
-				}
-			},
-			{
-				name: 'เจนวิทย์ ไกรสินธุ์',
-				side: 'opp',
-				src: 'rp/ศาลตัด-เจนวิทย์.png',
-				color: '#ff6f21',
-				replace_by: {
-					name: 'ว่าง',
-					side: 'opp',
-					src: 'w.png',
-					color: '#fff'
+					name: 'สมศักดิ์ คุณเงิน',
+					side: 'free',
+					src: 'rp/pt14-สมศักดิ์.png',
+					color: '#F0DA8C'
 				}
 			}
 		],
@@ -571,9 +571,9 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				}
 			},
 			{
-				name: 'พงศกร รอดชมภู',
+				name: 'เจนวิทย์ ไกรสินธุ์',
 				side: 'opp',
-				src: 'rp/ศาลตัด-พงศกร.png',
+				src: 'rp/ศาลตัด-เจนวิทย์.png',
 				color: '#ff6f21',
 				replace_by: {
 					name: 'ว่าง',
@@ -621,15 +621,27 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				}
 			},
 			{
-				name: 'นวัธ เตาะเจริญสุข',
+				name: 'จารุวรรณ ศรัณย์เกตุ',
 				side: 'opp',
-				src: 'rp/ศาลตัด-นวัธ.png',
-				color: '#e50000',
+				src: 'rp/ศาลตัด-จารุวรรณ.png',
+				color: '#ff6f21',
 				replace_by: {
-					name: 'สมศักดิ์ คุณเงิน',
-					side: 'free',
-					src: 'rp/pt14-สมศักดิ์.png',
-					color: '#F0DA8C'
+					name: 'ว่าง',
+					side: 'opp',
+					src: 'w.png',
+					color: '#fff'
+				}
+			},
+			{
+				name: 'พงศกร รอดชมภู',
+				side: 'opp',
+				src: 'rp/ศาลตัด-พงศกร.png',
+				color: '#ff6f21',
+				replace_by: {
+					name: 'ว่าง',
+					side: 'opp',
+					src: 'w.png',
+					color: '#fff'
 				}
 			}
 		]
