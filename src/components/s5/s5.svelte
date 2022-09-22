@@ -27,7 +27,7 @@
 		<img
 			class="logo"
 			src="/shaking-parliament/title.png"
-			alt="ส.ส. เคลื่อน มติสั่น สภาคลอน"
+			alt="สรุปสั้นสภาไทย (Thai Parliament in a Coconutshell)"
 			decoding="async"
 			loading="lazy"
 		/>
