@@ -1,7 +1,67 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { timeline, inView } from 'motion';
+
+	let el_deco_container: any;
+	onMount(() => {
+		const el_decors = el_deco_container.children;
+		const seq: TimelineDefinition = [
+			[
+				el_decors[0],
+				{ transform: ['translate(0,0) scale(0) rotate(180deg)', 'translate(15vw,-35vh) scale(1)'] },
+				{ easing: 'ease-out', duration: 0.5 }
+			],
+			[
+				el_decors[1],
+				{
+					transform: ['translate(0,0) scale(0) rotate(-180deg)', 'translate(-23vw,-5vh) scale(1)']
+				},
+				{ easing: 'ease-out', duration: 0.5, at: '<' }
+			],
+			[
+				el_decors[2],
+				{ transform: ['translate(0,0) scale(0) rotate(-180deg)', 'translate(18vw,23vh) scale(1)'] },
+				{ easing: 'ease-out', duration: 0.5, at: '<' }
+			]
+		];
+
+		inView(
+			el_deco_container,
+			() => {
+				timeline(seq);
+			},
+			{ amount: 0.8 }
+		);
+	});
 </script>
 
 <h2 class="h100 c tc part2-title mtb0">
+	<div bind:this={el_deco_container} class="decor" aria-hidden="true">
+		<img
+			src="/shaking-parliament/part2_bg1.png"
+			alt=""
+			decoding="async"
+			loading="lazy"
+			width="92"
+			height="93"
+		/>
+		<img
+			src="/shaking-parliament/part2_bg2.png"
+			alt=""
+			decoding="async"
+			loading="lazy"
+			width="107"
+			height="137"
+		/>
+		<img
+			src="/shaking-parliament/part2_bg3.png"
+			alt=""
+			decoding="async"
+			loading="lazy"
+			width="135"
+			height="101"
+		/>
+	</div>
 	<img
 		class="title-img"
 		src="/shaking-parliament/part2_title.png"
@@ -43,6 +103,22 @@
 </div>
 
 <style lang="scss">
+	.decor {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100vh;
+
+		> img {
+			position: absolute;
+			object-fit: contain;
+			object-position: center;
+			top: 50%;
+			left: 50%;
+			transform: scale(0);
+		}
+	}
+
 	.title-img {
 		width: min(60vw, 60vh);
 	}
