@@ -10,7 +10,7 @@
 			() => {
 				is_logo_inview = true;
 			},
-			{ amount: 0.3 }
+			{ amount: 0.5 }
 		);
 	});
 </script>
@@ -41,16 +41,16 @@
 		> h1 > .logo {
 			opacity: 0.1;
 
-			height: 60vh;
-			width: 60vw;
+			height: 65vh;
+			width: 65vw;
 			object-fit: contain;
 		}
 
 		> .logo-decor {
 			opacity: 0.3;
 
-			height: 70vh; /* O */
-			width: 70vw; /* O */
+			height: 65vh; /* O */
+			width: 65vw; /* O */
 			object-fit: contain;
 
 			position: absolute;
