@@ -8,20 +8,24 @@
 		const seq: TimelineDefinition = [
 			[
 				el_decors[0],
-				{ transform: ['translate(0,0) scale(0) rotate(180deg)', 'translate(15vw,-35vh) scale(1)'] },
-				{ easing: 'ease-out', duration: 0.5 }
+				{
+					transform: ['translate(0,0) scale(0) rotate(180deg)', 'translate(15vw,-38vh) scale(1)']
+				},
+				{ easing: [0.5, 0, 0.27, 1.55], duration: 0.5 }
 			],
 			[
 				el_decors[1],
 				{
-					transform: ['translate(0,0) scale(0) rotate(-180deg)', 'translate(-23vw,-5vh) scale(1)']
+					transform: ['translate(0,0) scale(0) rotate(-180deg)', 'translate(-30vw,-10vh) scale(1)']
 				},
-				{ easing: 'ease-out', duration: 0.5, at: '<' }
+				{ easing: [0.5, 0, 0.27, 1.55], duration: 0.5, at: '<' }
 			],
 			[
 				el_decors[2],
-				{ transform: ['translate(0,0) scale(0) rotate(-180deg)', 'translate(18vw,23vh) scale(1)'] },
-				{ easing: 'ease-out', duration: 0.5, at: '<' }
+				{
+					transform: ['translate(0,0) scale(0) rotate(-180deg)', 'translate(15vw,25vh) scale(1)']
+				},
+				{ easing: [0.5, 0, 0.27, 1.55], duration: 0.5, at: '<' }
 			]
 		];
 
@@ -42,24 +46,24 @@
 			alt=""
 			decoding="async"
 			loading="lazy"
-			width="92"
-			height="93"
+			width="184"
+			height="186"
 		/>
 		<img
 			src="/shaking-parliament/part2_bg2.png"
 			alt=""
 			decoding="async"
 			loading="lazy"
-			width="107"
-			height="137"
+			width="214"
+			height="274"
 		/>
 		<img
 			src="/shaking-parliament/part2_bg3.png"
 			alt=""
 			decoding="async"
 			loading="lazy"
-			width="135"
-			height="101"
+			width="270"
+			height="202"
 		/>
 	</div>
 	<img
