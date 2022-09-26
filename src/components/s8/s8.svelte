@@ -7,25 +7,18 @@
 		const el_decors = el_deco_container.children;
 		const seq: TimelineDefinition = [
 			[
-				el_decors[0],
-				{
-					transform: ['translate(0,0) scale(0) rotate(180deg)', 'translate(15vw,-38vh) scale(1)']
-				},
-				{ easing: [0.5, 0, 0.27, 1.55], duration: 0.5 }
-			],
-			[
 				el_decors[1],
 				{
-					transform: ['translate(0,0) scale(0) rotate(-180deg)', 'translate(-30vw,-10vh) scale(1)']
+					transform: ['translate(30%, -40%) rotate(0deg)', 'translate(30%, -40%) rotate(90deg)']
 				},
-				{ easing: [0.5, 0, 0.27, 1.55], duration: 0.5, at: '<' }
+				{ duration: 0.5 }
 			],
 			[
-				el_decors[2],
+				el_decors[3],
 				{
-					transform: ['translate(0,0) scale(0) rotate(-180deg)', 'translate(15vw,25vh) scale(1)']
+					transform: ['translate(-30%, 40%) rotate(180deg)', 'translate(-30%, 40%) rotate(270deg)']
 				},
-				{ easing: [0.5, 0, 0.27, 1.55], duration: 0.5, at: '<' }
+				{ duration: 0.5, at: '<' }
 			]
 		];
 
@@ -42,28 +35,40 @@
 <h2 class="h100 c tc part2-title mtb0">
 	<div bind:this={el_deco_container} class="decor" aria-hidden="true">
 		<img
+			class="disc d1"
 			src="/shaking-parliament/part2_bg1.png"
 			alt=""
 			decoding="async"
 			loading="lazy"
-			width="184"
-			height="186"
+			width="533"
+			height="533"
 		/>
 		<img
+			class="reader r1"
 			src="/shaking-parliament/part2_bg2.png"
 			alt=""
 			decoding="async"
 			loading="lazy"
-			width="214"
-			height="274"
+			width="374"
+			height="374"
 		/>
 		<img
-			src="/shaking-parliament/part2_bg3.png"
+			class="disc d2"
+			src="/shaking-parliament/part2_bg1.png"
 			alt=""
 			decoding="async"
 			loading="lazy"
-			width="270"
-			height="202"
+			width="533"
+			height="533"
+		/>
+		<img
+			class="reader r2"
+			src="/shaking-parliament/part2_bg2.png"
+			alt=""
+			decoding="async"
+			loading="lazy"
+			width="374"
+			height="374"
 		/>
 	</div>
 	<img
@@ -109,9 +114,44 @@
 			position: absolute;
 			object-fit: contain;
 			object-position: center;
-			top: 50%;
-			left: 50%;
-			transform: scale(0);
+
+			&.disc {
+				max-width: 50vw;
+				max-height: 50vw;
+			}
+
+			&.d1 {
+				top: 10vh;
+				left: 0;
+
+				transform: translateX(-50%);
+			}
+
+			&.d2 {
+				bottom: 10vh;
+				right: 0;
+
+				transform: translateX(50%);
+			}
+
+			&.reader {
+				max-width: 35vw;
+				max-height: 35vw;
+			}
+
+			&.r1 {
+				top: 10vh;
+				left: 0;
+
+				transform: translate(30%, -40%) rotate(0deg);
+			}
+
+			&.r2 {
+				bottom: 10vh;
+				right: 0;
+
+				transform: translate(-30%, 40%) rotate(180deg);
+			}
 		}
 	}
 
