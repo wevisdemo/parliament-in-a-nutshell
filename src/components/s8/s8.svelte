@@ -84,25 +84,17 @@
 		loading="lazy"
 	/>
 	<p class="news-text tc">
-		<span class="ib" style="margin:0 0 .5rem">&ldquo; ผ่านไป 45 วัน<br /></span>
-		<span class="nw">หลังจากที่สังคม</span><span class="nw">ทราบผลการเลือกตั้ง</span><br />
-		<span class="black"
-			>กกต. จึงได้เปิดเผยตัวเลข<span class="nw">ที่นั่ง</span><span class="nw">ในสภา</span><span
-				class="nw">ออกมา</span
-			></span
-		><br />
+		45 วัน หลังจากทราบผลการเลือกตั้ง<br />
+		<span class="b">กกต. จึงได้เปิดเผยตัวเลขที่นั่งในสภา</span>ออกมา<br />
 		<br />
 		ผลปรากฏคือ<br />
-		<span class="black"
-			>มีพรรคที่ได้ที่นั่ง<span class="nw">เพิ่มมา</span>ทั้งหมด
-			<span class="nw">12 พรรค</span></span
-		><br />
-		<span class="black">แต่ละพรรคได้ไป <span class="nw">1 ที่นั่ง</span></span><br />
+		<span class="b highlight">
+			มีพรรคที่ได้ที่นั่งเพิ่มมาทั้งหมด 12 พรรค<br />
+			แต่ละพรรคได้ไป 1 ที่นั่ง
+		</span><br />
+		<br />
 		หักปากกาบรรดาเซียน<br />
-		<span class="ib" style="margin:.5rem 0 0">
-			ที่พยายามคำนวณ<span class="nw">ที่นั่ง</span> <span class="nw">ส.ส.</span>
-			<span class="nw">ไว้ก่อนหน้า &rdquo;</span>
-		</span>
+		ที่พยายามคำนวณที่นั่ง ส.ส. ไว้ก่อนหน้า
 	</p>
 </div>
 
@@ -150,21 +142,12 @@
 	}
 
 	.news-text {
-		font-size: 2rem;
-		line-height: 1.2;
+		font-size: 1.8rem;
+		line-height: 1.5;
 
-		> .black {
-			display: inline-block;
-			background: #000;
-			color: #fff;
-			padding: 8px 16px;
-			margin: 1.6px 0;
-			line-height: 1.5;
-			font-weight: 700;
+		> .highlight {
+			font-size: 1.11em; // 1.8rem * 1.11em ~= 2.00rem
+			text-decoration: underline;
 		}
-	}
-
-	.ib {
-		display: inline-block;
 	}
 </style>

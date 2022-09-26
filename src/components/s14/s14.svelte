@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { timeline, scroll, inView, animate } from 'motion';
+	import { timeline, scroll, inView } from 'motion';
 
 	import Sankey from './sankey.svelte';
 	import TableBridge from 'components/TableBridge.svelte';
@@ -76,6 +76,13 @@
 			loading="lazy"
 		/>
 	</h2>
+	<p class="news-text tc">
+		<span class="b">มกราคม 2565:</span> พล.อ.ประวิตร วงษ์สุวรรณ หัวหน้าพรรคพปชร.<br />
+		<span class="b bggr under">ได้มีมติให้ขับ 21 ส.ส. &ldquo;ก๊วนธรรมนัส&rdquo; ออกจากพรรค</span><br
+		/>
+		ด้วยเห็นว่าในช่วงหลายเดือนที่ผ่านมา<br />
+		<span class="b bggr">มีเหตุแห่งความร้ายแรงของพรรค ที่เกิดจากคนทั้ง 21 คน</span>
+	</p>
 	<img
 		class="news-img"
 		src="/shaking-parliament/pt4_newspaper.png"
@@ -84,23 +91,13 @@
 		loading="lazy"
 	/>
 	<p class="news-text tc">
-		&ldquo; มกราคม 2565 พล.อ.ประวิตร วงษ์สุวรรณ<br />
-		<span class="special-lh">หัวหน้าพรรคพลังประชารัฐ<br /></span>
-		<span class="black">ได้มีมติให้ขับ 21 ส.ส. &ldquo;ก๊วนธรรมนัส&rdquo; ออกจากพรรค</span><br />
-		ด้วยเห็นว่าในช่วงหลายเดือนที่ผ่านมา<br />
-		<span class="black"
-			>มีเหตุแห่งความร้ายแรงของพรรค ที่เกิดจากคน<span class="nw">ทั้ง 21 คน</span></span
-		>
-		<br /><br /><br /><br />
 		โดยในเวลาต่อมา
-		<strong>ร.อ. ธรรมนัสได้นำทีม <span class="T1 num">18</span> ส.ส. เข้าสังกัด</strong><br />
-		<span class="T1 thaiecon">พรรคเศรษฐกิจไทย</span><br />
-		<span class="black" style="margin-top:8px"
-			>ซึ่งมิได้ประกาศจุดยืนอย่างแน่ชัดว่าจะถือตนอยู่ใน<span class="nw">ขั้วข้างใด</span></span
-		><br />
-		ในขณะที่อีก <span class="T1 num">3</span> ส.ส. ได้เข้าสังกัด<br />
-		<span class="T1 poomjaithai">พรรคภูมิใจไทย</span><br />
-		ตามที่มีกระแสข่าวก่อนหน้านี้ &rdquo;
+		<span class="b">ร.อ. ธรรมนัสได้นำทีม <span class="T1 num">18</span> ส.ส.</span><br />
+		เข้าสังกัด <span class="b tec tectx">พรรคเศรษฐกิจไทย</span><br />
+		<span class="b under">ซึ่งมิได้ประกาศขั้วข้างของตนอย่างแน่ชัด</span><br /><br />
+		ในขณะที่อีก <span class="T1 num">3</span> ส.ส. ได้เข้าสังกัด
+		<span class="b poomjaithai">พรรคภูมิใจไทย</span><br />
+		ตามที่มีกระแสข่าวก่อนหน้านี้
 	</p>
 </div>
 <div style="--h:128px" />
@@ -111,7 +108,7 @@
 	หัวหน้าพรรคพลังประชารัฐ<br />
 	<br />
 	<span>การวางตัวเป็น <strong style="font-size:1.3em">&ldquo;ฝ่ายอิสระ&rdquo;</strong></span>
-	<span>ของ<span class="thaiecon-light">พรรคเศรษฐกิจไทย</span></span>
+	<span>ของ<span class="tec">พรรคเศรษฐกิจไทย</span></span>
 	ซึ่งนำโดย ร.อ. ธรรมนัส<br />
 	<strong style="font-size:1.3em">จึงเป็นที่น่าจับตามอง</strong>
 	<strong style="font-size:1.3em">อย่างยิ่ง</strong>
@@ -183,27 +180,19 @@
 	.news-img {
 		width: 80%;
 		max-width: 800px;
-		margin-bottom: 96px;
+		margin: 96px 0;
 	}
 
 	.news-text {
-		font-size: 2rem;
-		line-height: 1.2;
-		position: relative;
+		font-size: 1.8rem;
+		line-height: 1.5;
 
-		> .black {
-			display: inline-block;
-			background: #000;
-			color: #fff;
-			padding: 8px 16px;
-			margin: 1.6px 0;
-			line-height: 1.5;
-			font-weight: 700;
+		> .bggr {
+			font-size: 1.11em; // 1.8rem * 1.11em ~= 2.00rem
 		}
 
-		.T1 {
-			font-size: 3.5rem;
-			line-height: 1.1;
+		> .under {
+			text-decoration: underline;
 		}
 
 		.num {
@@ -211,20 +200,22 @@
 		}
 	}
 
-	.special-lh {
-		line-height: var(--lh, 2);
-	}
-
-	.thaiecon {
-		color: #cbb979;
-	}
-
-	.thaiecon-light {
+	.tec {
 		color: #f0da8c;
+	}
+
+	.tectx {
+		font-size: 3rem;
+		text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000,
+			0px -1px 0 #000, -1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000,
+			2px -2px 0 #000, -2px -2px 0 #000, 0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000,
+			2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000, 1px -2px 0 #000, -1px -2px 0 #000,
+			2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
 	}
 
 	.poomjaithai {
 		color: #065cab;
+		font-size: 3rem;
 	}
 
 	.bridge-text {
