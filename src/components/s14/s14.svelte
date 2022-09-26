@@ -7,7 +7,7 @@
 	import Circle from 'components/Circle.svelte';
 
 	let play_star_animation = false;
-	let pop = false;
+	let show_news = false;
 
 	let el_decor_container: any;
 	let el_logo: any;
@@ -33,7 +33,7 @@
 		});
 
 		inView(el_logo, () => void (play_star_animation = true), { amount: 1 });
-		inView(el_newspaper, () => void (pop = true), { amount: 1 });
+		inView(el_newspaper, () => void (show_news = true), { amount: 1 });
 	});
 </script>
 
@@ -89,7 +89,7 @@
 	<div bind:this={el_newspaper}>
 		<img
 			class="decor-star"
-			class:pop
+			class:show_news
 			src="/shaking-parliament/star_03.svg"
 			alt=""
 			decoding="async"
@@ -100,6 +100,7 @@
 		/>
 		<img
 			class="news-img"
+			class:show_news
 			src="/shaking-parliament/pt4_newspaper.png"
 			alt="28 มกราคม 2565 ธรรมนัสนำทีมย้ายขั้ว"
 			decoding="async"
@@ -198,6 +199,12 @@
 		width: 80%;
 		max-width: 800px;
 		margin: 96px 10vw 96px 0;
+		opacity: 0;
+		transition: opacity 0.5s;
+
+		&.show_news {
+			opacity: 1;
+		}
 	}
 
 	.decor-star {
@@ -206,7 +213,7 @@
 		bottom: 56px;
 		transform: scale(0);
 
-		&.pop {
+		&.show_news {
 			animation: bounceInRev 1s forwards;
 		}
 	}
