@@ -32,8 +32,20 @@
 			offset: ['start end', 'end start']
 		});
 
-		inView(el_logo, () => void (play_star_animation = true), { amount: 1 });
-		inView(el_newspaper, () => void (show_news = true), { amount: 1 });
+		inView(
+			el_logo,
+			() => {
+				play_star_animation = true;
+			},
+			{ amount: 1 }
+		);
+		inView(
+			el_newspaper,
+			() => {
+				show_news = true;
+			},
+			{ amount: 0.5 }
+		);
 	});
 </script>
 
