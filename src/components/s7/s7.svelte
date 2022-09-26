@@ -19,7 +19,6 @@
 	let el_pill2: any;
 	let el_trigger: any;
 	let prev_scroll_progress: number;
-	let new_num_timeout: NodeJS.Timeout;
 	onMount(() => {
 		const seq: TimelineDefinition = [
 			[
@@ -50,12 +49,8 @@
 			({ y }) => {
 				if (y.progress === prev_scroll_progress) return;
 				if ((prev_scroll_progress = y.progress) === 1) {
-					showAll = true;
-					new_num_timeout = setTimeout(() => {
-						showNewNum = true;
-					}, 500);
+					showNewNum = showAll = true;
 				} else {
-					clearTimeout(new_num_timeout);
 					showNewNum = showAll = false;
 				}
 			},
@@ -224,7 +219,7 @@
 
 		&.showNewNum {
 			opacity: 1;
-			transition: opacity 0.5s 0.75s;
+			transition: opacity 0.5s 0.5s;
 		}
 	}
 
@@ -246,11 +241,11 @@
 
 			.bignum-container {
 				opacity: 1;
-				transition-delay: 0.5s;
+				transition-delay: 0.25s;
 
 				&.total {
-					animation: slide-right 1.25s;
-					transition-delay: 0.75s;
+					animation: slide-right 1s;
+					transition-delay: 0.5s;
 				}
 			}
 		}
