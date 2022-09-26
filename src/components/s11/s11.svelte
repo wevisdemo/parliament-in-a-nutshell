@@ -151,7 +151,9 @@
 				height: 40vh;
 
 				&.play_star_animation {
-					animation: bounceInPt3 1s forwards;
+					--btxm: -50%;
+					--btym: -50%;
+					animation: bounceInRev 1s forwards;
 				}
 			}
 

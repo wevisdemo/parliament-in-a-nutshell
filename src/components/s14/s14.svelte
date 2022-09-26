@@ -7,9 +7,11 @@
 	import Circle from 'components/Circle.svelte';
 
 	let play_star_animation = false;
+	let pop = false;
 
 	let el_decor_container: any;
 	let el_logo: any;
+	let el_newspaper: any;
 	onMount(() => {
 		const el_decorchild = el_decor_container.children;
 		const seq: TimelineDefinition = [
@@ -31,6 +33,7 @@
 		});
 
 		inView(el_logo, () => void (play_star_animation = true), { amount: 1 });
+		inView(el_newspaper, () => void (pop = true), { amount: 1 });
 	});
 </script>
 
@@ -83,13 +86,26 @@
 		ด้วยเห็นว่าในช่วงหลายเดือนที่ผ่านมา<br />
 		<span class="b bggr">มีเหตุแห่งความร้ายแรงของพรรค ที่เกิดจากคนทั้ง 21 คน</span>
 	</p>
-	<img
-		class="news-img"
-		src="/shaking-parliament/pt4_newspaper.png"
-		alt="28 มกราคม 2565 ธรรมนัสนำทีมย้ายขั้ว"
-		decoding="async"
-		loading="lazy"
-	/>
+	<div bind:this={el_newspaper}>
+		<img
+			class="decor-star"
+			class:pop
+			src="/shaking-parliament/star_03.svg"
+			alt=""
+			decoding="async"
+			loading="lazy"
+			width="410"
+			height="428"
+			aria-hidden="true"
+		/>
+		<img
+			class="news-img"
+			src="/shaking-parliament/pt4_newspaper.png"
+			alt="28 มกราคม 2565 ธรรมนัสนำทีมย้ายขั้ว"
+			decoding="async"
+			loading="lazy"
+		/>
+	</div>
 	<p class="news-text tc">
 		โดยในเวลาต่อมา
 		<span class="b">ร.อ. ธรรมนัสได้นำทีม <span class="T1 num">18</span> ส.ส.</span><br />
@@ -165,7 +181,8 @@
 				height: 40vh;
 
 				&.play_star_animation {
-					animation: bounceInPt4 1s forwards;
+					--btxm: -50%;
+					animation: bounceInRev 1s forwards;
 				}
 			}
 
@@ -180,7 +197,18 @@
 	.news-img {
 		width: 80%;
 		max-width: 800px;
-		margin: 96px 0;
+		margin: 96px 10vw 96px 0;
+	}
+
+	.decor-star {
+		position: absolute;
+		right: 0;
+		bottom: 56px;
+		transform: scale(0);
+
+		&.pop {
+			animation: bounceInRev 1s forwards;
+		}
 	}
 
 	.news-text {

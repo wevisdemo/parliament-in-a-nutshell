@@ -36,7 +36,7 @@
 	}
 }
 
-@keyframes bounceInPt3 {
+@keyframes bounceInRev {
 	from,
 	20%,
 	40%,
@@ -47,62 +47,27 @@
 	}
 
 	0% {
-		transform: translate(-50%, -50%) scale3d(0.3, 0.3, 0.3);
+		transform: translate(var(--btxm, 0), var(--btym, 0)) scale3d(0.3, 0.3, 0.3);
 	}
 
 	20% {
-		transform: translate(-50%, -50%) scale3d(1.1, 1.1, 1.1);
+		transform: translate(var(--btxm, 0), var(--btym, 0)) scale3d(1.1, 1.1, 1.1);
 	}
 
 	40% {
-		transform: translate(-50%, -50%) scale3d(0.9, 0.9, 0.9);
+		transform: translate(var(--btxm, 0), var(--btym, 0)) scale3d(0.9, 0.9, 0.9);
 	}
 
 	60% {
-		transform: translate(-50%, -50%) scale3d(1.03, 1.03, 1.03);
+		transform: translate(var(--btxm, 0), var(--btym, 0)) scale3d(1.03, 1.03, 1.03);
 	}
 
 	80% {
-		transform: translate(-50%, -50%) scale3d(0.97, 0.97, 0.97);
+		transform: translate(var(--btxm, 0), var(--btym, 0)) scale3d(0.97, 0.97, 0.97);
 	}
 
 	to {
-		transform: translate(-50%, -50%) scale3d(1, 1, 1);
-	}
-}
-
-@keyframes bounceInPt4 {
-	from,
-	20%,
-	40%,
-	60%,
-	80%,
-	to {
-		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-	}
-
-	0% {
-		transform: translateX(-50%) scale3d(0.3, 0.3, 0.3);
-	}
-
-	20% {
-		transform: translateX(-50%) scale3d(1.1, 1.1, 1.1);
-	}
-
-	40% {
-		transform: translateX(-50%) scale3d(0.9, 0.9, 0.9);
-	}
-
-	60% {
-		transform: translateX(-50%) scale3d(1.03, 1.03, 1.03);
-	}
-
-	80% {
-		transform: translateX(-50%) scale3d(0.97, 0.97, 0.97);
-	}
-
-	to {
-		transform: translateX(-50%) scale3d(1, 1, 1);
+		transform: translate(var(--btxm, 0), var(--btym, 0)) scale3d(1, 1, 1);
 	}
 }
 
