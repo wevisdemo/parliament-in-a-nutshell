@@ -60,12 +60,12 @@
 		&.in-view {
 			> h1 > .logo {
 				opacity: 1;
-				animation: flickering 1s linear forwards;
+				animation: flickering 0.75s linear forwards;
 			}
 			> .logo-decor {
 				opacity: 1;
-				transition: opacity 1s linear;
-				transition-delay: 0.5s;
+				transition: opacity 0.75s linear;
+				transition-delay: 0.375s;
 			}
 		}
 	}
