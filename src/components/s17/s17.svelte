@@ -1,20 +1,27 @@
 <script lang="ts">
 	const SITE_LINK = 'https://wevisdemo.github.io/shaking-parliament/';
+
+	let copy_class = '';
 	const copyLinkToClipboard = () => {
 		navigator.clipboard
 			.writeText(SITE_LINK)
 			.then(() => {
-				// TODO: make button green
+				copy_class = 'success';
 			})
 			.catch(() => {
-				// TODO: make button red and shake
+				copy_class = 'fail';
+			})
+			.finally(() => {
+				setTimeout(() => (copy_class = ''), 100);
 			});
 	};
 </script>
 
 <div class="s-16 container c tc">
-	<div class="header">ร่วมจับตาดูความเคลื่อนไหวในสภา<span class="nw">อย่างต่อเนื่อง</span></div>
-	<div class="subheader">ก่อนเข้าสู่การเลือกตั้งครั้งถัดไปที่จะเกิดขึ้นในปี 2566</div>
+	<h2 class="header mtb0">
+		ร่วมจับตาดูความเคลื่อนไหวในสภา<span class="nw">อย่างต่อเนื่อง</span><br />
+		<small class="subheader">ก่อนเข้าสู่การเลือกตั้งครั้งถัดไปที่จะเกิดขึ้นในปี 2566</small>
+	</h2>
 	<div class="share-text">แชร์เพื่อบอกเล่าเรื่องราวกับเพื่อนของคุณ</div>
 	<div class="social-container">
 		<div class="row" style="--gap:32px">
@@ -31,7 +38,8 @@
 						viewBox="0 0 24 24"
 						xmlns="http://www.w3.org/2000/svg"
 						fill="currentColor"
-						stroke=" none"
+						stroke="none"
+						aria-label="Share on Facebook"
 					>
 						<path
 							d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
@@ -52,7 +60,8 @@
 						viewBox="0 0 24 24"
 						xmlns="http://www.w3.org/2000/svg"
 						fill="currentColor"
-						stroke=" none"
+						stroke="none"
+						aria-label="Share on Twitter"
 					>
 						<path
 							d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
@@ -63,7 +72,7 @@
 			<div class="col">
 				<button
 					type="button"
-					class="social-share"
+					class={`social-share copy ${copy_class}`}
 					aria-label="Copy link to clipboard"
 					on:click={copyLinkToClipboard}
 				>
@@ -74,6 +83,7 @@
 						fill="none"
 						stroke="currentColor"
 						stroke-width="2"
+						aria-label="Copy link to clipboard"
 					>
 						<path
 							stroke-linecap="round"
@@ -119,15 +129,21 @@
 			height="443"
 		/>
 	</div>
-	<div class="header">ติดตามการลงมติในสภาเพิ่มเติมได้ที่</div>
+	<h2 class="header" style="line-height:1.5">ติดตามการลงมติในสภาเพิ่มเติมได้ที่</h2>
 	<a
 		class="card"
 		href="https://theyworkforus.wevis.info/"
 		target="_blank"
 		rel="nofollow noopener noreferrer"
 	>
-		<img src="/shaking-parliament/theywork.png" alt="" />
-		<div class="card-body">
+		<img
+			src="/shaking-parliament/theywork.png"
+			alt=""
+			aria-labelledby="theywork-content"
+			decoding="async"
+			loading="lazy"
+		/>
+		<div class="card-body" id="theywork-content">
 			<div class="card-header">They Work For Us รู้จักและติดตาม 'ผู้แทน' ในสภาของเรา</div>
 			<p>ใครเป็นใคร เคยทำอะไรมาบ้าง ตอนนี้อยู่ตำแหน่งไหน และยกมือสนับสนุนอะไรในสภา</p>
 		</div>
@@ -139,7 +155,6 @@
 	.subheader {
 		font-weight: 700;
 		font-size: 3rem;
-		line-height: 1.5;
 	}
 
 	.subheader {
@@ -162,7 +177,9 @@
 		width: 80px;
 		height: 80px;
 
-		transition: color 0.3s;
+		outline: none;
+		transition-property: color, box-shadow;
+		transition-duration: 0.3s;
 
 		> svg {
 			height: 44px;
@@ -185,12 +202,50 @@
 			transition: transform 0.3s;
 		}
 
-		&:hover {
+		&:is(:hover, :focus) {
 			color: #fff;
 
 			&::before {
 				transform: scale(1);
 			}
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 8px #6a6a6a80;
+		}
+	}
+
+	.social-share.copy {
+		--cpy-c: #6a6a6a;
+		border: 2px var(--cpy-c) solid;
+		transition: color 0.3s, border 0.3s;
+
+		&::before {
+			background: var(--cpy-c);
+			border: 2px var(--cpy-c) solid;
+			transition: transform 0.3s, background 0.3s, border 0.3s;
+		}
+
+		&.success,
+		&.fail {
+			--cpy-c: #92da1f;
+			transition: color 0.3s;
+
+			&::before {
+				transition: transform 0.3s;
+			}
+		}
+
+		&.fail {
+			--cpy-c: #dd5a5a;
+		}
+
+		&.success:focus {
+			box-shadow: 0 0 0 8px #92da1f80;
+		}
+
+		&.fail:focus {
+			box-shadow: 0 0 0 8px #dd5a5a80;
 		}
 	}
 
@@ -210,8 +265,16 @@
 		cursor: pointer;
 		display: inline-block;
 
-		&:hover {
+		outline: none;
+		transition-property: box-shadow;
+		transition-duration: 0.3s;
+
+		&:is(:hover, :focus) {
 			background: #333;
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 8px #3338;
 		}
 	}
 
@@ -241,9 +304,20 @@
 		color: #000;
 		text-decoration: none;
 
-		box-shadow: 15px 17px 18px rgba(0, 0, 0, 0.29);
+		border-radius: 8px;
+
+		box-shadow: 0 0 0 0 #f3b8d080, 15px 17px 18px rgba(0, 0, 0, 0.29);
 		transition-property: box-shadow;
 		transition-duration: 0.3s;
+		outline: none;
+
+		&:hover {
+			box-shadow: 0 0 0 0 #f3b8d080, 30px 34px 72px rgba(0, 0, 0, 0.29);
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 8px #f3b8d080, 15px 17px 18px rgba(0, 0, 0, 0.29);
+		}
 
 		img {
 			width: 100%;

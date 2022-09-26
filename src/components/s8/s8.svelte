@@ -1,80 +1,158 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { animate, scroll } from 'motion';
+	import { timeline, inView } from 'motion';
 
-	let el_title_section: any;
-	let el_bg: any;
+	let el_deco_container: any;
 	onMount(() => {
-		scroll(
-			animate(
-				el_bg,
-				{ transform: ['translateY(-150px)', 'translateY(150px)'] },
-				{ easing: 'linear' }
-			),
-			{
-				target: el_title_section,
-				offset: ['start end', 'end start']
-			}
+		const el_decors = el_deco_container.children;
+		const seq: TimelineDefinition = [
+			[
+				el_decors[1],
+				{
+					transform: ['translate(30%, -40%) rotate(0deg)', 'translate(30%, -40%) rotate(90deg)']
+				},
+				{ duration: 0.5 }
+			],
+			[
+				el_decors[3],
+				{
+					transform: ['translate(-30%, 40%) rotate(180deg)', 'translate(-30%, 40%) rotate(270deg)']
+				},
+				{ duration: 0.5, at: '<' }
+			]
+		];
+
+		inView(
+			el_deco_container,
+			() => {
+				timeline(seq);
+			},
+			{ amount: 0.8 }
 		);
 	});
 </script>
 
-<div bind:this={el_title_section} class="h100 c tc part2-title">
-	<img
-		bind:this={el_bg}
-		src="/shaking-parliament/part2_bg.png"
-		alt=""
-		class="bg"
-		decoding="async"
-		loading="lazy"
-	/>
+<h2 class="h100 c tc part2-title mtb0">
+	<div bind:this={el_deco_container} class="decor" aria-hidden="true">
+		<img
+			class="disc d1"
+			src="/shaking-parliament/part2_bg1.png"
+			alt=""
+			decoding="async"
+			loading="lazy"
+			width="533"
+			height="533"
+		/>
+		<img
+			class="reader r1"
+			src="/shaking-parliament/part2_bg2.png"
+			alt=""
+			decoding="async"
+			loading="lazy"
+			width="374"
+			height="374"
+		/>
+		<img
+			class="disc d2"
+			src="/shaking-parliament/part2_bg1.png"
+			alt=""
+			decoding="async"
+			loading="lazy"
+			width="533"
+			height="533"
+		/>
+		<img
+			class="reader r2"
+			src="/shaking-parliament/part2_bg2.png"
+			alt=""
+			decoding="async"
+			loading="lazy"
+			width="374"
+			height="374"
+		/>
+	</div>
 	<img
 		class="title-img"
 		src="/shaking-parliament/part2_title.png"
-		alt=""
+		alt="บทที่ 2 — เพลงไม่ทันเปิด เกิดกฏิกาพิเศษ ส.ส. ปัดเศษ เข้าสภา"
 		decoding="async"
 		loading="lazy"
 		style="position:relative"
 	/>
-</div>
+</h2>
 <div class="news-container">
 	<img
 		src="/shaking-parliament/part2_papers.png"
-		alt=""
+		alt="ตะลึง! 12 พรรคเล็ก ผุดที่นั่งหนุนรัฐบาล"
 		class="newspaper"
 		decoding="async"
 		loading="lazy"
 	/>
 	<p class="news-text tc">
-		<span class="ib" style="margin:0 0 .5rem">&ldquo; ผ่านไป 45 วัน<br /></span>
-		<span class="nw">หลังจากที่สังคม</span><span class="nw">ทราบผลการเลือกตั้ง</span><br />
-		<span class="black"
-			>กกต. จึงได้เปิดเผยตัวเลข<span class="nw">ที่นั่ง</span><span class="nw">ในสภา</span><span
-				class="nw">ออกมา</span
-			></span
-		><br />
+		45 วัน หลังจากทราบผลการเลือกตั้ง<br />
+		<span class="b">กกต. จึงได้เปิดเผยตัวเลขที่นั่งในสภา</span>ออกมา<br />
 		<br />
 		ผลปรากฏคือ<br />
-		<span class="black"
-			>มีพรรคที่ได้ที่นั่ง<span class="nw">เพิ่มมา</span>ทั้งหมด
-			<span class="nw">12 พรรค</span></span
-		><br />
-		<span class="black">แต่ละพรรคได้ไป <span class="nw">1 ที่นั่ง</span></span><br />
+		<span class="b highlight">
+			มีพรรคที่ได้ที่นั่งเพิ่มมาทั้งหมด 12 พรรค<br />
+			แต่ละพรรคได้ไป 1 ที่นั่ง
+		</span><br />
+		<br />
 		หักปากกาบรรดาเซียน<br />
-		<span class="ib" style="margin:.5rem 0 0">
-			ที่พยายามคำนวณ<span class="nw">ที่นั่ง</span> <span class="nw">ส.ส.</span>
-			<span class="nw">ไว้ก่อนหน้า &rdquo;</span>
-		</span>
+		ที่พยายามคำนวณที่นั่ง ส.ส. ไว้ก่อนหน้า
 	</p>
 </div>
 
 <style lang="scss">
-	.bg {
+	.decor {
 		position: absolute;
-		top: 50%;
-		width: 80vw;
-		object-fit: contain;
-		transform: translateY(-150px);
+		inset: 0;
+		width: 100%;
+		height: 100vh;
+
+		> img {
+			position: absolute;
+			object-fit: contain;
+			object-position: center;
+
+			&.disc {
+				max-width: 50vw;
+				max-height: 50vw;
+			}
+
+			&.d1 {
+				top: 10vh;
+				left: 0;
+
+				transform: translateX(-50%);
+			}
+
+			&.d2 {
+				bottom: 10vh;
+				right: 0;
+
+				transform: translateX(50%);
+			}
+
+			&.reader {
+				max-width: 35vw;
+				max-height: 35vw;
+			}
+
+			&.r1 {
+				top: 10vh;
+				left: 0;
+
+				transform: translate(30%, -40%) rotate(0deg);
+			}
+
+			&.r2 {
+				bottom: 10vh;
+				right: 0;
+
+				transform: translate(-30%, 40%) rotate(180deg);
+			}
+		}
 	}
 
 	.title-img {
@@ -90,7 +168,6 @@
 		padding: 0 32px;
 		height: 80vh;
 
-		margin-top: 300px;
 		margin-bottom: 96px;
 	}
 
@@ -105,21 +182,12 @@
 	}
 
 	.news-text {
-		font-size: 2rem;
-		line-height: 1.2;
+		font-size: 1.8rem;
+		line-height: 1.5;
 
-		> .black {
-			display: inline-block;
-			background: #000;
-			color: #fff;
-			padding: 8px 16px;
-			margin: 1.6px 0;
-			line-height: 1.5;
-			font-weight: 700;
+		> .highlight {
+			font-size: 1.11em; // 1.8rem * 1.11em ~= 2.00rem
+			text-decoration: underline;
 		}
-	}
-
-	.ib {
-		display: inline-block;
 	}
 </style>

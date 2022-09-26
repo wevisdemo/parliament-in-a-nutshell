@@ -11,7 +11,7 @@
 	import ScreenNotice from 'components/ScreenNotice.svelte';
 
 	import S1 from 'components/s1/s1.svelte';
-	import S2 from 'components/s2/s2.svelte';
+	// import S2 from 'components/s2/s2.svelte';
 	import S3 from 'components/s3/s3.svelte';
 	import S4 from 'components/s4/s4.svelte';
 
@@ -35,9 +35,11 @@
 
 	let loaded = false;
 	let isReady = false;
+	let el_tooltip: HTMLElement;
 	onMount(() => {
 		weAreAlwaysHiring();
 		loaded = true;
+		window.el_tooltip = el_tooltip;
 		if ('requestIdleCallback' in window) {
 			window.requestIdleCallback(() => (isReady = true));
 			// failsafe, the idle should not be long anyway
@@ -48,39 +50,54 @@
 	});
 </script>
 
-<a
-	href="https://wevis.info/"
-	rel="nofollow noopener noreferrer"
-	style="position:fixed;top:12px;left:16px;z-index:99;mix-blend-mode:difference"
-	title="WeVis"
->
-	<img
-		src="/shaking-parliament/wevis-logo.svg"
-		alt="WeVis"
-		decoding="async"
-		loading="eager"
-		width="93"
-		height="28"
-	/>
-</a>
 <ScreenNotice />
 <Loader {loaded} {isReady} />
 <GoTop />
-<S1 />
-<S2 />
-<S3 />
-<S4 />
-<S5 />
-<S6 />
-<S7 />
-<S8 />
-<S9 />
-<S10 />
-<S11 />
-<S12 />
-<S13 />
-<S14 />
-<S15 />
-<S16 />
-<S17 />
+<main>
+	<a
+		href="https://wevis.info/"
+		rel="nofollow noopener noreferrer"
+		style="position:fixed;top:12px;left:16px;z-index:99;mix-blend-mode:difference"
+		title="WeVis"
+	>
+		<img
+			src="/shaking-parliament/wevis-logo.svg"
+			alt="WeVis"
+			decoding="async"
+			loading="eager"
+			width="93"
+			height="28"
+		/>
+	</a>
+	<section>
+		<S1 />
+		<!-- <S2 /> -->
+		<S3 />
+		<S4 />
+		<S5 />
+	</section>
+	<section>
+		<S6 />
+		<S7 />
+	</section>
+	<section>
+		<S8 />
+		<S9 />
+		<S10 />
+	</section>
+	<section>
+		<S11 />
+		<S12 />
+		<S13 />
+	</section>
+	<section>
+		<S14 />
+		<S15 />
+	</section>
+	<section>
+		<S16 />
+		<S17 />
+	</section>
+</main>
 <S18 />
+<div bind:this={el_tooltip} class="tooltip" />

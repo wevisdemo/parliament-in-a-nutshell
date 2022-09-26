@@ -3,6 +3,8 @@
 	import VoteIcon from './VoteIcon.svelte';
 
 	export let hintPracharat = false;
+	export let lineColor =
+		'linear-gradient(90deg,#70d267 0%,#70d267 25%,#0b3757 25%,#0b3757 50%,#065cab 50%,#065cab 75%,#75328c 75%,#75328c 100%)';
 </script>
 
 <div class="votelegend-container">
@@ -33,7 +35,7 @@
 	</div>
 	<div class="legend fw" style="gap:0 32px">
 		<div class="type">
-			<div class="line" />
+			<div class="line" style:--lineColor={lineColor} />
 			<span>=</span>
 			<span>จุดเวลาที่ย้ายขั้ว/สังกัดพรรค</span>
 		</div>
@@ -47,13 +49,26 @@
 		<div class="type">
 			<VoteIcon style="color:#a4a4a4" />
 			<span>=</span>
-			<span>การลงมติทั่วไป</span>
+			<span>การลงมติแก้รัฐธรรมนูญ/มติทั่วไป</span>
 		</div>
 		<div class="sep" />
 		<div class="type">
 			<VoteIcon style="color:#a4a4a4" type="distrust" />
 			<span>=</span>
 			<span>การลงมติอภิปรายไม่ไว้วางใจ</span>
+		</div>
+	</div>
+	<div class="legend fw">
+		<div class="type">
+			<VoteIcon style="color:#92da1f" aria-label="มติผ่าน" />
+			<span>=</span>
+			<span>มติผ่าน</span>
+		</div>
+		<!-- <div class="sep" /> -->
+		<div class="type">
+			<VoteIcon style="color:#dd5a5a" aria-label="มติไม่ผ่าน" />
+			<span>=</span>
+			<span>มติไม่ผ่าน</span>
 		</div>
 	</div>
 </div>
@@ -80,7 +95,7 @@
 	.line {
 		width: 64px;
 		height: 5px;
-		background: #a0a0a0;
+		background: var(--lineColor, #a0a0a0);
 	}
 
 	.type {
@@ -89,7 +104,7 @@
 		gap: 1ch;
 	}
 
-	@media screen and (max-width: 1200px) {
+	@media screen and (max-width: 1350px) {
 		.s2 {
 			width: 0;
 			height: 24px;

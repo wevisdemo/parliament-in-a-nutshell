@@ -42,6 +42,7 @@
 		in:goTopTransition={{ duration: 250, easing: cubicOut }}
 		out:goTopTransition={{ duration: 200, easing: quadIn }}
 		on:click={goTop}
+		aria-label="Go top"
 		data-placeholder="กลับด้านบน"
 	/>
 {/if}

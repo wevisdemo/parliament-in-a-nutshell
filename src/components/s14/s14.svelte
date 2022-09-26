@@ -1,15 +1,17 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { timeline, scroll, inView, animate } from 'motion';
+	import { timeline, scroll, inView } from 'motion';
 
 	import Sankey from './sankey.svelte';
 	import TableBridge from 'components/TableBridge.svelte';
 	import Circle from 'components/Circle.svelte';
 
 	let play_star_animation = false;
+	let show_news = false;
 
 	let el_decor_container: any;
 	let el_logo: any;
+	let el_newspaper: any;
 	onMount(() => {
 		const el_decorchild = el_decor_container.children;
 		const seq: TimelineDefinition = [
@@ -30,12 +32,25 @@
 			offset: ['start end', 'end start']
 		});
 
-		inView(el_logo, () => void (play_star_animation = true), { amount: 1 });
+		inView(
+			el_logo,
+			() => {
+				play_star_animation = true;
+			},
+			{ amount: 1 }
+		);
+		inView(
+			el_newspaper,
+			() => {
+				show_news = true;
+			},
+			{ amount: 0.5 }
+		);
 	});
 </script>
 
 <div class="s14-container tc c">
-	<img class="crack" src="/shaking-parliament/crack.svg" alt="" />
+	<img class="crack" src="/shaking-parliament/crack.svg" alt="" decoding="async" loading="lazy" />
 	<div bind:this={el_decor_container} class="decor">
 		<img
 			class="star"
@@ -66,33 +81,52 @@
 			height="578"
 		/>
 	</div>
-	<img
-		bind:this={el_logo}
-		class="title-img"
-		src="/shaking-parliament/part4_title.png"
-		alt=""
-		decoding="async"
-		loading="lazy"
-	/>
-	<img class="news-img" src="/shaking-parliament/pt4_newspaper.png" alt="" />
+	<h2 class="mtb0">
+		<img
+			bind:this={el_logo}
+			class="title-img"
+			src="/shaking-parliament/part4_title.png"
+			alt="บทที่ 4 — สภาคลอน ขั้วรัฐแตกพ่าย เกิดการโยกย้ายขนานใหญ่"
+			decoding="async"
+			loading="lazy"
+		/>
+	</h2>
 	<p class="news-text tc">
-		&ldquo; มกราคม 2565 พล.อ.ประวิตร วงษ์สุวรรณ<br />
-		<span class="special-lh">หัวหน้าพรรคพลังประชารัฐ<br /></span>
-		<span class="black">ได้มีมติให้ขับ 21 ส.ส. &ldquo;ก๊วนธรรมนัส&rdquo; ออกจากพรรค</span><br />
+		<span class="b">มกราคม 2565:</span> พล.อ.ประวิตร วงษ์สุวรรณ หัวหน้าพรรคพปชร.<br />
+		<span class="b bggr under">ได้มีมติให้ขับ 21 ส.ส. &ldquo;ก๊วนธรรมนัส&rdquo; ออกจากพรรค</span><br
+		/>
 		ด้วยเห็นว่าในช่วงหลายเดือนที่ผ่านมา<br />
-		<span class="black"
-			>มีเหตุแห่งความร้ายแรงของพรรค ที่เกิดจากคน<span class="nw">ทั้ง 21 คน</span></span
-		>
-		<br /><br /><br /><br />
+		<span class="b bggr">มีเหตุแห่งความร้ายแรงของพรรค ที่เกิดจากคนทั้ง 21 คน</span>
+	</p>
+	<div bind:this={el_newspaper}>
+		<img
+			class="decor-star"
+			class:show_news
+			src="/shaking-parliament/star_03.svg"
+			alt=""
+			decoding="async"
+			loading="lazy"
+			width="410"
+			height="428"
+			aria-hidden="true"
+		/>
+		<img
+			class="news-img"
+			class:show_news
+			src="/shaking-parliament/pt4_newspaper.png"
+			alt="28 มกราคม 2565 ธรรมนัสนำทีมย้ายขั้ว"
+			decoding="async"
+			loading="lazy"
+		/>
+	</div>
+	<p class="news-text tc">
 		โดยในเวลาต่อมา
-		<strong>ร.อ. ธรรมนัสได้นำทีม <span class="T1 num">18</span> ส.ส. เข้าสังกัด</strong><br />
-		<span class="T1 thaiecon">พรรคเศรษฐกิจไทย</span><br />
-		<span class="black" style="margin-top:8px"
-			>ซึ่งมิได้ประกาศจุดยืนอย่างแน่ชัดว่าจะถือตนอยู่ใน<span class="nw">ขั้วข้างใด</span></span
-		><br />
-		ในขณะที่อีก <span class="T1 num">3</span> ส.ส. ได้เข้าสังกัด<br />
-		<span class="T1 poomjaithai">พรรคภูมิใจไทย</span><br />
-		ตามที่มีกระแสข่าวก่อนหน้านี้ &rdquo;
+		<span class="b">ร.อ. ธรรมนัสได้นำทีม <span class="T1 num">18</span> ส.ส.</span><br />
+		เข้าสังกัด <span class="b tec tectx">พรรคเศรษฐกิจไทย</span><br />
+		<span class="b under">ซึ่งมิได้ประกาศขั้วข้างของตนอย่างแน่ชัด</span><br /><br />
+		ในขณะที่อีก <span class="T1 num">3</span> ส.ส. ได้เข้าสังกัด
+		<span class="b poomjaithai">พรรคภูมิใจไทย</span><br />
+		ตามที่มีกระแสข่าวก่อนหน้านี้
 	</p>
 </div>
 <div style="--h:128px" />
@@ -103,7 +137,7 @@
 	หัวหน้าพรรคพลังประชารัฐ<br />
 	<br />
 	<span>การวางตัวเป็น <strong style="font-size:1.3em">&ldquo;ฝ่ายอิสระ&rdquo;</strong></span>
-	<span>ของ<span class="thaiecon-light">พรรคเศรษฐกิจไทย</span></span>
+	<span>ของ<span class="tec">พรรคเศรษฐกิจไทย</span></span>
 	ซึ่งนำโดย ร.อ. ธรรมนัส<br />
 	<strong style="font-size:1.3em">จึงเป็นที่น่าจับตามอง</strong>
 	<strong style="font-size:1.3em">อย่างยิ่ง</strong>
@@ -129,7 +163,10 @@
 	}
 
 	.title-img {
-		width: min(70vw, 90vh);
+		width: 70vw;
+		height: 50vh;
+		object-fit: contain;
+		object-position: center;
 		margin: 96px 0;
 	}
 
@@ -150,13 +187,15 @@
 			max-width: 25vw;
 
 			&.star {
-				top: calc(30vw + 84px);
-				left: 32%;
+				top: calc(30vw + 96px + 5vh);
+				left: 30%;
 				transform: translateX(-50%) scale(0);
 				max-width: initial;
+				height: 40vh;
 
 				&.play_star_animation {
-					animation: bounceInPt4 1s forwards;
+					--btxm: -50%;
+					animation: bounceInRev 1s forwards;
 				}
 			}
 
@@ -171,27 +210,36 @@
 	.news-img {
 		width: 80%;
 		max-width: 800px;
-		margin-bottom: 96px;
+		margin: 96px 10vw 96px 0;
+		opacity: 0;
+		transition: opacity 0.5s;
+
+		&.show_news {
+			opacity: 1;
+		}
+	}
+
+	.decor-star {
+		position: absolute;
+		right: 0;
+		bottom: 56px;
+		transform: scale(0);
+
+		&.show_news {
+			animation: bounceInRev 1s forwards;
+		}
 	}
 
 	.news-text {
-		font-size: 2rem;
-		line-height: 1.2;
-		position: relative;
+		font-size: 1.8rem;
+		line-height: 1.5;
 
-		> .black {
-			display: inline-block;
-			background: #000;
-			color: #fff;
-			padding: 8px 16px;
-			margin: 1.6px 0;
-			line-height: 1.5;
-			font-weight: 700;
+		> .bggr {
+			font-size: 1.11em; // 1.8rem * 1.11em ~= 2.00rem
 		}
 
-		.T1 {
-			font-size: 3.5rem;
-			line-height: 1.1;
+		> .under {
+			text-decoration: underline;
 		}
 
 		.num {
@@ -199,20 +247,22 @@
 		}
 	}
 
-	.special-lh {
-		line-height: var(--lh, 2);
-	}
-
-	.thaiecon {
-		color: #cbb979;
-	}
-
-	.thaiecon-light {
+	.tec {
 		color: #f0da8c;
+	}
+
+	.tectx {
+		font-size: 3rem;
+		text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000,
+			0px -1px 0 #000, -1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000,
+			2px -2px 0 #000, -2px -2px 0 #000, 0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000,
+			2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000, 1px -2px 0 #000, -1px -2px 0 #000,
+			2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
 	}
 
 	.poomjaithai {
 		color: #065cab;
+		font-size: 3rem;
 	}
 
 	.bridge-text {

@@ -1,83 +1,62 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { computePosition, offset, shift as fshift } from '@floating-ui/dom';
+	import { showTooltip as _showTooltip, hideTooltip as _hideTooltip } from 'utils/tooltip';
 
 	export let src: string;
 	export let side: 'gov' | 'opp' | 'free' = 'gov';
 	export let color: string;
 	export let name: string;
 	export let size: string = '';
-	export let style: string = '';
+	export let tooltip = true;
+
 	let clazz: string = '';
 	export { clazz as class };
 
-	export let showTop: boolean = false;
-	export let shift: string = '6px';
-	export let tooltip: 'top' | 'right' | null = null;
+	export let showTop = false;
 	export let dashedBorder = false;
-	export let op: string = shift === '0' ? '0' : '0.3';
 
-	let showTooltip = () => {};
-	let hideTooltip = () => {};
-	let el_image: any;
-	let el_tooltip: any;
+	let showTooltip = tooltip ? _showTooltip : () => {};
+	let hideTooltip = tooltip ? _hideTooltip : () => {};
 	onMount(() => {
 		if (!tooltip) return;
-		showTooltip = () => {
-			if (showTop) return;
-			el_tooltip.classList.add('show');
-
-			computePosition(el_image, el_tooltip, {
-				placement: tooltip ?? 'top',
-				middleware: [offset(8), fshift({ padding: 8 })]
-			}).then(({ x, y }) => {
-				Object.assign(el_tooltip.style, {
-					left: `${x}px`,
-					top: `${y}px`
-				});
-			});
-		};
-
-		hideTooltip = () => {
-			el_tooltip.classList.remove('show');
-			Object.assign(el_tooltip.style, {
-				left: null,
-				top: null
-			});
-		};
 	});
+
+	const altSide = side === 'gov' ? 'ฝ่ายรัฐบาล' : side === 'opp' ? 'ฝ่ายค้าน' : 'ฝ่ายค้านอิสระ';
 </script>
 
-<div
-	class="rp-container {clazz}"
-	class:showTop
-	style:--s={size}
-	style:--op={op}
-	bind:this={el_image}
-	on:mouseenter={showTooltip}
-	on:mouseleave={hideTooltip}
-	{...$$restProps}
->
+{#if $$slots.default}
+	<div class="rp-container {clazz}" class:showTop style:--s={size} {...$$restProps}>
+		<img
+			src="/shaking-parliament/{src}"
+			alt="{name} ({altSide})"
+			class="portrait {side}"
+			class:dashedBorder
+			style:--c={color}
+			decoding="async"
+			loading="lazy"
+			width={size}
+			height={size}
+			on:mouseenter={showTooltip}
+			on:mouseleave={hideTooltip}
+		/>
+		<div class="top"><slot /></div>
+	</div>
+{:else}
 	<img
 		src="/shaking-parliament/{src}"
-		alt={name}
-		class="portrait {side}"
+		alt="{name} ({altSide})"
+		class="portrait {side} {clazz}"
 		class:dashedBorder
 		style:--c={color}
-		style:--s={size}
 		decoding="async"
 		loading="lazy"
-		{style}
 		width={size}
 		height={size}
+		on:mouseenter={showTooltip}
+		on:mouseleave={hideTooltip}
+		{...$$restProps}
 	/>
-	{#if tooltip}
-		<div bind:this={el_tooltip} class="tooltip">{name}</div>
-	{/if}
-	{#if $$slots.default}
-		<div class="top" style:--shift={shift}><slot /></div>
-	{/if}
-</div>
+{/if}
 
 <style lang="scss">
 	.rp-container {
@@ -92,13 +71,7 @@
 
 		background: var(--c, #fff);
 
-		width: calc(var(--s) * 1px);
-		height: calc(var(--s) * 1px);
-
-		opacity: 1;
-		// filter: saturate(1);
-		transition: opacity 0.3s /*, filter 0.3s*/;
-		// will-change: opacity /*, filter*/;
+		transition: opacity 0.3s;
 
 		overflow: hidden;
 
@@ -123,8 +96,8 @@
 
 	.top {
 		position: absolute;
-		top: var(--shift, calc(var(--s) * 0.25 * 1px));
-		left: var(--shift, calc(var(--s) * 0.25 * 1px));
+		top: 0;
+		left: 0;
 
 		pointer-events: none;
 		opacity: 0;
@@ -133,48 +106,12 @@
 
 	.rp-container.showTop {
 		> .portrait {
-			opacity: var(--op, 0.3);
-			// filter: saturate(0.5);
+			opacity: 0;
 		}
 
 		> .top {
 			opacity: 1;
 			pointer-events: auto;
-		}
-	}
-
-	.tooltip {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 20;
-
-		padding: 12px;
-
-		background: #000d;
-		border-radius: 8px;
-
-		display: flex;
-
-		color: #fff;
-		letter-spacing: 0.3px;
-		line-height: 1;
-		white-space: nowrap;
-
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		user-select: none;
-
-		font-size: 0;
-		opacity: 0;
-		transition: opacity 0;
-		pointer-events: none;
-
-		&.show {
-			font-size: 1rem;
-			opacity: 1;
-			pointer-events: auto;
-			transition: opacity 0.1s;
 		}
 	}
 </style>

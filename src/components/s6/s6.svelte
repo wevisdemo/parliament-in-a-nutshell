@@ -41,7 +41,7 @@
 <!-- VH skip check -->
 <div style="--h:calc(210vh + 480px)">
 	<div class="stick part1-section" style="--h:calc(110vh + 480px)">
-		<div bind:this={el_chair_container} class="part1-decor">
+		<div bind:this={el_chair_container} class="part1-decor" aria-hidden="true">
 			<img
 				class="chair1"
 				src="/shaking-parliament/part1_bg1.png"
@@ -79,15 +79,15 @@
 				height="660"
 			/>
 		</div>
-		<div class="h100 c">
+		<h2 class="h100 c mtb0">
 			<img
 				class="title-img"
 				src="/shaking-parliament/part1_title.png"
-				alt=""
+				alt="บทที่ 1 — เริ่มเกมเก้าอี้ดนตรี ตลอดระยะเวลา 3 ปี มีตำแหน่งในที่ว่างลงบ้าง"
 				decoding="async"
 				loading="lazy"
 			/>
-		</div>
+		</h2>
 		<CircleFold>
 			มาสำรวจสถิติ<br />
 			<strong style="font-size:2rem;line-height:1.2">

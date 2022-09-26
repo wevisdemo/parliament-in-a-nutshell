@@ -2,22 +2,23 @@
 	import { onMount } from 'svelte';
 	import { scroll, ScrollOffset, timeline } from 'motion';
 
-	import RP from 'components/RepPortrait.svelte';
 	import Bignum from 'components/Bignum.svelte';
 	import BignumTitle from './BignumTitle.svelte';
 	import Spareseat from './Spareseat.svelte';
 	import Bridge from './s8-bridge.svelte';
+	import RpStack from './RpStack.svelte';
+
+	import Caret from 'components/Caret.svelte';
 
 	import { PART1_DATA } from 'data/overall_change';
 
-	let showReplaced = false;
+	let showAll = false;
 	let showNewNum = false;
 
 	let el_pill1: any;
 	let el_pill2: any;
 	let el_trigger: any;
 	let prev_scroll_progress: number;
-	let new_num_timeout: NodeJS.Timeout;
 	onMount(() => {
 		const seq: TimelineDefinition = [
 			[
@@ -48,13 +49,9 @@
 			({ y }) => {
 				if (y.progress === prev_scroll_progress) return;
 				if ((prev_scroll_progress = y.progress) === 1) {
-					showReplaced = true;
-					new_num_timeout = setTimeout(() => {
-						showNewNum = true;
-					}, 500);
+					showNewNum = showAll = true;
 				} else {
-					clearTimeout(new_num_timeout);
-					showNewNum = showReplaced = false;
+					showNewNum = showAll = false;
 				}
 			},
 			{
@@ -70,32 +67,12 @@
 	<div class="h100 c stick">
 		<div class="event-container">
 			<div class="event resign">
-				<h3 class="tc">ลาออก</h3>
+				<span class="tc">ลาออก</span>
 				<div class="row rp-grid">
 					{#each PART1_DATA.resign as res_c}
 						<div class="col row vert">
 							{#each res_c as rep}
-								<RP
-									size="34"
-									color={rep.color}
-									name={rep.name}
-									side={rep.side}
-									src={rep.src}
-									showTop={showReplaced}
-									tooltip="right"
-								>
-									{#if rep.replace_by}
-										<RP
-											size="34"
-											color={rep.replace_by.color}
-											name={rep.replace_by.name}
-											side={rep.replace_by.side}
-											src={rep.replace_by.src}
-											dashedBorder={rep.replace_by.name === 'ว่าง'}
-											tooltip="right"
-										/>
-									{/if}
-								</RP>
+								<RpStack data={rep} {showAll} />
 							{/each}
 						</div>
 					{/each}
@@ -103,32 +80,12 @@
 			</div>
 			<div class="sep" />
 			<div class="event pass">
-				<h3 class="tc">เสียชีวิต</h3>
+				<span class="tc">เสียชีวิต</span>
 				<div class="row rp-grid">
 					{#each PART1_DATA.pass as res_c}
 						<div class="col row vert">
 							{#each res_c as rep}
-								<RP
-									size="34"
-									color={rep.color}
-									name={rep.name}
-									side={rep.side}
-									src={rep.src}
-									showTop={showReplaced}
-									tooltip="right"
-								>
-									{#if rep.replace_by}
-										<RP
-											size="34"
-											color={rep.replace_by.color}
-											name={rep.replace_by.name}
-											side={rep.replace_by.side}
-											src={rep.replace_by.src}
-											dashedBorder={rep.replace_by.name === 'ว่าง'}
-											tooltip="right"
-										/>
-									{/if}
-								</RP>
+								<RpStack data={rep} {showAll} />
 							{/each}
 						</div>
 					{/each}
@@ -136,32 +93,12 @@
 			</div>
 			<div class="sep" />
 			<div class="event fire">
-				<h3 class="tc">ศาลตัดสินให้พ้นสภาพ ส.ส.</h3>
+				<span class="tc">ศาลตัดสินให้พ้นสภาพ ส.ส.</span>
 				<div class="row rp-grid">
 					{#each PART1_DATA.fire as res_c}
 						<div class="col row vert">
 							{#each res_c as rep}
-								<RP
-									size="34"
-									color={rep.color}
-									name={rep.name}
-									side={rep.side}
-									src={rep.src}
-									showTop={showReplaced}
-									tooltip="right"
-								>
-									{#if rep.replace_by}
-										<RP
-											size="34"
-											color={rep.replace_by.color}
-											name={rep.replace_by.name}
-											side={rep.replace_by.side}
-											src={rep.replace_by.src}
-											dashedBorder={rep.replace_by.name === 'ว่าง'}
-											tooltip="right"
-										/>
-									{/if}
-								</RP>
+								<RpStack data={rep} {showAll} />
 							{/each}
 						</div>
 					{/each}
@@ -171,6 +108,7 @@
 		<div style="width:max-content">
 			<div bind:this={el_pill1} class="pill">
 				ส.ส. ที่มีเหตุต้อง<strong>พ้นจากการปฏิบัติหน้าที่</strong>
+				<Caret class="s7-next-part-hint" />
 			</div>
 			<div bind:this={el_pill2} class="pill new-pill">
 				ส.ส. ที่เข้ามา<strong>แทนที่นั่ง</strong> ทั้งการเลือกตั้งซ่อมและการเลื่อนบัญชีรายชื่อ
@@ -179,16 +117,12 @@
 		<div class="row" style="--gap:32px">
 			<div class="shifter" class:showNewNum />
 			<div class="shifter" class:showNewNum />
-			<Bignum {showNewNum} oldNum={28} newNum={28}>
+			<Bignum {showNewNum} oldNum={28} newNum={27}>
 				<BignumTitle slot="header" />
 			</Bignum>
-			<div class="will-show" class:showNewNum>
-				<div class="bignum-container">
-					<Bignum {showNewNum} side="อิสระ" oldNum={0} newNum={2}>
-						<BignumTitle side="อิสระ" slot="header" />
-					</Bignum>
-				</div>
-			</div>
+			<Bignum {showNewNum} side="อิสระ" oldNum={0} newNum={2}>
+				<BignumTitle side="อิสระ" slot="header" />
+			</Bignum>
 			<Bignum {showNewNum} side="ค้าน" oldNum={20} newNum={4}>
 				<BignumTitle side="ค้าน" slot="header" />
 			</Bignum>
@@ -210,6 +144,19 @@
 	.event-container {
 		display: grid;
 		grid-template-columns: 1fr auto auto auto 1fr;
+
+		&::after {
+			content: 'อัพเดตข้อมูลวันที่ 22 กันยายน 2565';
+
+			font-size: 0.8rem;
+			letter-spacing: 0.5px;
+			color: #5b5b5b;
+
+			position: absolute;
+			top: -8px;
+			right: 0;
+			transform: translateY(-100%);
+		}
 	}
 
 	.event {
@@ -218,9 +165,13 @@
 		padding: 32px;
 	}
 
-	h3 {
+	.tc {
 		white-space: nowrap;
-		margin-bottom: 24px;
+		margin: 0 0 24px;
+		text-align: center;
+		display: block;
+		font-size: 1.17em;
+		font-weight: 700;
 	}
 
 	.sep {
@@ -268,7 +219,7 @@
 
 		&.showNewNum {
 			opacity: 1;
-			transition: opacity 0.5s 0.75s;
+			transition: opacity 0.5s 0.5s;
 		}
 	}
 
@@ -290,11 +241,11 @@
 
 			.bignum-container {
 				opacity: 1;
-				transition-delay: 0.5s;
+				transition-delay: 0.25s;
 
 				&.total {
-					animation: slide-right 1.25s;
-					transition-delay: 0.75s;
+					animation: slide-right 1s;
+					transition-delay: 0.5s;
 				}
 			}
 		}

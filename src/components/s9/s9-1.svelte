@@ -44,12 +44,12 @@
 
 <!-- VH skip check -->
 <div class="c tc">
-	<h1>
+	<h2>
 		แล้ว 12 เก้าอี้ที่เพิ่มมา<br />
 		<strong>เกื้อหนุน</strong> ฝั่งรัฐบาลมากน้อยแค่ไหน?
-	</h1>
+	</h2>
 	<p class="s8-p">
-		การเข้าสภาของ 12 พรรคเล็ก ส่งผลให้ส.ส.ฝ่ายรัฐบาล <strong>พลิกเป็นเสียงข้างมาก</strong>
+		การเข้าสภาของ 12 พรรคเล็ก ส่งผลให้ ส.ส.ฝ่ายรัฐบาล <strong>พลิกเป็นเสียงข้างมาก</strong>
 	</p>
 	<div class="row par-size" style="--gap:0" class:showSeat>
 		<div class="col c tc gov" style="--bgc:#5b5b5b;--txc:#fff">
@@ -70,6 +70,7 @@
 			loading="lazy"
 			width="126"
 			height="283"
+			aria-hidden="true"
 		/>
 	</div>
 	<svg width="0" height="0">
@@ -104,7 +105,7 @@
 <div class="s9-2sep black tc" style="--h:10vh" />
 
 <style lang="scss">
-	h1 {
+	h2 {
 		font-size: 2.5rem;
 		line-height: 1;
 

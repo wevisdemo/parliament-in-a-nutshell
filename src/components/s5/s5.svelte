@@ -10,7 +10,7 @@
 			() => {
 				is_logo_inview = true;
 			},
-			{ amount: 0.3 }
+			{ amount: 0.5 }
 		);
 	});
 </script>
@@ -23,26 +23,34 @@
 		decoding="async"
 		loading="lazy"
 	/>
-	<img class="logo" src="/shaking-parliament/title.png" alt="" decoding="async" loading="lazy" />
+	<h1 class="mtb0">
+		<img
+			class="logo"
+			src="/shaking-parliament/title.png"
+			alt="สรุปสั้นสภาไทย (Thai Parliament in a Coconutshell)"
+			decoding="async"
+			loading="lazy"
+		/>
+	</h1>
 </div>
 
 <style lang="scss">
 	.s5-container {
 		background: #000;
 
-		> .logo {
+		> h1 > .logo {
 			opacity: 0.1;
 
-			height: 60vh;
-			width: 60vw;
+			height: 65vh;
+			width: 65vw;
 			object-fit: contain;
 		}
 
 		> .logo-decor {
 			opacity: 0.3;
 
-			height: 70vh; /* O */
-			width: 70vw; /* O */
+			height: 65vh; /* O */
+			width: 65vw; /* O */
 			object-fit: contain;
 
 			position: absolute;
@@ -50,14 +58,14 @@
 		}
 
 		&.in-view {
-			> .logo {
+			> h1 > .logo {
 				opacity: 1;
-				animation: flickering 1s linear forwards;
+				animation: flickering 0.75s linear forwards;
 			}
 			> .logo-decor {
 				opacity: 1;
-				transition: opacity 1s linear;
-				transition-delay: 0.5s;
+				transition: opacity 0.75s linear;
+				transition-delay: 0.375s;
 			}
 		}
 	}

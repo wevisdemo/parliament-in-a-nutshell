@@ -70,17 +70,9 @@
 				name="กวินนาถ ตาคีย์"
 				side="opp"
 				size="56"
-				shift="0"
-				tooltip="top"
 				showTop={srinuanMoved}
 			>
-				<RP
-					src="rp/pt12-กวินนาถ.png"
-					color="#70d267"
-					name="กวินนาถ ตาคีย์"
-					size="56"
-					tooltip="top"
-				/>
+				<RP src="rp/pt12-กวินนาถ.png" color="#70d267" name="กวินนาถ ตาคีย์" size="56" />
 			</RP>
 			<RP
 				src="rp/pt12-จารึก.png"
@@ -88,11 +80,9 @@
 				name="จารึก ศรีอ่อน"
 				side="opp"
 				size="56"
-				shift="0"
-				tooltip="top"
 				showTop={srinuanMoved}
 			>
-				<RP src="rp/pt12-จารึก.png" color="#70d267" name="จารึก ศรีอ่อน" size="56" tooltip="top" />
+				<RP src="rp/pt12-จารึก.png" color="#70d267" name="จารึก ศรีอ่อน" size="56" />
 			</RP>
 			<RP
 				src="rp/pt12-ฐนภัทร.png"
@@ -100,17 +90,9 @@
 				name="ฐนภัทร กิตติวงศา"
 				side="opp"
 				size="56"
-				shift="0"
-				tooltip="top"
 				showTop={srinuanMoved}
 			>
-				<RP
-					src="rp/pt12-ฐนภัทร.png"
-					color="#065cab"
-					name="ฐนภัทร กิตติวงศา"
-					size="56"
-					tooltip="top"
-				/></RP
+				<RP src="rp/pt12-ฐนภัทร.png" color="#065cab" name="ฐนภัทร กิตติวงศา" size="56" /></RP
 			>
 			<RP
 				src="rp/pt12-ศรีนวล.png"
@@ -118,17 +100,9 @@
 				name="ศรีนวล บุญลือ"
 				side="opp"
 				size="56"
-				shift="0"
-				tooltip="top"
 				showTop={srinuanMoved}
 			>
-				<RP
-					src="rp/pt12-ศรีนวล.png"
-					color="#065cab"
-					name="ศรีนวล บุญลือ"
-					size="56"
-					tooltip="top"
-				/></RP
+				<RP src="rp/pt12-ศรีนวล.png" color="#065cab" name="ศรีนวล บุญลือ" size="56" /></RP
 			>
 			<RP
 				src="rp/pt12-กิตติชัย.png"
@@ -136,17 +110,9 @@
 				name="กิตติชัย เรืองสวัสดิ์"
 				side="opp"
 				size="56"
-				shift="0"
-				tooltip="top"
 				showTop={anakinMoved}
 			>
-				<RP
-					src="rp/pt12-กิตติชัย.png"
-					color="#065cab"
-					name="กิตติชัย เรืองสวัสดิ์"
-					size="56"
-					tooltip="top"
-				/></RP
+				<RP src="rp/pt12-กิตติชัย.png" color="#065cab" name="กิตติชัย เรืองสวัสดิ์" size="56" /></RP
 			>
 			<RP
 				src="rp/pt12-กฤติเดช.png"
@@ -154,17 +120,9 @@
 				name="กฤติเดช สันติวชิระกุล"
 				side="opp"
 				size="56"
-				shift="0"
-				tooltip="top"
 				showTop={anakinMoved}
 			>
-				<RP
-					src="rp/pt12-กฤติเดช.png"
-					color="#065cab"
-					name="กฤติเดช สันติวชิระกุล"
-					size="56"
-					tooltip="top"
-				/></RP
+				<RP src="rp/pt12-กฤติเดช.png" color="#065cab" name="กฤติเดช สันติวชิระกุล" size="56" /></RP
 			>
 			<RP
 				src="rp/pt12-โชติพิพัฒน์.png"
@@ -172,8 +130,6 @@
 				name="โชติพิพัฒน์ เตชะโสภณมณี"
 				side="opp"
 				size="56"
-				shift="0"
-				tooltip="top"
 				showTop={anakinMoved}
 			>
 				<RP
@@ -181,7 +137,6 @@
 					color="#065cab"
 					name="โชติพิพัฒน์ เตชะโสภณมณี"
 					size="56"
-					tooltip="top"
 				/></RP
 			>
 			<RP
@@ -190,17 +145,9 @@
 				name="ฐิตินันท์ แสงนาค"
 				side="opp"
 				size="56"
-				shift="0"
-				tooltip="top"
 				showTop={anakinMoved}
 			>
-				<RP
-					src="rp/pt12-ฐิตินันท์.png"
-					color="#065cab"
-					name="ฐิตินันท์ แสงนาค"
-					size="56"
-					tooltip="top"
-				/></RP
+				<RP src="rp/pt12-ฐิตินันท์.png" color="#065cab" name="ฐิตินันท์ แสงนาค" size="56" /></RP
 			>
 			<RP
 				src="rp/pt12-มณฑล.png"
@@ -208,17 +155,9 @@
 				name="มณฑล โพธิ์คาย"
 				side="opp"
 				size="56"
-				shift="0"
-				tooltip="top"
 				showTop={anakinMoved}
 			>
-				<RP
-					src="rp/pt12-มณฑล.png"
-					color="#065cab"
-					name="มณฑล โพธิ์คาย"
-					size="56"
-					tooltip="top"
-				/></RP
+				<RP src="rp/pt12-มณฑล.png" color="#065cab" name="มณฑล โพธิ์คาย" size="56" /></RP
 			>
 			<RP
 				src="rp/pt12-วิรัช.png"
@@ -226,17 +165,9 @@
 				name="วิรัช พันธุมะผล"
 				side="opp"
 				size="56"
-				shift="0"
-				tooltip="top"
 				showTop={anakinMoved}
 			>
-				<RP
-					src="rp/pt12-วิรัช.png"
-					color="#065cab"
-					name="วิรัช พันธุมะผล"
-					size="56"
-					tooltip="top"
-				/></RP
+				<RP src="rp/pt12-วิรัช.png" color="#065cab" name="วิรัช พันธุมะผล" size="56" /></RP
 			>
 			<RP
 				src="rp/pt12-สำลี.png"
@@ -244,17 +175,9 @@
 				name="สำลี รักสุทธี"
 				side="opp"
 				size="56"
-				shift="0"
-				tooltip="top"
 				showTop={anakinMoved}
 			>
-				<RP
-					src="rp/pt12-สำลี.png"
-					color="#065cab"
-					name="สำลี รักสุทธี"
-					size="56"
-					tooltip="top"
-				/></RP
+				<RP src="rp/pt12-สำลี.png" color="#065cab" name="สำลี รักสุทธี" size="56" /></RP
 			>
 			<RP
 				src="rp/pt12-อนาวิล.png"
@@ -262,17 +185,9 @@
 				name="อนาวิล รัตนสถาพร"
 				side="opp"
 				size="56"
-				shift="0"
-				tooltip="top"
 				showTop={anakinMoved}
 			>
-				<RP
-					src="rp/pt12-อนาวิล.png"
-					color="#065cab"
-					name="อนาวิล รัตนสถาพร"
-					size="56"
-					tooltip="top"
-				/></RP
+				<RP src="rp/pt12-อนาวิล.png" color="#065cab" name="อนาวิล รัตนสถาพร" size="56" /></RP
 			>
 			<RP
 				src="rp/pt12-เอกการ.png"
@@ -280,17 +195,9 @@
 				name="เอกการ ซื่อทรงธรรม"
 				side="opp"
 				size="56"
-				shift="0"
-				tooltip="top"
 				showTop={anakinMoved}
 			>
-				<RP
-					src="rp/pt12-เอกการ.png"
-					color="#065cab"
-					name="เอกการ ซื่อทรงธรรม"
-					size="56"
-					tooltip="top"
-				/></RP
+				<RP src="rp/pt12-เอกการ.png" color="#065cab" name="เอกการ ซื่อทรงธรรม" size="56" /></RP
 			>
 			<RP
 				src="rp/pt12-จุลพันธ์.png"
@@ -298,17 +205,9 @@
 				name="จุลพันธ์ โนนศรีชัย"
 				side="opp"
 				size="56"
-				shift="0"
-				tooltip="top"
 				showTop={anakinMoved}
 			>
-				<RP
-					src="rp/pt12-จุลพันธ์.png"
-					color="#cc8ae3"
-					name="จุลพันธ์ โนนศรีชัย"
-					size="56"
-					tooltip="top"
-				/></RP
+				<RP src="rp/pt12-จุลพันธ์.png" color="#cc8ae3" name="จุลพันธ์ โนนศรีชัย" size="56" /></RP
 			>
 			<RP
 				src="rp/pt12-สมัคร.png"
@@ -316,17 +215,9 @@
 				name="สมัคร ป้องวงษ์"
 				side="opp"
 				size="56"
-				shift="0"
-				tooltip="top"
 				showTop={anakinMoved}
 			>
-				<RP
-					src="rp/pt12-สมัคร.png"
-					color="#fd980d"
-					name="สมัคร ป้องวงษ์"
-					size="56"
-					tooltip="top"
-				/></RP
+				<RP src="rp/pt12-สมัคร.png" color="#fd980d" name="สมัคร ป้องวงษ์" size="56" /></RP
 			>
 			<RP
 				src="rp/pt12-พรพิมล.png"
@@ -334,114 +225,66 @@
 				name="พรพิมล ธรรมสาร"
 				side="opp"
 				size="56"
-				shift="0"
-				tooltip="top"
 				showTop={pornpimolMoved}
 			>
-				<RP
-					src="rp/pt12-พรพิมล.png"
-					color="#065cab"
-					name="พรพิมล ธรรมสาร"
-					size="56"
-					tooltip="top"
-				/></RP
+				<RP src="rp/pt12-พรพิมล.png" color="#065cab" name="พรพิมล ธรรมสาร" size="56" /></RP
 			>
 			<RP
 				src="rp/pt12-สุภดิช.png"
 				color="#75328C"
 				name="สุภดิช อากาศฤกษ์"
 				size="56"
-				shift="0"
 				side="opp"
-				tooltip="top"
 				showTop={neweconMoved}
 			>
-				<RP
-					src="rp/pt12-สุภดิช.png"
-					color="#75328C"
-					name="สุภดิช อากาศฤกษ์"
-					size="56"
-					tooltip="top"
-				/></RP
+				<RP src="rp/pt12-สุภดิช.png" color="#75328C" name="สุภดิช อากาศฤกษ์" size="56" /></RP
 			>
 			<RP
 				src="rp/pt12-นิยม.png"
 				color="#75328C"
 				name="นิยม วิวรรธนดิฐกุล"
 				size="56"
-				shift="0"
 				side="opp"
-				tooltip="top"
 				showTop={neweconMoved}
 			>
-				<RP
-					src="rp/pt12-นิยม.png"
-					color="#75328C"
-					name="นิยม วิวรรธนดิฐกุล"
-					size="56"
-					tooltip="top"
-				/></RP
+				<RP src="rp/pt12-นิยม.png" color="#75328C" name="นิยม วิวรรธนดิฐกุล" size="56" /></RP
 			>
 			<RP
 				src="rp/pt12-ภาสกร.png"
 				color="#75328C"
 				name="ภาสกร เงินเจริญกุล"
 				size="56"
-				shift="0"
 				side="opp"
-				tooltip="top"
 				showTop={neweconMoved}
 			>
-				<RP
-					src="rp/pt12-ภาสกร.png"
-					color="#75328C"
-					name="ภาสกร เงินเจริญกุล"
-					size="56"
-					tooltip="top"
-				/></RP
+				<RP src="rp/pt12-ภาสกร.png" color="#75328C" name="ภาสกร เงินเจริญกุล" size="56" /></RP
 			>
 			<RP
 				src="rp/pt12-มนูญ.png"
 				color="#75328C"
 				name="มนูญ สิวาภิรมย์รัตน์"
 				size="56"
-				shift="0"
 				side="opp"
-				tooltip="top"
 				showTop={neweconMoved}
 			>
-				<RP
-					src="rp/pt12-มนูญ.png"
-					color="#75328C"
-					name="มนูญ สิวาภิรมย์รัตน์"
-					size="56"
-					tooltip="top"
-				/></RP
+				<RP src="rp/pt12-มนูญ.png" color="#75328C" name="มนูญ สิวาภิรมย์รัตน์" size="56" /></RP
 			>
 			<RP
 				src="rp/pt12-มารศรี.png"
 				color="#75328C"
 				name="มารศรี ขจรเรืองโรจน์"
 				size="56"
-				shift="0"
 				side="opp"
-				tooltip="top"
 				showTop={neweconMoved}
 			>
-				<RP
-					src="rp/pt12-มารศรี.png"
-					color="#75328C"
-					name="มารศรี ขจรเรืองโรจน์"
-					size="56"
-					tooltip="top"
-				/></RP
+				<RP src="rp/pt12-มารศรี.png" color="#75328C" name="มารศรี ขจรเรืองโรจน์" size="56" /></RP
 			>
 		</svelte:fragment>
 		<svelte:fragment>
 			{#each VOTE_METADATA as mati, mati_index}
-				<div class="votelog-row" class:last-row={mati_index > VOTE_METADATA.length - 3}>
+				<div class="votelog-row" class:top-row={mati_index < 2}>
 					<div class="votelog-icon">
-						<Icon type={mati.icon} />
+						<Icon type={mati.icon} style={`color:#${mati.pass ? '92da1f' : 'dd5a5a'}`} />
 					</div>
 					<div class="votelog-value">
 						<div class="votelog-subject">{@html mati.html_name}</div>

@@ -154,12 +154,12 @@
 
 <!-- VH skip check -->
 <div class="s3-container">
-	<div class="decor">
+	<div class="decor" aria-hidden="true">
 		<div bind:this={el_counter} class="T1 counter-decor">{rp_num}</div>
 		<div bind:this={el_thanathorn} class="thanathorn-img-container">
-			<div class="circle1" />
-			<div class="circle2" />
-			<div class="circle3" />
+			<div class="circle1" aria-hidden="true" />
+			<div class="circle2" aria-hidden="true" />
+			<div class="circle3" aria-hidden="true" />
 			<RP
 				class="thanathorn-img deco-people"
 				color="#ff6f21"
@@ -167,6 +167,7 @@
 				size="170"
 				side="opp"
 				src="rp/ศาลตัด-ธนาธร.png"
+				tooltip={false}
 			/>
 		</div>
 		<div bind:this={el_thammanas} class="thammanas-img">
@@ -177,6 +178,7 @@
 				size="170"
 				side="free"
 				src="rp/pt14-ธรรมนัส.png"
+				tooltip={false}
 			/>
 		</div>
 		<div bind:this={el_paiboon} class="paiboon-img-container">
@@ -196,6 +198,7 @@
 				size="170"
 				side="gov"
 				src="rp/paiboon.png"
+				tooltip={false}
 			/>
 		</div>
 		<div bind:this={el_parina} class="parina-img">
@@ -206,10 +209,11 @@
 				size="170"
 				side="gov"
 				src="rp/ศาลตัด-ปารีณา.png"
+				tooltip={false}
 			/>
 		</div>
 		<div bind:this={el_pornpimol} class="pornpimol-img-container">
-			<div class="back" />
+			<div class="back" aria-hidden="true" />
 			<RP
 				class="deco-people"
 				color="#e50000"
@@ -217,6 +221,7 @@
 				size="170"
 				side="opp"
 				src="rp/pt12-พรพิมล.png"
+				tooltip={false}
 			/>
 		</div>
 		<div bind:this={el_mongkonkit} class="mongkonkit-img-container">
@@ -227,6 +232,7 @@
 				size="170"
 				side="free"
 				src="rp/mongkonkit.png"
+				tooltip={false}
 			/>
 			<img
 				class="circle1"
@@ -250,10 +256,10 @@
 	</div>
 	<div class="c" bind:this={el_bridge_text1} style="padding-bottom:288px">
 		<div style="--h:16px" />
-		<h1 class="T1">
+		<h2 class="T1">
 			ตัวเลขที่ผันแปรเหล่านี้<br />
 			กำลังบอกอะไรเรา ?
-		</h1>
+		</h2>
 		<div class="line" />
 		<p class="tc">
 			<strong>ความเคลื่อนไหวอย่างต่อเนื่อง</strong> หลังสิ้นสุดฤดูกาลเลือกตั้ง<br />
@@ -284,8 +290,7 @@
 
 <style lang="scss">
 	.s3-container {
-		margin-top: -15vh;
-		padding-top: 30vh;
+		padding-top: 15vh;
 
 		padding-bottom: 50vh;
 		margin-bottom: -50vh;
@@ -311,8 +316,9 @@
 	.decor {
 		position: absolute;
 		inset: 0;
-
+		top: -15vh;
 		overflow: hidden;
+		pointer-events: none;
 	}
 
 	.line {
