@@ -8,6 +8,8 @@
 	import Bridge from './s8-bridge.svelte';
 	import RpStack from './RpStack.svelte';
 
+	import Caret from 'components/Caret.svelte';
+
 	import { PART1_DATA } from 'data/overall_change';
 
 	let showAll = false;
@@ -111,6 +113,7 @@
 		<div style="width:max-content">
 			<div bind:this={el_pill1} class="pill">
 				ส.ส. ที่มีเหตุต้อง<strong>พ้นจากการปฏิบัติหน้าที่</strong>
+				<Caret class="s7-next-part-hint" />
 			</div>
 			<div bind:this={el_pill2} class="pill new-pill">
 				ส.ส. ที่เข้ามา<strong>แทนที่นั่ง</strong> ทั้งการเลือกตั้งซ่อมและการเลื่อนบัญชีรายชื่อ
