@@ -62,6 +62,10 @@
 	.rp-container {
 		width: calc(var(--s) * 1px);
 		height: calc(var(--s) * 1px);
+
+		> .portrait {
+			transition: opacity 0.3s;
+		}
 	}
 
 	.portrait {
@@ -70,8 +74,6 @@
 		object-position: 50% 50%;
 
 		background: var(--c, #fff);
-
-		transition: opacity 0.3s;
 
 		overflow: hidden;
 
