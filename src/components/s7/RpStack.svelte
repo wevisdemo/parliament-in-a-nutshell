@@ -104,9 +104,6 @@
 		height: calc(100% + 16px);
 		transform: var(--pt);
 
-		padding-left: 50px;
-		padding-right: 12px;
-
 		background: #000;
 		border-radius: 8px;
 
@@ -122,9 +119,10 @@
 		-moz-user-select: none;
 		user-select: none;
 
-		font-size: 1rem;
+		padding: 0;
+		font-size: 0;
 		opacity: 0;
-		transition: opacity 0;
+		transition: opacity 0s;
 		pointer-events: none;
 	}
 
@@ -164,6 +162,12 @@
 
 			> .ly3.showAll {
 				--pt: translate(200%, calc(200% + 16px));
+			}
+
+			> .plbl {
+				padding-left: 50px;
+				padding-right: 12px;
+				font-size: 1rem;
 			}
 
 			> .plbl.showAll {
