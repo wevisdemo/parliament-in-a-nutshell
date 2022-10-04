@@ -9,14 +9,14 @@
 			[
 				el_decors[1],
 				{
-					transform: ['translate(30%, -40%) rotate(0deg)', 'translate(30%, -40%) rotate(90deg)']
+					transform: ['translate(30%, -40%) rotate(0deg)', 'translate(30%, -40%) rotate(-60deg)']
 				},
 				{ duration: 0.5 }
 			],
 			[
 				el_decors[3],
 				{
-					transform: ['translate(-30%, 40%) rotate(180deg)', 'translate(-30%, 40%) rotate(270deg)']
+					transform: ['translate(-30%, 40%) rotate(180deg)', 'translate(-30%, 40%) rotate(120deg)']
 				},
 				{ duration: 0.5, at: '<' }
 			]
@@ -104,11 +104,16 @@
 </div>
 
 <style lang="scss">
+	.part2-title {
+		position: relative;
+	}
+
 	.decor {
 		position: absolute;
 		inset: 0;
 		width: 100%;
-		height: 100vh;
+		height: 100%;
+		overflow: hidden;
 
 		> img {
 			position: absolute;
