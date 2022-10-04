@@ -48,6 +48,7 @@
 		class="portrait {side} {clazz}"
 		class:dashedBorder
 		style:--c={color}
+		style:--size={size}
 		decoding="async"
 		loading="lazy"
 		width={size}
@@ -77,6 +78,7 @@
 
 		overflow: hidden;
 
+		flex: 0 0 calc(var(--size) * 1px);
 		position: relative;
 		z-index: 1;
 
