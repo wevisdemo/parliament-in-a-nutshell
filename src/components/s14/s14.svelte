@@ -231,8 +231,10 @@
 	}
 
 	.news-text {
+		position: relative;
 		font-size: 1.8rem;
 		line-height: 1.5;
+		text-shadow: 0 0 32px #fff, 0 0 16px #fff, 0 0 8px #fff, 0 0 4px #fff;
 
 		> .bggr {
 			font-size: 1.11em; // 1.8rem * 1.11em ~= 2.00rem

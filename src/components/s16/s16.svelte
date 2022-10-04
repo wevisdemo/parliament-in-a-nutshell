@@ -94,6 +94,8 @@
 		font-size: 2rem;
 		position: relative;
 
+		text-shadow: 0 0 32px #fff, 0 0 16px #fff, 0 0 8px #fff, 0 0 4px #fff;
+
 		> strong {
 			font-size: 1.25em;
 		}
