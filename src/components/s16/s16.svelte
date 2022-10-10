@@ -86,7 +86,7 @@
 	}
 
 	.s16-container {
-		padding: 250px 0 250px;
+		padding: 250px 0 186px;
 	}
 
 	p {

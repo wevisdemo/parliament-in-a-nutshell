@@ -17,7 +17,7 @@
 	};
 </script>
 
-<div class="s-16 container c tc">
+<div class="s17-container c tc">
 	<h2 class="header mtb0">
 		ร่วมจับตาดูความเคลื่อนไหวในสภา<span class="nw">อย่างต่อเนื่อง</span><br />
 		<small class="subheader">ก่อนเข้าสู่การเลือกตั้งครั้งถัดไปที่จะเกิดขึ้นในปี 2566</small>
@@ -151,6 +151,10 @@
 </div>
 
 <style lang="scss">
+	.s17-container {
+		padding-top: 64px;
+	}
+
 	.header,
 	.subheader {
 		font-weight: 700;
@@ -219,6 +223,7 @@
 		--cpy-c: #6a6a6a;
 		border: 2px var(--cpy-c) solid;
 		transition: color 0.3s, border 0.3s;
+		background: rgba(0, 0, 0, 0);
 
 		&::before {
 			background: var(--cpy-c);
