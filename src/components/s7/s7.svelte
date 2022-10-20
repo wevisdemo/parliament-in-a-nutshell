@@ -146,7 +146,7 @@
 		grid-template-columns: 1fr auto auto auto 1fr;
 
 		&::after {
-			content: 'อัพเดตข้อมูลวันที่ 22 กันยายน 2565';
+			content: 'อัพเดตข้อมูลวันที่ 20 ตุลาคม 2565';
 
 			font-size: 0.8rem;
 			letter-spacing: 0.5px;

@@ -519,6 +519,18 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 					src: 'rp/pt14-สมศักดิ์.png',
 					color: '#F0DA8C'
 				}
+			},
+			{
+				name: 'พีระวิทย์ เรื่องลือดลภาค',
+				side: 'gov',
+				src: 'rp/ศาลตัด-พีระวิทย์.png',
+				color: '#ff7e61',
+				replace_by: {
+					name: 'ว่าง',
+					side: 'gov',
+					src: 'w.png',
+					color: '#fff'
+				}
 			}
 		],
 		[
