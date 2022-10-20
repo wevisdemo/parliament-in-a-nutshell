@@ -7,9 +7,9 @@
 	export let circleClass: string = '';
 	export let circleStyle: string = '';
 	export let decorSrc: [string, string, string] = [
-		'/shaking-parliament/circle_03.svg',
-		'/shaking-parliament/circle_03.svg',
-		'/shaking-parliament/circle_03.svg'
+		'/parliament-in-a-nutshell/circle_03.svg',
+		'/parliament-in-a-nutshell/circle_03.svg',
+		'/parliament-in-a-nutshell/circle_03.svg'
 	];
 
 	let el_circle_container: any;

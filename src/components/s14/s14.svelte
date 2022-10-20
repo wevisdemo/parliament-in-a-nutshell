@@ -50,12 +50,12 @@
 </script>
 
 <div class="s14-container tc c">
-	<img class="crack" src="/shaking-parliament/crack.svg" alt="" decoding="async" loading="lazy" />
+	<img class="crack" src="/parliament-in-a-nutshell/crack.svg" alt="" decoding="async" loading="lazy" />
 	<div bind:this={el_decor_container} class="decor">
 		<img
 			class="star"
 			class:play_star_animation
-			src="/shaking-parliament/star_02.svg"
+			src="/parliament-in-a-nutshell/star_02.svg"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -64,7 +64,7 @@
 		/>
 		<img
 			class="d1"
-			src="/shaking-parliament/part1_bg4.png"
+			src="/parliament-in-a-nutshell/part1_bg4.png"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -73,7 +73,7 @@
 		/>
 		<img
 			class="d2"
-			src="/shaking-parliament/part1_bg3.png"
+			src="/parliament-in-a-nutshell/part1_bg3.png"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -85,7 +85,7 @@
 		<img
 			bind:this={el_logo}
 			class="title-img"
-			src="/shaking-parliament/part4_title.png"
+			src="/parliament-in-a-nutshell/part4_title.png"
 			alt="บทที่ 4 — สภาคลอน ขั้วรัฐแตกพ่าย เกิดการโยกย้ายขนานใหญ่"
 			decoding="async"
 			loading="lazy"
@@ -102,7 +102,7 @@
 		<img
 			class="decor-star"
 			class:show_news
-			src="/shaking-parliament/star_03.svg"
+			src="/parliament-in-a-nutshell/star_03.svg"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -113,7 +113,7 @@
 		<img
 			class="news-img"
 			class:show_news
-			src="/shaking-parliament/pt4_newspaper.png"
+			src="/parliament-in-a-nutshell/pt4_newspaper.png"
 			alt="28 มกราคม 2565 ธรรมนัสนำทีมย้ายขั้ว"
 			decoding="async"
 			loading="lazy"

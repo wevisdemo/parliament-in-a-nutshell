@@ -295,7 +295,7 @@
 	<div class="sankey-connector-container">
 		<img
 			class="sankey-connector"
-			src="/shaking-parliament/sankey1.svg"
+			src="/parliament-in-a-nutshell/sankey1.svg"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -322,7 +322,7 @@
 		<div class="sankey-fade-newecon" />
 		<img
 			class="sankey-img-newecon"
-			src="/shaking-parliament/part12.png"
+			src="/parliament-in-a-nutshell/part12.png"
 			alt="พรรคเศรษฐกิจใหม่ ย้ายขั้วไปรัฐบาล"
 			decoding="async"
 			loading="lazy"

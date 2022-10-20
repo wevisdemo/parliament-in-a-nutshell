@@ -227,7 +227,7 @@
 	<div class="sankey-connector-container">
 		<img
 			class="sankey-connector"
-			src="/shaking-parliament/sankey2.svg"
+			src="/parliament-in-a-nutshell/sankey2.svg"
 			alt=""
 			decoding="async"
 			loading="lazy"

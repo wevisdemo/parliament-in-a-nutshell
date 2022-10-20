@@ -31,7 +31,7 @@
 		height: 100%;
 		z-index: 98;
 
-		background: url(/shaking-parliament/bg.jpg), #eee;
+		background: url(/parliament-in-a-nutshell/bg.jpg), #eee;
 		background-size: 100%;
 	}
 

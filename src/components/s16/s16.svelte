@@ -53,7 +53,7 @@
 	<div bind:this={el_deco_container} class="decor">
 		<img
 			class="d1"
-			src="/shaking-parliament/p16_hand_right.png"
+			src="/parliament-in-a-nutshell/p16_hand_right.png"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -62,7 +62,7 @@
 		/>
 		<img
 			class="d2"
-			src="/shaking-parliament/part1_bg3.png"
+			src="/parliament-in-a-nutshell/part1_bg3.png"
 			alt=""
 			decoding="async"
 			loading="lazy"

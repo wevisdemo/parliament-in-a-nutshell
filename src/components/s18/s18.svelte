@@ -57,7 +57,7 @@
 		<div class="col c tc intern">
 			<img
 				class="intern-portrait"
-				src="/shaking-parliament/i1.jpg"
+				src="/parliament-in-a-nutshell/i1.jpg"
 				alt="ทินกร หวานแท้ — Intern Project Coordinator"
 				decoding="async"
 				loading="lazy"
@@ -75,7 +75,7 @@
 		<div class="col c tc intern">
 			<img
 				class="intern-portrait"
-				src="/shaking-parliament/i2.jpg"
+				src="/parliament-in-a-nutshell/i2.jpg"
 				alt="ณภัทร แต้เถา — Intern Digital Designer"
 				decoding="async"
 				loading="lazy"
@@ -93,7 +93,7 @@
 		<div class="col c tc intern">
 			<img
 				class="intern-portrait"
-				src="/shaking-parliament/i3.jpg"
+				src="/parliament-in-a-nutshell/i3.jpg"
 				alt="สุเทพ จันทร์ชูผล — Intern Web Developer"
 				decoding="async"
 				loading="lazy"

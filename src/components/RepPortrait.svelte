@@ -27,7 +27,7 @@
 {#if $$slots.default}
 	<div class="rp-container {clazz}" class:showTop style:--s={size} {...$$restProps}>
 		<img
-			src="/shaking-parliament/{src}"
+			src="/parliament-in-a-nutshell/{src}"
 			alt="{name} ({altSide})"
 			class="portrait {side}"
 			class:dashedBorder
@@ -43,7 +43,7 @@
 	</div>
 {:else}
 	<img
-		src="/shaking-parliament/{src}"
+		src="/parliament-in-a-nutshell/{src}"
 		alt="{name} ({altSide})"
 		class="portrait {side} {clazz}"
 		class:dashedBorder

@@ -24,7 +24,7 @@
 	<span class="cross" aria-hidden="true">
 		<img
 			class="c1"
-			src="/shaking-parliament/mark-tlbr.png"
+			src="/parliament-in-a-nutshell/mark-tlbr.png"
 			alt=""
 			decoding="async"
 			loading="eager"
@@ -34,7 +34,7 @@
 		/>
 		<img
 			class="c2"
-			src="/shaking-parliament/mark-bltr.png"
+			src="/parliament-in-a-nutshell/mark-bltr.png"
 			alt=""
 			decoding="async"
 			loading="eager"

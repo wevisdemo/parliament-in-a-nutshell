@@ -44,7 +44,7 @@
 		<div bind:this={el_chair_container} class="part1-decor" aria-hidden="true">
 			<img
 				class="chair1"
-				src="/shaking-parliament/part1_bg1.png"
+				src="/parliament-in-a-nutshell/part1_bg1.png"
 				alt=""
 				decoding="async"
 				loading="lazy"
@@ -53,7 +53,7 @@
 			/>
 			<img
 				class="chair2"
-				src="/shaking-parliament/part1_bg2.png"
+				src="/parliament-in-a-nutshell/part1_bg2.png"
 				alt=""
 				decoding="async"
 				loading="lazy"
@@ -62,7 +62,7 @@
 			/>
 			<img
 				class="chair3"
-				src="/shaking-parliament/part1_bg3.png"
+				src="/parliament-in-a-nutshell/part1_bg3.png"
 				alt=""
 				decoding="async"
 				loading="lazy"
@@ -71,7 +71,7 @@
 			/>
 			<img
 				class="chair4"
-				src="/shaking-parliament/part1_bg4.png"
+				src="/parliament-in-a-nutshell/part1_bg4.png"
 				alt=""
 				decoding="async"
 				loading="lazy"
@@ -82,7 +82,7 @@
 		<h2 class="h100 c mtb0">
 			<img
 				class="title-img"
-				src="/shaking-parliament/part1_title.png"
+				src="/parliament-in-a-nutshell/part1_title.png"
 				alt="บทที่ 1 — เริ่มเกมเก้าอี้ดนตรี ตลอดระยะเวลา 3 ปี มีตำแหน่งในที่ว่างลงบ้าง"
 				decoding="async"
 				loading="lazy"

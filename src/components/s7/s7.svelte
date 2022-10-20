@@ -181,19 +181,19 @@
 	.resign {
 		flex: 2 2 0;
 		background: linear-gradient(rgba(217, 217, 217, 0.8) 80%, rgba(217, 217, 217, 1) 100%),
-			url(/shaking-parliament/bg-resign.jpg) no-repeat center/cover;
+			url(/parliament-in-a-nutshell/bg-resign.jpg) no-repeat center/cover;
 	}
 
 	.pass {
 		flex: 1 1 0;
 		background: linear-gradient(rgba(217, 217, 217, 0.8) 80%, rgba(217, 217, 217, 1) 100%),
-			url(/shaking-parliament/bg-pass.jpg) no-repeat center/cover;
+			url(/parliament-in-a-nutshell/bg-pass.jpg) no-repeat center/cover;
 	}
 
 	.fire {
 		flex: 2 2 0;
 		background: linear-gradient(rgba(217, 217, 217, 0.8) 80%, rgba(217, 217, 217, 1) 100%),
-			url(/shaking-parliament/bg-fire.jpg) no-repeat center/cover;
+			url(/parliament-in-a-nutshell/bg-fire.jpg) no-repeat center/cover;
 	}
 
 	.rp-grid {

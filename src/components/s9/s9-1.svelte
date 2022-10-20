@@ -63,7 +63,7 @@
 		</div>
 		<div class="small-overlay" />
 		<img
-			src="/shaking-parliament/middle_line.svg"
+			src="/parliament-in-a-nutshell/middle_line.svg"
 			alt=""
 			class="middle-line"
 			decoding="async"

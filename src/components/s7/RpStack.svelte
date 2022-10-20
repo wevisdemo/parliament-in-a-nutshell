@@ -8,7 +8,7 @@
 <div class="stack-rp-container">
 	<div class="plbl showAll">{data.name}</div>
 	<img
-		src="/shaking-parliament/{data.src}"
+		src="/parliament-in-a-nutshell/{data.src}"
 		alt={data.name}
 		class="portrait ly1 {data.side}"
 		class:showAll
@@ -21,7 +21,7 @@
 	{#if data.replace_by}
 		<div class="plbl lbl2" class:showAll>{data.replace_by.name}</div>
 		<img
-			src="/shaking-parliament/{data.replace_by.src}"
+			src="/parliament-in-a-nutshell/{data.replace_by.src}"
 			alt={data.replace_by.name}
 			class="portrait ly2 {data.replace_by.side}"
 			class:showAll
@@ -36,7 +36,7 @@
 		{#if data.replace_by.replace_by}
 			<div class="plbl lbl3" class:showAll>{data.replace_by.replace_by.name}</div>
 			<img
-				src="/shaking-parliament/{data.replace_by.replace_by.src}"
+				src="/parliament-in-a-nutshell/{data.replace_by.replace_by.src}"
 				alt={data.replace_by.replace_by.name}
 				class="portrait ly3 {data.replace_by.replace_by.side}"
 				class:showAll

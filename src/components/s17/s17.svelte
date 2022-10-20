@@ -1,5 +1,5 @@
 <script lang="ts">
-	const SITE_LINK = 'https://wevisdemo.github.io/shaking-parliament/';
+	const SITE_LINK = 'https://wevis.info/parliament-in-a-nutshell/';
 
 	let copy_class = '';
 	const copyLinkToClipboard = () => {
@@ -103,7 +103,7 @@
 	<div class="decor">
 		<img
 			class="d1"
-			src="/shaking-parliament/star_01.svg"
+			src="/parliament-in-a-nutshell/star_01.svg"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -112,7 +112,7 @@
 		/>
 		<img
 			class="d2"
-			src="/shaking-parliament/circles_02.svg"
+			src="/parliament-in-a-nutshell/circles_02.svg"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -121,7 +121,7 @@
 		/>
 		<img
 			class="d3"
-			src="/shaking-parliament/circles_02.svg"
+			src="/parliament-in-a-nutshell/circles_02.svg"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -137,7 +137,7 @@
 		rel="nofollow noopener noreferrer"
 	>
 		<img
-			src="/shaking-parliament/theywork.png"
+			src="/parliament-in-a-nutshell/theywork.png"
 			alt=""
 			aria-labelledby="theywork-content"
 			decoding="async"
