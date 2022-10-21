@@ -117,7 +117,7 @@
 		<div class="row" style="--gap:32px">
 			<div class="shifter" class:showNewNum />
 			<div class="shifter" class:showNewNum />
-			<Bignum {showNewNum} oldNum={28} newNum={27}>
+			<Bignum {showNewNum} oldNum={29} newNum={27}>
 				<BignumTitle slot="header" />
 			</Bignum>
 			<Bignum {showNewNum} side="อิสระ" oldNum={0} newNum={2}>
