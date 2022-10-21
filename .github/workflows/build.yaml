@@ -21,6 +21,6 @@ jobs:
         uses: s0/git-publish-subdir-action@v2.3.0
         env:
           REPO: self
-          BRANCH: gh-page
+          BRANCH: build
           FOLDER: build
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
