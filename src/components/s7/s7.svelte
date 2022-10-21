@@ -117,7 +117,7 @@
 		<div class="row" style="--gap:32px">
 			<div class="shifter" class:showNewNum />
 			<div class="shifter" class:showNewNum />
-			<Bignum {showNewNum} oldNum={28} newNum={27}>
+			<Bignum {showNewNum} oldNum={29} newNum={27}>
 				<BignumTitle slot="header" />
 			</Bignum>
 			<Bignum {showNewNum} side="อิสระ" oldNum={0} newNum={2}>
@@ -146,7 +146,7 @@
 		grid-template-columns: 1fr auto auto auto 1fr;
 
 		&::after {
-			content: 'อัพเดตข้อมูลวันที่ 22 กันยายน 2565';
+			content: 'อัพเดตข้อมูลวันที่ 20 ตุลาคม 2565';
 
 			font-size: 0.8rem;
 			letter-spacing: 0.5px;
@@ -181,19 +181,19 @@
 	.resign {
 		flex: 2 2 0;
 		background: linear-gradient(rgba(217, 217, 217, 0.8) 80%, rgba(217, 217, 217, 1) 100%),
-			url(/shaking-parliament/bg-resign.jpg) no-repeat center/cover;
+			url(/parliament-in-a-nutshell/bg-resign.jpg) no-repeat center/cover;
 	}
 
 	.pass {
 		flex: 1 1 0;
 		background: linear-gradient(rgba(217, 217, 217, 0.8) 80%, rgba(217, 217, 217, 1) 100%),
-			url(/shaking-parliament/bg-pass.jpg) no-repeat center/cover;
+			url(/parliament-in-a-nutshell/bg-pass.jpg) no-repeat center/cover;
 	}
 
 	.fire {
 		flex: 2 2 0;
 		background: linear-gradient(rgba(217, 217, 217, 0.8) 80%, rgba(217, 217, 217, 1) 100%),
-			url(/shaking-parliament/bg-fire.jpg) no-repeat center/cover;
+			url(/parliament-in-a-nutshell/bg-fire.jpg) no-repeat center/cover;
 	}
 
 	.rp-grid {

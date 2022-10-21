@@ -18,7 +18,7 @@
 <div class="h100 s5-container c" class:in-view={is_logo_inview} bind:this={el_logo_container}>
 	<img
 		class="logo-decor"
-		src="/shaking-parliament/title_decor.svg"
+		src="/parliament-in-a-nutshell/title_decor.svg"
 		alt=""
 		decoding="async"
 		loading="lazy"
@@ -26,7 +26,7 @@
 	<h1 class="mtb0">
 		<img
 			class="logo"
-			src="/shaking-parliament/title.png"
+			src="/parliament-in-a-nutshell/title.png"
 			alt="สรุปสั้นสภาไทย (Thai Parliament in a Coconutshell)"
 			decoding="async"
 			loading="lazy"

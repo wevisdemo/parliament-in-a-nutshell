@@ -51,7 +51,7 @@
 		<div class="ans-img-container">
 			<img
 				class="ans-img"
-				src="/shaking-parliament/quiz-stamp.png"
+				src="/parliament-in-a-nutshell/quiz-stamp.png"
 				alt="ไม่มีคำตอบที่ตายตัวหรอก เพราะที่นั่ง ส.ส. เปลี่ยนแปลงไปแทบทุกวัน"
 				decoding="async"
 				loading="eager"
@@ -63,7 +63,7 @@
 
 	<div class="continue" class:show={isSubmitted} aria-hidden={!isSubmitted}>
 		<img
-			src="/shaking-parliament/thinking.png"
+			src="/parliament-in-a-nutshell/thinking.png"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -73,7 +73,7 @@
 		/>
 		เกิดอะไรขึ้น? ไปดูกัน!
 		<img
-			src="/shaking-parliament/hand-down.png"
+			src="/parliament-in-a-nutshell/hand-down.png"
 			alt=""
 			decoding="async"
 			loading="lazy"

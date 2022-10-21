@@ -53,7 +53,7 @@
 	<div bind:this={el_deco_container} class="decor">
 		<img
 			class="d1"
-			src="/shaking-parliament/p16_hand_right.png"
+			src="/parliament-in-a-nutshell/p16_hand_right.png"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -62,7 +62,7 @@
 		/>
 		<img
 			class="d2"
-			src="/shaking-parliament/part1_bg3.png"
+			src="/parliament-in-a-nutshell/part1_bg3.png"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -86,13 +86,15 @@
 	}
 
 	.s16-container {
-		padding: 250px 0 250px;
+		padding: 250px 0 186px;
 	}
 
 	p {
 		line-height: 1.5;
 		font-size: 2rem;
 		position: relative;
+
+		text-shadow: 0 0 32px #fff, 0 0 16px #fff, 0 0 8px #fff, 0 0 4px #fff;
 
 		> strong {
 			font-size: 1.25em;

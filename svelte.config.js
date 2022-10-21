@@ -9,9 +9,8 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
-		prerender: { default: true },
 		paths: {
-			base: '/shaking-parliament'
+			base: '/parliament-in-a-nutshell'
 		}
 	}
 };

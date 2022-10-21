@@ -9,14 +9,14 @@
 			[
 				el_decors[1],
 				{
-					transform: ['translate(30%, -40%) rotate(0deg)', 'translate(30%, -40%) rotate(90deg)']
+					transform: ['translate(30%, -40%) rotate(0deg)', 'translate(30%, -40%) rotate(-60deg)']
 				},
 				{ duration: 0.5 }
 			],
 			[
 				el_decors[3],
 				{
-					transform: ['translate(-30%, 40%) rotate(180deg)', 'translate(-30%, 40%) rotate(270deg)']
+					transform: ['translate(-30%, 40%) rotate(180deg)', 'translate(-30%, 40%) rotate(120deg)']
 				},
 				{ duration: 0.5, at: '<' }
 			]
@@ -36,7 +36,7 @@
 	<div bind:this={el_deco_container} class="decor" aria-hidden="true">
 		<img
 			class="disc d1"
-			src="/shaking-parliament/part2_bg1.png"
+			src="/parliament-in-a-nutshell/part2_bg1.png"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -45,7 +45,7 @@
 		/>
 		<img
 			class="reader r1"
-			src="/shaking-parliament/part2_bg2.png"
+			src="/parliament-in-a-nutshell/part2_bg2.png"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -54,7 +54,7 @@
 		/>
 		<img
 			class="disc d2"
-			src="/shaking-parliament/part2_bg1.png"
+			src="/parliament-in-a-nutshell/part2_bg1.png"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -63,7 +63,7 @@
 		/>
 		<img
 			class="reader r2"
-			src="/shaking-parliament/part2_bg2.png"
+			src="/parliament-in-a-nutshell/part2_bg2.png"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -73,7 +73,7 @@
 	</div>
 	<img
 		class="title-img"
-		src="/shaking-parliament/part2_title.png"
+		src="/parliament-in-a-nutshell/part2_title.png"
 		alt="บทที่ 2 — เพลงไม่ทันเปิด เกิดกฏิกาพิเศษ ส.ส. ปัดเศษ เข้าสภา"
 		decoding="async"
 		loading="lazy"
@@ -82,7 +82,7 @@
 </h2>
 <div class="news-container">
 	<img
-		src="/shaking-parliament/part2_papers.png"
+		src="/parliament-in-a-nutshell/part2_papers.png"
 		alt="ตะลึง! 12 พรรคเล็ก ผุดที่นั่งหนุนรัฐบาล"
 		class="newspaper"
 		decoding="async"
@@ -104,11 +104,16 @@
 </div>
 
 <style lang="scss">
+	.part2-title {
+		position: relative;
+	}
+
 	.decor {
 		position: absolute;
 		inset: 0;
 		width: 100%;
-		height: 100vh;
+		height: 100%;
+		overflow: hidden;
 
 		> img {
 			position: absolute;

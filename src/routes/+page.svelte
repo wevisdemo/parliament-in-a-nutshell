@@ -61,7 +61,7 @@
 		title="WeVis"
 	>
 		<img
-			src="/shaking-parliament/wevis-logo.svg"
+			src="/parliament-in-a-nutshell/wevis-logo.svg"
 			alt="WeVis"
 			decoding="async"
 			loading="eager"

@@ -27,7 +27,7 @@
 {#if $$slots.default}
 	<div class="rp-container {clazz}" class:showTop style:--s={size} {...$$restProps}>
 		<img
-			src="/shaking-parliament/{src}"
+			src="/parliament-in-a-nutshell/{src}"
 			alt="{name} ({altSide})"
 			class="portrait {side}"
 			class:dashedBorder
@@ -43,11 +43,12 @@
 	</div>
 {:else}
 	<img
-		src="/shaking-parliament/{src}"
+		src="/parliament-in-a-nutshell/{src}"
 		alt="{name} ({altSide})"
 		class="portrait {side} {clazz}"
 		class:dashedBorder
 		style:--c={color}
+		style:--size={size}
 		decoding="async"
 		loading="lazy"
 		width={size}
@@ -62,6 +63,10 @@
 	.rp-container {
 		width: calc(var(--s) * 1px);
 		height: calc(var(--s) * 1px);
+
+		> .portrait {
+			transition: opacity 0.3s;
+		}
 	}
 
 	.portrait {
@@ -71,10 +76,9 @@
 
 		background: var(--c, #fff);
 
-		transition: opacity 0.3s;
-
 		overflow: hidden;
 
+		flex: 0 0 calc(var(--size) * 1px);
 		position: relative;
 		z-index: 1;
 

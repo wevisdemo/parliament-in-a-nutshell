@@ -44,7 +44,7 @@
 		<img
 			class="star"
 			class:play_star_animation
-			src="/shaking-parliament/star_02.svg"
+			src="/parliament-in-a-nutshell/star_02.svg"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -53,7 +53,7 @@
 		/>
 		<img
 			class="hand1"
-			src="/shaking-parliament/part3_bg1.png"
+			src="/parliament-in-a-nutshell/part3_bg1.png"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -62,7 +62,7 @@
 		/>
 		<img
 			class="hand2"
-			src="/shaking-parliament/part3_bg2.png"
+			src="/parliament-in-a-nutshell/part3_bg2.png"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -71,7 +71,7 @@
 		/>
 		<img
 			class="hand3"
-			src="/shaking-parliament/part3_bg3.png"
+			src="/parliament-in-a-nutshell/part3_bg3.png"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -83,7 +83,7 @@
 		<img
 			bind:this={el_logo}
 			class="title-img"
-			src="/shaking-parliament/part3_title.png"
+			src="/parliament-in-a-nutshell/part3_title.png"
 			alt="บทที่ 3 — เพราะภายในมีจุดยืนต่าง ขั้วข้างจึงสั่นคลอน"
 			decoding="async"
 			loading="lazy"
@@ -101,9 +101,9 @@
 <div style="--h:128px" />
 <CircleFold
 	decorSrc={[
-		'/shaking-parliament/part3_deco1.svg',
-		'/shaking-parliament/part3_deco2.svg',
-		'/shaking-parliament/part3_deco3.svg'
+		'/parliament-in-a-nutshell/part3_deco1.svg',
+		'/parliament-in-a-nutshell/part3_deco2.svg',
+		'/parliament-in-a-nutshell/part3_deco3.svg'
 	]}
 	circleStyle="font-size:1rem"
 >

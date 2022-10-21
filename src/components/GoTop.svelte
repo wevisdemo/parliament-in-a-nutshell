@@ -76,7 +76,7 @@
 			position: absolute;
 			top: 2px;
 			width: 95%;
-			border-top: 4px solid white;
+			border-top: 4px solid #fff;
 			transition: transform 0.2s;
 		}
 
@@ -89,8 +89,8 @@
 			width: 70%;
 			height: 70%;
 
-			border-top: 4px solid white;
-			border-left: 4px solid white;
+			border-top: 4px solid #fff;
+			border-left: 4px solid #fff;
 
 			transform: rotate(45deg);
 			transform-origin: center center;

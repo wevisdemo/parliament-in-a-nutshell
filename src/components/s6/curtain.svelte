@@ -53,7 +53,7 @@
 <style lang="scss">
 	.curtain {
 		width: 100%;
-		background: url(/shaking-parliament/curtain.png) repeat-x;
+		background: url(/parliament-in-a-nutshell/curtain.png) repeat-x;
 		background-size: auto 100%;
 		background-position: center;
 

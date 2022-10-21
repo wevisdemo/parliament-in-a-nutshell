@@ -1,5 +1,5 @@
 <script lang="ts">
-	const SITE_LINK = 'https://wevisdemo.github.io/shaking-parliament/';
+	const SITE_LINK = 'https://wevis.info/parliament-in-a-nutshell/';
 
 	let copy_class = '';
 	const copyLinkToClipboard = () => {
@@ -17,7 +17,7 @@
 	};
 </script>
 
-<div class="s-16 container c tc">
+<div class="s17-container c tc">
 	<h2 class="header mtb0">
 		ร่วมจับตาดูความเคลื่อนไหวในสภา<span class="nw">อย่างต่อเนื่อง</span><br />
 		<small class="subheader">ก่อนเข้าสู่การเลือกตั้งครั้งถัดไปที่จะเกิดขึ้นในปี 2566</small>
@@ -103,7 +103,7 @@
 	<div class="decor">
 		<img
 			class="d1"
-			src="/shaking-parliament/star_01.svg"
+			src="/parliament-in-a-nutshell/star_01.svg"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -112,7 +112,7 @@
 		/>
 		<img
 			class="d2"
-			src="/shaking-parliament/circles_02.svg"
+			src="/parliament-in-a-nutshell/circles_02.svg"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -121,7 +121,7 @@
 		/>
 		<img
 			class="d3"
-			src="/shaking-parliament/circles_02.svg"
+			src="/parliament-in-a-nutshell/circles_02.svg"
 			alt=""
 			decoding="async"
 			loading="lazy"
@@ -137,7 +137,7 @@
 		rel="nofollow noopener noreferrer"
 	>
 		<img
-			src="/shaking-parliament/theywork.png"
+			src="/parliament-in-a-nutshell/theywork.png"
 			alt=""
 			aria-labelledby="theywork-content"
 			decoding="async"
@@ -151,6 +151,10 @@
 </div>
 
 <style lang="scss">
+	.s17-container {
+		padding-top: 64px;
+	}
+
 	.header,
 	.subheader {
 		font-weight: 700;
@@ -219,6 +223,7 @@
 		--cpy-c: #6a6a6a;
 		border: 2px var(--cpy-c) solid;
 		transition: color 0.3s, border 0.3s;
+		background: rgba(0, 0, 0, 0);
 
 		&::before {
 			background: var(--cpy-c);

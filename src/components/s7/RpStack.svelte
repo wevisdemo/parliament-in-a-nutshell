@@ -8,7 +8,7 @@
 <div class="stack-rp-container">
 	<div class="plbl showAll">{data.name}</div>
 	<img
-		src="/shaking-parliament/{data.src}"
+		src="/parliament-in-a-nutshell/{data.src}"
 		alt={data.name}
 		class="portrait ly1 {data.side}"
 		class:showAll
@@ -21,7 +21,7 @@
 	{#if data.replace_by}
 		<div class="plbl lbl2" class:showAll>{data.replace_by.name}</div>
 		<img
-			src="/shaking-parliament/{data.replace_by.src}"
+			src="/parliament-in-a-nutshell/{data.replace_by.src}"
 			alt={data.replace_by.name}
 			class="portrait ly2 {data.replace_by.side}"
 			class:showAll
@@ -36,7 +36,7 @@
 		{#if data.replace_by.replace_by}
 			<div class="plbl lbl3" class:showAll>{data.replace_by.replace_by.name}</div>
 			<img
-				src="/shaking-parliament/{data.replace_by.replace_by.src}"
+				src="/parliament-in-a-nutshell/{data.replace_by.replace_by.src}"
 				alt={data.replace_by.replace_by.name}
 				class="portrait ly3 {data.replace_by.replace_by.side}"
 				class:showAll
@@ -104,9 +104,6 @@
 		height: calc(100% + 16px);
 		transform: var(--pt);
 
-		padding-left: 50px;
-		padding-right: 12px;
-
 		background: #000;
 		border-radius: 8px;
 
@@ -122,9 +119,10 @@
 		-moz-user-select: none;
 		user-select: none;
 
-		font-size: 1rem;
+		padding: 0;
+		font-size: 0;
 		opacity: 0;
-		transition: opacity 0;
+		transition: opacity 0s;
 		pointer-events: none;
 	}
 
@@ -164,6 +162,12 @@
 
 			> .ly3.showAll {
 				--pt: translate(200%, calc(200% + 16px));
+			}
+
+			> .plbl {
+				padding-left: 50px;
+				padding-right: 12px;
+				font-size: 1rem;
 			}
 
 			> .plbl.showAll {
