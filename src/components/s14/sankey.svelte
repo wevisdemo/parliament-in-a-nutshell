@@ -7,7 +7,13 @@
 	let el_sankey: any;
 	let el_sankey2: any;
 	let el_sankey3: any;
+
+	let sankey_inview = false;
 	onMount(() => {
+		inView(el_sankey, () => {
+			sankey_inview = true;
+		});
+
 		inView(
 			el_sankey,
 			() => {
@@ -73,6 +79,19 @@
 	});
 </script>
 
+<!-- Load curved connector on first sankey -->
+{#if sankey_inview}
+	<img
+		src="/parliament-in-a-nutshell/sankey2.svg"
+		alt=""
+		decoding="async"
+		loading="eager"
+		width="0"
+		height="0"
+		style="display:none"
+	/>
+{/if}
+<!-- SANKEY 1 -->
 <div
 	bind:this={el_sankey}
 	class="row sankey"
