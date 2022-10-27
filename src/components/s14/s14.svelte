@@ -1,10 +1,10 @@
 <script lang="ts">
+	import { inView, scroll, timeline } from 'motion';
 	import { onMount } from 'svelte';
-	import { timeline, scroll, inView } from 'motion';
 
-	import Sankey from './sankey.svelte';
-	import TableBridge from 'components/TableBridge.svelte';
 	import Circle from 'components/Circle.svelte';
+	import TableBridge from 'components/TableBridge.svelte';
+	import Sankey from './sankey.svelte';
 
 	let play_star_animation = false;
 	let show_news = false;
@@ -50,7 +50,13 @@
 </script>
 
 <div class="s14-container tc c">
-	<img class="crack" src="/parliament-in-a-nutshell/crack.svg" alt="" decoding="async" loading="lazy" />
+	<img
+		class="crack"
+		src="/parliament-in-a-nutshell/crack.svg"
+		alt=""
+		decoding="async"
+		loading="lazy"
+	/>
 	<div bind:this={el_decor_container} class="decor">
 		<img
 			class="star"

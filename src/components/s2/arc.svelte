@@ -1,7 +1,7 @@
 <script>
 	// @ts-nocheck
+	import { arc as d3arc, interpolate, select, symbol, symbolTriangle } from 'd3';
 	import { onMount } from 'svelte';
-	import { arc as d3arc, interpolate, symbol, symbolTriangle, select } from 'd3';
 
 	let el_chart;
 	export let show_current_data = false;

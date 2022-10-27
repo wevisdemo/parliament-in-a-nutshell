@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { VOTE_METADATA } from 'data/vote_metadata';
 	import { PART4_DATA } from 'data/thammanas';
+	import { VOTE_METADATA } from 'data/vote_metadata';
 
-	import Votelog from 'components/votelog/Votelog.svelte';
 	import RP from 'components/RepPortrait.svelte';
 	import Cell from 'components/votelog/VoteCell.svelte';
 	import Icon from 'components/votelog/VoteIcon.svelte';
+	import Votelog from 'components/votelog/Votelog.svelte';
 
 	let showTop = false;
 	const setShowTop = ({ detail }: { detail: boolean }) => {

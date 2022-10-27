@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { showTooltip as _showTooltip, hideTooltip as _hideTooltip } from 'utils/tooltip';
+	import { hideTooltip as _hideTooltip, showTooltip as _showTooltip } from 'utils/tooltip';
 
 	export let src: string;
 	export let side: 'gov' | 'opp' | 'free' = 'gov';

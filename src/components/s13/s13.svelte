@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { VOTE_METADATA } from 'data/vote_metadata';
 	import { PART3_DATA } from 'data/side_shift';
+	import { VOTE_METADATA } from 'data/vote_metadata';
 
-	import Votelog from 'components/votelog/Votelog.svelte';
 	import RP from 'components/RepPortrait.svelte';
 	import Cell from 'components/votelog/VoteCell.svelte';
 	import Icon from 'components/votelog/VoteIcon.svelte';
+	import Votelog from 'components/votelog/Votelog.svelte';
 
 	const isSrinuanGroup = (mati_index: number, person_index: number) =>
 		mati_index === 3 && [0, 1, 2, 3].includes(person_index);

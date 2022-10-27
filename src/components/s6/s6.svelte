@@ -1,9 +1,9 @@
 <script lang="ts">
+	import { scroll, ScrollOffset, timeline } from 'motion';
 	import { onMount } from 'svelte';
-	import { timeline, scroll, ScrollOffset } from 'motion';
 
-	import Curtain from './curtain.svelte';
 	import CircleFold from 'components/CircleFold.svelte';
+	import Curtain from './curtain.svelte';
 
 	let el_chair_container: any;
 	onMount(() => {

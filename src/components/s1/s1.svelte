@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { addHtmlClass, removeHtmlClass } from 'utils/html-style-director';
 	import { onMount } from 'svelte';
+	import { addHtmlClass, removeHtmlClass } from 'utils/html-style-director';
 
 	import Choice from './choice.svelte';
 

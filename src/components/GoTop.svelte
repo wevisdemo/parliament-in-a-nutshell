@@ -1,7 +1,7 @@
 <script lang="ts">
+	import { scroll } from 'motion';
 	import { onMount } from 'svelte';
 	import { cubicOut, quadIn } from 'svelte/easing';
-	import { scroll } from 'motion';
 
 	let scroll_top_enabled = false;
 	let shift_footer = false;

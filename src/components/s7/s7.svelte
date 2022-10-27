@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { scroll, ScrollOffset, timeline } from 'motion';
+	import { onMount } from 'svelte';
 
 	import Bignum from 'components/Bignum.svelte';
 	import BignumTitle from './BignumTitle.svelte';
-	import Spareseat from './Spareseat.svelte';
-	import Bridge from './s8-bridge.svelte';
 	import RpStack from './RpStack.svelte';
+	import Bridge from './s8-bridge.svelte';
+	import Spareseat from './Spareseat.svelte';
 
 	import Caret from 'components/Caret.svelte';
 

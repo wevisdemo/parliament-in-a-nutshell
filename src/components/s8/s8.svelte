@@ -1,6 +1,6 @@
 <script lang="ts">
+	import { inView, timeline } from 'motion';
 	import { onMount } from 'svelte';
-	import { timeline, inView } from 'motion';
 
 	let el_deco_container: any;
 	onMount(() => {

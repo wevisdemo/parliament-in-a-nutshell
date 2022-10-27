@@ -1,6 +1,6 @@
 <script lang="ts">
+	import { inView, scroll, timeline } from 'motion';
 	import { onMount } from 'svelte';
-	import { timeline, inView, scroll, animate } from 'motion';
 
 	import Circle from 'components/Circle.svelte';
 	import CircleFold from 'components/CircleFold.svelte';
