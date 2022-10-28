@@ -248,7 +248,7 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				src: 'rp/ลาออก-กรณ์.png',
 				color: '#349EE9',
 				replace_by: {
-					name: 'พีระวิทย์ เรื่องลือดลภาค (ลาออก)',
+					name: 'พีระวิทย์ เรื่องลือดลภาค (ศาลตัดสินให้พ้นสภาพ ส.ส.)',
 					side: 'gov',
 					src: 'rp/ศาลตัด-พีระวิทย์.png',
 					color: '#ff7e61',
