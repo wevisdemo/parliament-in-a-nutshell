@@ -40,6 +40,7 @@
 				alt={data.replace_by.replace_by.name}
 				class="portrait ly3 {data.replace_by.replace_by.side}"
 				class:showAll
+				class:dashedBorder={data.replace_by.replace_by.name === 'ว่าง'}
 				style:--c={data.replace_by.replace_by.color}
 				decoding="async"
 				loading="lazy"

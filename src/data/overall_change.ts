@@ -145,9 +145,9 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				}
 			},
 			{
-				name: 'กรณ์ จาติกวณิช',
+				name: 'คุณหญิงกัลยา โสภณพนิช',
 				side: 'gov',
-				src: 'rp/ลาออก-กรณ์.png',
+				src: 'rp/ลาออก-คุณหญิงกัลยา.png',
 				color: '#349EE9',
 				replace_by: {
 					name: 'พิสิฐ ลี้อาธรรม',
@@ -178,6 +178,18 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 					side: 'gov',
 					src: 'rp/แทน-บุญญาพร.png',
 					color: '#AAC826'
+				}
+			},
+			{
+				name: 'สมเกียรติ ศรลัมพ์',
+				side: 'gov',
+				src: 'rp/ลาออก-สมเกียรติ.png',
+				color: '#288707',
+				replace_by: {
+					name: 'นันทนา สงฆ์ประชา',
+					side: 'gov',
+					src: 'rp/แทน-นันทนา.png',
+					color: '#288707'
 				}
 			}
 		],
@@ -231,15 +243,21 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 				}
 			},
 			{
-				name: 'สมเกียรติ ศรลัมพ์',
+				name: 'กรณ์ จาติกวณิช',
 				side: 'gov',
-				src: 'rp/ลาออก-สมเกียรติ.png',
-				color: '#288707',
+				src: 'rp/ลาออก-กรณ์.png',
+				color: '#349EE9',
 				replace_by: {
-					name: 'นันทนา สงฆ์ประชา',
+					name: 'พีระวิทย์ เรื่องลือดลภาค (ลาออก)',
 					side: 'gov',
-					src: 'rp/แทน-นันทนา.png',
-					color: '#288707'
+					src: 'rp/ศาลตัด-พีระวิทย์.png',
+					color: '#ff7e61',
+					replace_by: {
+						name: 'ว่าง',
+						side: 'gov',
+						src: 'w.png',
+						color: '#fff'
+					}
 				}
 			}
 		],
@@ -518,18 +536,6 @@ export const PART1_DATA: PART1_DATA_TYPE = {
 					side: 'free',
 					src: 'rp/pt14-สมศักดิ์.png',
 					color: '#F0DA8C'
-				}
-			},
-			{
-				name: 'พีระวิทย์ เรื่องลือดลภาค',
-				side: 'gov',
-				src: 'rp/ศาลตัด-พีระวิทย์.png',
-				color: '#ff7e61',
-				replace_by: {
-					name: 'ว่าง',
-					side: 'gov',
-					src: 'w.png',
-					color: '#fff'
 				}
 			}
 		],
