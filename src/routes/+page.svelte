@@ -1,13 +1,13 @@
 <script lang="ts">
-	import 'styles/master.scss';
-	import '@wevisdemo/ui/styles/typography.css';
 	import '@wevisdemo/ui/styles/components.css';
+	import '@wevisdemo/ui/styles/typography.css';
+	import 'styles/master.scss';
 
 	import { onMount } from 'svelte';
 	import { weAreAlwaysHiring } from 'utils/we-are-hiring';
 
-	import Loader from 'components/loader/loader.svelte';
 	import GoTop from 'components/GoTop.svelte';
+	import Loader from 'components/loader/loader.svelte';
 	import ScreenNotice from 'components/ScreenNotice.svelte';
 
 	import S1 from 'components/s1/s1.svelte';
@@ -20,10 +20,10 @@
 	import S7 from 'components/s7/s7.svelte';
 	import S8 from 'components/s8/s8.svelte';
 
-	import S9 from 'components/s9/s9.svelte';
 	import S10 from 'components/s10/s10.svelte';
 	import S11 from 'components/s11/s11.svelte';
 	import S12 from 'components/s12/s12.svelte';
+	import S9 from 'components/s9/s9.svelte';
 
 	import S13 from 'components/s13/s13.svelte';
 	import S14 from 'components/s14/s14.svelte';

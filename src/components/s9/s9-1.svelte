@@ -1,8 +1,8 @@
 <script lang="ts">
+	import { animate, scroll, ScrollOffset } from 'motion';
 	import { onMount } from 'svelte';
-	import { tweened } from 'svelte/motion';
 	import { sineOut } from 'svelte/easing';
-	import { scroll, animate, ScrollOffset } from 'motion';
+	import { tweened } from 'svelte/motion';
 
 	let showSeat = false;
 	let gov_seat = tweened(242, { duration: 500, easing: sineOut });

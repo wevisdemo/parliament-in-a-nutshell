@@ -1,6 +1,6 @@
 <script lang="ts">
+	import { animate, scroll, ScrollOffset, timeline } from 'motion';
 	import { onMount } from 'svelte';
-	import { scroll, ScrollOffset, timeline, animate } from 'motion';
 
 	import Arc from './arc.svelte';
 

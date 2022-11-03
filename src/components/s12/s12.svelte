@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Bignum from 'components/Bignum.svelte';
-	import Sankey from './sankey.svelte';
 	import TableBridge from 'components/TableBridge.svelte';
+	import Sankey from './sankey.svelte';
 </script>
 
 <div style="--h:128px" />

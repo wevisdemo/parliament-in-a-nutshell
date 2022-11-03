@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { animate, inView } from 'motion';
+	import { onMount } from 'svelte';
 
 	let clazz: string = '';
 	export { clazz as class };

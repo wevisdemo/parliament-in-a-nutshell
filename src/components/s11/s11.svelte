@@ -1,6 +1,6 @@
 <script lang="ts">
+	import { inView, scroll, timeline } from 'motion';
 	import { onMount } from 'svelte';
-	import { timeline, inView, scroll, animate } from 'motion';
 
 	import Circle from 'components/Circle.svelte';
 	import CircleFold from 'components/CircleFold.svelte';
@@ -95,7 +95,7 @@
 	ที่ภายในพรรคหนึ่งพรรค<br />
 	จะออกเสียงตามมติพรรคได้โดยเอกฉันท์<br />
 	<span>ดังนั้น<strong style="font-size:1.3em">การโหวตสวนมติพรรค</strong></span>
-	ของ ส.ส. บางรายจึงปรากฎให้เห็น<br />
+	ของ ส.ส. บางรายจึงปรากฏให้เห็น<br />
 	บนหน้าข่าวอยู่เรื่อยไป
 </Circle>
 <div style="--h:128px" />

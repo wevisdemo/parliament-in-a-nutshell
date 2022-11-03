@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { inView, scroll, animate, ScrollOffset, stagger } from 'motion';
 	import { scaleLinear } from 'd3';
+	import { animate, inView, scroll, ScrollOffset, stagger } from 'motion';
+	import { onMount } from 'svelte';
 
 	import RP from 'components/RepPortrait.svelte';
 

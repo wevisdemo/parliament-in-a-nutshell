@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { addHtmlClass, removeHtmlClass } from 'utils/html-style-director';
 	import { onMount } from 'svelte';
+	import { addHtmlClass, removeHtmlClass } from 'utils/html-style-director';
 
 	import Choice from './choice.svelte';
 
@@ -42,6 +42,19 @@
 	>
 		ตรวจคำตอบ
 	</button>
+
+	{#if selected_choice}
+		<!-- Trigger stamp load on choice selected -->
+		<img
+			src="/parliament-in-a-nutshell/quiz-stamp.png"
+			alt=""
+			decoding="async"
+			loading="eager"
+			width="0"
+			height="0"
+			style="display:none"
+		/>
+	{/if}
 
 	{#if isSubmitted && !isCorrect}
 		<div class="incorrect-overlay" aria-hidden="true" />

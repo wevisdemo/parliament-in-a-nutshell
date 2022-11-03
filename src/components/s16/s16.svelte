@@ -1,6 +1,6 @@
 <script lang="ts">
+	import { animate, inView, scroll, stagger, timeline } from 'motion';
 	import { onMount } from 'svelte';
-	import { animate, inView, stagger, timeline, scroll } from 'motion';
 
 	import Caret from 'components/Caret.svelte';
 

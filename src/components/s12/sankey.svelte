@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { inView, timeline } from 'motion';
+	import { onMount } from 'svelte';
 
 	import RP from 'components/RepPortrait.svelte';
 
@@ -35,8 +35,16 @@
 
 	let el_sankey6: any;
 
+	let sankey_inview = false;
 	onMount(() => {
-		inView(el_sankey1, () => animate2ColSankey(el_sankey1), { amount: 1 });
+		inView(
+			el_sankey1,
+			() => {
+				animate2ColSankey(el_sankey1);
+				sankey_inview = true;
+			},
+			{ amount: 1 }
+		);
 		inView(el_sankey2, () => animate2ColSankey(el_sankey2), { amount: 1 });
 		inView(el_sankey3, () => animate2ColSankey(el_sankey3), { amount: 1 });
 		inView(el_sankey4, () => animate2ColSankey(el_sankey4), { amount: 1 });
@@ -103,6 +111,18 @@
 	});
 </script>
 
+<!-- Load curved connector on first sankey -->
+{#if sankey_inview}
+	<img
+		src="/parliament-in-a-nutshell/sankey1.svg"
+		alt=""
+		decoding="async"
+		loading="eager"
+		width="0"
+		height="0"
+		style="display:none"
+	/>
+{/if}
 <!-- SANKEY 1 -->
 <div
 	bind:this={el_sankey1}

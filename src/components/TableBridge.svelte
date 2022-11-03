@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { animate, scroll } from 'motion';
+	import { onMount } from 'svelte';
 
 	let el_bridge: any;
 	let el_text: any;

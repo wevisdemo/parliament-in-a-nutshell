@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { tweened } from 'svelte/motion';
-	import { sineOut } from 'svelte/easing';
 	import { inView } from 'motion';
+	import { onMount } from 'svelte';
+	import { sineOut } from 'svelte/easing';
+	import { tweened } from 'svelte/motion';
 
 	const SIDE_COLOR = {
 		รัฐบาล: '#5b5b5b',

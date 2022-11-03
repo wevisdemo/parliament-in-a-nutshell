@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { inView } from 'motion';
+	import { onMount } from 'svelte';
 
 	let el_logo_container: any;
 	let is_logo_inview = false;

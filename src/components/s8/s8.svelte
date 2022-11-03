@@ -1,6 +1,6 @@
 <script lang="ts">
+	import { inView, timeline } from 'motion';
 	import { onMount } from 'svelte';
-	import { timeline, inView } from 'motion';
 
 	let el_deco_container: any;
 	onMount(() => {
@@ -74,7 +74,7 @@
 	<img
 		class="title-img"
 		src="/parliament-in-a-nutshell/part2_title.png"
-		alt="บทที่ 2 — เพลงไม่ทันเปิด เกิดกฏิกาพิเศษ ส.ส. ปัดเศษ เข้าสภา"
+		alt="บทที่ 2 — เพลงไม่ทันเปิด เกิดกติกาพิเศษ ส.ส. ปัดเศษ เข้าสภา"
 		decoding="async"
 		loading="lazy"
 		style="position:relative"

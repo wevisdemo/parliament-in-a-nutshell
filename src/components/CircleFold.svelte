@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { inView, timeline } from 'motion';
+	import { onMount } from 'svelte';
 
 	import Circle from 'components/Circle.svelte';
 

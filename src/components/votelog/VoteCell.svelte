@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { onMount, createEventDispatcher } from 'svelte';
 	import { scroll } from 'motion';
+	import { createEventDispatcher, onMount } from 'svelte';
 
 	const dispatch = createEventDispatcher();
 

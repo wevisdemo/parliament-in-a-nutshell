@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { fly } from 'svelte/transition';
 	import { sineIn, sineOut } from 'svelte/easing';
+	import { fly } from 'svelte/transition';
 
 	let screen_width = 0;
 	let screen_height = 0;
